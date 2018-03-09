@@ -2,6 +2,9 @@
 SML is a small header-only C++ library for geometrical operations.
 
 ## Content
+
+### Check out the [Class References page](https://martijnkoopman.github.io/Spatial-Math-Library/)
+
 Matrix classes:
 * Matrix
 * Matrix4x4
