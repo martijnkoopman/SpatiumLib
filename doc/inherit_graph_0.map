@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_s_m_l_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,56,120,83"/>
+<area shape="rect" id="node2" href="$class_s_m_l_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="168,5,275,32"/>
+<area shape="rect" id="node5" href="$class_s_m_l_1_1_plane.html" title="Plane geometry. " alt="" coords="176,56,267,83"/>
+<area shape="rect" id="node6" href="$class_s_m_l_1_1_sphere.html" title="Sphere geometry. " alt="" coords="172,107,271,133"/>
+<area shape="rect" id="node3" href="$class_s_m_l_1_1_spheroid.html" title="Spheroid geometry. " alt="" coords="323,5,431,32"/>
+<area shape="rect" id="node4" href="$class_s_m_l_1_1_oblate_spheroid.html" title="Oblate spheroid geometry. " alt="" coords="479,5,625,32"/>
+</map>
