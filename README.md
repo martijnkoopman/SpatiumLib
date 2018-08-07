@@ -91,9 +91,11 @@ We compute the slope (a) and y-intercept (b) as follows:
 
   // Compute x
   Math::Vector x = (A.transposed() * A).inverse() * A.transposed() * b;
-  double slope = x(0);
-  double yIntercept = x(1);  
+  double slope = x(0);       // -0.48
+  double yIntercept = x(1);  // 20.6
 ```
+
+Example from: https://ltcconline.net/greenl/courses/203/MatrixOnVectors/leastSquares.htm
 
 ## License
 This library is licensed under the GNU General Public License 3.0 - see the [LICENSE.md](LICENSE.md) file for details.
