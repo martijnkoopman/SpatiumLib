@@ -79,20 +79,21 @@ and want to fit a line through these points.
 
 We compute the slope (a) and y-intercept (b) as follows:
 ```
-  // Create matrix with coefficients of line equation
-  Math::Matrix A =
-  { {2,  1},
-    {6,  1},
-    {20, 1},
-    {30, 1},
-    {40, 1} };
+// Create matrix with coefficients of line equation
+Math::Matrix A =
+{ {2,  1},
+  {6,  1},
+  {20, 1},
+  {30, 1},
+  {40, 1} };
 
-  Math::Vector b = { 20, 18, 10, 6, 2 };
+Math::Vector b = { 20, 18, 10, 6, 2 };
 
-  // Compute x
-  Math::Vector x = (A.transposed() * A).inverse() * A.transposed() * b;
-  double slope = x(0);       // -0.48
-  double yIntercept = x(1);  // 20.6
+// Compute x
+Math::Vector x = (A.transposed() * A).inverse() * A.transposed() * b;
+
+double slope = x(0);       // -0.48
+double yIntercept = x(1);  // 20.6
 ```
 
 Example from: https://ltcconline.net/greenl/courses/203/MatrixOnVectors/leastSquares.htm
