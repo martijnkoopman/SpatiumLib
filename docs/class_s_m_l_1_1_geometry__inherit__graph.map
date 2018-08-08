@@ -1,7 +1,0 @@
-<map id="SML::Geometry" name="SML::Geometry">
-<area shape="rect" id="node2" href="$class_s_m_l_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="25,80,132,107"/>
-<area shape="rect" id="node5" href="$class_s_m_l_1_1_plane.html" title="Plane geometry. " alt="" coords="156,80,247,107"/>
-<area shape="rect" id="node6" href="$class_s_m_l_1_1_sphere.html" title="Sphere geometry. " alt="" coords="271,80,369,107"/>
-<area shape="rect" id="node3" href="$class_s_m_l_1_1_spheroid.html" title="Spheroid geometry. " alt="" coords="25,155,133,181"/>
-<area shape="rect" id="node4" href="$class_s_m_l_1_1_oblate_spheroid.html" title="Oblate spheroid geometry. " alt="" coords="5,229,152,256"/>
-</map>

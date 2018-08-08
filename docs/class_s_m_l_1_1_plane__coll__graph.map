@@ -1,6 +1,0 @@
-<map id="SML::Plane" name="SML::Plane">
-<area shape="rect" id="node2" href="$class_s_m_l_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,81,120,108"/>
-<area shape="rect" id="node3" href="$class_s_m_l_1_1_point3.html" title="Point in 3D space. " alt="" coords="145,81,239,108"/>
-<area shape="rect" id="node4" href="$class_s_m_l_1_1_matrix.html" title="Matrix. " alt="" coords="217,5,311,32"/>
-<area shape="rect" id="node5" href="$class_s_m_l_1_1_vector3.html" title="Vector in 3D space. " alt="" coords="263,81,366,108"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="SML::OblateSpheroid" name="SML::OblateSpheroid">
-<area shape="rect" id="node2" href="$class_s_m_l_1_1_spheroid.html" title="Spheroid geometry. " alt="" coords="81,276,189,303"/>
-<area shape="rect" id="node3" href="$class_s_m_l_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="81,200,188,227"/>
-<area shape="rect" id="node4" href="$class_s_m_l_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,81,120,108"/>
-<area shape="rect" id="node5" href="$class_s_m_l_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="144,81,259,108"/>
-<area shape="rect" id="node6" href="$class_s_m_l_1_1_matrix.html" title="Matrix. " alt="" coords="231,5,324,32"/>
-<area shape="rect" id="node7" href="$class_s_m_l_1_1_point3.html" title="Point in 3D space. " alt="" coords="283,81,378,108"/>
-</map>

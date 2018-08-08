@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['scaling',['scaling',['../class_math_1_1_geometry_1_1_matrix4x4.html#ae346b2ceb90a8ac1673ca33cf0355244',1,'Math::Geometry::Matrix4x4']]],
+  ['solvequadratic',['solveQuadratic',['../namespace_math.html#abd9c3963a6b91147db66df873a61b346',1,'Math']]],
+  ['sphere',['Sphere',['../class_math_1_1_geometry_1_1_sphere.html',1,'Math::Geometry::Sphere'],['../class_math_1_1_geometry_1_1_sphere.html#a9efed184eb46db01bdea89d5348a9146',1,'Math::Geometry::Sphere::Sphere(const Point3 &amp;origin, double radius)'],['../class_math_1_1_geometry_1_1_sphere.html#a7eceba94506dbea9f234b7155b116506',1,'Math::Geometry::Sphere::Sphere(double radius)'],['../class_math_1_1_geometry_1_1_sphere.html#aabc01bff839d68a5d7d5716e945c3bb5',1,'Math::Geometry::Sphere::Sphere(const Sphere &amp;other)=default']]],
+  ['sphere_2eh',['Sphere.h',['../_sphere_8h.html',1,'']]],
+  ['sphericaltocartesiancoordinates',['sphericalToCartesianCoordinates',['../class_math_1_1_geometry_1_1_sphere.html#a26e22326b2f0a0b7ae94a0e1f0a6147d',1,'Math::Geometry::Sphere']]],
+  ['spheroid',['Spheroid',['../class_math_1_1_geometry_1_1_spheroid.html',1,'Math::Geometry::Spheroid'],['../class_math_1_1_geometry_1_1_spheroid.html#a7da0729be12319e766fc3ab2e49450d9',1,'Math::Geometry::Spheroid::Spheroid(const Point3 &amp;origin, double axisXY, double axisZ)'],['../class_math_1_1_geometry_1_1_spheroid.html#a8d28b1c14b4de97ab735d4f66f0d4b1f',1,'Math::Geometry::Spheroid::Spheroid(double axisXY, double axisZ)'],['../class_math_1_1_geometry_1_1_spheroid.html#a765475c0215e309628be4ed939f325cd',1,'Math::Geometry::Spheroid::Spheroid(const Spheroid &amp;other)=default']]],
+  ['spheroid_2eh',['Spheroid.h',['../_spheroid_8h.html',1,'']]],
+  ['spheroidaltocartesiancoordinates',['spheroidalToCartesianCoordinates',['../class_math_1_1_geometry_1_1_oblate_spheroid.html#afcfb1ec99cf11613db9bef99a8075cf4',1,'Math::Geometry::OblateSpheroid::spheroidalToCartesianCoordinates(double longitude, double latitude, double height) const'],['../class_math_1_1_geometry_1_1_oblate_spheroid.html#ae81701db9b263c8b74af5ab2ca61b989',1,'Math::Geometry::OblateSpheroid::spheroidalToCartesianCoordinates(GeoPoint3 geoPoint) const']]],
+  ['surfacenormal',['surfaceNormal',['../class_math_1_1_geometry_1_1_ellipsoid.html#ac20143e6bb0f0dc91ca91e87e92f57a4',1,'Math::Geometry::Ellipsoid::surfaceNormal()'],['../class_math_1_1_geometry_1_1_sphere.html#a34bc24592d52cc5a6b58f79c76695290',1,'Math::Geometry::Sphere::surfaceNormal()']]]
+];
