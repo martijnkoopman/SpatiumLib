@@ -5,7 +5,7 @@ This library is being developed for the application [Spatium 3D ](http://spatium
 
 ## Content
 
-### Check out the [Class References page](https://martijnkoopman.github.io/SpatiumLib/).
+### Check out the [Class References page](https://martijnkoopman.github.io/SpatiumLib/html/inherits.html).
 
 Matrix classes:
 * Matrix
