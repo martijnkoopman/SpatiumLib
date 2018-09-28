@@ -28,6 +28,62 @@ Then *#include* the desired header files.
 
 ## Examples
 
+### Construct a Matrix
+Method 1: Explicit
+```
+Math::Matrix matrix(2, 2);
+matrix1(0,0) = 1;
+matrix1(0,1) = 2;
+matrix1(1,0) = 3;
+matrix1(1,1) = 4;
+```
+
+Method2: Constructor with initalizer list
+```
+Math::Matrix matrix({{1, 2}, {3, 4});
+```
+
+Method 3: Constructor with initalizer list + assignment
+```
+Math::Matrix matrix = {{1, 2}, {3, 4}};
+```
+
+
+### Implicit conversion
+```
+Math::Matrix matrix(4, 1);
+matrix(0,0) = 1;
+matrix(1,0) = 2;
+matrix(2,0) = 3;
+
+Math::Vector3 vector = matrix;
+```
+
+### Exception handling
+A std::out_of_bounds exception can be thrown in many situations.
+```
+Math::Matrix matrix = {
+  {3  , 3.2, 3},
+  {3.5, 3.6, 3}
+};
+
+try {
+  double val = matrix(1, 3);
+}
+catch(std::out_of_range e)
+{
+  // Column range is 0 - 2 (3 is out of bounds)
+}
+
+try {
+  Matrix inv = matrix.inverse();
+}
+catch(std::out_of_range e)
+{
+  // Matrix has no inverse
+}
+```
+
 ### Transform a point
 TODO
 
