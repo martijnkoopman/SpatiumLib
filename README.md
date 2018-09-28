@@ -38,12 +38,12 @@ matrix1(1,0) = 3;
 matrix1(1,1) = 4;
 ```
 
-Method2: Constructor with initalizer list
+Method2: With initalizer list
 ```
 Math::Matrix matrix({{1, 2}, {3, 4});
 ```
 
-Method 3: Constructor with initalizer list + assignment
+Method 3: With initalizer list + assignment
 ```
 Math::Matrix matrix = {{1, 2}, {3, 4}};
 ```
