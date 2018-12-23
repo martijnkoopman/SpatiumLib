@@ -88,6 +88,7 @@ public:
   Matrix& operator=(Matrix other)
   {
     // Exception safe assignment operator
+    // Note: other passed as copy, not by reference.
     std::swap(m_rows, other.m_rows);
     std::swap(m_cols, other.m_cols);
     std::swap(m_data, other.m_data);
