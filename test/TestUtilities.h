@@ -5,151 +5,167 @@
 
 #include <functional>
 
+// To read a pixel value from an QImage
+template<typename T, int N>
+struct ValueReader
+{
+};
+
+// To READ a pixel value from an QImage.
+// The input value has always 1 CHANNEL using using this template.
+template<typename T>
+struct ValueReader<T, 1>
+{
+  static std::array<T, 1> pixelValue(int gray) { return { static_cast<T>(gray) }; }
+  static std::array<T, 1> pixelValue(int red, int green, int blue) { return { static_cast<T>(red) * 0.2125 + static_cast<T>(green) * 0.7154 + static_cast<T>(blue) * 0.072 }; }
+  static std::array<T, 1> pixelValue(int red, int green, int blue, int) { return { static_cast<T>(red * 0.2125) + static_cast<T>(green * 0.7154) + static_cast<T>(blue * 0.0721) }; }
+};
+
+// To READ a pixel value from an QImage.
+// The input value has always 3 CHANNELS using using this template.
+template<typename T>
+struct ValueReader<T, 3>
+{
+  static std::array<T, 3> pixelValue(int gray) { return std::array<T, 3> { static_cast<T>(gray), static_cast<T>(gray), static_cast<T>(gray) }; }
+  static std::array<T, 3> pixelValue(int red, int green, int blue) { return std::array<T, 3> { static_cast<T>(red), static_cast<T>(green), static_cast<T>(blue) }; }
+  static std::array<T, 3> pixelValue(int red, int green, int blue, int) { return std::array<T, 3> { static_cast<T>(red), static_cast<T>(green), static_cast<T>(blue) }; }
+};
+
+// To READ a pixel value from an QImage.
+// The input value has always 4 CHANNELS using using this template.
+template<typename T>
+struct ValueReader<T, 4>
+{
+  static std::array<T, 4> pixelValue(int gray) { return std::array<T, 4> { static_cast<T>(gray), static_cast<T>(gray), static_cast<T>(gray), 255 }; }
+  static std::array<T, 4> pixelValue(int red, int green, int blue) { return std::array<T, 4> { static_cast<T>(red), static_cast<T>(green), static_cast<T>(blue), 255 }; }
+  static std::array<T, 4> pixelValue(int red, int green, int blue, int alpha) { return std::array<T, 4> { static_cast<T>(red), static_cast<T>(green), static_cast<T>(blue), static_cast<T>(alpha) }; }
+};
+
+// To write a pixel value to an QImage
+template<typename T, int N>
+struct ValueWriter
+{
+};
+
+// To WRITE a pixel value to an QImage
+// The input value has always 1 CHANNEL using using this template.
+template<typename T>
+struct ValueWriter<T, 1>
+{
+  static uint pixelValue(std::array<T, 1> gray) { return gray[0]; }
+};
+
+// To WRITE a pixel value to an QImage
+// The input value has always 3 CHANNELS using using this template.
+template<typename T>
+struct ValueWriter<T, 3>
+{
+  static uint pixelValue(std::array<T, 3> rgb) { return qRgb(rgb[0], rgb[1], rgb[2]); }
+};
+
+// To WRITE a pixel value to an QImage
+// The input value has always 4 CHANNELS using using this template.
+template<typename T>
+struct ValueWriter<T, 4>
+{
+  static uint pixelValue(std::array<T, 4> rgba) { return qRgba(rgba[0], rgba[1], rgba[2], rgba[3]); }
+};
+
 class TestUtilities
 {
 public:
- static bool ReadImageFromFile(const QString &fileName, Imaging::Image &image);
- static bool WriteImageToFile(const QString &fileName, const Imaging::Image &image);
+
+  // Read an image from file
+  template<typename T, int N>
+  static bool ReadImageFromFile(const QString &fileName, Imaging::Image<T, N> &image)
+  {
+    // Read QImage from file
+    QImage input(fileName);
+    if (input.isNull())
+    {
+      return false;
+    }
+
+    image.resize(input.width(), input.height());
+
+    for (int y = 0; y < image.height(); y++)
+    {
+      for (int x = 0; x < image.width(); x++)
+      {
+        if (input.format() == QImage::Format_Grayscale8)
+        {
+          int gray = qGray(input.pixel(x,y));
+          std::array<T, N> val = ValueReader<T, N>::pixelValue(gray);
+          image.setPixel(x, y, val);
+        }
+        else if(input.format() == QImage::Format_RGB32)
+        {
+          QRgb rgb = input.pixel(x, y);
+          std::array<T, N> val = ValueReader<T, N>::pixelValue(qRed(rgb), qGreen(rgb), qBlue(rgb));
+          image.setPixel(x, y, val);
+        }
+        else if(input.format() == QImage::Format_ARGB32)
+        {
+          QRgb rgba = input.pixel(x, y);
+          std::array<T, N> val = ValueReader<T, N>::pixelValue(qRed(rgba), qGreen(rgba), qBlue(rgba), qAlpha(rgba));
+          image.setPixel(x, y, val);
+        }
+        else
+        {
+          return false;
+        }
+      }
+    }
+
+    return true;
+  }
+
+  // Write an image to file
+  template<class T, int N>
+  static bool WriteImageToFile(const QString &fileName, const Imaging::Image<T, N> &image)
+  {
+    // Determine output image format
+    QImage::Format format;
+    if (N == 1)
+    {
+      format = QImage::Format_Grayscale8;
+    }
+    else if(N == 3) {
+      format = QImage::Format_RGB32;
+    }
+    else if(N == 4) {
+      format = QImage::Format_ARGB32;
+    }
+    else {
+      return false;
+    }
+
+    // Create output image
+    QImage outputImage(image.width(), image.height(), format);
+
+    // Set pixel values
+    for (int y = 0; y < outputImage.height(); y++)
+    {
+      for (int x = 0; x < outputImage.width(); x++)
+      {
+        std::array<T, N> val = image.getPixel(x,y);
+
+        if (format == QImage::Format_Grayscale8)
+        {
+          uint grayColor = ValueWriter<T, N>::pixelValue(val);
+          outputImage.setPixelColor(x, y, QColor(grayColor, grayColor, grayColor));
+        }
+        else
+        {
+          outputImage.setPixel(x, y, ValueWriter<T, N>::pixelValue(val));
+        }
+      }
+    }
+
+    // Save output image
+    return outputImage.save(fileName);
+  }
 
 private:
-  TestUtilities();
+  TestUtilities() = delete;
 };
-
-bool TestUtilities::ReadImageFromFile(const QString &fileName, Imaging::Image &image)
-{
-  // Read QImage from file
-  QImage inputImage(fileName);
-  if (inputImage.isNull())
-  {
-    return false;
-  }
-
-  // Determine image format + copy-value function
-  Imaging::Image::Format format;
-  std::function<void(const QImage&, Imaging::Image&, int, int)> copyValue;
-
-  switch (inputImage.format())
-  {
-  case QImage::Format_Grayscale8:
-    // Set image format
-    format = Imaging::Image::Format_Grayscale8;
-
-    // Set copy-value function
-    copyValue = [&](const QImage &input, Imaging::Image &output, int x, int y) {
-      output.imageData()[y * output.width() + x] = qGray(input.pixel(x,y));
-    };
-
-    break;
-  case QImage::Format_RGB32:
-    // Set image format
-    format = Imaging::Image::Format_RGB32;
-
-    // Set copy-value function
-    copyValue = [&](const QImage &input, Imaging::Image &output, int x, int y) {
-      Imaging::Color32bppRgb *colorRgb = reinterpret_cast<Imaging::Color32bppRgb *>(
-        output.imageData()) + ((y * output.width()) + x);
-      QRgb rgb = input.pixel(x, y);
-      colorRgb->red = qRed(rgb);
-      colorRgb->green = qGreen(rgb);
-      colorRgb->blue = qBlue(rgb);
-      colorRgb->unused = 0xFF;
-    };
-
-    break;
-  case QImage::Format_ARGB32:
-    // Set image format
-    format = Imaging::Image::Format_RGBA32;
-
-    // Set copy-value function
-    copyValue = [&](const QImage &input, Imaging::Image &output, int x, int y) {
-      Imaging::Color32bppRgba *colorRgba = reinterpret_cast<Imaging::Color32bppRgba *>(
-        output.imageData()) + ((y * output.width()) + x);
-      QRgb rgb = input.pixel(x, y);
-      colorRgba->red = qRed(rgb);
-      colorRgba->green = qGreen(rgb);
-      colorRgba->blue = qBlue(rgb);
-      colorRgba->alpha = qAlpha(rgb);
-    };
-
-    break;
-  default:
-    return false;
-  }
-
-  // Create Imaging::Image
-  Imaging::Image outputImage(inputImage.width(), inputImage.height(), format);
-
-  // Set pixel values
-  for (int y = 0; y < outputImage.height(); y++)
-  {
-    for (int x = 0; x < outputImage.width(); x++)
-    {
-      copyValue(inputImage, outputImage, x, y);
-    }
-  }
-
-  image = outputImage;
-  return true;
-}
-
-bool TestUtilities::WriteImageToFile(const QString &fileName, const Imaging::Image &image)
-{
-  // Determine image format + copy-value function
-  QImage::Format format;
-  std::function<void(const Imaging::Image&, QImage&, int, int)> copyValue;
-
-  switch (image.format())
-  {
-  case Imaging::Image::Format_Grayscale8:
-    // Set format
-    format = QImage::Format_Grayscale8;
-
-    // Set copy-value function
-    copyValue = [&](const Imaging::Image &input, QImage &output, int x, int y) {
-      unsigned char val = input.imageData()[y * input.width() + x];
-      output.setPixel(x, y, qGray(val, val, val));
-    };
-
-    break;
-  case Imaging::Image::Format_RGB32:
-    // Set format
-    format = QImage::Format_RGB32;
-
-    // Set copy-value function
-    copyValue = [&](const Imaging::Image &input, QImage &output, int x, int y) {
-      Imaging::Color32bppRgb *color = reinterpret_cast<Imaging::Color32bppRgb *>(
-         input.imageData()) + y * input.width() + x;
-      output.setPixel(x, y, qRgb(color->red, color->green, color->blue));
-    };
-
-    break;
-  case Imaging::Image::Format_RGBA32:
-    // Set format
-    format = QImage::Format_ARGB32;
-
-    // Set copy-value function
-    copyValue = [&](const Imaging::Image &input, QImage &output, int x, int y) {
-      Imaging::Color32bppRgba *color = reinterpret_cast<Imaging::Color32bppRgba *>(
-         input.imageData()) + y * input.width() + x;
-      output.setPixel(x, y, qRgba(color->red, color->green, color->blue, color->alpha));
-    };
-
-    break;
-  default:
-    return false;
-  }
-
-  QImage outputImage(image.width(), image.height(), format);
-
-  // Set pixel values
-  for (int y = 0; y < outputImage.height(); y++)
-  {
-    for (int x = 0; x < outputImage.width(); x++)
-    {
-      copyValue(image, outputImage, x, y);
-    }
-  }
-
-  // Save output image
-  return outputImage.save(fileName);
-}

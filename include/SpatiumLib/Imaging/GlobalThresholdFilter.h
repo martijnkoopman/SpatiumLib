@@ -18,12 +18,13 @@
 
 namespace Imaging {
 
+template<typename T>
 class GlobalThresholdFilter : public IImageFilter
 {
 public:
-  GlobalThresholdFilter(unsigned char thesholdValue = 127, bool invert = false)
+  GlobalThresholdFilter(T thesholdValue = 0, T newValue = 255)
     : m_thresholdValue(thesholdValue)
-    , m_invert(invert)
+    , m_newValue(newValue)
   {}
 
   // Copy constructor
@@ -38,7 +39,7 @@ public:
   /// Get threshold value.
   ///
   /// \return Threshold value
-  unsigned char thresholdValue() const
+  T thresholdValue() const
   {
     return m_thresholdValue;
   }
@@ -46,90 +47,64 @@ public:
   /// Set threshold value.
   ///
   /// \param[in] value Threshold value
-  void setThresholdValue(unsigned char value)
+  void setThresholdValue(T value)
   {
     m_thresholdValue = value;
   }
 
-  /// Get invert thresholding
-  ///
-  /// \return Invert thresholding
-  bool invert() const
+  template<int N>
+  bool apply(const Image<T, N> &input, Image<T, 1> &output)
   {
-    return m_invert;
-  }
-
-  /// Set invert thresholding
-  ///
-  /// \param[in] invert Invert thresholding
-  void setInvert(bool invert)
-  {
-    m_invert = invert;
-  }
-
-  // Protected functions
-
-  std::vector<Image::Format> supportedInputFormats() const override
-  {
-    return std::vector<Image::Format>{
-      Image::Format_Grayscale8, Image::Format_RGB24,
-      Image::Format_RGB32, Image::Format_RGBA32 };
-  }
-
-  Image::Format outputFormat() const override
-  {
-    return Image::Format_Grayscale8;
-  }
-
-  bool apply(const Image &input, Image &output) const override
-  {
-    return false;
-  }
-
-  bool apply(Image &image) const override
-  {
-    std::function<unsigned char(Image&, size_t)> getValue;
-    std::function<void(Image&, size_t, unsigned char)> setValue;
-    switch(image.format())
+    for (int y = 0; y < input.height(); y++)
     {
-      case Image::Format_Grayscale8:
-        getValue = [&](Image &image, size_t i) -> unsigned char { return image.imageData()[i]; };
-        setValue = [&](Image &image, size_t i, unsigned char value) { image.imageData()[i] = value; };
-      break;
-      case Image::Format_RGB24:
-        getValue = [&](Image &image, size_t i) -> unsigned char { return image.imageData()[i * 3]; };
-        setValue = [&](Image &image, size_t i, unsigned char value) {
-          image.imageData()[i * 3] = value;
-          image.imageData()[i * 3 + 1] = value;
-          image.imageData()[i * 3 + 2] = value;
-        };
-      break;
-    case Image::Format_RGB32:
-    case Image::Format_RGBA32:
-      getValue = [&](Image &image, size_t i) -> unsigned char { return image.imageData()[i * 4]; };
-      setValue = [&](Image &image, size_t i, unsigned char value) {
-        image.imageData()[i * 4] = value;
-        image.imageData()[i * 4 + 1] = value;
-        image.imageData()[i * 4 + 2] = value;
-      };
-    break;
-      default:
-        return false;
+      for (int x = 0; x < input.width(); x++)
+      {
+        //std::array<T, N> pixel = input.getPixel();
+        //T value = pixelValue(pixel);
+        //if (value > m_thresholdValue)
+        //{
+        //  output.setPixel(x, y, { m_newValue });
+        //}
+      }
     }
+  }
 
-    unsigned char newValue;
-    for (size_t i = 0; i < image.width() * image.height(); i++)
-    {
-      newValue = (getValue(image, i) > m_thresholdValue ? 255 : 0);
-      setValue(image, i, newValue);
-    }
+//  bool apply(Image<T, 1> &inoutput)
+//  {
+//    for (int y = 0; y < inoutput.height(); y++)
+//    {
+//      for (int x = 0; x < inoutput.width(); x++)
+//      {
+//        T value = pixelValue(inoutput.getPixel());
+//        if (value > m_thresholdValue)
+//        {
+//          inoutput.setPixel(x, y, m_newValue);
+//        }
+//      }
+//    }
+//  }
 
-    return true;
+protected:
+
+  T pixelValue(const std::array<T, 1> &pixel)
+  {
+    return pixel[0];
+  }
+
+  T pixelValue(const std::array<T, 3> &pixel)
+  {
+    return pixel[0] * 0.2125 + pixel[1] * 0.7154 + pixel[2] * 0.0721;
+  }
+
+  T pixelValue(const std::array<T, 4> &pixel)
+  {
+    return pixel[0] * 0.2125 + pixel[1] * 0.7154 + pixel[2] * 0.0721;
+    // pixel[3] is unused (alpha value probaly)
   }
 
 private:
-  unsigned char m_thresholdValue;
-  bool m_invert;
+  T m_thresholdValue;
+  T m_newValue;
 };
 
 } // namespace Imaging

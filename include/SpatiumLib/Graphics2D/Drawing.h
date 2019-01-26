@@ -23,17 +23,20 @@ class Drawing
 {
 public:
 
-  void drawCircle(const Point &center, int radius, bool fill, unsigned value, Imaging::Image &image)
+  template<typename T, int N>
+  void drawCircle(const Point &center, int radius, bool fill, T value[N], Imaging::Image<T, N> &image)
   {
     //
   }
 
-  void drawLine(const Point &start, const Point &end, unsigned value, Imaging::Image &image)
+  template<typename T, int N>
+  void drawLine(const Point &start, const Point &end, T value[N], Imaging::Image<T, N> &image)
   {
     //
   }
 
-  void drawRectangle(const Point &start, const Point &end, unsigned value, Imaging::Image &image)
+  template<typename T, int N>
+  void drawRectangle(const Point &start, const Point &end, T value[N], Imaging::Image<T, N> &image)
   {
 
   }
