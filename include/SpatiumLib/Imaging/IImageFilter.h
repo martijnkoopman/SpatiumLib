@@ -27,10 +27,10 @@ class IImageFilter
 public:
   // Destructor
   virtual ~IImageFilter() = default;
-  /*
 
-  /// Run filter with input and output image.
-  bool run(const Image &input, Image &output) const
+  // Apply filter
+  template<typename T, int N>
+  bool apply(const Image<T, N> &input, Image<T, 1> &output)
   {
     // Check image size equal
     if (input.width() != output.width() || input.height() != output.height())
@@ -41,31 +41,12 @@ public:
     return apply(input, output);
   }
 
-  bool runInPlace(Image &image) const
+  // Apply filter in place
+  template<typename T, int N>
+  bool apply(Image<T, N> &inoutput)
   {
-    // Check input format supported
-    std::vector<Image::Format> formats = supportedInputFormats();
-    if (std::find(std::begin(formats),
-                  std::end(formats),
-                  image.format()) != std::end(formats))
-    {
-      return false;
-    }
-
-    // Check output format supported
-    if (image.format() != outputFormat())
-    {
-      return false;
-    }
-
-    return apply(image);
+    return apply(inoutput);
   }
-
-protected:
-  virtual bool apply(const Image &input, Image &output) const = 0;
-  virtual bool apply(Image &image) const = 0;
-
-*/
 };
 
 } // namespace Imaging

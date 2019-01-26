@@ -19,12 +19,11 @@
 namespace Imaging {
 
 template<typename T>
-class GlobalThresholdFilter : public IImageFilter
+class GlobalThresholdFilter
 {
 public:
-  GlobalThresholdFilter(T thesholdValue = 0, T newValue = 255)
+  GlobalThresholdFilter(T thesholdValue = 0)
     : m_thresholdValue(thesholdValue)
-    , m_newValue(newValue)
   {}
 
   // Copy constructor
@@ -34,7 +33,7 @@ public:
   GlobalThresholdFilter& operator=(const GlobalThresholdFilter &rhs) = default;
 
   // Destuctor
-  virtual ~GlobalThresholdFilter() override = default;
+  virtual ~GlobalThresholdFilter() = default;
 
   /// Get threshold value.
   ///
@@ -52,59 +51,58 @@ public:
     m_thresholdValue = value;
   }
 
+  // Apply filter
   template<int N>
   bool apply(const Image<T, N> &input, Image<T, 1> &output)
   {
+    T newValue = std::numeric_limits<T>::max();
+
     for (int y = 0; y < input.height(); y++)
     {
       for (int x = 0; x < input.width(); x++)
       {
-        //std::array<T, N> pixel = input.getPixel();
-        //T value = pixelValue(pixel);
-        //if (value > m_thresholdValue)
-        //{
-        //  output.setPixel(x, y, { m_newValue });
-        //}
+        std::array<T, N> pixel = input.getPixel(x, y);
+        T value = Imaging::PixelValue<T, 1>::value(pixel)[0];
+        if (value > m_thresholdValue)
+        {
+          output.setPixel(x, y, { newValue });
+        }
+        else {
+          output.setPixel(x, y, { 0 });
+        }
       }
     }
+
+    return true;
   }
 
-//  bool apply(Image<T, 1> &inoutput)
-//  {
-//    for (int y = 0; y < inoutput.height(); y++)
-//    {
-//      for (int x = 0; x < inoutput.width(); x++)
-//      {
-//        T value = pixelValue(inoutput.getPixel());
-//        if (value > m_thresholdValue)
-//        {
-//          inoutput.setPixel(x, y, m_newValue);
-//        }
-//      }
-//    }
-//  }
-
-protected:
-
-  T pixelValue(const std::array<T, 1> &pixel)
+  // Apply in place
+  bool apply(Image<T, 1> &inoutput)
   {
-    return pixel[0];
+    T newValue = std::numeric_limits<T>::max();
+
+    for (int y = 0; y < inoutput.height(); y++)
+    {
+      for (int x = 0; x < inoutput.width(); x++)
+      {
+        std::array<T, 1> pixel = inoutput.getPixel(x, y);
+        T value = pixel[0];
+        if (value > m_thresholdValue)
+        {
+          inoutput.setPixel(x, y, { newValue });
+        }
+        else {
+          inoutput.setPixel(x, y, { 0 });
+        }
+      }
+    }
+
+    return true;
   }
 
-  T pixelValue(const std::array<T, 3> &pixel)
-  {
-    return pixel[0] * 0.2125 + pixel[1] * 0.7154 + pixel[2] * 0.0721;
-  }
-
-  T pixelValue(const std::array<T, 4> &pixel)
-  {
-    return pixel[0] * 0.2125 + pixel[1] * 0.7154 + pixel[2] * 0.0721;
-    // pixel[3] is unused (alpha value probaly)
-  }
 
 private:
   T m_thresholdValue;
-  T m_newValue;
 };
 
 } // namespace Imaging

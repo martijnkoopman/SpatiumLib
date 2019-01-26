@@ -1,4 +1,5 @@
 #include <QtTest>
+#include "TestUtilities.h"
 
 #include <SpatiumLib/Imaging/Image.h>
 

@@ -13,10 +13,96 @@
 #ifndef SPATIUMLIB_IMAGE_H
 #define SPATIUMLIB_IMAGE_H
 
+#include <limits> // numeric_limits
 #include <cstring> // memcpy, memset
 #include <memory> // shared_ptr
 
 namespace Imaging {
+
+//template<typename T, int N1, int N2>
+//inline std::array<T, N2> pixelValue(const std::array<T, N1> &input)
+//{
+//}
+
+// These conversion functions are embedded in structs because otherwise
+// their call is ambiguous: same arguments, different return type
+
+template<typename T, int N>
+struct PixelValue
+{
+};
+
+template<typename T>
+struct PixelValue<T, 1>
+{
+  static std::array<T, 1> value(const std::array<T, 1> &input)
+  {
+    // No conversion
+    return input;
+  }
+
+  // Convert 3 channel pixel value to 1 channel
+  static std::array<T, 1> value(const std::array<T, 3> &input)
+  {
+    // Convert 3 channel RGB to 1 channel Grayscale
+    return { input[0] * 0.2125 + input[1] * 0.7154 + input[2] * 0.0721 };
+  }
+
+  // Convert 4 channel pixel value to 1 channel
+  static std::array<T, 1> pixelValue(const std::array<T, 4> &input)
+  {
+    // Convert 4 channel RGBA to grayscale by luminosity (BT.709) (Alpha is ignored)
+    return { input[0] * 0.2125 + input[1] * 0.7154 + input[2] * 0.0721 };
+  }
+};
+
+template<typename T>
+struct PixelValue<T, 3>
+{
+  // Convert 1 channel pixel value to 3 channel
+  static std::array<T, 3> pixelValue(const std::array<T, 1> &input)
+  {
+    // Convert 1 channel Grayscale to 3 channel RGB
+    return { input[0], input[0], input[1] };
+  }
+
+  static std::array<T, 3> value(const std::array<T, 3> &input)
+  {
+    // No conversion
+    return input;
+  }
+
+  // Convert a 4 channel pixel value to 3 channel
+  static std::array<T, 3> pixelValue(const std::array<T, 4> &input)
+  {
+    // Convert 4 channel RGBA to 3 channel RGB (Alpha is ignored)
+    return { input[0], input[1], input[2] };
+  }
+};
+
+template<typename T>
+struct PixelValue<T, 4>
+{
+  // Convert a 1 channel pixel value to 4 channel
+  static std::array<T, 4> pixelValue(const std::array<T, 1> &input)
+  {
+    // Convert 1 channel Grayscale to 4 channel RGBA. (Alpha is full opaque)
+    return { input[0], input[0], input[0], std::numeric_limits<T>::max() };
+  }
+
+  // Convert a 3 channel pixel value to 4 channel
+  static std::array<T, 4> pixelValue(const std::array<T, 3> &input)
+  {
+    // Convert 3 channel RGB to 4 channel RGBA. (Alpha is full opaque)
+    return { input[0], input[1], input[2], std::numeric_limits<T>::max() };
+  }
+
+  static std::array<T, 4> value(const std::array<T, 4> &input)
+  {
+    // No conversion
+    return input;
+  }
+};
 
 /// \class Image
 /// \brief Templated image container

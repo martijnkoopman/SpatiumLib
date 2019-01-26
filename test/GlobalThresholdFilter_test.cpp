@@ -33,19 +33,31 @@ GlobalThresholdFilter_test::~GlobalThresholdFilter_test()
 
 void GlobalThresholdFilter_test::test_apply()
 {
-  // Read image from file
-  Imaging::Image<unsigned char, 3> image;
-  TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna.png", image);
-//QVERIFY(
+  // Read ground truth image for verification
+  Imaging::Image<unsigned char, 1> groundtruth;
+  QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/threshold.png", groundtruth));
 
-  //Imaging::GlobalThresholdFilter<unsigned char> filter(170, 255);
-  //Imaging::Image<unsigned char, 1> result(image.width(), image.height());
-  //QVERIFY(filter.apply(image, result));
+  // Read input image from file
+  Imaging::Image<unsigned char, 1> input;
+  TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input);
 
-  // Save output image
-  //QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna2.png", image));
+  Imaging::GlobalThresholdFilter<unsigned char> filter(127);
+
+  // Apply in another image
+  Imaging::Image<unsigned char, 1> output(input.width(), input.height());
+  QVERIFY(filter.apply(input, output));
+
+  // Verify output image
+  //QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/threshold.png", output));
+  QVERIFY(output == groundtruth);
+
+  // Apply in input image
+  QVERIFY(filter.apply(input));
+
+  // Verify output image
+  //QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/threshold.png", input));
+  QVERIFY(input == groundtruth);
 }
-
 
 QTEST_APPLESS_MAIN(GlobalThresholdFilter_test)
 
