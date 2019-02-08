@@ -10,8 +10,8 @@
  *
  */
 
-#ifndef VECTOR_H
-#define VECTOR_H
+#ifndef SPATIUMLIB_VECTOR_H
+#define SPATIUMLIB_VECTOR_H
 
 #include "SpatiumLib/Math/Matrix.h"
 
@@ -221,4 +221,4 @@ private:
 
 } // namespace Math
 
-#endif // VECTOR_H
+#endif // SPATIUMLIB_VECTOR_H

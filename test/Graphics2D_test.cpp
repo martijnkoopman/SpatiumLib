@@ -3,6 +3,7 @@
 
 #include <SpatiumLib/Imaging/Image.h>
 #include <SpatiumLib/Graphics2D/Drawing.h>
+#include <SpatiumLib/Graphics2D/BezierCurve.h>
 
 class Graphics2D_test : public QObject
 {
@@ -16,6 +17,10 @@ private slots:
   void test_drawLine();
   void test_drawCircle();
   void test_drawRectangle();
+
+  void test_drawLinearCurve();
+  void test_drawQuadraticCurve();
+  void test_drawCubicCurve();
 
 private:
 };
@@ -90,6 +95,28 @@ void Graphics2D_test::test_drawRectangle()
   // Compare output with input
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/rectangle_fill.png", groundtruth));
   QVERIFY(image == groundtruth);
+}
+
+void Graphics2D_test::test_drawLinearCurve()
+{
+  std::vector<std::array<int, 2>> controlPoints;
+  controlPoints.push_back({10, 10});
+  controlPoints.push_back({30, 30});
+  Graphics2D::BezierCurve linear(controlPoints);
+
+  Imaging::Image<unsigned char, 3> image(50, 30);
+
+  //Graphics2D::Drawing::drawCurve(image, linear, {255, 0, 0});
+}
+
+void Graphics2D_test::test_drawQuadraticCurve()
+{
+
+}
+
+void Graphics2D_test::test_drawCubicCurve()
+{
+
 }
 
 QTEST_APPLESS_MAIN(Graphics2D_test)
