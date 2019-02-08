@@ -13,14 +13,30 @@
 #ifndef SPATIUM_STATISTICS_H
 #define SPATIUM_STATISTICS_H
 
+#include <SpatiumLib/Math/Vector.h>
+
 namespace Math {
 
-inline double mean(const double &values)
+/// Calculate mean value
+///
+/// \param[in] values Values vector
+/// \return Mean value
+inline double mean(const Vector &values)
 {
+  double result = 0;
 
-    return 0;
+  unsigned count = values.rows();
+  const double divider = 1 / count;
+  for (unsigned i = 0; i < count; i++)
+  {
+    result += values(i) * divider;
+  }
+
+  return result;
 }
+
+/// \todo variance, standard deviation, covariance matrix
 
 } // namespace Math
 
-#endif // MATH_H
+#endif // SPATIUM_STATISTICS_H

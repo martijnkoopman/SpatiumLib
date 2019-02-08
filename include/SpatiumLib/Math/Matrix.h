@@ -10,11 +10,13 @@
  *
  */
 
-#ifndef MATRIX_H
-#define MATRIX_H
+#ifndef SPATIUMLIB_MATRIX_H
+#define SPATIUMLIB_MATRIX_H
 
-#include <iostream>
 #include <vector>
+#include <initializer_list>
+#include <stdexcept> // std::out_of_range
+#include <ostream>
 
 #ifdef __linux__
 #undef minor
@@ -482,6 +484,111 @@ protected:
   std::vector<double> m_data;
 };
 
+#include "Math.h"
+
+/// Compute eigenvalues for 2-by-2 matrix
+///
+/// \param[in] matrix 2-by-2 matrix
+/// \param[out] eigenval1 Eigenvalue 1
+/// \param[out] eigenval2 Eigenvalue 2
+/// \return Number of unique solutions 0, 1 or 2
+inline int eigenvalues2d(Matrix matrix, double &eigenval1, double &eigenval2)
+{
+  // Check 2-by-2 matrix
+  if (matrix.rows() != 2 || matrix.cols() != 2)
+  {
+    return 0;
+  }
+
+  double p = matrix(0,0);
+  double q = matrix(0,1);
+  double r = matrix(1,0);
+  double s = matrix(1,1);
+
+  return Math::solveQuadratic(1, -1 * (p + s), p*s - q*r, eigenval1, eigenval2);
+
+  /*
+  A = |p q|
+      |r s|
+
+  A * v = L * v
+    A is square matrix
+    v is eigenvector
+    L (lambda) is eigenvalue
+
+  Characteristic equation
+  |A - L * I| = 0
+    determinant(...) = 0
+    I = identity matrix
+
+  B = A - L * I = |p-L  q |
+                  | r  s-L|
+
+  Write as second order polynomial
+  |B| = (p-L)(s-L) - (q)(r) = 0
+      = ps - pL - sL + L² - qr = 0
+      = L² - (p + s)L + ps - qr = 0
+
+  Coefficients:
+  a = 1
+  b = -1 * (p + s)
+  c = ps - qr
+  */
+}
+
+inline int eigenvector2d(const Matrix &matrix, double eigenval, Matrix &eigenvector)
+{
+  // Check 2-by-2 matrix
+  if (matrix.rows() != 2 || matrix.cols() != 2)
+  {
+    return 0;
+  }
+
+  Matrix B(matrix);
+  B(0,0) -= eigenval;
+  B(1,1) -= eigenval;
+
+  /*
+  A * v = L * v
+  (A - L) * v = 0
+
+  B = A - L
+  B * v = 0
+
+  Write multiplication:
+  |a b||x|=|0|
+  |c d||y| |0|
+
+  ax + by = 0
+  cx + dy = 0
+
+  ax + by = cx + dy
+  ax - cx = dy - by
+  (a - c)x = (d - b)y
+
+  ratio = (a-c)x : (d - b)y
+
+
+  5x = 10y
+
+  px + qy = rx + sy
+  px - rx + qy - sy = 0
+  (p - r)x + (q - s)y = 0
+  px + qy = rx + sy
+
+  p * x + q * y  - r * x - s * y = 0
+
+  pv1 + qv2 - rv1 -
+
+
+
+  */
+
+
+
+
+}
+
 } // namespace Math
 
-#endif // MATRIX_H
+#endif // SPATIUMLIB_MATRIX_H

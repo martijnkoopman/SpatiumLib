@@ -26,7 +26,7 @@ ENABLE_TESTING()
 
 # Other tests
 # file(GLOB test_files . "*.cpp")
-SET(test_files Matrix_test.cpp Vector3_test.cpp)
+SET(test_files Matrix_test.cpp Vector3_test.cpp Math_test.cpp Statistics_test.cpp)
 
 FOREACH(test_file ${test_files})
     get_filename_component(test_name ${test_file} NAME_WE)

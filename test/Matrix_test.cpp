@@ -1,5 +1,6 @@
 #include <QtTest>
 
+#include <SpatiumLib/Math/Math.h>
 #include <SpatiumLib/Math/Matrix.h>
 #include <SpatiumLib/Math/Vector.h>
 #include <SpatiumLib/Math/Geometry/Vector3.h>
@@ -54,6 +55,7 @@ private slots:
   // Integration
   void test_solveSystemOfEquations();
   void test_leastSquares();
+  void test_eigenDecomposition2d();
 
 private:
   static bool approximatelyEqualDoubles(double d1, double d2);
@@ -450,6 +452,29 @@ void Matrix_test::test_leastSquares()
 
   QCOMPARE(x(0), -0.480376766091052); // Double compare?
   QCOMPARE(x(1), 20.61538461538461);  // Double compare?
+}
+
+
+void Matrix_test::test_eigenDecomposition2d()
+{
+  // Test 1
+  Math::Matrix A = {{7,  3},
+                    {3, -1}};
+
+  double eig1, eig2;
+  QVERIFY(eigenvalues2d(A, eig1, eig2));
+
+  QCOMPARE(eig1, -2);
+  QCOMPARE(eig2, 8);
+
+  // Test 2
+  A = {{ 0,  1},
+       {-2, -3}};
+
+  QVERIFY(eigenvalues2d(A, eig1, eig2));
+
+  QCOMPARE(eig1, -2);
+  QCOMPARE(eig2, -1);
 }
 
 bool Matrix_test::approximatelyEqualDoubles(double d1, double d2)
