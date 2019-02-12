@@ -10,18 +10,18 @@
  *
  */
 
-#ifndef MATRIX4X4_H
-#define MATRIX4X4_H
+#ifndef SPATIUMLIB_GEOM3D_MATRIX4X4_H
+#define SPATIUMLIB_GEOM3D_MATRIX4X4_H
 
-#include "SpatiumLib/Math/Matrix.h"
+#include "spatium/Matrix.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 class Vector3;
 
 /// \brief Matrix with 4 rows and 4 columns
-class Matrix4x4 : public Math::Matrix
+class Matrix4x4 : public Matrix
 {
 public:
   /// Constructor
@@ -195,7 +195,7 @@ public:
   }
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // MATRIX4X4_H
+#endif // SPATIUMLIB_GEOM3D_MATRIX4X4_H

@@ -10,16 +10,16 @@
  *
  */
 
-#ifndef ELLIPSOID_H
-#define ELLIPSOID_H
+#ifndef SPATIUMLIB_GEOM3D_ELLIPSOID_H
+#define SPATIUMLIB_GEOM3D_ELLIPSOID_H
 
 #include "Geometry.h"
 #include "Point3.h"
 #include "Matrix4x4.h"
 #include "Sphere.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// \brief Ellipsoid geometry
 ///
@@ -251,13 +251,13 @@ public:
         sphericalCoordinates.y() + directionY * angularDistance;
     if (poleLimit)
     {
-      if (pointOnHorizonSphericalY > Math::PI/2)
+      if (pointOnHorizonSphericalY > PI/2)
       {
-        pointOnHorizonSphericalY = Math::PI/2;
+        pointOnHorizonSphericalY = PI/2;
       }
-      else if (pointOnHorizonSphericalY < -Math::PI/2)
+      else if (pointOnHorizonSphericalY < -PI/2)
       {
-        pointOnHorizonSphericalY = -Math::PI/2;
+        pointOnHorizonSphericalY = -PI/2;
       }
     }
 
@@ -311,7 +311,7 @@ protected:
   double m_axisZ;
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // ELLIPSOID_H
+#endif // SPATIUMLIB_GEOM3D_ELLIPSOID_H

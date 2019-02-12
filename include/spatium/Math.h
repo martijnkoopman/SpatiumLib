@@ -17,12 +17,39 @@
 #include <utility> // std:swap
 #include <limits> // numeric_limits
 
-namespace Math {
+namespace spatium {
 
 /// Pi constant
 const double PI = std::atan(1) * 4;
 const double Rad2Deg = 180 / PI;
 const double Deg2Rad = PI / 180;
+
+/// Calculate the factorial
+/// Example: factorial(4) = 4! = 4*3*2*1 = 24
+///
+/// \param[in] n A positive integer
+/// \return Factorial
+inline double factorial(int n)
+{
+  double result = 1;
+  for (int i = n; i > 1; i--)
+  {
+    result *= i;
+  }
+  return result;
+}
+
+/// Calculate the binomial coefficient.
+/// Combinatorics: Choose a subset of K elements from a fixed set of N elements
+/// 'N choose K'
+///
+/// \param[in] n Number of elements in fixed set
+/// \param[in] k Number of elements to choose
+/// \return Binomial coefficient
+inline double binomialCoefficient(int n, int k)
+{
+  return factorial(n) / (factorial(k) * factorial(n-k));
+}
 
 /// Solve a quadratic equation: ax^2 + bx + c = 0
 ///
@@ -124,8 +151,8 @@ inline int solveCubic(double a, double b, double c, double d, double &x1, double
     // Solve with trigonometry
     double theta = acos(R/sqrt(-(Q*Q*Q)));
     x1 = 2 * sqrt(-Q) * cos(theta / 3) - (a/3);
-    x2 = 2 * sqrt(-Q) * cos(theta / 3 + (2*Math::PI/3)) - (a/3);
-    x3 = 2 * sqrt(-Q) * cos(theta / 3 + (4*Math::PI/3)) - (a/3);
+    x2 = 2 * sqrt(-Q) * cos(theta / 3 + (2*PI/3)) - (a/3);
+    x3 = 2 * sqrt(-Q) * cos(theta / 3 + (4*PI/3)) - (a/3);
 
     // Reorder results
     if (x1 > x2)
@@ -145,6 +172,6 @@ inline int solveCubic(double a, double b, double c, double d, double &x1, double
   }
 }
 
-} // namespace Math
+} // namespace spatium
 
 #endif // SPATIUMLIB_MATH_H

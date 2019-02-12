@@ -10,14 +10,14 @@
  *
  */
 
-#ifndef OBLATESPHEROID_H
-#define OBLATESPHEROID_H
+#ifndef SPATIUMLIB_GEOM3D_OBLATESPHEROID_H
+#define SPATIUMLIB_GEOM3D_OBLATESPHEROID_H
 
 #include "Spheroid.h"
 #include "GeoPoint3.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// \brief Oblate spheroid geometry
 ///
@@ -209,7 +209,7 @@ public:
   }
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // OBLATESPHEROID_H
+#endif // SPATIUMLIB_GEOM3D_OBLATESPHEROID_H

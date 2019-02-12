@@ -13,9 +13,9 @@
 #ifndef SPATIUMLIB_VECTOR_H
 #define SPATIUMLIB_VECTOR_H
 
-#include "SpatiumLib/Math/Matrix.h"
+#include "Matrix.h"
 
-namespace Math {
+namespace spatium {
 
 /// \brief Vector
 class Vector : public Matrix
@@ -219,6 +219,6 @@ private:
   using Matrix::cols;
 };
 
-} // namespace Math
+} // namespace spatium
 
 #endif // SPATIUMLIB_VECTOR_H

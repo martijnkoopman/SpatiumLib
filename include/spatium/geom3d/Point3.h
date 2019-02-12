@@ -10,21 +10,21 @@
  *
  */
 
-#ifndef POINT3_H
-#define POINT3_H
+#ifndef SPATIUMLIB_GEOM3D_POINT3_H
+#define SPATIUMLIB_GEOM3D_POINT3_H
 
-#include "SpatiumLib/Math/Matrix.h"
+#include "spatium/Matrix.h"
 #include "Vector3.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// \class Point3
 /// \brief Point in 3D Cartesian space
 ///
 /// A point is a Matrix with 1 column and 4 rows. The first three elements
 /// define the X, Y and Z coordinates. The fourth element is always 1.
-class Point3 : public Math::Matrix /// \todo To Math::Vector
+class Point3 : public Matrix /// \todo To Vector
 {
 public:
   /// Constructor
@@ -166,7 +166,7 @@ public:
   }
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // POINT3_H
+#endif // SPATIUMLIB_GEOM3D_POINT3_H

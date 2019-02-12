@@ -10,21 +10,33 @@
  *
  */
 
-#ifndef SPATIUMLIB_GRAPHICS_DRAWING_H
-#define SPATIUMLIB_GRAPHICS_DRAWING_H
+#ifndef SPATIUMLIB_GFX2D_DRAWING_H
+#define SPATIUMLIB_GFX2D_DRAWING_H
 
-#include "SpatiumLib/Imaging/Image.h"
+#include "spatium/imgproc/Image.h"
+#include "BezierCurve.h"
 
-namespace Graphics2D {
+namespace spatium {
+namespace gfx2d {
 
 /// \class Drawing
 class Drawing
 {
 public:
 
+  template<typename T, int N>
+  static void drawCurve(imgproc::Image<T, N> &image, const BezierCurve &curve, std::array<T, N> val)
+  {
+    for (double t = 0; t <= 1; t += 0.01)
+    {
+      std::array<double, 2> p = curve.evaluate(t);
+      image.setPixel(p[0], p[1], val);
+    }
+  }
+
   //https://en.wikipedia.org/wiki/Midpoint_circle_algorithm
   template<typename T, int N>
-  static void drawCircle(Imaging::Image<T, N> &image, std::array<int, 2> center, int radius, std::array<T, N> val)
+  static void drawCircle(imgproc::Image<T, N> &image, std::array<int, 2> center, int radius, std::array<T, N> val)
   {
     int x0 = center[0];
     int y0 = center[1];
@@ -64,7 +76,7 @@ public:
 
   // https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
   template<typename T, int N>
-  static void drawLine(Imaging::Image<T, N> &image, const std::array<int, 2> &start, const std::array<int, 2> &end, const std::array<T, N> &val)
+  static void drawLine(imgproc::Image<T, N> &image, const std::array<int, 2> &start, const std::array<int, 2> &end, const std::array<T, N> &val)
   {
     int x0 = start[0];
     int y0 = start[1];
@@ -95,7 +107,7 @@ public:
   }
 
   template<typename T, int N>
-  static void drawRectangle(Imaging::Image<T, N> &image, const std::array<int, 2> &topLeft, const std::array<int, 2> &bottomRight, const std::array<T, N> &val, bool fill = false)
+  static void drawRectangle(imgproc::Image<T, N> &image, const std::array<int, 2> &topLeft, const std::array<int, 2> &bottomRight, const std::array<T, N> &val, bool fill = false)
   {
     if (fill)
     {
@@ -128,7 +140,7 @@ public:
 protected:
 
   template<typename T, int N>
-  static void drawLineLow(Imaging::Image<T, N> &image, int &x0, int &y0, int &x1, int &y1, const std::array<T, N> &val)
+  static void drawLineLow(imgproc::Image<T, N> &image, int &x0, int &y0, int &x1, int &y1, const std::array<T, N> &val)
   {
     int dx = x1 - x0;
     int dy = y1 - y0;
@@ -154,7 +166,7 @@ protected:
   }
 
   template<typename T, int N>
-  static void drawLineHigh(Imaging::Image<T, N> &image, int x0, int y0, int x1, int y1, const std::array<T, N> &val)
+  static void drawLineHigh(imgproc::Image<T, N> &image, int x0, int y0, int x1, int y1, const std::array<T, N> &val)
   {
     int dx = x1 - x0;
     int dy = y1 - y0;
@@ -185,6 +197,7 @@ private:
 
 };
 
-} // namespace Graphics2D
+} // namespace gfx2d
+} // namespace spatium
 
-#endif // SPATIUMLIB_GRAPHICS_DRAWING_H
+#endif // SPATIUMLIB_GFX2D_DRAWING_H

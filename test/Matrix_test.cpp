@@ -1,11 +1,13 @@
 #include <QtTest>
 
-#include <SpatiumLib/Math/Math.h>
-#include <SpatiumLib/Math/Matrix.h>
-#include <SpatiumLib/Math/Vector.h>
-#include <SpatiumLib/Math/Geometry/Vector3.h>
-#include <SpatiumLib/Math/Geometry/Point3.h>
-#include <SpatiumLib/Math/Geometry/GeoPoint3.h>
+#include <spatium/Math.h>
+#include <spatium/Matrix.h>
+#include <spatium/Vector.h>
+#include <spatium/geom3d/Vector3.h>
+#include <spatium/geom3d/Point3.h>
+#include <spatium/geom3d/GeoPoint3.h>
+
+using namespace spatium;
 
 class Matrix_test : public QObject
 {
@@ -75,7 +77,7 @@ Matrix_test::~Matrix_test()
 
 void Matrix_test::test_constructorRowsCols()
 {
-  Math::Matrix matrix(5, 3);
+  Matrix matrix(5, 3);
 
   QCOMPARE(matrix.rows(), 5);
   QCOMPARE(matrix.cols(), 3);
@@ -84,7 +86,7 @@ void Matrix_test::test_constructorRowsCols()
 
 void Matrix_test::test_constructorInitializerList()
 {
-  Math::Matrix matrix(
+  Matrix matrix(
     {{1,   2,  3},
      {4,   5,  6},
      {7,   8,  9},
@@ -110,7 +112,7 @@ void Matrix_test::test_constructorInitializerList()
 
 void Matrix_test::test_constructorInitializerListEmpty1()
 {
-  Math::Matrix matrix({});
+  Matrix matrix({});
 
   QCOMPARE(matrix.rows(), 0);
   QCOMPARE(matrix.cols(), 0);
@@ -119,7 +121,7 @@ void Matrix_test::test_constructorInitializerListEmpty1()
 
 void Matrix_test::test_constructorInitializerListEmpty2()
 {
-  Math::Matrix matrix({{}});
+  Matrix matrix({{}});
 
   QCOMPARE(matrix.rows(), 0);
   QCOMPARE(matrix.cols(), 0);
@@ -128,7 +130,7 @@ void Matrix_test::test_constructorInitializerListEmpty2()
 
 void Matrix_test::test_constructorInitializerListUnequal()
 {
-  Math::Matrix matrix(
+  Matrix matrix(
   {{1,  2},
    {3,  4, 5},
    {6}});
@@ -146,11 +148,11 @@ void Matrix_test::test_constructorInitializerListUnequal()
 
 void Matrix_test::test_copyConstructorMatrix()
 {
-  Math::Matrix matrix1(3, 2);
+  Matrix matrix1(3, 2);
   matrix1(0,0) = 9;
   matrix1(2,1) = 6;
 
-  Math::Matrix matrix2(matrix1);
+  Matrix matrix2(matrix1);
   QCOMPARE(matrix2.rows(), 3);
   QCOMPARE(matrix2.cols(), 2);
   QCOMPARE(matrix2(0,0), 9);
@@ -161,11 +163,11 @@ void Matrix_test::test_copyConstructorMatrix()
 
 void Matrix_test::test_copyConstructorVector()
 {
-  Math::Vector vector(5);
+  Vector vector(5);
   vector(0) = 1;
   vector(1) = 2;
   vector(4) = 5;
-  Math::Matrix matrix(vector);
+  Matrix matrix(vector);
 
   QCOMPARE(matrix.rows(), 5);
   QCOMPARE(matrix.cols(), 1);
@@ -178,11 +180,11 @@ void Matrix_test::test_copyConstructorVector()
 
 void Matrix_test::test_copyConstructorVector3()
 {
-  Math::Geometry::Vector3 vector;
+  geom3d::Vector3 vector;
   vector.x(3);
   vector.y(2);
   vector.z(1);
-  Math::Matrix matrix(vector);
+  Matrix matrix(vector);
 
   QCOMPARE(matrix.rows(), 4);
   QCOMPARE(matrix.cols(), 1);
@@ -194,11 +196,11 @@ void Matrix_test::test_copyConstructorVector3()
 
 void Matrix_test::test_copyConstructorPoint3()
 {
-  Math::Geometry::Point3 point;
+  geom3d::Point3 point;
   point.x(3);
   point.y(2);
   point.z(1);
-  Math::Matrix matrix(point);
+  Matrix matrix(point);
 
   QCOMPARE(matrix.rows(), 4);
   QCOMPARE(matrix.cols(), 1);
@@ -210,11 +212,11 @@ void Matrix_test::test_copyConstructorPoint3()
 
 void Matrix_test::test_copyConstructorGeoPoint3()
 {
-  Math::Geometry::GeoPoint3 geoPoint;
+  geom3d::GeoPoint3 geoPoint;
   geoPoint.longitude(3);
   geoPoint.latitude(2);
   geoPoint.elevation(1);
-  Math::Matrix matrix(geoPoint);
+  Matrix matrix(geoPoint);
 
   QCOMPARE(matrix.rows(), 4);
   QCOMPARE(matrix.cols(), 1);
@@ -228,7 +230,7 @@ void Matrix_test::test_copyConstructorGeoPoint3()
 
 void Matrix_test::test_assignInitializerList()
 {
-  Math::Matrix matrix = { {1, 2, 3},
+  Matrix matrix = { {1, 2, 3},
                           {4, 5, 6} };
 
   QCOMPARE(matrix.rows(), 2);
@@ -239,11 +241,11 @@ void Matrix_test::test_assignInitializerList()
 
 void Matrix_test::test_assignVector()
 {
-  Math::Vector vector(5);
+  Vector vector(5);
   vector(0) = 1;
   vector(1) = 2;
   vector(4) = 5;
-  Math::Matrix matrix = vector;
+  Matrix matrix = vector;
 
   QCOMPARE(matrix.rows(), 5);
   QCOMPARE(matrix.cols(), 1);
@@ -256,11 +258,11 @@ void Matrix_test::test_assignVector()
 
 void Matrix_test::test_assignPoint3()
 {
-  Math::Geometry::Point3 point;
+  geom3d::Point3 point;
   point.x(3);
   point.y(2);
   point.z(1);
-  Math::Matrix matrix = point;
+  Matrix matrix = point;
 
   QCOMPARE(matrix.rows(), 4);
   QCOMPARE(matrix.cols(), 1);
@@ -309,7 +311,7 @@ void Matrix_test::test_divideScalar()
 
 void Matrix_test::test_constructIdentity()
 {
-  Math::Matrix matrix = Math::Matrix::identity(3);
+  Matrix matrix = Matrix::identity(3);
 
   QCOMPARE(matrix.rows(), 3);
   QCOMPARE(matrix.cols(), 3);
@@ -328,11 +330,11 @@ void Matrix_test::test_constructIdentity()
 
 void Matrix_test::test_transposed()
 {
-  Math::Matrix matrix1(3, 2);
+  Matrix matrix1(3, 2);
   matrix1(0,0) = 1;
   matrix1(2,1) = 6;
 
-  Math::Matrix matrix2 = matrix1.transposed();
+  Matrix matrix2 = matrix1.transposed();
 
   QCOMPARE(matrix2.rows(), 2);
   QCOMPARE(matrix2.cols(), 3);
@@ -342,7 +344,7 @@ void Matrix_test::test_transposed()
 
 void Matrix_test::test_determinant()
 {
-  Math::Matrix matrix = {
+  Matrix matrix = {
     {6,  1, 1},
     {4, -2, 5},
     {2,  8, 7}
@@ -355,7 +357,7 @@ void Matrix_test::test_determinant()
 
 void Matrix_test::test_determinantNonSquare()
 {
-  Math::Matrix matrix = {
+  Matrix matrix = {
     {6,  1, 1},
     {4, -2, 5}
   };
@@ -365,12 +367,12 @@ void Matrix_test::test_determinantNonSquare()
 
 void Matrix_test::test_inverse()
 {
-  Math::Matrix matrix1 = {
+  Matrix matrix1 = {
     {3  , 3.2},
     {3.5, 3.6}
   };
 
-  Math::Matrix matrix2 = matrix1.inverse();
+  Matrix matrix2 = matrix1.inverse();
 
   QCOMPARE(matrix2.rows(), 2);
   QCOMPARE(matrix2.cols(), 2);
@@ -386,7 +388,7 @@ void Matrix_test::test_inverse()
 
 void Matrix_test::test_inverseNonSquare()
 {
-  Math::Matrix matrix = {
+  Matrix matrix = {
     {3  , 3.2, 3},
     {3.5, 3.6, 3}
   };
@@ -396,7 +398,7 @@ void Matrix_test::test_inverseNonSquare()
 
 void Matrix_test::test_inverseSingular()
 {
-  Math::Matrix matrix = {
+  Matrix matrix = {
     {3, 4},
     {6, 8}
   };
@@ -406,16 +408,16 @@ void Matrix_test::test_inverseSingular()
 
 void Matrix_test::test_solveSystemOfEquations()
 {
-  Math::Matrix A =
+  Matrix A =
   {
     {1, 1,  1},
     {0, 2,  5},
     {2, 5, -1}
   };
 
-  Math::Vector b = { 6, -4, 27 };
+  Vector b = { 6, -4, 27 };
 
-  Math::Vector x = A.inverse() * b;
+  Vector x = A.inverse() * b;
 
   // X = x(0) = 5
   // Y = x(1) = 3
@@ -433,22 +435,22 @@ void Matrix_test::test_leastSquares()
   // Compute a (slope) and b (y-intercept)
 
   // Create matrix with coefficients of line equation
-  Math::Matrix A =
+  Matrix A =
   { {2,  1},
     {6,  1},
     {20, 1},
     {30, 1},
     {40, 1} };
 
-  Math::Vector b = { 20, 18, 10, 6, 2 };
+  Vector b = { 20, 18, 10, 6, 2 };
 
   // Compute x
-  Math::Vector x = (A.transposed() * A).inverse() * A.transposed() * b;
+  Vector x = (A.transposed() * A).inverse() * A.transposed() * b;
   // Slope = x(0)
   // Y-intercept = x(1)
 
   // Compute residuals (error vector)
-  //Math::Vector e = b - (A * x);
+  //Vector e = b - (A * x);
 
   QCOMPARE(x(0), -0.480376766091052); // Double compare?
   QCOMPARE(x(1), 20.61538461538461);  // Double compare?
@@ -458,7 +460,7 @@ void Matrix_test::test_leastSquares()
 void Matrix_test::test_eigenDecomposition2d()
 {
   // Test 1
-  Math::Matrix A = {{7,  3},
+  Matrix A = {{7,  3},
                     {3, -1}};
 
   double eig1, eig2;

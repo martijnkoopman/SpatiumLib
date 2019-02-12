@@ -13,9 +13,10 @@
 #ifndef SPATIUM_STATISTICS_H
 #define SPATIUM_STATISTICS_H
 
-#include <SpatiumLib/Math/Vector.h>
+#include "Vector.h"
 
-namespace Math {
+namespace spatium {
+namespace statistics {
 
 /// Calculate mean value
 ///
@@ -37,6 +38,7 @@ inline double mean(const Vector &values)
 
 /// \todo variance, standard deviation, covariance matrix
 
-} // namespace Math
+} // namespace statistics
+} // namespace spatium
 
 #endif // SPATIUM_STATISTICS_H

@@ -10,16 +10,15 @@
  *
  */
 
-#ifndef PLANE_H
-#define PLANE_H
+#ifndef SPATIUMLIB_GEOM3D_PLANE_H
+#define SPATIUMLIB_GEOM3D_PLANE_H
 
 #include "Geometry.h"
-
 #include "Point3.h"
 #include "Vector3.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// \brief Plane geometry
 ///
@@ -152,7 +151,7 @@ protected:
   Vector3 m_normal; // Always normalized
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // PLANE_H
+#endif // SPATIUMLIB_GEOM3D_PLANE_H

@@ -10,15 +10,16 @@
  *
  */
 
-#include "SpatiumLib/Imaging/Image.h"
+#include "spatium/imgproc/Image.h"
 
-#ifndef SPATIUMLIB_IIMAGEFILTER_H
-#define SPATIUMLIB_IIMAGEFILTER_H
+#ifndef SPATIUMLIB_IMGPROC_IIMAGEFILTER_H
+#define SPATIUMLIB_IMGPROC_IIMAGEFILTER_H
 
 #include <vector>
 #include <algorithm> // std::find
 
-namespace Imaging {
+namespace spatium {
+namespace imgproc {
 
 /// \class IImageFilter
 /// \brief Interface class for all image filters.
@@ -49,6 +50,7 @@ public:
   }
 };
 
-} // namespace Imaging
+} // namespace imgproc
+} // namespace spatium
 
-#endif // SPATIUMLIB_IIMAGEFILTER_H
+#endif // SPATIUMLIB_IMGPROC_IIMAGEFILTER_H

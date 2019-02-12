@@ -10,16 +10,16 @@
  *
  */
 
-#ifndef SPHERE_H
-#define SPHERE_H
+#ifndef SPATIUMLIB_GEOM3D_SPHERE_H
+#define SPATIUMLIB_GEOM3D_SPHERE_H
 
 #include "Geometry.h"
 #include "Point3.h"
 #include "Util.h"
-#include "SpatiumLib/Math/Math.h"
+#include "spatium/Math.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 class Vector3;
 
@@ -122,7 +122,7 @@ public:
     double c = offset.dot(offset) - (m_radius * m_radius);
 
     double x1 = 0, x2 = 0;
-    if (Math::solveQuadratic(a, b, c, x1, x2))
+    if (solveQuadratic(a, b, c, x1, x2))
     {
       // Use x1 to find intersection
       intersection = origin + (direction * x1);
@@ -261,7 +261,7 @@ protected:
   double m_radius;
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // SPHERE_H
+#endif // SPATIUMLIB_GEOM3D_SPHERE_H

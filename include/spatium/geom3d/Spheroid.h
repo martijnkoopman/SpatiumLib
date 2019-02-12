@@ -10,13 +10,13 @@
  *
  */
 
-#ifndef SPHEROID_H
-#define SPHEROID_H
+#ifndef SPATIUMLIB_GEOM3D_SPHEROID_H
+#define SPATIUMLIB_GEOM3D_SPHEROID_H
 
 #include "Ellipsoid.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// \brief Spheroid geometry
 ///
@@ -93,7 +93,7 @@ private:
   using Ellipsoid::axisY;
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // SPHEROID_H
+#endif // SPATIUMLIB_GEOM3D_SPHEROID_H

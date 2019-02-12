@@ -10,11 +10,11 @@
  *
  */
 
-#ifndef GEOMETRY_H
-#define GEOMETRY_H
+#ifndef SPATIUMLIB_GEOM3D_GEOMETRY_H
+#define SPATIUMLIB_GEOM3D_GEOMETRY_H
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 class Point3;
 class Vector3;
@@ -55,7 +55,7 @@ public:
                              Point3 &intersection) const = 0;
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // GEOMETRY_H
+#endif // SPATIUMLIB_GEOM3D_GEOMETRY_H

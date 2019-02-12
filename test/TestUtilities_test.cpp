@@ -1,7 +1,7 @@
 #include <QtTest>
 #include "TestUtilities.h"
 
-#include <SpatiumLib/Imaging/Image.h>
+#include <spatium/imgproc/Image.h>
 
 class TestUtilities_test : public QObject
 {
@@ -48,14 +48,14 @@ TestUtilities_test::~TestUtilities_test()
 void TestUtilities_test::test_readGrayscaleToGrayscale()
 {
   // Read grayscale image
-  Imaging::Image<unsigned char, 1> input;
+  imgproc::Image<unsigned char, 1> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_gray.png", input));
 
   // Write as grayscale
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2gray.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 1> output;
+  imgproc::Image<unsigned char, 1> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2gray.png", output));
   QVERIFY(input == output);
 }
@@ -63,14 +63,14 @@ void TestUtilities_test::test_readGrayscaleToGrayscale()
 void TestUtilities_test::test_readGrayscaleToRgb()
 {
   // Read grayscale image
-  Imaging::Image<unsigned char, 3> input;
+  imgproc::Image<unsigned char, 3> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_gray.png", input));
 
   // Write as RGB
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgb.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 3> output;
+  imgproc::Image<unsigned char, 3> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgb.png", output));
   QVERIFY(input == output);
 }
@@ -78,14 +78,14 @@ void TestUtilities_test::test_readGrayscaleToRgb()
 void TestUtilities_test::test_readGrayscaleToRgba()
 {
   // Read grayscale image
-  Imaging::Image<unsigned char, 4> input;
+  imgproc::Image<unsigned char, 4> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_gray.png", input));
 
   // Write as RGBA
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgba.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 4> output;
+  imgproc::Image<unsigned char, 4> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgba.png", output));
   QVERIFY(input == output);
 }
@@ -93,14 +93,14 @@ void TestUtilities_test::test_readGrayscaleToRgba()
 void TestUtilities_test::test_readRgbToGrayscale()
 {
   // Read RGB image as grayscale image
-  Imaging::Image<unsigned char, 1> input;
+  imgproc::Image<unsigned char, 1> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input));
 
   // Write as grayscale
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2gray.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 1> output;
+  imgproc::Image<unsigned char, 1> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2gray.png", output));
   QVERIFY(input == output);
 }
@@ -108,14 +108,14 @@ void TestUtilities_test::test_readRgbToGrayscale()
 void TestUtilities_test::test_readRgbToRgb()
 {
   // Read RGB image
-  Imaging::Image<unsigned char, 3> input;
+  imgproc::Image<unsigned char, 3> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input));
 
   // Write as RGB
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgb.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 3> output;
+  imgproc::Image<unsigned char, 3> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgb.png", output));
   QVERIFY(input == output);
 }
@@ -123,14 +123,14 @@ void TestUtilities_test::test_readRgbToRgb()
 void TestUtilities_test::test_readRgbToRgba()
 {
   // Read RGB image
-  Imaging::Image<unsigned char, 4> input;
+  imgproc::Image<unsigned char, 4> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input));
 
   // Write as RGBA
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgba.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 4> output;
+  imgproc::Image<unsigned char, 4> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgba.png", output));
   QVERIFY(input == output);
 }
@@ -138,14 +138,14 @@ void TestUtilities_test::test_readRgbToRgba()
 void TestUtilities_test::test_readRgbaToGrayscale()
 {
   // Read RGBA image
-  Imaging::Image<unsigned char, 1> input;
+  imgproc::Image<unsigned char, 1> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgba.png", input));
 
   // Write as grayscale
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2gray.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 1> output;
+  imgproc::Image<unsigned char, 1> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2gray.png", output));
   QVERIFY(input == output);
 }
@@ -153,14 +153,14 @@ void TestUtilities_test::test_readRgbaToGrayscale()
 void TestUtilities_test::test_readRgbaToRgb()
 {
   // Read RGBA image
-  Imaging::Image<unsigned char, 3> input;
+  imgproc::Image<unsigned char, 3> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgba.png", input));
 
   // Write as RGB
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgb.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 3> output;
+  imgproc::Image<unsigned char, 3> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgb.png", output));
   QVERIFY(input == output);
 }
@@ -168,14 +168,14 @@ void TestUtilities_test::test_readRgbaToRgb()
 void TestUtilities_test::test_readRgbaToRgba()
 {
   // Read RGBA image
-  Imaging::Image<unsigned char, 4> input;
+  imgproc::Image<unsigned char, 4> input;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgba.png", input));
 
   // Write as RGBA
   QVERIFY(TestUtilities::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgba.png", input));
 
   // Compare output with input
-  Imaging::Image<unsigned char, 4> output;
+  imgproc::Image<unsigned char, 4> output;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgba.png", output));
   QVERIFY(input == output);
 }

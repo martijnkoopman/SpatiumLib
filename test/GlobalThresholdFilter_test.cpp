@@ -1,7 +1,7 @@
 #include <QtTest>
 #include "TestUtilities.h"
 
-#include <SpatiumLib/Imaging/GlobalThresholdFilter.h>
+#include <spatium/imgproc/GlobalThresholdFilter.h>
 
 class GlobalThresholdFilter_test : public QObject
 {
@@ -34,17 +34,17 @@ GlobalThresholdFilter_test::~GlobalThresholdFilter_test()
 void GlobalThresholdFilter_test::test_apply()
 {
   // Read ground truth image for verification
-  Imaging::Image<unsigned char, 1> groundtruth;
+  imgproc::Image<unsigned char, 1> groundtruth;
   QVERIFY(TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/threshold.png", groundtruth));
 
   // Read input image from file
-  Imaging::Image<unsigned char, 1> input;
+  imgproc::Image<unsigned char, 1> input;
   TestUtilities::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input);
 
-  Imaging::GlobalThresholdFilter<unsigned char> filter(127);
+  imgproc::GlobalThresholdFilter<unsigned char> filter(127);
 
   // Apply in another image
-  Imaging::Image<unsigned char, 1> output(input.width(), input.height());
+  imgproc::Image<unsigned char, 1> output(input.width(), input.height());
   QVERIFY(filter.apply(input, output));
 
   // Verify output image

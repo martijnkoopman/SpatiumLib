@@ -1,5 +1,5 @@
 /*
- * Program: Spatial Math Library
+ * Program: Spatium Library
  *
  * Copyright (C) Martijn Koopman
  * All Rights Reserved
@@ -18,11 +18,13 @@
 #include <stdexcept> // std::out_of_range
 #include <ostream>
 
+#include "Math.h" // For eigenvalues2d()
+
 #ifdef __linux__
 #undef minor
 #endif
 
-namespace Math {
+namespace spatium {
 
 /// \brief Matrix
 class Matrix
@@ -484,8 +486,6 @@ protected:
   std::vector<double> m_data;
 };
 
-#include "Math.h"
-
 /// Compute eigenvalues for 2-by-2 matrix
 ///
 /// \param[in] matrix 2-by-2 matrix
@@ -505,7 +505,7 @@ inline int eigenvalues2d(Matrix matrix, double &eigenval1, double &eigenval2)
   double r = matrix(1,0);
   double s = matrix(1,1);
 
-  return Math::solveQuadratic(1, -1 * (p + s), p*s - q*r, eigenval1, eigenval2);
+  return solveQuadratic(1, -1 * (p + s), p*s - q*r, eigenval1, eigenval2);
 
   /*
   A = |p q|
@@ -589,6 +589,6 @@ inline int eigenvector2d(const Matrix &matrix, double eigenval, Matrix &eigenvec
 
 }
 
-} // namespace Math
+} // namespace spatium
 
 #endif // SPATIUMLIB_MATRIX_H

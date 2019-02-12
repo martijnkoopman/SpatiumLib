@@ -1,9 +1,11 @@
-#include <SpatiumLib/Imaging/Image.h>
+#include <spatium/imgproc/Image.h>
 
 #include <QString>
 #include <QImage>
 
 #include <functional>
+
+using namespace spatium;
 
 // To read a pixel value from an QImage
 template<typename T, int N>
@@ -77,7 +79,7 @@ public:
 
   // Read an image from file
   template<typename T, int N>
-  static bool ReadImageFromFile(const QString &fileName, Imaging::Image<T, N> &image)
+  static bool ReadImageFromFile(const QString &fileName, imgproc::Image<T, N> &image)
   {
     // Read QImage from file
     QImage input(fileName);
@@ -122,7 +124,7 @@ public:
 
   // Write an image to file
   template<class T, int N>
-  static bool WriteImageToFile(const QString &fileName, const Imaging::Image<T, N> &image)
+  static bool WriteImageToFile(const QString &fileName, const imgproc::Image<T, N> &image)
   {
     // Determine output image format
     QImage::Format format;

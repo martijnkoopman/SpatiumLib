@@ -1,7 +1,7 @@
 #include <QtTest>
 #include "TestUtilities.h"
 
-#include <SpatiumLib/Imaging/Image.h>
+#include <spatium/imgproc/Image.h>
 
 class Image_test : public QObject
 {
@@ -44,7 +44,7 @@ Image_test::~Image_test()
 
 void Image_test::test_constructorEmpty()
 {
-  Imaging::Image<unsigned char, 3> img;
+  imgproc::Image<unsigned char, 3> img;
 
   QCOMPARE(img.width(), 0);
   QCOMPARE(img.height(), 0);
@@ -53,7 +53,7 @@ void Image_test::test_constructorEmpty()
 
 void Image_test::test_constructor()
 {
-  Imaging::Image<unsigned char, 3> img(640, 480);
+  imgproc::Image<unsigned char, 3> img(640, 480);
 
   QCOMPARE(img.width(), 640);
   QCOMPARE(img.height(), 480);
@@ -61,7 +61,7 @@ void Image_test::test_constructor()
 
 void Image_test::test_constructorStack()
 {
-  Imaging::Image<unsigned char, 3> *img = new Imaging::Image<unsigned char, 3>(640, 480);
+  imgproc::Image<unsigned char, 3> *img = new imgproc::Image<unsigned char, 3>(640, 480);
 
   QCOMPARE(img->width(), 640);
   QCOMPARE(img->height(), 480);
@@ -69,28 +69,28 @@ void Image_test::test_constructorStack()
 
 void Image_test::test_copyConstructor()
 {
-  Imaging::Image<unsigned char, 3> img1(640, 480);
+  imgproc::Image<unsigned char, 3> img1(640, 480);
   img1.setPixel(10, 20, {255, 0, 255});
   img1.setPixel(200, 300, {0, 255, 255});
   img1.setPixel(400, 200, {127, 0, 255});
   img1.setPixel(620, 440, {0, 127, 127});
 
   // Copy constructor
-  //Imaging::Image<unsigned char, 3> img2 = img1; // implicit
-  Imaging::Image<unsigned char, 3> img2(img1); // explicit
+  //imgproc::Image<unsigned char, 3> img2 = img1; // implicit
+  imgproc::Image<unsigned char, 3> img2(img1); // explicit
 
   QVERIFY(img1 == img2);
 }
 
 void Image_test::test_copyAssignment()
 {
-  Imaging::Image<unsigned char, 3> img1(640, 480);
+  imgproc::Image<unsigned char, 3> img1(640, 480);
   img1.setPixel(10, 20, {255, 0, 255});
   img1.setPixel(200, 300, {0, 255, 255});
   img1.setPixel(400, 200, {127, 0, 255});
   img1.setPixel(620, 440, {0, 127, 127});
 
-  Imaging::Image<unsigned char, 3> img2(640, 480);
+  imgproc::Image<unsigned char, 3> img2(640, 480);
 
   // Copy assignment
   img2 = img1;
@@ -101,17 +101,17 @@ void Image_test::test_copyAssignment()
 
 void Image_test::test_compareEqual()
 {
-  Imaging::Image<unsigned char, 3> img1(640, 480);
-  Imaging::Image<unsigned char, 3> img2(640, 480);
+  imgproc::Image<unsigned char, 3> img1(640, 480);
+  imgproc::Image<unsigned char, 3> img2(640, 480);
   QVERIFY(img1 == img2);
 }
 
 void Image_test::test_compareUnequal()
 {
-  Imaging::Image<unsigned char, 3> img1(640, 480);
-  Imaging::Image<unsigned char, 3> img2(555, 480); // Different width
-  Imaging::Image<unsigned char, 3> img3(640, 333); // Different height
-  Imaging::Image<unsigned char, 3> img4(640, 480); // Different values
+  imgproc::Image<unsigned char, 3> img1(640, 480);
+  imgproc::Image<unsigned char, 3> img2(555, 480); // Different width
+  imgproc::Image<unsigned char, 3> img3(640, 333); // Different height
+  imgproc::Image<unsigned char, 3> img4(640, 480); // Different values
   img4.setPixel(10, 20, {255, 0, 255});
 
   QVERIFY(img1 != img2);
@@ -121,7 +121,7 @@ void Image_test::test_compareUnequal()
 
 void Image_test::test_getSetPixel()
 {
-  Imaging::Image<unsigned char, 3> img(640, 480);
+  imgproc::Image<unsigned char, 3> img(640, 480);
 
   // Set pixel value
   std::array<unsigned char, 3> val1 = {127, 191, 255};
@@ -142,7 +142,7 @@ void Image_test::test_getSetPixel()
 
 void Image_test::test_clear()
 {
-  Imaging::Image<unsigned char, 1> img(20, 10);
+  imgproc::Image<unsigned char, 1> img(20, 10);
 
   // Set all values to 255
   for(int y = 0; y < img.height(); y++)

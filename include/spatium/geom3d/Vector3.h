@@ -10,19 +10,19 @@
  *
  */
 
-#ifndef VECTOR3_H
-#define VECTOR3_H
+#ifndef SPATIUMLIB_GEOM3D_VECTOR3_H
+#define SPATIUMLIB_GEOM3D_VECTOR3_H
 
-#include "SpatiumLib/Math/Vector.h"
+#include "spatium/Vector.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// \brief Vector in 3D space
 ///
 /// A vector with 4 rows. The first three elements
 /// define the X, Y and Z coordinates. The fourth element is always 0.
-class Vector3 : public Math::Vector
+class Vector3 : public Vector
 {
 public:
   /// Constructor
@@ -255,7 +255,7 @@ public:
   }
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // VECTOR3_H
+#endif // SPATIUMLIB_GEOM3D_VECTOR3_H

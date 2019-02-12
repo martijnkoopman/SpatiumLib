@@ -10,14 +10,15 @@
  *
  */
 
-#ifndef SPATIUMLIB_IMAGE_H
-#define SPATIUMLIB_IMAGE_H
+#ifndef SPATIUMLIB_IMGPROC_IMAGE_H
+#define SPATIUMLIB_IMGPROC_IMAGE_H
 
 #include <limits> // numeric_limits
 #include <cstring> // memcpy, memset
 #include <memory> // shared_ptr
 
-namespace Imaging {
+namespace spatium {
+namespace imgproc {
 
 //template<typename T, int N1, int N2>
 //inline std::array<T, N2> pixelValue(const std::array<T, N1> &input)
@@ -303,6 +304,7 @@ protected:
   std::shared_ptr<T> m_imageData;
 };
 
-} // namespace Imaging
+} // namespace imgproc
+} // namespace spatium
 
-#endif // SPATIUMLIB_IMAGE_H
+#endif // SPATIUMLIB_IMGPROC_IMAGE_H

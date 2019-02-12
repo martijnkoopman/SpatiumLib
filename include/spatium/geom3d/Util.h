@@ -10,11 +10,11 @@
  *
  */
 
-#ifndef UTIL_H
-#define UTIL_H
+#ifndef SPATIUMLIB_GEOM3D_UTIL_H
+#define SPATIUMLIB_GEOM3D_UTIL_H
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// Convert decimal degrees to degrees, minutes and seconds.
 ///
@@ -35,7 +35,7 @@ inline void degrees2dms(double degreesDecimal, int &degrees, int &minutes, doubl
   seconds = residue / ((double)1 / (60*60));
 }
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // UTIL_H
+#endif // SPATIUMLIB_GEOM3D_UTIL_H

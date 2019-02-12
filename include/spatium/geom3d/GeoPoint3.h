@@ -10,13 +10,13 @@
  *
  */
 
-#ifndef GEOPOINT3_H
-#define GEOPOINT3_H
+#ifndef SPATIUMLIB_GEOM3D_GEOPOINT3_H
+#define SPATIUMLIB_GEOM3D_GEOPOINT3_H
 
 #include "Point3.h"
 
-namespace Math {
-namespace Geometry {
+namespace spatium {
+namespace geom3d {
 
 /// \class GeoPoint3
 /// \brief Point in 3D geographical space
@@ -118,7 +118,7 @@ private:
   using Point3::z;
 };
 
-} // namespace Geometry
-} // namespace Math
+} // namespace geom3d
+} // namespace spatium
 
-#endif // GEOPOINT3_H
+#endif // SPATIUMLIB_GEOM3D_GEOPOINT3_H

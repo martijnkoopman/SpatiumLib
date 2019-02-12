@@ -1,6 +1,6 @@
 #include <QtTest>
 
-#include <SpatiumLib/Math/Statistics.h>
+#include <spatium/Statistics.h>
 
 class Statistics_test : public QObject
 {

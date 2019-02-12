@@ -13,10 +13,11 @@
 #include "IImageFilter.h"
 #include <functional>
 
-#ifndef SPATIUMLIB_GLOBALTHRESHOLDFILTER_H
-#define SPATIUMLIB_GLOBALTHRESHOLDFILTER_H
+#ifndef SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
+#define SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
 
-namespace Imaging {
+namespace spatium {
+namespace imgproc {
 
 template<typename T>
 class GlobalThresholdFilter
@@ -62,7 +63,7 @@ public:
       for (int x = 0; x < input.width(); x++)
       {
         std::array<T, N> pixel = input.getPixel(x, y);
-        T value = Imaging::PixelValue<T, 1>::value(pixel)[0];
+        T value = imgproc::PixelValue<T, 1>::value(pixel)[0];
         if (value > m_thresholdValue)
         {
           output.setPixel(x, y, { newValue });
@@ -105,7 +106,8 @@ private:
   T m_thresholdValue;
 };
 
-} // namespace Imaging
+} // namespace imgproc
+} // namespace spatium
 
-#endif // SPATIUMLIB_GLOBALTHRESHOLDFILTER_H
+#endif // SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
 
