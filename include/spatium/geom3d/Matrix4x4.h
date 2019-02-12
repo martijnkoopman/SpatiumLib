@@ -13,7 +13,7 @@
 #ifndef SPATIUMLIB_GEOM3D_MATRIX4X4_H
 #define SPATIUMLIB_GEOM3D_MATRIX4X4_H
 
-#include "spatium/Matrix.h"
+#include <spatium/Matrix.h>
 
 namespace spatium {
 namespace geom3d {
