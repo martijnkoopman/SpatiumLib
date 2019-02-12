@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pi',['PI',['../namespace_math.html#ab940eb2360ac3c29182d1fe5b841c645',1,'Math']]]
+  ['pi',['PI',['../namespacespatium.html#afd689bed329fb922ea7c585f8cb96bad',1,'spatium']]]
 ];

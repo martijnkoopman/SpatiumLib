@@ -1,5 +1,15 @@
 var searchData=
 [
-  ['translation',['translation',['../class_math_1_1_geometry_1_1_matrix4x4.html#a4a93c2f080571ce4dac792a1ce2de4fe',1,'Math::Geometry::Matrix4x4']]],
-  ['transposed',['transposed',['../class_math_1_1_matrix.html#a889f1f1a9bed89147f3b37d5b0f0e822',1,'Math::Matrix']]]
+  ['scaling',['scaling',['../classspatium_1_1geom3d_1_1_matrix4x4.html#ac5bd50f66ab54f7f6861f221e33b21cd',1,'spatium::geom3d::Matrix4x4']]],
+  ['sceneobject',['SceneObject',['../classspatium_1_1gfx3d_1_1_scene_object.html#a786fff75be815ba32b43e4b52e0580c3',1,'spatium::gfx3d::SceneObject']]],
+  ['setpixel',['setPixel',['../classspatium_1_1imgproc_1_1_image.html#a2e639da2466be61ecba31b0ef9edab75',1,'spatium::imgproc::Image']]],
+  ['setthresholdvalue',['setThresholdValue',['../classspatium_1_1imgproc_1_1_global_threshold_filter.html#aa2b1eae07f1696f9fe5d1761de4e2176',1,'spatium::imgproc::GlobalThresholdFilter']]],
+  ['solvecubic',['solveCubic',['../namespacespatium.html#a6e7f93124da8ca19c9d502921b04a556',1,'spatium']]],
+  ['solvequadratic',['solveQuadratic',['../namespacespatium.html#a83fe4fe957fb830be7cdcc0c6cb32572',1,'spatium']]],
+  ['sphere',['Sphere',['../classspatium_1_1geom3d_1_1_sphere.html#aeed365a7038e76fdf6291cd74d954dd3',1,'spatium::geom3d::Sphere::Sphere(const Point3 &amp;origin, double radius)'],['../classspatium_1_1geom3d_1_1_sphere.html#a0044cd7f466fd294c7e50ed6f782533a',1,'spatium::geom3d::Sphere::Sphere(double radius)'],['../classspatium_1_1geom3d_1_1_sphere.html#aa9370917cab4dfda8c6f4a8ad17a9753',1,'spatium::geom3d::Sphere::Sphere(const Sphere &amp;other)=default']]],
+  ['sphericaltocartesiancoordinates',['sphericalToCartesianCoordinates',['../classspatium_1_1geom3d_1_1_sphere.html#ac40919a45ffe8ff435e94a22a7865fba',1,'spatium::geom3d::Sphere']]],
+  ['spheroid',['Spheroid',['../classspatium_1_1geom3d_1_1_spheroid.html#a7c2d28b742df9cc4ea9ce6afaef16c2c',1,'spatium::geom3d::Spheroid::Spheroid(const Point3 &amp;origin, double axisXY, double axisZ)'],['../classspatium_1_1geom3d_1_1_spheroid.html#ae6cfc6c9ab3fd5cb5fa902f083c9d6dd',1,'spatium::geom3d::Spheroid::Spheroid(double axisXY, double axisZ)'],['../classspatium_1_1geom3d_1_1_spheroid.html#a88f72eeabc49a99b79c3519f3582c74b',1,'spatium::geom3d::Spheroid::Spheroid(const Spheroid &amp;other)=default']]],
+  ['spheroidaltocartesiancoordinates',['spheroidalToCartesianCoordinates',['../classspatium_1_1geom3d_1_1_oblate_spheroid.html#ac8b3f049c5cbdb3f485311ee75493718',1,'spatium::geom3d::OblateSpheroid::spheroidalToCartesianCoordinates(double longitude, double latitude, double height) const'],['../classspatium_1_1geom3d_1_1_oblate_spheroid.html#a3b99a53a7ae3943372acfa4e26642f4a',1,'spatium::geom3d::OblateSpheroid::spheroidalToCartesianCoordinates(GeoPoint3 geoPoint) const']]],
+  ['split',['split',['../classspatium_1_1gfx2d_1_1_bezier_curve.html#a0cdd587fec454aa4a1c9683036629cc1',1,'spatium::gfx2d::BezierCurve']]],
+  ['surfacenormal',['surfaceNormal',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a6c0959b8d72f453805736718589ecbcb',1,'spatium::geom3d::Ellipsoid::surfaceNormal()'],['../classspatium_1_1geom3d_1_1_sphere.html#a2e49a55ddc62c24abcefcd0fbd91aa9d',1,'spatium::geom3d::Sphere::surfaceNormal()']]]
 ];

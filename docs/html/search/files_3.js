@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oblatespheroid_2eh',['OblateSpheroid.h',['../_oblate_spheroid_8h.html',1,'']]]
+  ['ellipsoid_2eh',['Ellipsoid.h',['../_ellipsoid_8h.html',1,'']]]
 ];

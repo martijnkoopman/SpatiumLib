@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sphere',['Sphere',['../class_math_1_1_geometry_1_1_sphere.html',1,'Math::Geometry']]],
-  ['spheroid',['Spheroid',['../class_math_1_1_geometry_1_1_spheroid.html',1,'Math::Geometry']]]
+  ['iimagefilter',['IImageFilter',['../classspatium_1_1imgproc_1_1_i_image_filter.html',1,'spatium::imgproc']]],
+  ['image',['Image',['../classspatium_1_1imgproc_1_1_image.html',1,'spatium::imgproc']]]
 ];

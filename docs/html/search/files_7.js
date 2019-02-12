@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['vector_2eh',['Vector.h',['../_vector_8h.html',1,'']]],
-  ['vector3_2eh',['Vector3.h',['../_vector3_8h.html',1,'']]]
+  ['math_2eh',['Math.h',['../_math_8h.html',1,'']]],
+  ['matrix_2eh',['Matrix.h',['../_matrix_8h.html',1,'']]],
+  ['matrix4x4_2eh',['Matrix4x4.h',['../_matrix4x4_8h.html',1,'']]],
+  ['mesh_2eh',['Mesh.h',['../_mesh_8h.html',1,'']]]
 ];

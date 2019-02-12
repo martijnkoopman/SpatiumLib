@@ -1,0 +1,7 @@
+<map id="spatium::geom3d::Plane" name="spatium::geom3d::Plane">
+<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,183,192,209"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space. " alt="" coords="217,183,391,209"/>
+<area shape="rect" id="node4" href="$classspatium_1_1_vector.html" title="Vector. " alt="" coords="267,81,381,108"/>
+<area shape="rect" id="node5" href="$classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="319,5,431,32"/>
+<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space. " alt="" coords="349,132,515,159"/>
+</map>

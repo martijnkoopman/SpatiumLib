@@ -1,4 +1,6 @@
-<map id="/home/martijn/GITHUB/SpatiumLib/include/SpatiumLib/Math/Geometry/Ellipsoid.h" name="/home/martijn/GITHUB/SpatiumLib/include/SpatiumLib/Math/Geometry/Ellipsoid.h">
-<area shape="rect" id="node2" href="$_spheroid_8h.html" title="/home/martijn/GITHUB\l/SpatiumLib/include/Spatium\lLib/Math/Geometry/Spheroid.h" alt="" coords="25,109,223,165"/>
-<area shape="rect" id="node3" href="$_oblate_spheroid_8h.html" title="/home/martijn/GITHUB\l/SpatiumLib/include/Spatium\lLib/Math/Geometry/OblateSpheroid.h" alt="" coords="5,213,243,269"/>
+<map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/Ellipsoid.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/Ellipsoid.h">
+<area shape="rect" id="node2" href="$_spheroid_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d/Spheroid.h" alt="" coords="94,109,282,165"/>
+<area shape="rect" id="node4" href="$geom3d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d.h" alt="" coords="175,317,363,373"/>
+<area shape="rect" id="node3" href="$_oblate_spheroid_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d/OblateSpheroid.h" alt="" coords="5,213,232,269"/>
+<area shape="rect" id="node5" href="$spatium_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/spatium.h" alt="" coords="175,421,363,477"/>
 </map>

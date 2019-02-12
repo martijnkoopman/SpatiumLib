@@ -19,6 +19,9 @@ namespace spatium {
 namespace gfx3d {
 
 /// \class Light
+/// \brief Light scene object
+///
+/// A Light emits light in all directions.
 class Light
 {
 public:
@@ -28,16 +31,15 @@ public:
   /// \param[in] strength Strength
   /// \param[in] color Color (RGB)
   Light(double strength, std::array<unsigned char, 3> color = {255, 255, 255})
-  : m_strength(strength)
-  , m_color(color)
+    : m_strength(strength)
+    , m_color(color)
   {
   }
 
-
-  // TODO: Rule of 5
+  ///\todo: Rule of 5
 
 private:
-  double strength;
+  double m_strength;
   std::array<unsigned char, 3> m_color;
 };
 

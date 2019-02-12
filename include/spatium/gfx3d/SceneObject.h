@@ -18,19 +18,37 @@
 #include <spatium/geom3d/Matrix4x4.h>
 #include <spatium/geom3d/Point3.h>
 
+#include <array>
+
 namespace spatium {
 namespace gfx3d {
 
 /// \class SceneObject
+/// \brief Object in a 3D scene
+///
+/// A SceneObject is transformable in world space.
 class SceneObject
 {
 public:
   // TODO: Rule of 5
 
+  SceneObject()
+    : m_bounds({0})
+  {}
+
+  /// Get the boundaries of the object; axis aligned.
+  /// Xmin, Xmax, Ymin, Ymax, Zmin, Zmax
+  ///
+  /// \return Boundaries
+  std::array<double, 6> bounds() const
+  {
+    return m_bounds;
+  }
+
   /// Get the transformation matrix
   ///
   /// \return Transformation matrix
-  geom3d::Matrix4x4 transform() const
+  geom3d::Matrix4x4 transformation() const
   {
     return m_transformation;
   }
@@ -62,7 +80,11 @@ public:
   }
 
 protected:
+  virtual void updateBounds() = 0;
+
   geom3d::Matrix4x4 m_transformation;
+
+  std::array<double, 6> m_bounds;
 };
 
 } // namespace gfx3d

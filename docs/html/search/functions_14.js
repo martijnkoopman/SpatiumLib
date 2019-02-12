@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z',['z',['../class_math_1_1_geometry_1_1_point3.html#acc2bf30f2e8bcd18be95dd15b8a836e9',1,'Math::Geometry::Point3::z(double val)'],['../class_math_1_1_geometry_1_1_point3.html#a0cdb8b03d9ce6986b65b58b20465aefc',1,'Math::Geometry::Point3::z() const'],['../class_math_1_1_geometry_1_1_vector3.html#a3c1c34f079211bcb5ee7cab8ebf742a4',1,'Math::Geometry::Vector3::z(double val)'],['../class_math_1_1_geometry_1_1_vector3.html#a9ef9f7d2a5824e36e53590b3b391de5b',1,'Math::Geometry::Vector3::z() const']]]
+  ['x',['x',['../classspatium_1_1geom3d_1_1_point3.html#a158c74589dbdaab8f406c9c0e1112c13',1,'spatium::geom3d::Point3::x(double val)'],['../classspatium_1_1geom3d_1_1_point3.html#ae3953e26093296e787bc15e5f3910319',1,'spatium::geom3d::Point3::x() const'],['../classspatium_1_1geom3d_1_1_vector3.html#ab3bb686e05d638caa056a73a988bdffd',1,'spatium::geom3d::Vector3::x(double val)'],['../classspatium_1_1geom3d_1_1_vector3.html#a2ad73c219b634484031d10b9b5fad5ea',1,'spatium::geom3d::Vector3::x() const']]]
 ];

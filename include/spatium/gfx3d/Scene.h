@@ -23,6 +23,10 @@ namespace spatium {
 namespace gfx3d {
 
 /// \class Scene
+/// \brief 3D scene
+///
+/// A scene is a collection of one Camera, one Light and one or more
+/// SceneObjects.
 class Scene
 {
 public:

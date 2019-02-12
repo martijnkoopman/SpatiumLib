@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['flattening',['flattening',['../class_math_1_1_geometry_1_1_oblate_spheroid.html#a200f56f54991a75d92c7048e8392e38e',1,'Math::Geometry::OblateSpheroid']]]
+  ['factorial',['factorial',['../namespacespatium.html#adf03d2a12e959b7d561fc1a11acb3eb2',1,'spatium']]],
+  ['flattening',['flattening',['../classspatium_1_1geom3d_1_1_oblate_spheroid.html#aa5137cfa918afc27138589db4a07a5cb',1,'spatium::geom3d::OblateSpheroid']]]
 ];

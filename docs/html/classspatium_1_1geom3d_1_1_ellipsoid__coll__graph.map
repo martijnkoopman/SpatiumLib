@@ -1,0 +1,6 @@
+<map id="spatium::geom3d::Ellipsoid" name="spatium::geom3d::Ellipsoid">
+<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,81,192,108"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="216,81,403,108"/>
+<area shape="rect" id="node4" href="$classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="353,5,465,32"/>
+<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space. " alt="" coords="427,81,594,108"/>
+</map>

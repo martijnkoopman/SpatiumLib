@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rad2deg',['Rad2Deg',['../namespace_math.html#a6fe099734269963155488450c59b7ac4',1,'Math']]]
+  ['rad2deg',['Rad2Deg',['../namespacespatium.html#a57ec3bc985cb4e7b3f0b930f01eabe69',1,'spatium']]]
 ];

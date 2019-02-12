@@ -1,0 +1,4 @@
+<map id="spatium::gfx3d::SceneObject" name="spatium::gfx3d::SceneObject">
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_camera.html" title="Camera scene object. " alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_mesh.html" title="Scene object with a mesh. " alt="" coords="193,80,341,107"/>
+</map>

@@ -1,8 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_math_1_1_geometry_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,56,187,83"/>
-<area shape="rect" id="node2" href="$class_math_1_1_geometry_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="235,5,408,32"/>
-<area shape="rect" id="node5" href="$class_math_1_1_geometry_1_1_plane.html" title="Plane geometry. " alt="" coords="243,56,400,83"/>
-<area shape="rect" id="node6" href="$class_math_1_1_geometry_1_1_sphere.html" title="Sphere geometry. " alt="" coords="239,107,404,133"/>
-<area shape="rect" id="node3" href="$class_math_1_1_geometry_1_1_spheroid.html" title="Spheroid geometry. " alt="" coords="456,5,631,32"/>
-<area shape="rect" id="node4" href="$class_math_1_1_geometry_1_1_oblate_spheroid.html" title="Oblate spheroid geometry. " alt="" coords="679,5,892,32"/>
+<area shape="rect" id="node1" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,56,192,83"/>
+<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="240,5,419,32"/>
+<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_plane.html" title="Plane geometry. " alt="" coords="248,56,411,83"/>
+<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_sphere.html" title="Sphere geometry. " alt="" coords="244,107,415,133"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_spheroid.html" title="Spheroid geometry. " alt="" coords="467,5,648,32"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_oblate_spheroid.html" title="Oblate spheroid geometry. " alt="" coords="696,5,915,32"/>
 </map>

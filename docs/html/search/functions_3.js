@@ -1,9 +1,16 @@
 var searchData=
 [
-  ['data',['data',['../class_math_1_1_matrix.html#a72986f3d13586d025c9dc004e03ad69c',1,'Math::Matrix']]],
-  ['degrees2dms',['degrees2dms',['../namespace_math_1_1_geometry.html#a2d6d232767876cc64756658529f42430',1,'Math::Geometry']]],
-  ['determinant',['determinant',['../class_math_1_1_matrix.html#ad47bdafaa063423e3cb7ebb1c693c875',1,'Math::Matrix::determinant() const'],['../class_math_1_1_matrix.html#a8633a1b861cbe2c486f963a56610e798',1,'Math::Matrix::determinant(const Matrix &amp;matrix) const']]],
-  ['distanceto',['distanceTo',['../class_math_1_1_geometry_1_1_ellipsoid.html#a7e0ed1a1248660489db0870d4bf3cd5d',1,'Math::Geometry::Ellipsoid::distanceTo()'],['../class_math_1_1_geometry_1_1_geometry.html#aeee7782df32c6207092f34e7148b80da',1,'Math::Geometry::Geometry::distanceTo()'],['../class_math_1_1_geometry_1_1_plane.html#a7bfbdd920027f4e8d6eb6c8603b27543',1,'Math::Geometry::Plane::distanceTo()'],['../class_math_1_1_geometry_1_1_point3.html#a7159409bf3e9311c38bd178e278a6b14',1,'Math::Geometry::Point3::distanceTo()'],['../class_math_1_1_geometry_1_1_sphere.html#a0ba9eeedfb2109b5963ae4d0fd95cd38',1,'Math::Geometry::Sphere::distanceTo()']]],
-  ['distancetohorizon',['distanceToHorizon',['../class_math_1_1_geometry_1_1_sphere.html#afe180e7dae462721b7ddd4980e0b1087',1,'Math::Geometry::Sphere']]],
-  ['dot',['dot',['../class_math_1_1_geometry_1_1_vector3.html#a98847e6db6c014b4564340877c4bc72a',1,'Math::Geometry::Vector3']]]
+  ['data',['data',['../classspatium_1_1_matrix.html#a6cb72d31e994f3a12b3c7923db317e70',1,'spatium::Matrix']]],
+  ['degree',['degree',['../classspatium_1_1gfx2d_1_1_bezier_curve.html#a46894732b76722ab3b625b2b68cf70c6',1,'spatium::gfx2d::BezierCurve']]],
+  ['degrees2dms',['degrees2dms',['../namespacespatium_1_1geom3d.html#a5242ab556f3a6f8e6032d7a79859028a',1,'spatium::geom3d']]],
+  ['determinant',['determinant',['../classspatium_1_1_matrix.html#ad3b46a5f3c254a22792f5d366a39e91a',1,'spatium::Matrix::determinant() const'],['../classspatium_1_1_matrix.html#a73a7064909fe86da471e5b9bc4934c7c',1,'spatium::Matrix::determinant(const Matrix &amp;matrix) const']]],
+  ['distanceto',['distanceTo',['../classspatium_1_1geom3d_1_1_ellipsoid.html#ae57929237ac79b2b7b59f2cb1a5ed962',1,'spatium::geom3d::Ellipsoid::distanceTo()'],['../classspatium_1_1geom3d_1_1_geometry.html#a3943a2fa0c8db13d68cc7dbb122da1d0',1,'spatium::geom3d::Geometry::distanceTo()'],['../classspatium_1_1geom3d_1_1_plane.html#a74d80590fa39f4068d667c44c89bf87d',1,'spatium::geom3d::Plane::distanceTo()'],['../classspatium_1_1geom3d_1_1_point3.html#ac40eaa593260d2e6d7e86b80bbd5a9a6',1,'spatium::geom3d::Point3::distanceTo()'],['../classspatium_1_1geom3d_1_1_sphere.html#a42c123109f107f61e2b104cc419a5d82',1,'spatium::geom3d::Sphere::distanceTo()']]],
+  ['distancetohorizon',['distanceToHorizon',['../classspatium_1_1geom3d_1_1_sphere.html#ad878c223af531a4eb6d592e4b0d557b5',1,'spatium::geom3d::Sphere']]],
+  ['dot',['dot',['../classspatium_1_1geom3d_1_1_vector3.html#ae4fd90943b7f1eb91946c2edf694d4a0',1,'spatium::geom3d::Vector3']]],
+  ['drawcircle',['drawCircle',['../classspatium_1_1gfx2d_1_1_drawing.html#ae7e9dc0dd0931f54a9de3439d238eb63',1,'spatium::gfx2d::Drawing']]],
+  ['drawcurve',['drawCurve',['../classspatium_1_1gfx2d_1_1_drawing.html#ab710f8a82afead1119108882f0de8546',1,'spatium::gfx2d::Drawing']]],
+  ['drawline',['drawLine',['../classspatium_1_1gfx2d_1_1_drawing.html#a3bf5f0dada4530484fe880e41f23f5a6',1,'spatium::gfx2d::Drawing']]],
+  ['drawlinehigh',['drawLineHigh',['../classspatium_1_1gfx2d_1_1_drawing.html#a502edd192f1ca06f8f3407f4f5066c43',1,'spatium::gfx2d::Drawing']]],
+  ['drawlinelow',['drawLineLow',['../classspatium_1_1gfx2d_1_1_drawing.html#a96cdc3844f9ff586f3490a7d86a4c4ad',1,'spatium::gfx2d::Drawing']]],
+  ['drawrectangle',['drawRectangle',['../classspatium_1_1gfx2d_1_1_drawing.html#ae3ff48dd26c0636e2b0abb84a93fc67f',1,'spatium::gfx2d::Drawing']]]
 ];

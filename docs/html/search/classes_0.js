@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ellipsoid',['Ellipsoid',['../class_math_1_1_geometry_1_1_ellipsoid.html',1,'Math::Geometry']]]
+  ['beziercurve',['BezierCurve',['../classspatium_1_1gfx2d_1_1_bezier_curve.html',1,'spatium::gfx2d']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deg2rad',['Deg2Rad',['../namespace_math.html#ac5e56c82558a1ee834040fe40fb40ce8',1,'Math']]]
+  ['deg2rad',['Deg2Rad',['../namespacespatium.html#a63b91fe965a335a07fd3335e00048172',1,'spatium']]]
 ];

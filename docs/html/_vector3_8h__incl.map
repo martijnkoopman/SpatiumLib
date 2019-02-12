@@ -1,4 +1,5 @@
-<map id="/home/martijn/GITHUB/SpatiumLib/include/SpatiumLib/Math/Geometry/Vector3.h" name="/home/martijn/GITHUB/SpatiumLib/include/SpatiumLib/Math/Geometry/Vector3.h">
-<area shape="rect" id="node2" href="$_vector_8h.html" title="SpatiumLib/Math/Vector.h" alt="" coords="15,109,189,136"/>
-<area shape="rect" id="node3" href="$_matrix_8h.html" title="SpatiumLib/Math/Matrix.h" alt="" coords="17,184,187,211"/>
+<map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/Vector3.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/Vector3.h">
+<area shape="rect" id="node2" href="$_vector_8h.html" title="spatium/Vector.h" alt="" coords="189,109,310,136"/>
+<area shape="rect" id="node3" href="$_matrix_8h.html" title="Matrix.h" alt="" coords="215,184,284,211"/>
+<area shape="rect" id="node8" href="$_math_8h.html" title="Math.h" alt="" coords="407,259,470,285"/>
 </map>

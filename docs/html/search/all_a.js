@@ -1,6 +1,28 @@
 var searchData=
 [
-  ['normal',['normal',['../class_math_1_1_geometry_1_1_plane.html#a341c40978d3147cffe51581c0c0f976d',1,'Math::Geometry::Plane::normal(const Vector3 &amp;normal)'],['../class_math_1_1_geometry_1_1_plane.html#aadc113a425e0ccac6b0f7de18e52136a',1,'Math::Geometry::Plane::normal() const']]],
-  ['normalize',['normalize',['../class_math_1_1_geometry_1_1_vector3.html#a178f123dc26465db86765505003121fa',1,'Math::Geometry::Vector3']]],
-  ['normalized',['normalized',['../class_math_1_1_geometry_1_1_vector3.html#a9dd03b139d7ff1bd4c23abad5e02f142',1,'Math::Geometry::Vector3']]]
+  ['m_5faxisx',['m_axisX',['../classspatium_1_1geom3d_1_1_ellipsoid.html#afd30d93f66e8dbc14639cc0845d85dac',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5faxisy',['m_axisY',['../classspatium_1_1geom3d_1_1_ellipsoid.html#aa577a5b5708e86481a1d37afc04aecd6',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5faxisz',['m_axisZ',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a2d1bd7ffd3c26c4200970f3ef9fcb9cd',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5fbounds',['m_bounds',['../classspatium_1_1gfx3d_1_1_scene_object.html#a978328cdbc71f794df62ca2860cc57eb',1,'spatium::gfx3d::SceneObject']]],
+  ['m_5fcols',['m_cols',['../classspatium_1_1_matrix.html#aee26b368e9a5ab79c5486dbde926d258',1,'spatium::Matrix']]],
+  ['m_5fdata',['m_data',['../classspatium_1_1_matrix.html#a4c4488ee38eb9fb54d99afd64f5bc696',1,'spatium::Matrix']]],
+  ['m_5fellipsoidaltransformation',['m_ellipsoidalTransformation',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a5148ed8c10a79adb445a0bd16dae4a57',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5fellipsoidaltransformationinverse',['m_ellipsoidalTransformationInverse',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a1cd8013e95fb08f1bd0ba92c65d248d1',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5fheight',['m_height',['../classspatium_1_1imgproc_1_1_image.html#a08f482618d953159cc8447222bc6f1fb',1,'spatium::imgproc::Image']]],
+  ['m_5fimagedata',['m_imageData',['../classspatium_1_1imgproc_1_1_image.html#a762d313690b3afccaf3ede87bdbb7657',1,'spatium::imgproc::Image']]],
+  ['m_5fnormal',['m_normal',['../classspatium_1_1geom3d_1_1_plane.html#a8f1b7fcd69bbd65de73afe1fa736bbf4',1,'spatium::geom3d::Plane']]],
+  ['m_5forigin',['m_origin',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a81acd41d1dbf4d0e48963e61b3f98736',1,'spatium::geom3d::Ellipsoid::m_origin()'],['../classspatium_1_1geom3d_1_1_plane.html#a0aec9fbb76a070b91e0b8ef28d5b762f',1,'spatium::geom3d::Plane::m_origin()'],['../classspatium_1_1geom3d_1_1_sphere.html#a1bc4f15b82e6e35d9e3f10f04191e937',1,'spatium::geom3d::Sphere::m_origin()']]],
+  ['m_5fradius',['m_radius',['../classspatium_1_1geom3d_1_1_sphere.html#a71d161e4c4275afa1c10562c81f0f189',1,'spatium::geom3d::Sphere']]],
+  ['m_5frows',['m_rows',['../classspatium_1_1_matrix.html#afc3396d15bca9b7488356ab6bdb279ca',1,'spatium::Matrix']]],
+  ['m_5ftransformation',['m_transformation',['../classspatium_1_1gfx3d_1_1_scene_object.html#a84aa28d2a8e7271ecdb6b1c868b0b0fe',1,'spatium::gfx3d::SceneObject']]],
+  ['m_5fwidth',['m_width',['../classspatium_1_1imgproc_1_1_image.html#a0a6c752791c4d209acdd0c702381609e',1,'spatium::imgproc::Image']]],
+  ['math_2eh',['Math.h',['../_math_8h.html',1,'']]],
+  ['matrix',['Matrix',['../classspatium_1_1_matrix.html',1,'spatium::Matrix'],['../classspatium_1_1_matrix.html#ac81f0713730779e812d4fa117f8f9942',1,'spatium::Matrix::Matrix(unsigned rows, unsigned cols)'],['../classspatium_1_1_matrix.html#aea96be5e2486ce7488692ce1c446aa45',1,'spatium::Matrix::Matrix(std::initializer_list&lt; std::initializer_list&lt; double &gt;&gt; array)'],['../classspatium_1_1_matrix.html#ab7955db9140cb5511657b55ce63849b9',1,'spatium::Matrix::Matrix(const Matrix &amp;other)']]],
+  ['matrix_2eh',['Matrix.h',['../_matrix_8h.html',1,'']]],
+  ['matrix4x4',['Matrix4x4',['../classspatium_1_1geom3d_1_1_matrix4x4.html',1,'spatium::geom3d::Matrix4x4'],['../classspatium_1_1geom3d_1_1_matrix4x4.html#a592ddb87dff905275e4e0379bd8693d6',1,'spatium::geom3d::Matrix4x4::Matrix4x4()'],['../classspatium_1_1geom3d_1_1_matrix4x4.html#a881df1cf8fa192e9a7873fd88797cd5a',1,'spatium::geom3d::Matrix4x4::Matrix4x4(const Matrix4x4 &amp;other)'],['../classspatium_1_1geom3d_1_1_matrix4x4.html#a465385ad297c1a920a6b1164f6a4f198',1,'spatium::geom3d::Matrix4x4::Matrix4x4(const Matrix &amp;other)']]],
+  ['matrix4x4_2eh',['Matrix4x4.h',['../_matrix4x4_8h.html',1,'']]],
+  ['mean',['mean',['../namespacespatium_1_1statistics.html#a8a390343f76f01c2fad02287f5a700d7',1,'spatium::statistics']]],
+  ['mesh',['Mesh',['../classspatium_1_1gfx3d_1_1_mesh.html',1,'spatium::gfx3d::Mesh'],['../classspatium_1_1gfx3d_1_1_mesh.html#ab6768a527257fada346d05c6ceb80130',1,'spatium::gfx3d::Mesh::Mesh()']]],
+  ['mesh_2eh',['Mesh.h',['../_mesh_8h.html',1,'']]],
+  ['minor',['minor',['../classspatium_1_1_matrix.html#aa1210bec11d55b77a2185e9ca7031d9d',1,'spatium::Matrix']]]
 ];

@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['normal',['normal',['../class_math_1_1_geometry_1_1_plane.html#a341c40978d3147cffe51581c0c0f976d',1,'Math::Geometry::Plane::normal(const Vector3 &amp;normal)'],['../class_math_1_1_geometry_1_1_plane.html#aadc113a425e0ccac6b0f7de18e52136a',1,'Math::Geometry::Plane::normal() const']]],
-  ['normalize',['normalize',['../class_math_1_1_geometry_1_1_vector3.html#a178f123dc26465db86765505003121fa',1,'Math::Geometry::Vector3']]],
-  ['normalized',['normalized',['../class_math_1_1_geometry_1_1_vector3.html#a9dd03b139d7ff1bd4c23abad5e02f142',1,'Math::Geometry::Vector3']]]
+  ['matrix',['Matrix',['../classspatium_1_1_matrix.html#ac81f0713730779e812d4fa117f8f9942',1,'spatium::Matrix::Matrix(unsigned rows, unsigned cols)'],['../classspatium_1_1_matrix.html#aea96be5e2486ce7488692ce1c446aa45',1,'spatium::Matrix::Matrix(std::initializer_list&lt; std::initializer_list&lt; double &gt;&gt; array)'],['../classspatium_1_1_matrix.html#ab7955db9140cb5511657b55ce63849b9',1,'spatium::Matrix::Matrix(const Matrix &amp;other)']]],
+  ['matrix4x4',['Matrix4x4',['../classspatium_1_1geom3d_1_1_matrix4x4.html#a592ddb87dff905275e4e0379bd8693d6',1,'spatium::geom3d::Matrix4x4::Matrix4x4()'],['../classspatium_1_1geom3d_1_1_matrix4x4.html#a881df1cf8fa192e9a7873fd88797cd5a',1,'spatium::geom3d::Matrix4x4::Matrix4x4(const Matrix4x4 &amp;other)'],['../classspatium_1_1geom3d_1_1_matrix4x4.html#a465385ad297c1a920a6b1164f6a4f198',1,'spatium::geom3d::Matrix4x4::Matrix4x4(const Matrix &amp;other)']]],
+  ['mean',['mean',['../namespacespatium_1_1statistics.html#a8a390343f76f01c2fad02287f5a700d7',1,'spatium::statistics']]],
+  ['mesh',['Mesh',['../classspatium_1_1gfx3d_1_1_mesh.html#ab6768a527257fada346d05c6ceb80130',1,'spatium::gfx3d::Mesh']]],
+  ['minor',['minor',['../classspatium_1_1_matrix.html#aa1210bec11d55b77a2185e9ca7031d9d',1,'spatium::Matrix']]]
 ];

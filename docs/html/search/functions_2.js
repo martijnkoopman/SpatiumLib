@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['cartesiantosphericalcoordinates',['cartesianToSphericalCoordinates',['../class_math_1_1_geometry_1_1_sphere.html#a6fcda58e5bd0a734587f7f5e584e46c5',1,'Math::Geometry::Sphere']]],
-  ['cartesiantospheroidalcoordinates',['cartesianToSpheroidalCoordinates',['../class_math_1_1_geometry_1_1_oblate_spheroid.html#a687cd62ccdf621521d705a52755af4f5',1,'Math::Geometry::OblateSpheroid::cartesianToSpheroidalCoordinates(double x, double y, double z, double precision=0) const'],['../class_math_1_1_geometry_1_1_oblate_spheroid.html#a2231f8fe86e9dd7023b0846c03c1c962',1,'Math::Geometry::OblateSpheroid::cartesianToSpheroidalCoordinates(Point3 point, double precision=0) const']]],
-  ['clear',['clear',['../class_math_1_1_matrix.html#a9dd46ab54ff40b1344ca3421c2a6a887',1,'Math::Matrix']]],
-  ['cols',['cols',['../class_math_1_1_matrix.html#a03db81b174265dac09c44ceb4fe5672b',1,'Math::Matrix']]],
-  ['cross',['cross',['../class_math_1_1_geometry_1_1_vector3.html#a2e19b4b9f52c5ec2d51ccc188ddeafb0',1,'Math::Geometry::Vector3']]]
+  ['cartesiantosphericalcoordinates',['cartesianToSphericalCoordinates',['../classspatium_1_1geom3d_1_1_sphere.html#ab4eef57da706ab387a9173996ab113ac',1,'spatium::geom3d::Sphere']]],
+  ['cartesiantospheroidalcoordinates',['cartesianToSpheroidalCoordinates',['../classspatium_1_1geom3d_1_1_oblate_spheroid.html#a5d44bdef730165997aad701b1076bc17',1,'spatium::geom3d::OblateSpheroid::cartesianToSpheroidalCoordinates(double x, double y, double z, double precision=0) const'],['../classspatium_1_1geom3d_1_1_oblate_spheroid.html#ac41631269fc6dbdc3b6df7d9c27e9fe6',1,'spatium::geom3d::OblateSpheroid::cartesianToSpheroidalCoordinates(Point3 point, double precision=0) const']]],
+  ['channelcount',['channelCount',['../classspatium_1_1imgproc_1_1_image.html#a260e94b36cb85d6767217ef283359beb',1,'spatium::imgproc::Image']]],
+  ['clear',['clear',['../classspatium_1_1imgproc_1_1_image.html#a0a30943142a9a5f0ffb269707ad28828',1,'spatium::imgproc::Image::clear()'],['../classspatium_1_1_matrix.html#a058509bb7c8f5f993589624b725c8f8d',1,'spatium::Matrix::clear()']]],
+  ['cols',['cols',['../classspatium_1_1_matrix.html#af5ff8d27fcf2c301f3c0376b4f7dd933',1,'spatium::Matrix']]],
+  ['cross',['cross',['../classspatium_1_1geom3d_1_1_vector3.html#a644b4122a74a3fcaa47bd0bcd3c95594',1,'spatium::geom3d::Vector3']]],
+  ['cube',['cube',['../classspatium_1_1gfx3d_1_1_mesh.html#a47c814f74ee5ce96c083caa33ebd88b7',1,'spatium::gfx3d::Mesh']]]
 ];

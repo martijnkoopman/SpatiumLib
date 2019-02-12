@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['m_5faxisx',['m_axisX',['../class_math_1_1_geometry_1_1_ellipsoid.html#a49c6f062f3f1f7f7c1964263eb280e78',1,'Math::Geometry::Ellipsoid']]],
-  ['m_5faxisy',['m_axisY',['../class_math_1_1_geometry_1_1_ellipsoid.html#a241201b852ab5fba540aa492c83dfb6e',1,'Math::Geometry::Ellipsoid']]],
-  ['m_5faxisz',['m_axisZ',['../class_math_1_1_geometry_1_1_ellipsoid.html#a7e984da0e6d6271e5cb716d0a69369cb',1,'Math::Geometry::Ellipsoid']]],
-  ['m_5fcols',['m_cols',['../class_math_1_1_matrix.html#a803d8267899d20606d4c091969e10b46',1,'Math::Matrix']]],
-  ['m_5fdata',['m_data',['../class_math_1_1_matrix.html#aa4401d8e280cb7c77bc0871ab892feae',1,'Math::Matrix']]],
-  ['m_5fellipsoidaltransformation',['m_ellipsoidalTransformation',['../class_math_1_1_geometry_1_1_ellipsoid.html#a4f651fa8801b5facc8a9fb9b6fa39a52',1,'Math::Geometry::Ellipsoid']]],
-  ['m_5fellipsoidaltransformationinverse',['m_ellipsoidalTransformationInverse',['../class_math_1_1_geometry_1_1_ellipsoid.html#a45a34698e6506c02be2d63d05323205b',1,'Math::Geometry::Ellipsoid']]],
-  ['m_5fnormal',['m_normal',['../class_math_1_1_geometry_1_1_plane.html#a5f6ae921f58c08b42a943a42638df6de',1,'Math::Geometry::Plane']]],
-  ['m_5forigin',['m_origin',['../class_math_1_1_geometry_1_1_ellipsoid.html#a01c18234f5be06f455ce6021e87c4f87',1,'Math::Geometry::Ellipsoid::m_origin()'],['../class_math_1_1_geometry_1_1_plane.html#a0364564a86b984f7d5380b650282b855',1,'Math::Geometry::Plane::m_origin()'],['../class_math_1_1_geometry_1_1_sphere.html#abfdc872e829fa892fbf9ca0c93de36ac',1,'Math::Geometry::Sphere::m_origin()']]],
-  ['m_5fradius',['m_radius',['../class_math_1_1_geometry_1_1_sphere.html#a2d1c1348b275b20f9e178bf7b34b1425',1,'Math::Geometry::Sphere']]],
-  ['m_5frows',['m_rows',['../class_math_1_1_matrix.html#a51b1794295064099f09e5ad781cf0084',1,'Math::Matrix']]]
+  ['m_5faxisx',['m_axisX',['../classspatium_1_1geom3d_1_1_ellipsoid.html#afd30d93f66e8dbc14639cc0845d85dac',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5faxisy',['m_axisY',['../classspatium_1_1geom3d_1_1_ellipsoid.html#aa577a5b5708e86481a1d37afc04aecd6',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5faxisz',['m_axisZ',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a2d1bd7ffd3c26c4200970f3ef9fcb9cd',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5fbounds',['m_bounds',['../classspatium_1_1gfx3d_1_1_scene_object.html#a978328cdbc71f794df62ca2860cc57eb',1,'spatium::gfx3d::SceneObject']]],
+  ['m_5fcols',['m_cols',['../classspatium_1_1_matrix.html#aee26b368e9a5ab79c5486dbde926d258',1,'spatium::Matrix']]],
+  ['m_5fdata',['m_data',['../classspatium_1_1_matrix.html#a4c4488ee38eb9fb54d99afd64f5bc696',1,'spatium::Matrix']]],
+  ['m_5fellipsoidaltransformation',['m_ellipsoidalTransformation',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a5148ed8c10a79adb445a0bd16dae4a57',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5fellipsoidaltransformationinverse',['m_ellipsoidalTransformationInverse',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a1cd8013e95fb08f1bd0ba92c65d248d1',1,'spatium::geom3d::Ellipsoid']]],
+  ['m_5fheight',['m_height',['../classspatium_1_1imgproc_1_1_image.html#a08f482618d953159cc8447222bc6f1fb',1,'spatium::imgproc::Image']]],
+  ['m_5fimagedata',['m_imageData',['../classspatium_1_1imgproc_1_1_image.html#a762d313690b3afccaf3ede87bdbb7657',1,'spatium::imgproc::Image']]],
+  ['m_5fnormal',['m_normal',['../classspatium_1_1geom3d_1_1_plane.html#a8f1b7fcd69bbd65de73afe1fa736bbf4',1,'spatium::geom3d::Plane']]],
+  ['m_5forigin',['m_origin',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a81acd41d1dbf4d0e48963e61b3f98736',1,'spatium::geom3d::Ellipsoid::m_origin()'],['../classspatium_1_1geom3d_1_1_plane.html#a0aec9fbb76a070b91e0b8ef28d5b762f',1,'spatium::geom3d::Plane::m_origin()'],['../classspatium_1_1geom3d_1_1_sphere.html#a1bc4f15b82e6e35d9e3f10f04191e937',1,'spatium::geom3d::Sphere::m_origin()']]],
+  ['m_5fradius',['m_radius',['../classspatium_1_1geom3d_1_1_sphere.html#a71d161e4c4275afa1c10562c81f0f189',1,'spatium::geom3d::Sphere']]],
+  ['m_5frows',['m_rows',['../classspatium_1_1_matrix.html#afc3396d15bca9b7488356ab6bdb279ca',1,'spatium::Matrix']]],
+  ['m_5ftransformation',['m_transformation',['../classspatium_1_1gfx3d_1_1_scene_object.html#a84aa28d2a8e7271ecdb6b1c868b0b0fe',1,'spatium::gfx3d::SceneObject']]],
+  ['m_5fwidth',['m_width',['../classspatium_1_1imgproc_1_1_image.html#a0a6c752791c4d209acdd0c702381609e',1,'spatium::imgproc::Image']]]
 ];

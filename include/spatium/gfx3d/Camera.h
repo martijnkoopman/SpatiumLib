@@ -13,15 +13,24 @@
 #ifndef SPATIUMLIB_GFX3D_CAMERA_H
 #define SPATIUMLIB_GFX3D_CAMERA_H
 
-//#include "SceneObject.h"
+#include "SceneObject.h"
 
 namespace spatium {
 namespace gfx3d {
 
 /// \class Camera
-class Camera  //: public SceneObject
+/// \brief Camera scene object
+///
+/// Vantage point from where an image can be rendered.
+class Camera : public SceneObject
 {
 public:
+
+protected:
+  void updateBounds() override
+  {
+    m_bounds = {0};
+  }
 
 private:
 };

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['matrix',['Matrix',['../class_math_1_1_matrix.html#a2b67bc3a313707710b1d3e629cd2b2cf',1,'Math::Matrix::Matrix(unsigned rows, unsigned cols)'],['../class_math_1_1_matrix.html#a2b306bfa17a1aa6d3e7c33967fac1c41',1,'Math::Matrix::Matrix(std::initializer_list&lt; std::initializer_list&lt; double &gt;&gt; array)'],['../class_math_1_1_matrix.html#a696f61bcc8c2f3c426db453c3584d5c9',1,'Math::Matrix::Matrix(const Matrix &amp;other)']]],
-  ['matrix4x4',['Matrix4x4',['../class_math_1_1_geometry_1_1_matrix4x4.html#a477852a9de53ba4e7634b16a7e1f0fcc',1,'Math::Geometry::Matrix4x4::Matrix4x4()'],['../class_math_1_1_geometry_1_1_matrix4x4.html#ab9fd96a2efbdba5d3b6e163c2a861b6b',1,'Math::Geometry::Matrix4x4::Matrix4x4(const Matrix4x4 &amp;other)'],['../class_math_1_1_geometry_1_1_matrix4x4.html#a7c80af70135f865d5c8d3e7eef03c6f6',1,'Math::Geometry::Matrix4x4::Matrix4x4(const Matrix &amp;other)']]],
-  ['minor',['minor',['../class_math_1_1_matrix.html#a8fbc615d700d8048f5c8edfe2a58112b',1,'Math::Matrix']]]
+  ['latitude',['latitude',['../classspatium_1_1geom3d_1_1_geo_point3.html#a0d349c72b17b0d3a8ff6c4fb57c6caae',1,'spatium::geom3d::GeoPoint3::latitude(double val)'],['../classspatium_1_1geom3d_1_1_geo_point3.html#af4f85b5254648bd76e63edfbcef626ed',1,'spatium::geom3d::GeoPoint3::latitude() const']]],
+  ['length',['length',['../classspatium_1_1geom3d_1_1_vector3.html#acbe50fda7e820b2bfcd0f4c886635787',1,'spatium::geom3d::Vector3']]],
+  ['light',['Light',['../classspatium_1_1gfx3d_1_1_light.html#a83200db1a5930cdbf30a6d4d82eb6d7d',1,'spatium::gfx3d::Light']]],
+  ['longitude',['longitude',['../classspatium_1_1geom3d_1_1_geo_point3.html#ae62221b51eab9d2288691f4197f614e0',1,'spatium::geom3d::GeoPoint3::longitude(double val)'],['../classspatium_1_1geom3d_1_1_geo_point3.html#a0d800c8ffbbc955f2d053bca93356519',1,'spatium::geom3d::GeoPoint3::longitude() const']]]
 ];
