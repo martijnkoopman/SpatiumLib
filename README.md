@@ -1,5 +1,5 @@
 # SpatiumLib
-C++ header-only library for 2D/3D computer graphics, mathematics (linear algebra and statistics) and a little bit of geography.
+C++ header-only library for 2D/3D computer graphics, image processing, mathematics (linear algebra and statistics) and a little bit of geography.
 
 ## Content
 
