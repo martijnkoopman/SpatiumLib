@@ -20,6 +20,7 @@ namespace geom3d {
 
 class Vector3;
 
+/// \class Matrix4x4
 /// \brief Matrix with 4 rows and 4 columns
 class Matrix4x4 : public Matrix
 {

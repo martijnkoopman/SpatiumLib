@@ -13,7 +13,7 @@
 #ifndef SPATIUMLIB_GFX3D_MESH_H
 #define SPATIUMLIB_GFX3D_MESH_H
 
-#include "SceneObject.h"
+#include "RenderObject.h"
 #include "spatium/geom3d/Point3.h"
 
 #include <vector>
@@ -26,7 +26,7 @@ namespace gfx3d {
 /// \brief Scene object with a mesh
 ///
 /// A mesh is a collection of vertices connected by edges.
-class Mesh : public SceneObject
+class Mesh : public RenderObject
 {
 public:
   /// Constructor
@@ -35,7 +35,7 @@ public:
   /// \param[in] edges List of edges.
   ///                  An edge is a tuple of two vertex indices (v1, v2).
   Mesh(const std::vector<geom3d::Point3> &vertices, const std::vector<std::array<int, 2>> &edges)
-  : SceneObject ()
+  : RenderObject ()
   , m_vertices(vertices)
   , m_edges(edges)
   {

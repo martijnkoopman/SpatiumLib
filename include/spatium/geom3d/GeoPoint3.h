@@ -19,9 +19,9 @@ namespace spatium {
 namespace geom3d {
 
 /// \class GeoPoint3
-/// \brief Point in 3D geographical space
+/// \brief Point in 3D geographical space as homogeneous coordinates
 ///
-/// Implementation wise GeoPoint3 is identical to Point3. Only the names of
+/// The implementation of GeoPoint3 is identical to Point3. Only the names of
 /// the fields are different: longitude, latitude and elevation.
 class GeoPoint3 : public Point3
 {

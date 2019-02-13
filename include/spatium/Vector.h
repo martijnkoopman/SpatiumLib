@@ -17,7 +17,8 @@
 
 namespace spatium {
 
-/// \brief Vector
+/// \class Vector
+/// \brief Vector in column-major order
 class Vector : public Matrix
 {
 public:

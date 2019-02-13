@@ -15,6 +15,8 @@
 
 #include "SceneObject.h"
 
+#include <ostream>
+
 namespace spatium {
 namespace gfx3d {
 
@@ -26,11 +28,34 @@ class Camera : public SceneObject
 {
 public:
 
-protected:
-  void updateBounds() override
+  /// Make camera look in the direction of target.
+  ///
+  /// \param[in] target Target position
+  /// \param[in] up Up vector
+  void lookAt(const geom3d::Point3 &target, const geom3d::Vector3 &up)
   {
-    m_bounds = {0};
+
   }
+
+  /// Set camera position and make make camera look in direction of target.
+  ///
+  /// \param[in] position Camera position
+  /// \param[in] target Target position
+  /// \param[in] up Up vector
+  void lookAt(const geom3d::Point3 &position, const geom3d::Point3 &target,
+              const geom3d::Vector3 &up)
+  {
+
+  }
+
+  /// Output to ostream
+  friend std::ostream &operator<<(std::ostream &os, const Camera &camera)
+  {
+    os << "Camera";
+    return os;
+  }
+
+protected:
 
 private:
 };

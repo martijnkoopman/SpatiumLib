@@ -26,7 +26,8 @@
 
 namespace spatium {
 
-/// \brief Matrix
+/// \class Matrix
+/// \brief Matrix in column-major order
 class Matrix
 {
 public:

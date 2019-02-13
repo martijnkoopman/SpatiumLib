@@ -1,7 +1,9 @@
 #include <QtTest>
 #include "TestUtilities.h"
 
+#include <spatium/imgproc/Image.h>
 #include <spatium/gfx3d/Mesh.h>
+#include <spatium/gfx3d/OrthographicCamera.h>
 
 using namespace spatium;
 
@@ -35,6 +37,8 @@ Graphics3D_test::~Graphics3D_test()
 
 void Graphics3D_test::test_cubeMesh()
 {
+  imgproc::Image<unsigned char, 3> frame(640, 480);
+
   // Construct mesh with diameter of 2 at origin
   gfx3d::Mesh cube = gfx3d::Mesh::cube(2);
 
@@ -48,6 +52,19 @@ void Graphics3D_test::test_cubeMesh()
   QCOMPARE(bounds[5],  1); // Zmax
 
   // Transform object
+
+  gfx3d::OrthographicCamera camera(640.0/480.0, 10);
+  camera.lookAt({0, 0, 10},  // Camera postion. Z = 10
+                {0, 0, 0},   // Look at origin
+                {0, 1, 0});  // Up vector is Y axis
+
+
+
+
+  // gfx3d::WireframeRenderer renderer;
+  //renderer.render(scene, )
+
+
 }
 
 void Graphics3D_test::test_sceneObjectTransform()

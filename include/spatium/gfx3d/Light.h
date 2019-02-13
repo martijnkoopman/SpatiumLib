@@ -13,6 +13,8 @@
 #ifndef SPATIUMLIB_GFX3D_LIGHT_H
 #define SPATIUMLIB_GFX3D_LIGHT_H
 
+#include "SceneObject.h"
+
 #include <array>
 
 namespace spatium {
@@ -22,7 +24,7 @@ namespace gfx3d {
 /// \brief Light scene object
 ///
 /// A Light emits light in all directions.
-class Light
+class Light : public SceneObject
 {
 public:
 
@@ -37,6 +39,14 @@ public:
   }
 
   ///\todo: Rule of 5
+
+  ///\todo Write to ostream
+
+protected:
+  void updateBounds() override
+  {
+    m_bounds = {0};
+  }
 
 private:
   double m_strength;

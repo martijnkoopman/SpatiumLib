@@ -30,19 +30,45 @@ namespace gfx3d {
 class SceneObject
 {
 public:
-  // TODO: Rule of 5
-
   SceneObject()
-    : m_bounds({0})
   {}
 
-  /// Get the boundaries of the object; axis aligned.
-  /// Xmin, Xmax, Ymin, Ymax, Zmin, Zmax
+  // TODO: Rule of 5
+
+  /// Set the position in world space
   ///
-  /// \return Boundaries
-  std::array<double, 6> bounds() const
+  /// \param[in] position Position
+  void setPosition(const geom3d::Point3 &point)
   {
-    return m_bounds;
+    m_transformation(0,3) = point.x();
+    m_transformation(1,3) = point.y();
+    m_transformation(2,3) = point.z();
+  }
+
+  /// Get the position in world space
+  ///
+  /// \return Position
+  geom3d::Point3 position() const
+  {
+    return geom3d::Point3(m_transformation(0,3),
+                          m_transformation(1,3),
+                          m_transformation(2,3));
+  }
+
+  /// Set the rotation in world space
+  ///
+  /// \param[in] euler Rotation in euler angles
+  void setRotation(const geom3d::Vector3 &euler)
+  {
+    //
+  }
+
+  /// Get the rotation in world space
+  ///
+  /// \return Rotation in euler angles
+  geom3d::Vector3 rotation() const
+  {
+    return geom3d::Vector3(0,0,0);
   }
 
   /// Get the transformation matrix
@@ -80,11 +106,7 @@ public:
   }
 
 protected:
-  virtual void updateBounds() = 0;
-
   geom3d::Matrix4x4 m_transformation;
-
-  std::array<double, 6> m_bounds;
 };
 
 } // namespace gfx3d

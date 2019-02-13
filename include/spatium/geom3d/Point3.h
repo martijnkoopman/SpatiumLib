@@ -20,16 +20,16 @@ namespace spatium {
 namespace geom3d {
 
 /// \class Point3
-/// \brief Point in 3D Cartesian space
+/// \brief Point in 3D Cartesian space as homogeneous coordinates
 ///
 /// A point is a Matrix with 1 column and 4 rows. The first three elements
 /// define the X, Y and Z coordinates. The fourth element is always 1.
-class Point3 : public Matrix /// \todo To Vector
+class Point3 : public Vector
 {
 public:
   /// Constructor
   Point3()
-    : Matrix(4, 1)
+    : Vector(4)
   {
     m_data[3] = 1;
   }
@@ -40,7 +40,7 @@ public:
   /// \param[in] y Y coordinate
   /// \param[in] z Z coordinate
   Point3(double x, double y, double z)
-    : Matrix(4, 1)
+    : Vector(4)
   {
     m_data[0] = x;
     m_data[1] = y;
@@ -52,7 +52,7 @@ public:
   ///
   /// \param[in] xyz Array with X, Y and Z coordinates
   Point3(double xyz[])
-    : Matrix(4, 1)
+    : Vector(4)
   {
     m_data[0] = xyz[0];
     m_data[1] = xyz[1];
@@ -62,7 +62,7 @@ public:
 
   /// Copy constructor
   Point3(const Point3 &other) // Needed?
-    : Matrix(other)
+    : Vector(other)
   {
   }
 
@@ -71,7 +71,7 @@ public:
   /// \param[in] other Other matrix
   /// \exception std::out_of_range Matrix dimensions out of range
   Point3(const Matrix &other)
-    : Matrix(4,1)
+    : Vector(4)
   {
     if (other.rows() != 4
         || other.cols() != 1)
