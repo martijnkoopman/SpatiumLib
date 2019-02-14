@@ -32,7 +32,7 @@ public:
   ///
   /// \param[in] strength Strength
   /// \param[in] color Color (RGB)
-  Light(double strength, std::array<unsigned char, 3> color = {255, 255, 255})
+  Light(double strength = 10, std::array<unsigned char, 3> color = {255, 255, 255})
     : m_strength(strength)
     , m_color(color)
   {
@@ -43,12 +43,6 @@ public:
   ///\todo Write to ostream
 
 protected:
-  void updateBounds() override
-  {
-    m_bounds = {0};
-  }
-
-private:
   double m_strength;
   std::array<unsigned char, 3> m_color;
 };

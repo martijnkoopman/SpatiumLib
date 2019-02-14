@@ -1,7 +1,11 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/imgproc/Image.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/imgproc/Image.h">
-<area shape="rect" id="node2" href="$_drawing_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx2d/Drawing.h" alt="" coords="12,109,200,165"/>
-<area shape="rect" id="node5" href="$_i_image_filter_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/imgproc/IImageFilter.h" alt="" coords="237,109,444,165"/>
-<area shape="rect" id="node3" href="$gfx2d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx2d.h" alt="" coords="5,213,193,269"/>
-<area shape="rect" id="node4" href="$spatium_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/spatium.h" alt="" coords="5,317,193,373"/>
-<area shape="rect" id="node6" href="$_global_threshold_filter_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/imgproc/GlobalThresholdFilter.h" alt="" coords="217,213,477,269"/>
+<area shape="rect" id="node2" href="$_drawing_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx2d/Drawing.h" alt="" coords="11,109,199,165"/>
+<area shape="rect" id="node5" href="$_renderer_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/Renderer.h" alt="" coords="244,109,432,165"/>
+<area shape="rect" id="node8" href="$_i_image_filter_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/imgproc/IImageFilter.h" alt="" coords="456,109,663,165"/>
+<area shape="rect" id="node10" href="$imgproc_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/imgproc.h" alt="" coords="468,317,656,373"/>
+<area shape="rect" id="node3" href="$gfx2d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx2d.h" alt="" coords="5,317,193,373"/>
+<area shape="rect" id="node4" href="$spatium_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/spatium.h" alt="" coords="243,421,431,477"/>
+<area shape="rect" id="node6" href="$_wireframe_renderer_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/WireframeRenderer.h" alt="" coords="93,213,329,269"/>
+<area shape="rect" id="node7" href="$gfx3d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d.h" alt="" coords="243,317,431,373"/>
+<area shape="rect" id="node9" href="$_global_threshold_filter_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/imgproc/GlobalThresholdFilter.h" alt="" coords="403,213,663,269"/>
 </map>

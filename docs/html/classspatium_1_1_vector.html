@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classspatium_1_1_vector.html" title="Vector. ">Vector</a>.  
+<p><a class="el" href="classspatium_1_1_vector.html" title="Vector in column-major order. ">Vector</a> in column-major order.  
  <a href="classspatium_1_1_vector.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_vector_8h_source.html">Vector.h</a>&gt;</code></p>
@@ -80,8 +80,10 @@ Inheritance diagram for spatium::Vector:</div>
 <div class="dyncontent">
 <div class="center"><img src="classspatium_1_1_vector__inherit__graph.png" border="0" usemap="#spatium_1_1_vector_inherit__map" alt="Inheritance graph"/></div>
 <map name="spatium_1_1_vector_inherit__map" id="spatium_1_1_vector_inherit__map">
-<area shape="rect" id="node3" href="classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space. " alt="" coords="5,155,180,181"/>
-<area shape="rect" id="node2" href="classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="37,5,149,32"/>
+<area shape="rect" id="node3" href="classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates. " alt="" coords="17,155,184,181"/>
+<area shape="rect" id="node5" href="classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space. " alt="" coords="208,155,383,181"/>
+<area shape="rect" id="node2" href="classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="142,5,254,32"/>
+<area shape="rect" id="node4" href="classspatium_1_1geom3d_1_1_geo_point3.html" title="Point in 3D geographical space as homogeneous coordinates. " alt="" coords="5,229,196,256"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -89,7 +91,7 @@ Collaboration diagram for spatium::Vector:</div>
 <div class="dyncontent">
 <div class="center"><img src="classspatium_1_1_vector__coll__graph.png" border="0" usemap="#spatium_1_1_vector_coll__map" alt="Collaboration graph"/></div>
 <map name="spatium_1_1_vector_coll__map" id="spatium_1_1_vector_coll__map">
-<area shape="rect" id="node2" href="classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="7,5,119,32"/>
+<area shape="rect" id="node2" href="classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="7,5,119,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -227,7 +229,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4c4488ee38eb9fb54d99afd64f5bc696 inherit pro_attribs_classspatium_1_1_matrix"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classspatium_1_1_vector.html" title="Vector. ">Vector</a>. </p>
+<div class="textblock"><p><a class="el" href="classspatium_1_1_vector.html" title="Vector in column-major order. ">Vector</a> in column-major order. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a05ce364d8b328b3c8ce01c007926dd65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05ce364d8b328b3c8ce01c007926dd65">&#9670;&nbsp;</a></span>Vector() <span class="overload">[1/4]</span></h2>
@@ -358,7 +360,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> dimensions out of range </td></tr>
+    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> dimensions out of range </td></tr>
   </table>
   </dd>
 </dl>
@@ -426,7 +428,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> element out of range </td></tr>
+    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> element out of range </td></tr>
   </table>
   </dd>
 </dl>
@@ -468,7 +470,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> element out of range </td></tr>
+    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> element out of range </td></tr>
   </table>
   </dd>
 </dl>
@@ -508,7 +510,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Multiplied vector </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast? </dd></dl>
 
 </div>
 </div>
@@ -539,18 +541,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Add matrix to vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> to add </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> to add </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> dimensions out of range </td></tr>
+    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> dimensions out of range </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Added vector </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast? </dd></dl>
 
 </div>
 </div>
@@ -581,18 +583,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Subtract matrix from vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> to subtract </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> to subtract </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> dimensions out of range </td></tr>
+    <tr><td class="paramname">std::out_of_range</td><td><a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> dimensions out of range </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Subtracted vector </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast? </dd></dl>
 
 </div>
 </div>
@@ -628,7 +630,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Divided vector </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast? </dd></dl>
 
 </div>
 </div>

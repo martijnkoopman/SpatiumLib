@@ -1,5 +1,9 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Camera.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Camera.h">
-<area shape="rect" id="node2" href="$_scene_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/Scene.h" alt="" coords="5,109,193,165"/>
-<area shape="rect" id="node3" href="$gfx3d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d.h" alt="" coords="71,213,259,269"/>
-<area shape="rect" id="node4" href="$spatium_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/spatium.h" alt="" coords="71,317,259,373"/>
+<area shape="rect" id="node2" href="$_orthographic_camera_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/OrthographicCamera.h" alt="" coords="5,213,248,269"/>
+<area shape="rect" id="node3" href="$gfx3d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d.h" alt="" coords="427,421,615,477"/>
+<area shape="rect" id="node5" href="$_perspective_camera_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/PerspectiveCamera.h" alt="" coords="323,317,562,373"/>
+<area shape="rect" id="node6" href="$_scene_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/Scene.h" alt="" coords="506,109,694,165"/>
+<area shape="rect" id="node4" href="$spatium_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/spatium.h" alt="" coords="427,525,615,581"/>
+<area shape="rect" id="node7" href="$_renderer_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/Renderer.h" alt="" coords="638,213,826,269"/>
+<area shape="rect" id="node8" href="$_wireframe_renderer_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/WireframeRenderer.h" alt="" coords="687,317,923,373"/>
 </map>

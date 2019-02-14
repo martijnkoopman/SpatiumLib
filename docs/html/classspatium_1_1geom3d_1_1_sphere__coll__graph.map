@@ -1,5 +1,6 @@
 <map id="spatium::geom3d::Sphere" name="spatium::geom3d::Sphere">
-<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,81,192,108"/>
-<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space. " alt="" coords="217,81,383,108"/>
-<area shape="rect" id="node4" href="$classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="244,5,356,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,157,192,184"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates. " alt="" coords="217,157,383,184"/>
+<area shape="rect" id="node4" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order. " alt="" coords="243,81,357,108"/>
+<area shape="rect" id="node5" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="244,5,356,32"/>
 </map>

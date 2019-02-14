@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['addlight',['addLight',['../classspatium_1_1gfx3d_1_1_scene.html#acc6ec0db2e1d0361be35089e410a04fb',1,'spatium::gfx3d::Scene']]],
+  ['addrenderobject',['addRenderObject',['../classspatium_1_1gfx3d_1_1_scene.html#afb7a527947755919440a8f19a5197efe',1,'spatium::gfx3d::Scene']]],
   ['angle',['angle',['../classspatium_1_1geom3d_1_1_vector3.html#abdb9ccee5b54467bb79624f1805c5dea',1,'spatium::geom3d::Vector3']]],
   ['apply',['apply',['../classspatium_1_1imgproc_1_1_global_threshold_filter.html#a5e0a206db0060dd4fa4560788b15dd37',1,'spatium::imgproc::GlobalThresholdFilter::apply(const Image&lt; T, N &gt; &amp;input, Image&lt; T, 1 &gt; &amp;output)'],['../classspatium_1_1imgproc_1_1_global_threshold_filter.html#a97b76cc4212b70a1d65c0be803052d8f',1,'spatium::imgproc::GlobalThresholdFilter::apply(Image&lt; T, 1 &gt; &amp;inoutput)'],['../classspatium_1_1imgproc_1_1_i_image_filter.html#a1dae30c79d18e4e4b9110d862698db85',1,'spatium::imgproc::IImageFilter::apply(const Image&lt; T, N &gt; &amp;input, Image&lt; T, 1 &gt; &amp;output)'],['../classspatium_1_1imgproc_1_1_i_image_filter.html#a4141b543e5b1a77590617de90a469e15',1,'spatium::imgproc::IImageFilter::apply(Image&lt; T, N &gt; &amp;inoutput)']]],
   ['array',['array',['../classspatium_1_1geom3d_1_1_point3.html#a627dd645bb8b55d9ac8c76f889834f0b',1,'spatium::geom3d::Point3::array()'],['../classspatium_1_1geom3d_1_1_vector3.html#a37f20a370c8c963571c80a2696a5fbb8',1,'spatium::geom3d::Vector3::array()']]],

@@ -1,3 +1,4 @@
 <map id="spatium::geom3d::Point3" name="spatium::geom3d::Point3">
-<area shape="rect" id="node2" href="$classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="33,5,145,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order. " alt="" coords="31,80,146,107"/>
+<area shape="rect" id="node3" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="33,5,145,32"/>
 </map>

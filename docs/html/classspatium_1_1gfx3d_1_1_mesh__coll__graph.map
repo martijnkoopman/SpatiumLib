@@ -1,5 +1,6 @@
 <map id="spatium::gfx3d::Mesh" name="spatium::gfx3d::Mesh">
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="5,171,196,197"/>
-<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="7,81,194,108"/>
-<area shape="rect" id="node4" href="$classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="45,5,157,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_render_object.html" title="Scene object that can be rendered. " alt="" coords="5,247,201,273"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="8,171,199,197"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="10,81,197,108"/>
+<area shape="rect" id="node5" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="47,5,159,32"/>
 </map>

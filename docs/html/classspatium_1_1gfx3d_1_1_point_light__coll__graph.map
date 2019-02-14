@@ -1,0 +1,8 @@
+<map id="spatium::gfx3d::PointLight" name="spatium::gfx3d::PointLight">
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_light.html" title="Light scene object. " alt="" coords="67,272,211,299"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="34,171,225,197"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="5,81,192,108"/>
+<area shape="rect" id="node5" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="129,5,241,32"/>
+<area shape="rect" id="node7" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order. " alt="" coords="216,81,331,108"/>
+<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates. " alt="" coords="182,221,349,248"/>
+</map>

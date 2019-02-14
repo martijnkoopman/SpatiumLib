@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['scene_2eh',['Scene.h',['../_scene_8h.html',1,'']]],
-  ['sceneobject_2eh',['SceneObject.h',['../_scene_object_8h.html',1,'']]],
-  ['spatium_2eh',['spatium.h',['../spatium_8h.html',1,'']]],
-  ['sphere_2eh',['Sphere.h',['../_sphere_8h.html',1,'']]],
-  ['spheroid_2eh',['Spheroid.h',['../_spheroid_8h.html',1,'']]],
-  ['statistics_2eh',['Statistics.h',['../_statistics_8h.html',1,'']]]
+  ['renderer_2eh',['Renderer.h',['../_renderer_8h.html',1,'']]],
+  ['renderobject_2eh',['RenderObject.h',['../_render_object_8h.html',1,'']]]
 ];

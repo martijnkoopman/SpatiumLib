@@ -47,7 +47,6 @@ public:
 protected:
   double m_aspectRatio;
   double m_size;
-
 };
 
 } // namespace gfx3d

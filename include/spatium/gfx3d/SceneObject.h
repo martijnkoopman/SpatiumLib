@@ -55,6 +55,14 @@ public:
                           m_transformation(2,3));
   }
 
+  /// Rotate (relative to object space)
+  ///
+  /// \param[in] euler Degrees around x, y and z axis
+  void rotate(const geom3d::Vector3 &euler)
+  {
+
+  }
+
   /// Set the rotation in world space
   ///
   /// \param[in] euler Rotation in euler angles

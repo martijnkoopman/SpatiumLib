@@ -20,7 +20,7 @@ namespace geom3d {
 
 /// \brief Vector in 3D space
 ///
-/// A vector with 4 rows. The first three elements
+/// Column vector with 4 rows. The first three elements
 /// define the X, Y and Z coordinates. The fourth element is always 0.
 class Vector3 : public Vector
 {

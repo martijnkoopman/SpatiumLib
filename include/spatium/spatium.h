@@ -1,5 +1,5 @@
 /*
- * Program: Spatial Math Library
+ * Program: Spatium Library
  *
  * Copyright (C) Martijn Koopman
  * All Rights Reserved
@@ -21,6 +21,5 @@
 #include "geom3d.h"
 #include "gfx2d.h"
 #include "gfx3d.h"
-
 
 #endif // SPATIUMLIB_SPATIUM_H

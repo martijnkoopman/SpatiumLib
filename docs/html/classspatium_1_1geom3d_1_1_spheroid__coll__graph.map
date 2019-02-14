@@ -1,7 +1,8 @@
 <map id="spatium::geom3d::Spheroid" name="spatium::geom3d::Spheroid">
-<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="220,200,399,227"/>
-<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,81,192,108"/>
-<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="216,81,403,108"/>
-<area shape="rect" id="node5" href="$classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="353,5,465,32"/>
-<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space. " alt="" coords="427,81,594,108"/>
+<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="151,289,329,316"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,191,192,218"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="227,132,413,159"/>
+<area shape="rect" id="node5" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="289,5,401,32"/>
+<area shape="rect" id="node7" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order. " alt="" coords="391,81,505,108"/>
+<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates. " alt="" coords="431,191,598,218"/>
 </map>

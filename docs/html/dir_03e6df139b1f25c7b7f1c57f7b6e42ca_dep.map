@@ -1,6 +1,8 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d">
-<area shape="rect" id="node1" href="dir_03e6df139b1f25c7b7f1c57f7b6e42ca.html" title="gfx3d" alt="" coords="27,52,99,100"/>
-<area shape="rect" id="node2" href="dir_534bb3376dd7e646d3e303938c07fba5.html" title="geom3d" alt="" coords="27,148,99,196"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000004_000002.html" title="4" alt="" coords="67,122,75,137"/>
-<area shape="rect" id="clust1" href="dir_18bb917584052d48cdd87a7edb710de2.html" title="spatium" alt="" coords="16,16,109,111"/>
+<area shape="rect" id="node1" href="dir_03e6df139b1f25c7b7f1c57f7b6e42ca.html" title="gfx3d" alt="" coords="53,52,125,100"/>
+<area shape="rect" id="node2" href="dir_534bb3376dd7e646d3e303938c07fba5.html" title="geom3d" alt="" coords="5,148,77,196"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000004_000002.html" title="7" alt="" coords="65,128,73,142"/>
+<area shape="rect" id="node3" href="dir_a08dd9dec147eb3f07137506e5bf3826.html" title="imgproc" alt="" coords="101,148,173,196"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000004_000005.html" title="1" alt="" coords="121,120,129,135"/>
+<area shape="rect" id="clust1" href="dir_18bb917584052d48cdd87a7edb710de2.html" title="spatium" alt="" coords="43,16,136,111"/>
 </map>

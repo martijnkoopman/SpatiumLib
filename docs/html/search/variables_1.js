@@ -1,19 +1,25 @@
 var searchData=
 [
+  ['m_5faspectratio',['m_aspectRatio',['../classspatium_1_1gfx3d_1_1_orthographic_camera.html#af0f8cac1f2d86177a0b815c98883e8c1',1,'spatium::gfx3d::OrthographicCamera']]],
   ['m_5faxisx',['m_axisX',['../classspatium_1_1geom3d_1_1_ellipsoid.html#afd30d93f66e8dbc14639cc0845d85dac',1,'spatium::geom3d::Ellipsoid']]],
   ['m_5faxisy',['m_axisY',['../classspatium_1_1geom3d_1_1_ellipsoid.html#aa577a5b5708e86481a1d37afc04aecd6',1,'spatium::geom3d::Ellipsoid']]],
   ['m_5faxisz',['m_axisZ',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a2d1bd7ffd3c26c4200970f3ef9fcb9cd',1,'spatium::geom3d::Ellipsoid']]],
-  ['m_5fbounds',['m_bounds',['../classspatium_1_1gfx3d_1_1_scene_object.html#a978328cdbc71f794df62ca2860cc57eb',1,'spatium::gfx3d::SceneObject']]],
+  ['m_5fbounds',['m_bounds',['../classspatium_1_1gfx3d_1_1_render_object.html#ab111b9c1e4c3f1351d444274b157c52d',1,'spatium::gfx3d::RenderObject']]],
+  ['m_5fcolor',['m_color',['../classspatium_1_1gfx3d_1_1_light.html#a759e99f61cd6bbde76855007eec77f24',1,'spatium::gfx3d::Light']]],
   ['m_5fcols',['m_cols',['../classspatium_1_1_matrix.html#aee26b368e9a5ab79c5486dbde926d258',1,'spatium::Matrix']]],
   ['m_5fdata',['m_data',['../classspatium_1_1_matrix.html#a4c4488ee38eb9fb54d99afd64f5bc696',1,'spatium::Matrix']]],
+  ['m_5fdirection',['m_direction',['../classspatium_1_1gfx3d_1_1_spot_light.html#a1b3ebb5214823649643dd24e5937e3c1',1,'spatium::gfx3d::SpotLight::m_direction()'],['../classspatium_1_1gfx3d_1_1_sun_light.html#a2e4d88cb76603dbf3b358d5fa84ec3ae',1,'spatium::gfx3d::SunLight::m_direction()']]],
   ['m_5fellipsoidaltransformation',['m_ellipsoidalTransformation',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a5148ed8c10a79adb445a0bd16dae4a57',1,'spatium::geom3d::Ellipsoid']]],
   ['m_5fellipsoidaltransformationinverse',['m_ellipsoidalTransformationInverse',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a1cd8013e95fb08f1bd0ba92c65d248d1',1,'spatium::geom3d::Ellipsoid']]],
   ['m_5fheight',['m_height',['../classspatium_1_1imgproc_1_1_image.html#a08f482618d953159cc8447222bc6f1fb',1,'spatium::imgproc::Image']]],
   ['m_5fimagedata',['m_imageData',['../classspatium_1_1imgproc_1_1_image.html#a762d313690b3afccaf3ede87bdbb7657',1,'spatium::imgproc::Image']]],
   ['m_5fnormal',['m_normal',['../classspatium_1_1geom3d_1_1_plane.html#a8f1b7fcd69bbd65de73afe1fa736bbf4',1,'spatium::geom3d::Plane']]],
   ['m_5forigin',['m_origin',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a81acd41d1dbf4d0e48963e61b3f98736',1,'spatium::geom3d::Ellipsoid::m_origin()'],['../classspatium_1_1geom3d_1_1_plane.html#a0aec9fbb76a070b91e0b8ef28d5b762f',1,'spatium::geom3d::Plane::m_origin()'],['../classspatium_1_1geom3d_1_1_sphere.html#a1bc4f15b82e6e35d9e3f10f04191e937',1,'spatium::geom3d::Sphere::m_origin()']]],
-  ['m_5fradius',['m_radius',['../classspatium_1_1geom3d_1_1_sphere.html#a71d161e4c4275afa1c10562c81f0f189',1,'spatium::geom3d::Sphere']]],
+  ['m_5fposition',['m_position',['../classspatium_1_1gfx3d_1_1_point_light.html#a8405ae6bc0c45f808c690a28f290713e',1,'spatium::gfx3d::PointLight::m_position()'],['../classspatium_1_1gfx3d_1_1_spot_light.html#a879e041a1adbf4f61319ec1224a7f539',1,'spatium::gfx3d::SpotLight::m_position()']]],
+  ['m_5fradius',['m_radius',['../classspatium_1_1geom3d_1_1_sphere.html#a71d161e4c4275afa1c10562c81f0f189',1,'spatium::geom3d::Sphere::m_radius()'],['../classspatium_1_1gfx3d_1_1_spot_light.html#a5b353799a408fb6f8c498b87c78cdaa0',1,'spatium::gfx3d::SpotLight::m_radius()']]],
   ['m_5frows',['m_rows',['../classspatium_1_1_matrix.html#afc3396d15bca9b7488356ab6bdb279ca',1,'spatium::Matrix']]],
+  ['m_5fsize',['m_size',['../classspatium_1_1gfx3d_1_1_orthographic_camera.html#a1b614e9f6aae30f4bf1940935f52a4ed',1,'spatium::gfx3d::OrthographicCamera']]],
+  ['m_5fstrength',['m_strength',['../classspatium_1_1gfx3d_1_1_light.html#a2af7d7e66564e69741335cbd4325b2b8',1,'spatium::gfx3d::Light']]],
   ['m_5ftransformation',['m_transformation',['../classspatium_1_1gfx3d_1_1_scene_object.html#a84aa28d2a8e7271ecdb6b1c868b0b0fe',1,'spatium::gfx3d::SceneObject']]],
   ['m_5fwidth',['m_width',['../classspatium_1_1imgproc_1_1_image.html#a0a6c752791c4d209acdd0c702381609e',1,'spatium::imgproc::Image']]]
 ];

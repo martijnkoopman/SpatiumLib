@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['camera',['Camera',['../classspatium_1_1gfx3d_1_1_camera.html',1,'spatium::gfx3d']]],
+  ['camera',['Camera',['../classspatium_1_1gfx3d_1_1_camera.html',1,'spatium::gfx3d::Camera'],['../classspatium_1_1gfx3d_1_1_scene.html#abed8b06bbc54d23a53af4ee9ed943f31',1,'spatium::gfx3d::Scene::camera()']]],
   ['camera_2eh',['Camera.h',['../_camera_8h.html',1,'']]],
   ['cartesiantosphericalcoordinates',['cartesianToSphericalCoordinates',['../classspatium_1_1geom3d_1_1_sphere.html#ab4eef57da706ab387a9173996ab113ac',1,'spatium::geom3d::Sphere']]],
   ['cartesiantospheroidalcoordinates',['cartesianToSpheroidalCoordinates',['../classspatium_1_1geom3d_1_1_oblate_spheroid.html#a5d44bdef730165997aad701b1076bc17',1,'spatium::geom3d::OblateSpheroid::cartesianToSpheroidalCoordinates(double x, double y, double z, double precision=0) const'],['../classspatium_1_1geom3d_1_1_oblate_spheroid.html#ac41631269fc6dbdc3b6df7d9c27e9fe6',1,'spatium::geom3d::OblateSpheroid::cartesianToSpheroidalCoordinates(Point3 point, double precision=0) const']]],

@@ -1,3 +1,4 @@
 <map id="spatium::gfx3d::Mesh" name="spatium::gfx3d::Mesh">
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_render_object.html" title="Scene object that can be rendered. " alt="" coords="5,80,201,107"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="8,5,199,32"/>
 </map>

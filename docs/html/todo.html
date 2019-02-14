@@ -63,20 +63,36 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000001"></a>Class <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">spatium::geom3d::Point3</a>  </dt>
-<dd>To <a class="el" href="classspatium_1_1_vector.html" title="Vector. ">Vector</a>  </dd>
+<dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="classspatium_1_1gfx3d_1_1_light.html#a2af7d7e66564e69741335cbd4325b2b8">spatium::gfx3d::Light::m_strength</a>  </dt>
+<dd><p class="startdd">: Rule of 5 </p>
+<p class="enddd">Write to ostream  </p>
+</dd>
 <dt><a class="anchor" id="_todo000004"></a>Member <a class="el" href="classspatium_1_1gfx3d_1_1_mesh.html#a30c7b06aac42bb040a72e91e30f6f973">spatium::gfx3d::Mesh::updateBounds</a>  () override</dt>
 <dd>Update these bounds based on m_transformation. Will that work?  </dd>
 <dt><a class="anchor" id="_todo000003"></a>Member <a class="el" href="classspatium_1_1gfx3d_1_1_mesh.html#ac38218d4d5c338dca3a87a3cdeb83c3e">spatium::gfx3d::Mesh::vertex</a>  (size_t index) const</dt>
 <dd>Bounds checking  </dd>
-<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="classspatium_1_1_vector.html#a5db2f061e7c858f68c696785c355a455">spatium::Vector::operator*</a>  (double scalar) const</dt>
-<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast?  </dd>
-<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classspatium_1_1_vector.html#a14f93ea35cd6ffc7e65c0a342afd1add">spatium::Vector::operator+</a>  (const <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> &amp;other) const</dt>
-<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast?  </dd>
-<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="classspatium_1_1_vector.html#a87d21f70eabba648385153e493dbea8e">spatium::Vector::operator-</a>  (const <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> &amp;other) const</dt>
-<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast?  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Member <a class="el" href="classspatium_1_1_vector.html#a26bb54e5cf4a3577608a72e76a0f9d0d">spatium::Vector::operator/</a>  (double scalar) const</dt>
-<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix. ">Matrix</a> function and cast? </dd>
+<dt><a class="anchor" id="_todo000005"></a>Member <a class="el" href="classspatium_1_1gfx3d_1_1_point_light.html#a8405ae6bc0c45f808c690a28f290713e">spatium::gfx3d::PointLight::m_position</a>  </dt>
+<dd><p class="startdd">: Rule of 5 </p>
+<p class="enddd">Write to ostream  </p>
+</dd>
+<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#a73c937184aed21398d66b08527319e63">spatium::gfx3d::Scene::~Scene</a>  ()=default</dt>
+<dd>Rule of 5. std::move  </dd>
+<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="classspatium_1_1gfx3d_1_1_spot_light.html#a879e041a1adbf4f61319ec1224a7f539">spatium::gfx3d::SpotLight::m_position</a>  </dt>
+<dd><p class="startdd">: Rule of 5 </p>
+<p class="enddd">Write to ostream  </p>
+</dd>
+<dt><a class="anchor" id="_todo000010"></a>Member <a class="el" href="classspatium_1_1gfx3d_1_1_sun_light.html#a2e4d88cb76603dbf3b358d5fa84ec3ae">spatium::gfx3d::SunLight::m_direction</a>  </dt>
+<dd><p class="startdd">: Rule of 5 </p>
+<p class="enddd">Write to ostream  </p>
+</dd>
+<dt><a class="anchor" id="_todo000015"></a>Member <a class="el" href="classspatium_1_1_vector.html#a5db2f061e7c858f68c696785c355a455">spatium::Vector::operator*</a>  (double scalar) const</dt>
+<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast?  </dd>
+<dt><a class="anchor" id="_todo000013"></a>Member <a class="el" href="classspatium_1_1_vector.html#a14f93ea35cd6ffc7e65c0a342afd1add">spatium::Vector::operator+</a>  (const <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> &amp;other) const</dt>
+<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast?  </dd>
+<dt><a class="anchor" id="_todo000014"></a>Member <a class="el" href="classspatium_1_1_vector.html#a87d21f70eabba648385153e493dbea8e">spatium::Vector::operator-</a>  (const <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> &amp;other) const</dt>
+<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast?  </dd>
+<dt><a class="anchor" id="_todo000016"></a>Member <a class="el" href="classspatium_1_1_vector.html#a26bb54e5cf4a3577608a72e76a0f9d0d">spatium::Vector::operator/</a>  (double scalar) const</dt>
+<dd>Use <a class="el" href="classspatium_1_1_matrix.html" title="Matrix in column-major order. ">Matrix</a> function and cast? </dd>
 </dl>
 </div></div><!-- contents -->
 <!-- start footer part -->

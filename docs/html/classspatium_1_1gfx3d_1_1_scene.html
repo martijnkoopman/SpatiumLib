@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classspatium_1_1gfx3d_1_1_scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">spatium::gfx3d::Scene Class Reference</div>  </div>
@@ -73,10 +74,316 @@ $(function() {
  <a href="classspatium_1_1gfx3d_1_1_scene.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_scene_8h_source.html">Scene.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae4ccc71dada972be6f6be5156def2ef2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#ae4ccc71dada972be6f6be5156def2ef2">Scene</a> ()=default</td></tr>
+<tr class="memdesc:ae4ccc71dada972be6f6be5156def2ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae4ccc71dada972be6f6be5156def2ef2">More...</a><br /></td></tr>
+<tr class="separator:ae4ccc71dada972be6f6be5156def2ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75d6dbde7632b7ba137a1f765a745f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#ac75d6dbde7632b7ba137a1f765a745f3">Scene</a> (const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;scene)=default</td></tr>
+<tr class="memdesc:ac75d6dbde7632b7ba137a1f765a745f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor The references to the scene objects will be copied. As a result objects will be references from multiple scenes.  <a href="#ac75d6dbde7632b7ba137a1f765a745f3">More...</a><br /></td></tr>
+<tr class="separator:ac75d6dbde7632b7ba137a1f765a745f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c937184aed21398d66b08527319e63"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#a73c937184aed21398d66b08527319e63">~Scene</a> ()=default</td></tr>
+<tr class="memdesc:a73c937184aed21398d66b08527319e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a73c937184aed21398d66b08527319e63">More...</a><br /></td></tr>
+<tr class="separator:a73c937184aed21398d66b08527319e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ac0ffcde1caf53b862d6ce1d877d7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#a38ac0ffcde1caf53b862d6ce1d877d7d">setCamera</a> (std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html">Camera</a> &gt; <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#abed8b06bbc54d23a53af4ee9ed943f31">camera</a>)</td></tr>
+<tr class="memdesc:a38ac0ffcde1caf53b862d6ce1d877d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera.  <a href="#a38ac0ffcde1caf53b862d6ce1d877d7d">More...</a><br /></td></tr>
+<tr class="separator:a38ac0ffcde1caf53b862d6ce1d877d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed8b06bbc54d23a53af4ee9ed943f31"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#abed8b06bbc54d23a53af4ee9ed943f31">camera</a> () const</td></tr>
+<tr class="memdesc:abed8b06bbc54d23a53af4ee9ed943f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera.  <a href="#abed8b06bbc54d23a53af4ee9ed943f31">More...</a><br /></td></tr>
+<tr class="separator:abed8b06bbc54d23a53af4ee9ed943f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6ec0db2e1d0361be35089e410a04fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#acc6ec0db2e1d0361be35089e410a04fb">addLight</a> (std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_light.html">Light</a> &gt; light)</td></tr>
+<tr class="memdesc:acc6ec0db2e1d0361be35089e410a04fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a light.  <a href="#acc6ec0db2e1d0361be35089e410a04fb">More...</a><br /></td></tr>
+<tr class="separator:acc6ec0db2e1d0361be35089e410a04fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7b1e31e50dae4351ce629464a7f7d7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_light.html">Light</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#aea7b1e31e50dae4351ce629464a7f7d7">lights</a> () const</td></tr>
+<tr class="memdesc:aea7b1e31e50dae4351ce629464a7f7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all lights.  <a href="#aea7b1e31e50dae4351ce629464a7f7d7">More...</a><br /></td></tr>
+<tr class="separator:aea7b1e31e50dae4351ce629464a7f7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7a527947755919440a8f19a5197efe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#afb7a527947755919440a8f19a5197efe">addRenderObject</a> (std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_render_object.html">RenderObject</a> &gt; renderObject)</td></tr>
+<tr class="memdesc:afb7a527947755919440a8f19a5197efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a render object.  <a href="#afb7a527947755919440a8f19a5197efe">More...</a><br /></td></tr>
+<tr class="separator:afb7a527947755919440a8f19a5197efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9afb4d0a388ffb67b595d76e31c73056"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_render_object.html">RenderObject</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html#a9afb4d0a388ffb67b595d76e31c73056">renderObjects</a> () const</td></tr>
+<tr class="memdesc:a9afb4d0a388ffb67b595d76e31c73056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all render objects.  <a href="#a9afb4d0a388ffb67b595d76e31c73056">More...</a><br /></td></tr>
+<tr class="separator:a9afb4d0a388ffb67b595d76e31c73056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>3D scene </p>
-<p>A scene is a collection of one <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera scene object. ">Camera</a>, one <a class="el" href="classspatium_1_1gfx3d_1_1_light.html" title="Light scene object. ">Light</a> and one or more SceneObjects. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p>A scene is a collection of:</p><ul>
+<li>one camera</li>
+<li>zero or more lights</li>
+<li>zero or more render objects </li>
+</ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae4ccc71dada972be6f6be5156def2ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ccc71dada972be6f6be5156def2ef2">&#9670;&nbsp;</a></span>Scene() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">spatium::gfx3d::Scene::Scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<a id="ac75d6dbde7632b7ba137a1f765a745f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75d6dbde7632b7ba137a1f765a745f3">&#9670;&nbsp;</a></span>Scene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">spatium::gfx3d::Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor The references to the scene objects will be copied. As a result objects will be references from multiple scenes. </p>
+
+</div>
+</div>
+<a id="a73c937184aed21398d66b08527319e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c937184aed21398d66b08527319e63">&#9670;&nbsp;</a></span>~Scene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual spatium::gfx3d::Scene::~Scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Rule of 5. std::move </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acc6ec0db2e1d0361be35089e410a04fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6ec0db2e1d0361be35089e410a04fb">&#9670;&nbsp;</a></span>addLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spatium::gfx3d::Scene::addLight </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_light.html">Light</a> &gt;&#160;</td>
+          <td class="paramname"><em>light</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a light. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">light</td><td><a class="el" href="classspatium_1_1gfx3d_1_1_light.html" title="Light scene object. ">Light</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb7a527947755919440a8f19a5197efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7a527947755919440a8f19a5197efe">&#9670;&nbsp;</a></span>addRenderObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spatium::gfx3d::Scene::addRenderObject </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_render_object.html">RenderObject</a> &gt;&#160;</td>
+          <td class="paramname"><em>renderObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a render object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">renderObject</td><td>Render object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abed8b06bbc54d23a53af4ee9ed943f31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed8b06bbc54d23a53af4ee9ed943f31">&#9670;&nbsp;</a></span>camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classspatium_1_1gfx3d_1_1_camera.html">Camera</a>&gt; spatium::gfx3d::Scene::camera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the camera. </p>
+<dl class="section return"><dt>Returns</dt><dd>The camera </dd></dl>
+
+</div>
+</div>
+<a id="aea7b1e31e50dae4351ce629464a7f7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7b1e31e50dae4351ce629464a7f7d7">&#9670;&nbsp;</a></span>lights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classspatium_1_1gfx3d_1_1_light.html">Light</a>&gt; &gt; spatium::gfx3d::Scene::lights </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all lights. </p>
+<dl class="section return"><dt>Returns</dt><dd>All lights </dd></dl>
+
+</div>
+</div>
+<a id="a9afb4d0a388ffb67b595d76e31c73056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9afb4d0a388ffb67b595d76e31c73056">&#9670;&nbsp;</a></span>renderObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classspatium_1_1gfx3d_1_1_render_object.html">RenderObject</a>&gt; &gt; spatium::gfx3d::Scene::renderObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all render objects. </p>
+<dl class="section return"><dt>Returns</dt><dd>All render objects </dd></dl>
+
+</div>
+</div>
+<a id="a38ac0ffcde1caf53b862d6ce1d877d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ac0ffcde1caf53b862d6ce1d877d7d">&#9670;&nbsp;</a></span>setCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spatium::gfx3d::Scene::setCamera </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html">Camera</a> &gt;&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">camera</td><td>The camera </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/<a class="el" href="_scene_8h_source.html">Scene.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,4 +1,4 @@
 <map id="spatium::gfx3d::SceneObject" name="spatium::gfx3d::SceneObject">
 <area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="7,81,194,108"/>
-<area shape="rect" id="node3" href="$classspatium_1_1_matrix.html" title="Matrix. " alt="" coords="45,5,157,32"/>
+<area shape="rect" id="node3" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="45,5,157,32"/>
 </map>

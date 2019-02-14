@@ -41,7 +41,7 @@ public:
   {
     updateBounds();
   }
-  
+
   // TODO: Rule of 5
 
   /// Get all vertices

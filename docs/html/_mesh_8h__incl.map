@@ -1,9 +1,10 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Mesh.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Mesh.h">
-<area shape="rect" id="node2" href="$_scene_object_8h.html" title="SceneObject.h" alt="" coords="276,109,384,136"/>
-<area shape="rect" id="node3" href="$_point3_8h.html" title="spatium/geom3d/Point3.h" alt="" coords="101,184,271,211"/>
-<area shape="rect" id="node13" href="$_vector3_8h.html" title="Vector3.h" alt="" coords="161,259,240,285"/>
-<area shape="rect" id="node15" href="$_matrix4x4_8h.html" title="spatium/geom3d/Matrix4x4.h" alt="" coords="264,259,455,285"/>
-<area shape="rect" id="node4" href="$_matrix_8h.html" title="spatium/Matrix.h" alt="" coords="199,408,317,435"/>
-<area shape="rect" id="node9" href="$_math_8h.html" title="Math.h" alt="" coords="324,483,387,509"/>
-<area shape="rect" id="node14" href="$_vector_8h.html" title="spatium/Vector.h" alt="" coords="173,333,295,360"/>
+<area shape="rect" id="node2" href="$_render_object_8h.html" title="RenderObject.h" alt="" coords="215,109,329,136"/>
+<area shape="rect" id="node4" href="$_point3_8h.html" title="spatium/geom3d/Point3.h" alt="" coords="72,259,243,285"/>
+<area shape="rect" id="node3" href="$_scene_object_8h.html" title="SceneObject.h" alt="" coords="218,184,326,211"/>
+<area shape="rect" id="node14" href="$_vector3_8h.html" title="Vector3.h" alt="" coords="189,333,267,360"/>
+<area shape="rect" id="node16" href="$_matrix4x4_8h.html" title="spatium/geom3d/Matrix4x4.h" alt="" coords="291,333,482,360"/>
+<area shape="rect" id="node5" href="$_matrix_8h.html" title="spatium/Matrix.h" alt="" coords="190,483,309,509"/>
+<area shape="rect" id="node10" href="$_math_8h.html" title="Math.h" alt="" coords="407,557,470,584"/>
+<area shape="rect" id="node15" href="$_vector_8h.html" title="spatium/Vector.h" alt="" coords="189,408,310,435"/>
 </map>

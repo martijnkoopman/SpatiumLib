@@ -1,5 +1,5 @@
 /*
- * Program: Spatial Math Library
+ * Program: Spatium Library
  *
  * Copyright (C) Martijn Koopman
  * All Rights Reserved
