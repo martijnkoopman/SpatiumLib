@@ -6,5 +6,7 @@ var searchData=
   ['vector3',['Vector3',['../classspatium_1_1geom3d_1_1_vector3.html',1,'spatium::geom3d::Vector3'],['../classspatium_1_1geom3d_1_1_vector3.html#af522da4cc6f36eaaf60804725c3dd696',1,'spatium::geom3d::Vector3::Vector3()'],['../classspatium_1_1geom3d_1_1_vector3.html#aa1e4a0d920457165f68fb637a6e28264',1,'spatium::geom3d::Vector3::Vector3(double x, double y, double z)'],['../classspatium_1_1geom3d_1_1_vector3.html#a40466658b47e079a1deaa9bcbcd6660f',1,'spatium::geom3d::Vector3::Vector3(double xyz[])'],['../classspatium_1_1geom3d_1_1_vector3.html#aa3753782cc7d5f9421615cd0ae054278',1,'spatium::geom3d::Vector3::Vector3(const Vector3 &amp;other)'],['../classspatium_1_1geom3d_1_1_vector3.html#aca1b2dc2345f34bfdf7f3bc49118b3a9',1,'spatium::geom3d::Vector3::Vector3(const Matrix &amp;other)']]],
   ['vector3_2eh',['Vector3.h',['../_vector3_8h.html',1,'']]],
   ['vertex',['vertex',['../classspatium_1_1gfx3d_1_1_mesh.html#ac38218d4d5c338dca3a87a3cdeb83c3e',1,'spatium::gfx3d::Mesh']]],
-  ['vertices',['vertices',['../classspatium_1_1gfx3d_1_1_mesh.html#a29639227e895910eb6217bc707269031',1,'spatium::gfx3d::Mesh']]]
+  ['vertices',['vertices',['../classspatium_1_1gfx3d_1_1_mesh.html#a29639227e895910eb6217bc707269031',1,'spatium::gfx3d::Mesh']]],
+  ['viewdirection',['viewDirection',['../classspatium_1_1gfx3d_1_1_camera.html#afcb5f5fed820aa92e7fc462e455c3f0c',1,'spatium::gfx3d::Camera']]],
+  ['viewup',['viewUp',['../classspatium_1_1gfx3d_1_1_camera.html#a5de38fcb80b6173e10647e0d665a148b',1,'spatium::gfx3d::Camera']]]
 ];

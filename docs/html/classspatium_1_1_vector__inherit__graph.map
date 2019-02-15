@@ -1,6 +1,7 @@
 <map id="spatium::Vector" name="spatium::Vector">
-<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates. " alt="" coords="17,155,184,181"/>
-<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space. " alt="" coords="208,155,383,181"/>
-<area shape="rect" id="node2" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="142,5,254,32"/>
-<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_geo_point3.html" title="Point in 3D geographical space as homogeneous coordinates. " alt="" coords="5,229,196,256"/>
+<area shape="rect" id="node1" title="Vector in column&#45;major order." alt="" coords="141,80,255,107"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates." alt="" coords="17,155,184,181"/>
+<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space." alt="" coords="208,155,383,181"/>
+<area shape="rect" id="node2" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="142,5,254,32"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_geo_point3.html" title="Point in 3D geographical space as homogeneous coordinates." alt="" coords="5,229,196,256"/>
 </map>

@@ -1,8 +1,9 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/Util.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/Util.h">
-<area shape="rect" id="node2" href="$_sphere_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d/Sphere.h" alt="" coords="195,109,383,165"/>
-<area shape="rect" id="node6" href="$geom3d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d.h" alt="" coords="226,525,414,581"/>
-<area shape="rect" id="node3" href="$_ellipsoid_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d/Ellipsoid.h" alt="" coords="145,213,333,269"/>
-<area shape="rect" id="node4" href="$_spheroid_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d/Spheroid.h" alt="" coords="94,317,282,373"/>
-<area shape="rect" id="node5" href="$_oblate_spheroid_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/geom3d/OblateSpheroid.h" alt="" coords="5,421,232,477"/>
-<area shape="rect" id="node7" href="$spatium_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/spatium.h" alt="" coords="226,629,414,685"/>
+<area shape="rect" id="node1" title=" " alt="" coords="261,5,449,61"/>
+<area shape="rect" id="node2" href="$_sphere_8h.html" title=" " alt="" coords="195,109,383,165"/>
+<area shape="rect" id="node6" href="$geom3d_8h.html" title=" " alt="" coords="226,525,414,581"/>
+<area shape="rect" id="node3" href="$_ellipsoid_8h.html" title=" " alt="" coords="145,213,333,269"/>
+<area shape="rect" id="node4" href="$_spheroid_8h.html" title=" " alt="" coords="94,317,282,373"/>
+<area shape="rect" id="node5" href="$_oblate_spheroid_8h.html" title=" " alt="" coords="5,421,232,477"/>
+<area shape="rect" id="node7" href="$spatium_8h.html" title=" " alt="" coords="226,629,414,685"/>
 </map>

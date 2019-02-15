@@ -1,4 +1,4 @@
 <map id="spatium::gfx3d::SpotLight" name="spatium::gfx3d::SpotLight">
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_light.html" title="Light scene object. " alt="" coords="29,80,173,107"/>
-<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node1" title="Light source that emits a beam of light in one particular direction from a fixed point in space." alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_light.html" title="Light scene object." alt="" coords="19,5,163,32"/>
 </map>

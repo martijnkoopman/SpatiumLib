@@ -1,14 +1,22 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/OblateSpheroid.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/geom3d/OblateSpheroid.h">
-<area shape="rect" id="node2" href="$_spheroid_8h.html" title="Spheroid.h" alt="" coords="270,109,354,136"/>
-<area shape="rect" id="node20" href="$_geo_point3_8h.html" title="GeoPoint3.h" alt="" coords="161,184,255,211"/>
-<area shape="rect" id="node3" href="$_ellipsoid_8h.html" title="Ellipsoid.h" alt="" coords="280,184,363,211"/>
-<area shape="rect" id="node4" href="$_geometry_8h.html" title="Geometry.h" alt="" coords="475,333,565,360"/>
-<area shape="rect" id="node5" href="$_point3_8h.html" title="Point3.h" alt="" coords="195,333,266,360"/>
-<area shape="rect" id="node17" href="$_matrix4x4_8h.html" title="Matrix4x4.h" alt="" coords="268,408,359,435"/>
-<area shape="rect" id="node18" href="$_sphere_8h.html" title="Sphere.h" alt="" coords="347,259,421,285"/>
-<area shape="rect" id="node6" href="$_matrix_8h.html" title="spatium/Matrix.h" alt="" coords="171,557,290,584"/>
-<area shape="rect" id="node15" href="$_vector3_8h.html" title="Vector3.h" alt="" coords="103,408,182,435"/>
-<area shape="rect" id="node11" href="$_math_8h.html" title="Math.h" alt="" coords="406,632,469,659"/>
-<area shape="rect" id="node16" href="$_vector_8h.html" title="spatium/Vector.h" alt="" coords="71,483,193,509"/>
-<area shape="rect" id="node19" href="$_util_8h.html" title="Util.h" alt="" coords="347,333,400,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="151,5,377,61"/>
+<area shape="rect" id="node2" href="$_spheroid_8h.html" title=" " alt="" coords="270,109,354,136"/>
+<area shape="rect" id="node20" href="$_geo_point3_8h.html" title=" " alt="" coords="161,184,255,211"/>
+<area shape="rect" id="node3" href="$_ellipsoid_8h.html" title=" " alt="" coords="280,184,363,211"/>
+<area shape="rect" id="node4" href="$_geometry_8h.html" title=" " alt="" coords="475,333,565,360"/>
+<area shape="rect" id="node5" href="$_point3_8h.html" title=" " alt="" coords="195,333,266,360"/>
+<area shape="rect" id="node17" href="$_matrix4x4_8h.html" title=" " alt="" coords="268,408,359,435"/>
+<area shape="rect" id="node18" href="$_sphere_8h.html" title=" " alt="" coords="347,259,421,285"/>
+<area shape="rect" id="node6" href="$_matrix_8h.html" title=" " alt="" coords="171,557,290,584"/>
+<area shape="rect" id="node15" href="$_vector3_8h.html" title=" " alt="" coords="103,408,182,435"/>
+<area shape="rect" id="node7" title=" " alt="" coords="99,632,157,659"/>
+<area shape="rect" id="node8" title=" " alt="" coords="182,632,279,659"/>
+<area shape="rect" id="node9" title=" " alt="" coords="303,632,382,659"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5,632,75,659"/>
+<area shape="rect" id="node11" href="$_math_8h.html" title=" " alt="" coords="406,632,469,659"/>
+<area shape="rect" id="node12" title=" " alt="" coords="328,707,387,733"/>
+<area shape="rect" id="node13" title=" " alt="" coords="411,707,464,733"/>
+<area shape="rect" id="node14" title=" " alt="" coords="488,707,541,733"/>
+<area shape="rect" id="node16" href="$_vector_8h.html" title=" " alt="" coords="71,483,193,509"/>
+<area shape="rect" id="node19" href="$_util_8h.html" title=" " alt="" coords="347,333,400,360"/>
 </map>

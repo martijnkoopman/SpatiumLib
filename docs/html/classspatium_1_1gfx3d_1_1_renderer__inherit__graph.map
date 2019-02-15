@@ -1,3 +1,4 @@
 <map id="spatium::gfx3d::Renderer" name="spatium::gfx3d::Renderer">
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_wireframe_renderer.html" title="Wireframe renderer for meshes. " alt="" coords="5,80,181,121"/>
+<area shape="rect" id="node1" title="Abstract base class for renderers." alt="" coords="9,5,178,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_wireframe_renderer.html" title="Wireframe renderer for meshes." alt="" coords="5,80,181,121"/>
 </map>

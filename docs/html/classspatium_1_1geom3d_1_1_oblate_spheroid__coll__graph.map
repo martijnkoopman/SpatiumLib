@@ -1,9 +1,11 @@
 <map id="spatium::geom3d::OblateSpheroid" name="spatium::geom3d::OblateSpheroid">
-<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_spheroid.html" title="Spheroid geometry. " alt="" coords="149,365,331,392"/>
-<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="151,289,329,316"/>
-<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class. " alt="" coords="5,191,192,218"/>
-<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="227,132,413,159"/>
-<area shape="rect" id="node6" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="289,5,401,32"/>
-<area shape="rect" id="node8" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order. " alt="" coords="391,81,505,108"/>
-<area shape="rect" id="node7" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates. " alt="" coords="431,191,598,218"/>
+<area shape="rect" id="node1" title="Oblate spheroid geometry." alt="" coords="131,531,349,557"/>
+<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_spheroid.html" title="Spheroid geometry." alt="" coords="149,455,331,481"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_ellipsoid.html" title="Ellipsoid geometry." alt="" coords="151,379,329,405"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_geometry.html" title="Abstract Geometry class." alt="" coords="5,281,192,307"/>
+<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns." alt="" coords="227,221,413,248"/>
+<area shape="rect" id="node6" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="289,95,401,121"/>
+<area shape="rect" id="node9" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order." alt="" coords="391,171,505,197"/>
+<area shape="rect" id="node7" title=" " alt="" coords="272,5,419,32"/>
+<area shape="rect" id="node8" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates." alt="" coords="431,281,598,307"/>
 </map>

@@ -1,11 +1,5 @@
 <map id="spatium::gfx3d::SceneObject" name="spatium::gfx3d::SceneObject">
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_camera.html" title="Camera scene object. " alt="" coords="261,78,423,105"/>
-<area shape="rect" id="node5" href="$classspatium_1_1gfx3d_1_1_light.html" title="Light scene object. " alt="" coords="270,187,414,214"/>
-<area shape="rect" id="node9" href="$classspatium_1_1gfx3d_1_1_render_object.html" title="Scene object that can be rendered. " alt="" coords="244,263,440,290"/>
-<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_orthographic_camera.html" title="Camera with orthographic projection. " alt="" coords="488,5,679,47"/>
-<area shape="rect" id="node4" href="$classspatium_1_1gfx3d_1_1_perspective_camera.html" title="spatium::gfx3d::Perspective\lCamera" alt="" coords="491,71,676,112"/>
-<area shape="rect" id="node6" href="$classspatium_1_1gfx3d_1_1_point_light.html" title="Light source that emits light in all directions from a fixed point in space. " alt="" coords="496,137,671,163"/>
-<area shape="rect" id="node7" href="$classspatium_1_1gfx3d_1_1_spot_light.html" title="Light source that emits a beam of light in one particular direction from a fixed point in space..." alt="" coords="498,187,669,214"/>
-<area shape="rect" id="node8" href="$classspatium_1_1gfx3d_1_1_sun_light.html" title="Light source that emits light in one direction as parallel rays &lt;&gt; the position. " alt="" coords="500,238,667,265"/>
-<area shape="rect" id="node10" href="$classspatium_1_1gfx3d_1_1_mesh.html" title="Scene object with a mesh. " alt="" coords="509,289,657,315"/>
+<area shape="rect" id="node1" title="Object in a 3D scene." alt="" coords="8,5,199,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_render_object.html" title="Scene object that can be rendered." alt="" coords="5,80,201,107"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_mesh.html" title="Scene object with a mesh." alt="" coords="29,155,177,181"/>
 </map>

@@ -1,8 +1,9 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/RenderObject.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/RenderObject.h">
-<area shape="rect" id="node2" href="$_mesh_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/Mesh.h" alt="" coords="5,213,193,269"/>
-<area shape="rect" id="node3" href="$gfx3d_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d.h" alt="" coords="188,421,376,477"/>
-<area shape="rect" id="node5" href="$_scene_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/Scene.h" alt="" coords="269,109,457,165"/>
-<area shape="rect" id="node4" href="$spatium_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/spatium.h" alt="" coords="188,525,376,581"/>
-<area shape="rect" id="node6" href="$_renderer_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/Renderer.h" alt="" coords="320,213,508,269"/>
-<area shape="rect" id="node7" href="$_wireframe_renderer_8h.html" title="/home/martijn/Development\l/Projects/SpatiumLib/include\l/spatium/gfx3d/WireframeRenderer.h" alt="" coords="369,317,605,373"/>
+<area shape="rect" id="node1" title=" " alt="" coords="130,5,333,61"/>
+<area shape="rect" id="node2" href="$_mesh_8h.html" title=" " alt="" coords="5,213,193,269"/>
+<area shape="rect" id="node3" href="$gfx3d_8h.html" title=" " alt="" coords="188,421,376,477"/>
+<area shape="rect" id="node5" href="$_scene_8h.html" title=" " alt="" coords="269,109,457,165"/>
+<area shape="rect" id="node4" href="$spatium_8h.html" title=" " alt="" coords="188,525,376,581"/>
+<area shape="rect" id="node6" href="$_renderer_8h.html" title=" " alt="" coords="320,213,508,269"/>
+<area shape="rect" id="node7" href="$_wireframe_renderer_8h.html" title=" " alt="" coords="369,317,605,373"/>
 </map>

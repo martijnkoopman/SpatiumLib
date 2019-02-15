@@ -14,6 +14,7 @@
 #define SPATIUMLIB_GFX3D_POINTLIGHT_H
 
 #include "Light.h"
+#include <spatium/geom3d/Point3.h>
 
 namespace spatium {
 namespace gfx3d {
@@ -28,8 +29,9 @@ public:
   ///
   /// \param[in] strength Strength
   /// \param[in] color Color (RGB)
-  PointLight(double strength, std::array<unsigned char, 3> color = {255, 255, 255})
+  PointLight(double strength = 10, std::array<unsigned char, 3> color = {255, 255, 255})
     : Light(strength, color)
+    , m_position({0,0,0})
   {
   }
 

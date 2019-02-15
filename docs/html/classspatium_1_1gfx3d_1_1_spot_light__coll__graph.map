@@ -1,9 +1,10 @@
 <map id="spatium::gfx3d::SpotLight" name="spatium::gfx3d::SpotLight">
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_light.html" title="Light scene object. " alt="" coords="23,247,167,273"/>
-<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="5,171,196,197"/>
-<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_matrix4x4.html" title="Matrix with 4 rows and 4 columns. " alt="" coords="42,81,229,108"/>
-<area shape="rect" id="node5" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="150,5,262,32"/>
-<area shape="rect" id="node7" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order. " alt="" coords="222,171,337,197"/>
-<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space. " alt="" coords="192,247,367,273"/>
-<area shape="rect" id="node8" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates. " alt="" coords="391,247,557,273"/>
+<area shape="rect" id="node1" title="Light source that emits a beam of light in one particular direction from a fixed point in space." alt="" coords="176,364,347,391"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_light.html" title="Light scene object." alt="" coords="5,275,149,301"/>
+<area shape="rect" id="node3" title=" " alt="" coords="7,171,148,212"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space." alt="" coords="174,275,349,301"/>
+<area shape="rect" id="node5" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order." alt="" coords="301,178,416,205"/>
+<area shape="rect" id="node8" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates." alt="" coords="373,275,539,301"/>
+<area shape="rect" id="node6" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="303,95,415,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="285,5,432,32"/>
 </map>

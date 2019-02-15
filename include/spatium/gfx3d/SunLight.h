@@ -30,9 +30,10 @@ public:
   /// \param[in] direction Direction of the light
   /// \param[in] strength Strength
   /// \param[in] color Color (RGB)
-  SunLight(const geom3d::Vector3 &direction, double strength = 10, std::array<unsigned char, 3> color = {255, 255, 255})
+  SunLight(double strength = 10,
+           std::array<unsigned char, 3> color = {255, 255, 255})
     : Light(strength, color)
-    , m_direction(direction)
+    , m_direction({0,0,0})
   {
   }
 

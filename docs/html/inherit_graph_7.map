@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classspatium_1_1imgproc_1_1_i_image_filter.html" title="Interface class for all image filters. " alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node1" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_render_object.html" title="Scene object that can be rendered." alt="" coords="244,5,440,32"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_mesh.html" title="Scene object with a mesh." alt="" coords="488,5,636,32"/>
 </map>

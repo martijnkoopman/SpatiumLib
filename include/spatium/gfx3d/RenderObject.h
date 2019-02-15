@@ -30,7 +30,8 @@ public:
   // TODO: Rule of 5
 
   RenderObject()
-    : m_bounds({0})
+    : SceneObject()
+    , m_bounds({0})
   {}
 
   /// Get the boundaries of the object; axis aligned.

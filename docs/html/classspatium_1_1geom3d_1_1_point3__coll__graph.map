@@ -1,4 +1,6 @@
 <map id="spatium::geom3d::Point3" name="spatium::geom3d::Point3">
-<area shape="rect" id="node2" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order. " alt="" coords="31,80,146,107"/>
-<area shape="rect" id="node3" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order. " alt="" coords="33,5,145,32"/>
+<area shape="rect" id="node1" title="Point in 3D Cartesian space as homogeneous coordinates." alt="" coords="5,247,172,273"/>
+<area shape="rect" id="node2" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order." alt="" coords="31,171,146,197"/>
+<area shape="rect" id="node3" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="33,95,145,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="15,5,162,32"/>
 </map>

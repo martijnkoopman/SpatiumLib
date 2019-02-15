@@ -32,7 +32,7 @@ public:
   }
 
   /// Copy constructor
-  Matrix4x4(const Matrix4x4 &other) // Needed?
+  Matrix4x4(const Matrix4x4 &other) // Needed? Implicit
     : Matrix(other)
   {
   }
@@ -66,9 +66,9 @@ public:
   }
 
   /// Destructor
-  virtual ~Matrix4x4() override
-  {
-  }
+  virtual ~Matrix4x4() override = default;
+
+  // Construct affine transformation Matrix4x4
 
   /// Construct identity matrix.
   ///

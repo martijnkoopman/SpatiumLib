@@ -1,7 +1,8 @@
 <map id="spatium::geom3d::Geometry" name="spatium::geom3d::Geometry">
-<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_ellipsoid.html" title="Ellipsoid geometry. " alt="" coords="25,80,204,107"/>
-<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_plane.html" title="Plane geometry. " alt="" coords="228,80,391,107"/>
-<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_sphere.html" title="Sphere geometry. " alt="" coords="415,80,585,107"/>
-<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_spheroid.html" title="Spheroid geometry. " alt="" coords="24,155,205,181"/>
-<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_oblate_spheroid.html" title="Oblate spheroid geometry. " alt="" coords="5,229,224,256"/>
+<area shape="rect" id="node1" title="Abstract Geometry class." alt="" coords="216,5,403,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_ellipsoid.html" title="Ellipsoid geometry." alt="" coords="25,80,204,107"/>
+<area shape="rect" id="node5" href="$classspatium_1_1geom3d_1_1_plane.html" title="Plane geometry." alt="" coords="228,80,391,107"/>
+<area shape="rect" id="node6" href="$classspatium_1_1geom3d_1_1_sphere.html" title="Sphere geometry." alt="" coords="415,80,585,107"/>
+<area shape="rect" id="node3" href="$classspatium_1_1geom3d_1_1_spheroid.html" title="Spheroid geometry." alt="" coords="24,155,205,181"/>
+<area shape="rect" id="node4" href="$classspatium_1_1geom3d_1_1_oblate_spheroid.html" title="Oblate spheroid geometry." alt="" coords="5,229,224,256"/>
 </map>

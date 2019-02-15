@@ -23,8 +23,6 @@ namespace gfx3d {
 /// \class SpotLight
 /// \brief Light source that emits a beam of light in one particular direction
 ///        from a fixed point in space.
-///
-///
 class SpotLight : public Light
 {
 public:
@@ -36,13 +34,12 @@ public:
   /// \param[in] radius Radius of the light beam
   /// \param[in] strength Strength of the light
   /// \param[in] color Color (RGB)
-  SpotLight(const geom3d::Point3 &position, const geom3d::Vector3 &direction,
-            double radius, double strength = 10,
-            std::array<unsigned char, 3> color = {255, 255, 255})
+  SpotLight(double radius, double strength = 10,
+  std::array<unsigned char, 3> color = {255, 255, 255})
     : Light(strength, color)
-    , m_position(position)
-    , m_direction(direction)
     , m_radius(radius)
+    , m_position({0,0,0})
+    , m_direction({0,0,0})
   {
   }
 
@@ -51,9 +48,9 @@ public:
   ///\todo Write to ostream
 
 protected:
+  double m_radius;
   geom3d::Point3 m_position;
   geom3d::Vector3 m_direction;
-  double m_radius;
 };
 
 } // namespace gfx3d

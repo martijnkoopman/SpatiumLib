@@ -1,5 +1,5 @@
 <map id="spatium::gfx3d::Camera" name="spatium::gfx3d::Camera">
-<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_orthographic_camera.html" title="Camera with orthographic projection. " alt="" coords="5,155,196,196"/>
-<area shape="rect" id="node4" href="$classspatium_1_1gfx3d_1_1_perspective_camera.html" title="spatium::gfx3d::Perspective\lCamera" alt="" coords="220,155,405,196"/>
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene. " alt="" coords="111,5,301,32"/>
+<area shape="rect" id="node1" title="Camera scene object." alt="" coords="125,5,287,32"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_orthographic_camera.html" title="Camera with orthographic projection." alt="" coords="5,80,196,121"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_perspective_camera.html" title=" " alt="" coords="220,80,405,121"/>
 </map>

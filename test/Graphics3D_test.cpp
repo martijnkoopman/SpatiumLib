@@ -57,17 +57,36 @@ void Graphics3D_test::test_cubeMesh()
 
 void Graphics3D_test::test_sceneObjectTransform()
 {
-  // Construct mesh with diameter of 2 at origin
-  gfx3d::Mesh cube = gfx3d::Mesh::cube(2);
+  // Create an object with one vertex at origin. No transformation applied.
+  geom3d::Point3 origin = {0,0,0};
+  std::vector<geom3d::Point3> vertices;
+  vertices.push_back(origin);
+  std::vector<std::array<int, 2>> edges;
+  gfx3d::Mesh pointMesh(vertices, edges);
 
-  cube.setPosition({0, 0, 10});
+  // Convert point to world coordinates
+  geom3d::Point3 worldPoint = pointMesh.objectPointToWorldPoint(origin);
 
+  // Check coinciding points
+  QCOMPARE(worldPoint, origin);
 
+  // Translate object in world space
+  pointMesh.setPosition({10, 5, 2});
 
-  // gfx3d::WireframeRenderer renderer;
-  //renderer.render(scene, )
+  // Rotate mesh around itself. Should not affect position
+  pointMesh.rotate({90, 45, 0});
 
+  // Convert object origin to world space
+  worldPoint = pointMesh.objectPointToWorldPoint(origin);
 
+  // Check translated point
+  QCOMPARE(worldPoint, geom3d::Point3({10, 5, 2}));
+
+  // Get world origin in object space
+  geom3d::Point3 objectPoint  = pointMesh.worldPointToObjectPoint(origin);
+
+  // Check point in world space
+  QCOMPARE(objectPoint, geom3d::Point3({-10, -5, -2}));
 }
 
 void Graphics3D_test::test_objectPointToWorldPoint()

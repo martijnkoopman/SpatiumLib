@@ -1,10 +1,16 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/SunLight.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/SunLight.h">
-<area shape="rect" id="node2" href="$_light_8h.html" title="Light.h" alt="" coords="161,109,223,136"/>
-<area shape="rect" id="node14" href="$_vector3_8h.html" title="Vector3.h" alt="" coords="318,333,397,360"/>
-<area shape="rect" id="node3" href="$_scene_object_8h.html" title="SceneObject.h" alt="" coords="138,184,246,211"/>
-<area shape="rect" id="node4" href="$_point3_8h.html" title="spatium/geom3d/Point3.h" alt="" coords="153,259,324,285"/>
-<area shape="rect" id="node16" href="$_matrix4x4_8h.html" title="spatium/geom3d/Matrix4x4.h" alt="" coords="21,333,211,360"/>
-<area shape="rect" id="node5" href="$_matrix_8h.html" title="spatium/Matrix.h" alt="" coords="190,483,309,509"/>
-<area shape="rect" id="node10" href="$_math_8h.html" title="Math.h" alt="" coords="407,557,470,584"/>
-<area shape="rect" id="node15" href="$_vector_8h.html" title="spatium/Vector.h" alt="" coords="290,408,411,435"/>
+<area shape="rect" id="node1" title=" " alt="" coords="71,5,259,61"/>
+<area shape="rect" id="node2" href="$_light_8h.html" title=" " alt="" coords="63,109,124,136"/>
+<area shape="rect" id="node5" href="$_vector3_8h.html" title=" " alt="" coords="153,109,332,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,184,56,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="36,333,105,360"/>
+<area shape="rect" id="node6" href="$_vector_8h.html" title=" " alt="" coords="194,184,315,211"/>
+<area shape="rect" id="node7" href="$_matrix_8h.html" title=" " alt="" coords="223,259,292,285"/>
+<area shape="rect" id="node8" title=" " alt="" coords="129,333,188,360"/>
+<area shape="rect" id="node9" title=" " alt="" coords="213,333,310,360"/>
+<area shape="rect" id="node10" title=" " alt="" coords="334,333,413,360"/>
+<area shape="rect" id="node11" href="$_math_8h.html" title=" " alt="" coords="437,333,499,360"/>
+<area shape="rect" id="node12" title=" " alt="" coords="359,408,417,435"/>
+<area shape="rect" id="node13" title=" " alt="" coords="441,408,495,435"/>
+<area shape="rect" id="node14" title=" " alt="" coords="519,408,572,435"/>
 </map>
