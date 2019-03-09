@@ -114,7 +114,7 @@ public:
   /// Compare operator. Is unequal.
   ///
   /// \param[in] other Other matrix
-  /// \throwue if unequal, otherwise false
+  /// \return True if unequal, otherwise false
   bool operator!=(const Matrix &other) const
   {
     return !(operator ==(other));
@@ -289,7 +289,7 @@ public:
   {
     if (row >= m_rows || col >= m_cols)
     {
-      throw std::out_of_range ("Matrix element out of range");
+      throw std::out_of_range ("Matrix element index out of range");
     }
     return m_data[m_cols * row + col];
   }
@@ -304,7 +304,7 @@ public:
   {
     if (row >= m_rows || col >= m_cols)
     {
-      throw std::out_of_range ("Matrix element out of range");
+      throw std::out_of_range ("Matrix element index out of range");
     }
     return m_data[m_cols * row + col];
   }
@@ -312,11 +312,11 @@ public:
   /// Add by matrix.
   ///
   /// \param[in] other Matrix to add
-  /// \throw std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix dimensions mismatch
   /// \return Added matrix
   Matrix operator+(const Matrix &other) const
   {
-    // Check bounds
+    // Check matrix dimensions
     if (other.m_rows != m_rows || other.m_cols != m_cols)
     {
       throw std::out_of_range ("Matrix dimensions mismatch");
@@ -337,14 +337,14 @@ public:
   /// Subtract by matrix.
   ///
   /// \param[in] other Matrix to subtract
-  /// \throw std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix dimensions mismatch
   /// \return Subtracted matrix
   Matrix operator-(const Matrix &other) const
   {
-    // Check bounds
+    // Check matrix dimensions
     if (other.m_rows != m_rows || other.m_cols != m_cols)
     {
-      throw std::out_of_range ("Matrix element out of range");
+      throw std::out_of_range ("Matrix dimensions mismatch");
     }
 
     // Subtract
@@ -366,10 +366,10 @@ public:
   /// \return Multiplied matrix
   Matrix operator*(const Matrix &other) const
   {
-    // Check bounds
+    // Check column and row count
     if (m_cols != other.m_rows)
     {
-      throw std::out_of_range ("Matrix multiplication requires matrices with equal sized rows and columns");
+      throw std::out_of_range ("Matrix column count mismatch with row count of other matrix");
     }
 
     // Multiply

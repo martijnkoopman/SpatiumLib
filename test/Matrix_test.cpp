@@ -291,7 +291,17 @@ void Matrix_test::test_subtract()
 
 void Matrix_test::test_multiply()
 {
+  Matrix m1 = {
+    { 1, 2, 3 },
+    { 4, 5, 6 }
+  };
+  Matrix m2 = m1.transposed();
+  Matrix m3 = m1 * m2;
 
+  QCOMPARE(m3(0,0), 14);
+  QCOMPARE(m3(0,1), 32);
+  QCOMPARE(m3(1,0), 32);
+  QCOMPARE(m3(1,1), 77);
 }
 
 void Matrix_test::test_multiplyScalar()
@@ -373,10 +383,6 @@ void Matrix_test::test_inverse()
 
   QCOMPARE(matrix2.rows(), 2);
   QCOMPARE(matrix2.cols(), 2);
-  //QCOMPARE(matrix2(0,0), -9);
-  //QCOMPARE(matrix2(0,1),  8);
-  //QCOMPARE(matrix2(1,0),  8.75);
-  //QCOMPARE(matrix2(1,1), -7.5);
   QVERIFY(qFuzzyCompare(matrix2(0,0), -9));
   QVERIFY(qFuzzyCompare(matrix2(0,1),  8));
   QVERIFY(qFuzzyCompare(matrix2(1,0),  8.75));
@@ -446,8 +452,8 @@ void Matrix_test::test_leastSquares()
   // Compute residuals (error vector)
   //Vector e = b - (A * x);
 
-  QCOMPARE(x(0), -0.480376766091052); // Double compare?
-  QCOMPARE(x(1), 20.61538461538461);  // Double compare?
+  QCOMPARE(x(0), -0.480376766091052); // Fuzzy compare?
+  QCOMPARE(x(1), 20.61538461538461);  // Fuzzy compare?
 }
 
 
