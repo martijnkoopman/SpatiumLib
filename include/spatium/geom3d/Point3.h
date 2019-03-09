@@ -61,7 +61,9 @@ public:
   }
 
   /// Copy constructor
-  Point3(const Point3 &other) // Needed?
+  ///
+  /// \param[in] other Other Point3
+  Point3(const Point3 &other)
     : Vector(other)
   {
   }
@@ -69,7 +71,7 @@ public:
   /// Copy constructor
   ///
   /// \param[in] other Other matrix
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   Point3(const Matrix &other)
     : Vector(4)
   {
@@ -86,13 +88,15 @@ public:
   }
 
   /// Assignment operator
-  Point3& operator=(Point3 other){
-    Matrix::operator=(other);
-    return *this;
-  }
+  Point3& operator=(const Point3 &other) = default;
+
+//  Point3& operator=(Point3 other){
+//    Matrix::operator=(other);
+//    return *this;
+//  }
 
   /// Destructor
-  virtual ~Point3() override = default;
+  ~Point3() = default;
 
   void x(double val) { m_data[0] = val; }
   double x() const { return m_data[0]; }
@@ -109,7 +113,7 @@ public:
   /// Subtract matrix from point.
   ///
   /// \param[in] other Matrix to subtract
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Subtracted point
   Point3 operator-(const Matrix &other) const
   {
@@ -129,7 +133,7 @@ public:
   /// Add matrix to point.
   ///
   /// \param[in] other Matrix to add
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Added point
   Point3 operator+(const Matrix &other) const
   {

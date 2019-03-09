@@ -13,7 +13,6 @@
 #ifndef SPATIUMLIB_IMGPROC_H
 #define SPATIUMLIB_IMGPROC_H
 
-#include "imgproc/Image.h"
 #include "imgproc/IImageFilter.h"
 #include "imgproc/GlobalThresholdFilter.h"
 

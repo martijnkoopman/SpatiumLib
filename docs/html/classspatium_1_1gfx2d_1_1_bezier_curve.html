@@ -74,6 +74,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>2D Bezier curve  
+ <a href="classspatium_1_1gfx2d_1_1_bezier_curve.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_bezier_curve_8h_source.html">BezierCurve.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -82,15 +85,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afff6abd383bc2dad50cb082f878940f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#afff6abd383bc2dad50cb082f878940f8">More...</a><br /></td></tr>
 <tr class="separator:afff6abd383bc2dad50cb082f878940f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36cba915851799a3c6aa28509d385170"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::array&lt; double, 2 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html#a36cba915851799a3c6aa28509d385170">points</a> () const</td></tr>
+<tr class="memdesc:a36cba915851799a3c6aa28509d385170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the points of the curve.  <a href="#a36cba915851799a3c6aa28509d385170">More...</a><br /></td></tr>
 <tr class="separator:a36cba915851799a3c6aa28509d385170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46894732b76722ab3b625b2b68cf70c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html#a46894732b76722ab3b625b2b68cf70c6">degree</a> () const</td></tr>
+<tr class="memdesc:a46894732b76722ab3b625b2b68cf70c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the degree of the curve.  <a href="#a46894732b76722ab3b625b2b68cf70c6">More...</a><br /></td></tr>
 <tr class="separator:a46894732b76722ab3b625b2b68cf70c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4acc46c8892875436ee51c34de69341"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html#aa4acc46c8892875436ee51c34de69341">evaluate</a> (double t) const</td></tr>
 <tr class="memdesc:aa4acc46c8892875436ee51c34de69341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate bezier curve.  <a href="#aa4acc46c8892875436ee51c34de69341">More...</a><br /></td></tr>
 <tr class="separator:aa4acc46c8892875436ee51c34de69341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cdd587fec454aa4a1c9683036629cc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html">BezierCurve</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html#a0cdd587fec454aa4a1c9683036629cc1">split</a> () const</td></tr>
-<tr class="memdesc:a0cdd587fec454aa4a1c9683036629cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a bezier curve. This will increase the degree of the curve without affecting the shape of the curve. The new control points are placed in between the existing control points.  <a href="#a0cdd587fec454aa4a1c9683036629cc1">More...</a><br /></td></tr>
-<tr class="separator:a0cdd587fec454aa4a1c9683036629cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03aff72cbb19e0003d9371c8582e6880"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html">BezierCurve</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html#a03aff72cbb19e0003d9371c8582e6880">divide</a> () const</td></tr>
+<tr class="memdesc:a03aff72cbb19e0003d9371c8582e6880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide a bezier curve.  <a href="#a03aff72cbb19e0003d9371c8582e6880">More...</a><br /></td></tr>
+<tr class="separator:a03aff72cbb19e0003d9371c8582e6880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -98,7 +103,10 @@ Friends</h2></td></tr>
 <tr class="memdesc:a8e13abadbf604770ef4899399eedfe77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output to ostream.  <a href="#a8e13abadbf604770ef4899399eedfe77">More...</a><br /></td></tr>
 <tr class="separator:a8e13abadbf604770ef4899399eedfe77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>2D Bezier curve </p>
+<p><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html" title="2D Bezier curve">BezierCurve</a> is a class to represent a parametric Bezier curve. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afff6abd383bc2dad50cb082f878940f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afff6abd383bc2dad50cb082f878940f8">&#9670;&nbsp;</a></span>BezierCurve()</h2>
 
@@ -156,6 +164,39 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the degree of the curve. </p>
+<p>The degree is the number of points - 1. A 1st degree curve (linear) has two points, a 2nd degree curve (cubic) has 3 points, a 3rd degree curve (cubic) has 4 points, etc, </p><dl class="section return"><dt>Returns</dt><dd>Degree </dd></dl>
+
+</div>
+</div>
+<a id="a03aff72cbb19e0003d9371c8582e6880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03aff72cbb19e0003d9371c8582e6880">&#9670;&nbsp;</a></span>divide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html">BezierCurve</a> spatium::gfx2d::BezierCurve::divide </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Divide a bezier curve. </p>
+<p>This will increase the degree of the curve without affecting the shape. The new control points are placed in between the existing control points</p>
+<dl class="section return"><dt>Returns</dt><dd>Bezier curve with degree + 1 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>This function doesn't work properly yet. Perhaps it should be recursive. </dd></dl>
 
 </div>
 </div>
@@ -217,33 +258,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a0cdd587fec454aa4a1c9683036629cc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cdd587fec454aa4a1c9683036629cc1">&#9670;&nbsp;</a></span>split()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1gfx2d_1_1_bezier_curve.html">BezierCurve</a> spatium::gfx2d::BezierCurve::split </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Split a bezier curve. This will increase the degree of the curve without affecting the shape of the curve. The new control points are placed in between the existing control points. </p>
-<dl class="section return"><dt>Returns</dt><dd>Bezier curve with degree + 1 </dd></dl>
+<p>Get the points of the curve. </p>
+<p>A curve should at least have 2 control points. The first and last control points (anchor points) are the starting point and end point of the line. </p><dl class="section return"><dt>Returns</dt><dd>Points </dd></dl>
 
 </div>
 </div>

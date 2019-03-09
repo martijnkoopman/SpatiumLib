@@ -1,14 +1,14 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx2d/Drawing.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx2d/Drawing.h">
-<area shape="rect" id="node1" title=" " alt="" coords="158,5,346,61"/>
-<area shape="rect" id="node2" href="$_image_8h.html" title=" " alt="" coords="12,109,181,136"/>
-<area shape="rect" id="node6" href="$_bezier_curve_8h.html" title=" " alt="" coords="313,109,418,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="54,259,107,285"/>
-<area shape="rect" id="node4" title=" " alt="" coords="22,184,83,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="107,184,176,211"/>
-<area shape="rect" id="node7" href="$_math_8h.html" title=" " alt="" coords="200,184,312,211"/>
-<area shape="rect" id="node10" title=" " alt="" coords="336,184,395,211"/>
-<area shape="rect" id="node11" title=" " alt="" coords="419,184,470,211"/>
-<area shape="rect" id="node12" title=" " alt="" coords="494,184,563,211"/>
-<area shape="rect" id="node8" title=" " alt="" coords="187,259,246,285"/>
-<area shape="rect" id="node9" title=" " alt="" coords="270,259,323,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="143,5,331,61"/>
+<area shape="rect" id="node2" href="$_image_8h.html" title=" " alt="" coords="83,109,202,136"/>
+<area shape="rect" id="node7" href="$_bezier_curve_8h.html" title=" " alt="" coords="279,109,385,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="92,259,145,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="23,184,84,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="201,184,252,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="108,184,177,211"/>
+<area shape="rect" id="node8" href="$_math_8h.html" title=" " alt="" coords="276,184,388,211"/>
+<area shape="rect" id="node11" title=" " alt="" coords="412,184,471,211"/>
+<area shape="rect" id="node12" title=" " alt="" coords="495,184,564,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="263,259,321,285"/>
+<area shape="rect" id="node10" title=" " alt="" coords="345,259,399,285"/>
 </map>

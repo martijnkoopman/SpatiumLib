@@ -1,11 +1,11 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Light.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Light.h">
-<area shape="rect" id="node1" title=" " alt="" coords="295,5,483,61"/>
-<area shape="rect" id="node2" href="$_point_light_8h.html" title=" " alt="" coords="5,213,193,269"/>
-<area shape="rect" id="node3" href="$gfx3d_8h.html" title=" " alt="" coords="239,421,427,477"/>
-<area shape="rect" id="node5" href="$_scene_8h.html" title=" " alt="" coords="295,109,483,165"/>
-<area shape="rect" id="node8" href="$_spot_light_8h.html" title=" " alt="" coords="629,317,817,373"/>
-<area shape="rect" id="node9" href="$_sun_light_8h.html" title=" " alt="" coords="717,109,905,165"/>
-<area shape="rect" id="node4" href="$spatium_8h.html" title=" " alt="" coords="239,525,427,581"/>
-<area shape="rect" id="node6" href="$_renderer_8h.html" title=" " alt="" coords="320,213,508,269"/>
-<area shape="rect" id="node7" href="$_wireframe_renderer_8h.html" title=" " alt="" coords="369,317,605,373"/>
+<area shape="rect" id="node1" title=" " alt="" coords="213,5,401,61"/>
+<area shape="rect" id="node2" href="$_directional_light_8h.html" title=" " alt="" coords="5,109,219,165"/>
+<area shape="rect" id="node3" href="$_point_light_8h.html" title=" " alt="" coords="81,213,269,269"/>
+<area shape="rect" id="node4" href="$gfx3d_8h.html" title=" " alt="" coords="289,421,477,477"/>
+<area shape="rect" id="node6" href="$_scene_8h.html" title=" " alt="" coords="345,109,533,165"/>
+<area shape="rect" id="node9" href="$_spot_light_8h.html" title=" " alt="" coords="705,317,893,373"/>
+<area shape="rect" id="node5" href="$spatium_8h.html" title=" " alt="" coords="289,525,477,581"/>
+<area shape="rect" id="node7" href="$_renderer_8h.html" title=" " alt="" coords="395,213,583,269"/>
+<area shape="rect" id="node8" href="$_wireframe_renderer_8h.html" title=" " alt="" coords="445,317,681,373"/>
 </map>

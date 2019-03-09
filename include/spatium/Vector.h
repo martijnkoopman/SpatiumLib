@@ -54,7 +54,9 @@ public:
   }
 
   /// Copy constructor
-  Vector(const Vector &other) // Needed?
+  ///
+  /// \param[in] other Other vector
+  Vector(const Vector &other)
     : Matrix(other)
   {
   }
@@ -62,7 +64,7 @@ public:
   /// Copy constructor
   ///
   /// \param[in] other Other matrix
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   Vector(const Matrix &other)
     : Matrix(other.rows(), 1)
   {
@@ -78,21 +80,17 @@ public:
   }
 
   /// Assignment operator
-  Vector& operator=(Vector other)
-  {
-    Matrix::operator=(other);
-    return *this;
-  }
+  Vector& operator=(const Vector &other) = default;
 
   /// Destructor
-  virtual ~Vector() = default;
+  ~Vector() = default;
 
   // Operators
 
   /// Access element by value.
   ///
   /// \param[in] row Row of element
-  /// \exception std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix element out of range
   /// \return Element value
   double operator() (unsigned row) const
   {
@@ -107,7 +105,7 @@ public:
   ///
   /// \param[in] row Row of element
   /// \param[in] col Column of element
-  /// \exception std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix element out of range
   /// \return Element reference
   double& operator() (unsigned row)
   {
@@ -121,12 +119,12 @@ public:
   /// Add matrix to vector.
   ///
   /// \param[in] other Matrix to add
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Added vector
   Vector operator+(const Matrix &other) const
   {
-    /// \todo Use Matrix function and cast?
-    //return Matrix::operator+(other);
+    /// \todo Use Matrix function and cast or make virtual?
+    /// return Matrix::operator+(other);
 
     if (other.rows() != m_rows
         || other.cols() != m_cols)
@@ -145,11 +143,11 @@ public:
   /// Subtract matrix from vector.
   ///
   /// \param[in] other Matrix to subtract
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Subtracted vector
   Vector operator-(const Matrix &other) const
   {
-    /// \todo Use Matrix function and cast?
+    /// \todo Use Matrix function and cast or make virtual?
     //return Matrix::operator-(other);
 
     // Check bounds
@@ -174,8 +172,9 @@ public:
   /// \return Multiplied vector
   Vector operator*(double scalar) const
   {
-    /// \todo Use Matrix function and cast?
+    /// \todo Use Matrix function and cast or make virtual?
     //return Matrix::operator*(scalar);
+
     Vector result(m_rows);
     for (unsigned row = 0; row < m_rows; row++)
     {

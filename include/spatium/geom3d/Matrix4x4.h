@@ -21,7 +21,11 @@ namespace geom3d {
 class Vector3;
 
 /// \class Matrix4x4
-/// \brief Matrix with 4 rows and 4 columns
+/// \brief 4-by-4 matrix to represent and manipulate 3D transformations.
+///
+/// Matrix4x4 is a class to represent and manipulate 4x4 matrices.
+/// Specifically, it is designed to work on 4x4 transformation matrices found
+/// in 3D rendering using homogeneous coordinates [x y z w].
 class Matrix4x4 : public Matrix
 {
 public:
@@ -29,6 +33,10 @@ public:
   Matrix4x4()
     : Matrix(4, 4)
   {
+    operator()(0,0) = 1;
+    operator()(1,1) = 1;
+    operator()(2,2) = 1;
+    operator()(3,3) = 1;
   }
 
   /// Copy constructor
@@ -39,7 +47,8 @@ public:
 
   /// Copy constructor
   ///
-  /// \exception std::out_of_range Matrix dimenions != 4
+  /// \param[in] other Other matrix
+  /// \throw std::out_of_range Matrix dimenions != 4
   Matrix4x4(const Matrix &other)
     : Matrix(4,4)
   {
@@ -59,29 +68,31 @@ public:
   }
 
   /// Assignment operator
-  Matrix4x4& operator=(Matrix4x4 other)
-  {
-    Matrix::operator=(other);
-    return *this;
-  }
+  Matrix4x4& operator=(const Matrix4x4 &other) = default;
+
+//  Matrix4x4& operator=(Matrix4x4 other)
+//  {
+//    Matrix::operator=(other);
+//    return *this;
+//  }
 
   /// Destructor
-  virtual ~Matrix4x4() override = default;
+  ~Matrix4x4() = default;
 
   // Construct affine transformation Matrix4x4
 
-  /// Construct identity matrix.
-  ///
-  /// \return Identity matrix
-  static Matrix4x4 identity()
-  {
-    Matrix4x4 result;
-    result(0,0) = 1;
-    result(1,1) = 1;
-    result(2,2) = 1;
-    result(3,3) = 1;
-    return result;
-  }
+//  / Construct identity matrix.
+//  /
+//  / \return Identity matrix
+//  static Matrix4x4 identity()
+//  {
+//    Matrix4x4 result;
+//    result(0,0) = 1;
+//    result(1,1) = 1;
+//    result(2,2) = 1;
+//    result(3,3) = 1;
+//    return result;
+//  }
 
   /// Construct translation matrix.
   ///
@@ -91,7 +102,7 @@ public:
   /// \return Translation matrix
   static Matrix4x4 translation(double x, double y, double z)
   {
-    Matrix4x4 result = Matrix4x4::identity();
+    Matrix4x4 result; // Identity matrix
     result(0,3) = x;
     result(1,3) = y;
     result(2,3) = z;
@@ -106,14 +117,14 @@ public:
   /// \return Scaling matrix
   static Matrix4x4 scaling(double x, double y, double z)
   {
-    Matrix4x4 result = Matrix4x4::identity();
+    Matrix4x4 result; // Identity matrix
     result(0,0) = x;
     result(1,1) = y;
     result(2,2) = z;
     return result;
   }
 
-  /// Construct rotation matrix.
+  /// Construct rotation matrix (counterclockwise).
   ///
   /// \param[in] x Rotation on X axis
   /// \param[in] y Rotation on Y axis
@@ -121,33 +132,32 @@ public:
   /// \return Rotation matrix
   static Matrix4x4 rotation(double x, double y, double z)
   {
-    // TODO: Test order of multiplication
-    return Matrix4x4::rotationX(x)
-        * Matrix4x4::rotationY(y)
-        * Matrix4x4::rotationZ(z);
+    return Matrix4x4::rotationZ(z)
+           * Matrix4x4::rotationY(y)
+           * Matrix4x4::rotationX(x);
   }
 
-  /// Construct matrix for rotation around X axis.
+  /// Construct matrix for rotation around X axis (counterclockwise).
   ///
   /// \param[in] angle Angle in radians
   /// \return Rotation matrix
   static Matrix4x4 rotationX(double angle)
   {
-    Matrix4x4 result = Matrix4x4::identity();
+    Matrix4x4 result; // Identity matrix
     result(1,1) = cos(angle);
-    result(1,2) = -sin(angle);
-    result(2,1) = sin(angle);
+    result(1,2) = -sin(angle); // +?
+    result(2,1) = sin(angle); // -?
     result(2,2) = cos(angle);
     return result;
   }
 
-  /// Construct matrix for rotation around Y axis.
+  /// Construct matrix for rotation around Y axis (counterclockwise).
   ///
   /// \param[in] angle Angle in radians
   /// \return Rotation matrix
   static Matrix4x4 rotationY(double angle)
   {
-    Matrix4x4 result = Matrix4x4::identity();
+    Matrix4x4 result; // Identity matrix
     result(0,0) = cos(angle);
     result(0,2) = sin(angle);
     result(2,0) = -sin(angle);
@@ -155,21 +165,21 @@ public:
     return result;
   }
 
-  /// Construct matrix for rotation around Z axis.
+  /// Construct matrix for rotation around Z axis (counterclockwise).
   ///
   /// \param[in] angle Angle in radians
   /// \return Rotation matrix
   static Matrix4x4 rotationZ(double angle)
   {
-    Matrix4x4 result = Matrix4x4::identity();
+    Matrix4x4 result; // Identity matrix
     result(0,0) = cos(angle);
-    result(0,1) = -sin(angle);
-    result(1,0) = sin(angle);
+    result(0,1) = -sin(angle); // +?
+    result(1,0) = sin(angle); // -?
     result(1,1) = cos(angle);
     return result;
   }
 
-  /// Construct matrix for rotation around axis.
+  /// Construct matrix for rotation around axis (counterclockwise).
   ///
   /// \param[in] axis Axis vector
   /// \param[in] angle Angle in radians

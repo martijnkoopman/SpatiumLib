@@ -1,7 +1,7 @@
 #include <QtTest>
 #include "TestUtilities.h"
 
-#include <spatium/imgproc/Image.h>
+#include <spatium/Image.h>
 
 class Image_test : public QObject
 {
@@ -19,6 +19,8 @@ private slots:
   void test_constructorStack();
   void test_copyConstructor();
   void test_copyAssignment();
+  void test_moveConstructor();
+  void test_moveAssignment();
 
   // Operators
   void test_compareEqual();
@@ -44,16 +46,16 @@ Image_test::~Image_test()
 
 void Image_test::test_constructorEmpty()
 {
-  imgproc::Image<unsigned char, 3> img;
+  Image<unsigned char, 3> img;
 
-  QCOMPARE(img.width(), 0);
-  QCOMPARE(img.height(), 0);
-  QCOMPARE(img.imageDataPtr(), nullptr);
+  QCOMPARE(img.width(), 1);
+  QCOMPARE(img.height(), 1);
+  QVERIFY(img.imageDataPtr() != nullptr);
 }
 
 void Image_test::test_constructor()
 {
-  imgproc::Image<unsigned char, 3> img(640, 480);
+  Image<unsigned char, 3> img(640, 480);
 
   QCOMPARE(img.width(), 640);
   QCOMPARE(img.height(), 480);
@@ -61,7 +63,7 @@ void Image_test::test_constructor()
 
 void Image_test::test_constructorStack()
 {
-  imgproc::Image<unsigned char, 3> *img = new imgproc::Image<unsigned char, 3>(640, 480);
+  Image<unsigned char, 3> *img = new Image<unsigned char, 3>(640, 480);
 
   QCOMPARE(img->width(), 640);
   QCOMPARE(img->height(), 480);
@@ -69,28 +71,30 @@ void Image_test::test_constructorStack()
 
 void Image_test::test_copyConstructor()
 {
-  imgproc::Image<unsigned char, 3> img1(640, 480);
-  img1.setPixel(10, 20, {255, 0, 255});
-  img1.setPixel(200, 300, {0, 255, 255});
-  img1.setPixel(400, 200, {127, 0, 255});
-  img1.setPixel(620, 440, {0, 127, 127});
+  Image<unsigned char, 3> img1(640, 480);
+  img1.pixel(10, 20) = {255, 0, 255};
+  img1.pixel(200, 300) = {0, 255, 255};
+  img1.pixel(400, 200) = {127, 0, 255};
+  img1.pixel(620, 440) = {0, 127, 127};
 
-  // Copy constructor
-  //imgproc::Image<unsigned char, 3> img2 = img1; // implicit
-  imgproc::Image<unsigned char, 3> img2(img1); // explicit
-
+  // Implicit copy
+  Image<unsigned char, 3> img2 = img1;
   QVERIFY(img1 == img2);
+
+  // Explicit copy
+  Image<unsigned char, 3> img3(img1);
+  QVERIFY(img1 == img3);
 }
 
 void Image_test::test_copyAssignment()
 {
-  imgproc::Image<unsigned char, 3> img1(640, 480);
-  img1.setPixel(10, 20, {255, 0, 255});
-  img1.setPixel(200, 300, {0, 255, 255});
-  img1.setPixel(400, 200, {127, 0, 255});
-  img1.setPixel(620, 440, {0, 127, 127});
+  Image<unsigned char, 3> img1(640, 480);
+  img1.pixel(10, 20) = {255, 0, 255};
+  img1.pixel(200, 300) = {0, 255, 255};
+  img1.pixel(400, 200) = {127, 0, 255};
+  img1.pixel(620, 440) = {0, 127, 127};
 
-  imgproc::Image<unsigned char, 3> img2(640, 480);
+  Image<unsigned char, 3> img2(640, 480);
 
   // Copy assignment
   img2 = img1;
@@ -98,21 +102,56 @@ void Image_test::test_copyAssignment()
   QVERIFY(img1 == img2);
 }
 
+void Image_test::test_moveConstructor()
+{
+  const int width = 640;
+  const int height = 480;
+
+  // Move constructor
+  auto createImage = [=](int width, int height) -> Image<>
+  {
+    // Lambda to return an Image (rvalue)
+    return Image<>(width, height);
+  };
+
+  ///\TODO Should work without std::move
+  Image<> img1 = std::move(createImage(640, 480));
+  QCOMPARE(img1.width(), width);
+  QCOMPARE(img1.height(), height);
+
+  // Move assignment
+  //Image<unsigned char, 3> img2 = std::move(createImage(width, height));
+}
+
+void Image_test::test_moveAssignment()
+{
+  const int width = 640;
+  const int height = 480;
+
+  Image<unsigned char, 3> img1(width, height);
+  Image<unsigned char, 3> img2;
+  img2 = std::move(img1);
+
+  QCOMPARE(img1.width(), 1);
+  QCOMPARE(img1.height(), 1);
+  QCOMPARE(img2.width(), width);
+  QCOMPARE(img2.height(), height);
+}
 
 void Image_test::test_compareEqual()
 {
-  imgproc::Image<unsigned char, 3> img1(640, 480);
-  imgproc::Image<unsigned char, 3> img2(640, 480);
+  Image<unsigned char, 3> img1(640, 480);
+  Image<unsigned char, 3> img2(640, 480);
   QVERIFY(img1 == img2);
 }
 
 void Image_test::test_compareUnequal()
 {
-  imgproc::Image<unsigned char, 3> img1(640, 480);
-  imgproc::Image<unsigned char, 3> img2(555, 480); // Different width
-  imgproc::Image<unsigned char, 3> img3(640, 333); // Different height
-  imgproc::Image<unsigned char, 3> img4(640, 480); // Different values
-  img4.setPixel(10, 20, {255, 0, 255});
+  Image<unsigned char, 3> img1(640, 480);
+  Image<unsigned char, 3> img2(555, 480); // Different width
+  Image<unsigned char, 3> img3(640, 333); // Different height
+  Image<unsigned char, 3> img4(640, 480); // Different values
+  img4.pixel(10, 20) = {255, 0, 255};
 
   QVERIFY(img1 != img2);
   QVERIFY(img1 != img3);
@@ -121,35 +160,38 @@ void Image_test::test_compareUnequal()
 
 void Image_test::test_getSetPixel()
 {
-  imgproc::Image<unsigned char, 3> img(640, 480);
+  Image<unsigned char, 3> img(640, 480);
 
   // Set pixel value
   std::array<unsigned char, 3> val1 = {127, 191, 255};
-  img.setPixel(10, 20, val1);
+  img.pixel(10, 20) = val1;
 
   // Get pixel value
-  std::array<unsigned char, 3> val2 = img.getPixel(10, 20);
+  std::array<unsigned char, 3> val2 = img.pixel(10, 20);
 
   // Compare equal
   QVERIFY(val1 == val2);
 
   // Get another pixel value (zero)
-  val2 = img.getPixel(11, 21);
+  val2 = img.pixel(11, 21);
 
   // Compare unequal
   QVERIFY(val1 != val2);
+
+  /// \TODO: Test with out of bounds
 }
 
 void Image_test::test_clear()
 {
-  imgproc::Image<unsigned char, 1> img(20, 10);
+  Image<unsigned char, 1> img(20, 10);
 
   // Set all values to 255
+  std::array<unsigned char, 1> val = {255};
   for(int y = 0; y < img.height(); y++)
   {
     for(int x = 0; x < img.height(); x++)
     {
-      img.imageDataPtr()[y * img.width() + x] = 255;
+      img.imageDataPtr()[y * img.width() + x] = val;
     }
   }
 
@@ -157,11 +199,12 @@ void Image_test::test_clear()
   img.clear();
 
   // Compare all values set to zero
+  std::array<unsigned char, 1> zero = {0};
   for(int y = 0; y < img.height(); y++)
   {
     for(int x = 0; x < img.height(); x++)
     {
-      QCOMPARE(img.imageDataPtr()[y * img.width() + x], 0);
+      QCOMPARE(img.imageDataPtr()[y * img.width() + x], zero);
     }
   }
 }

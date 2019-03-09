@@ -67,7 +67,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classspatium_1_1gfx3d_1_1_camera-members.html">List of all members</a>  </div>
@@ -76,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera scene object.">Camera</a> scene object.  
+<p><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera object in a 3D scene.">Camera</a> object in a 3D scene.  
  <a href="classspatium_1_1gfx3d_1_1_camera.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_camera_8h_source.html">Camera.h</a>&gt;</code></p>
@@ -85,9 +84,10 @@ Inheritance diagram for spatium::gfx3d::Camera:</div>
 <div class="dyncontent">
 <div class="center"><img src="classspatium_1_1gfx3d_1_1_camera__inherit__graph.png" border="0" usemap="#spatium_1_1gfx3d_1_1_camera_inherit__map" alt="Inheritance graph"/></div>
 <map name="spatium_1_1gfx3d_1_1_camera_inherit__map" id="spatium_1_1gfx3d_1_1_camera_inherit__map">
-<area shape="rect"  title="Camera scene object." alt="" coords="125,5,287,32"/>
-<area shape="rect"  href="classspatium_1_1gfx3d_1_1_orthographic_camera.html" title="Camera with orthographic projection." alt="" coords="5,80,196,121"/>
-<area shape="rect"  href="classspatium_1_1gfx3d_1_1_perspective_camera.html" title=" " alt="" coords="220,80,405,121"/>
+<area shape="rect"  title="Camera object in a 3D scene." alt="" coords="125,80,287,107"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_orthographic_camera.html" title="Camera with orthographic projection." alt="" coords="5,155,196,196"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_perspective_camera.html" title=" " alt="" coords="220,155,405,196"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene." alt="" coords="111,5,301,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -95,58 +95,50 @@ Collaboration diagram for spatium::gfx3d::Camera:</div>
 <div class="dyncontent">
 <div class="center"><img src="classspatium_1_1gfx3d_1_1_camera__coll__graph.png" border="0" usemap="#spatium_1_1gfx3d_1_1_camera_coll__map" alt="Collaboration graph"/></div>
 <map name="spatium_1_1gfx3d_1_1_camera_coll__map" id="spatium_1_1gfx3d_1_1_camera_coll__map">
-<area shape="rect"  title="Camera scene object." alt="" coords="107,351,270,377"/>
-<area shape="rect"  href="classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space." alt="" coords="5,247,180,273"/>
-<area shape="rect"  href="classspatium_1_1_vector.html" title="Vector in column&#45;major order." alt="" coords="131,171,246,197"/>
-<area shape="rect"  href="classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates." alt="" coords="204,247,371,273"/>
-<area shape="rect"  href="classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="133,95,245,121"/>
-<area shape="rect"  title=" " alt="" coords="115,5,262,32"/>
+<area shape="rect"  title="Camera object in a 3D scene." alt="" coords="19,425,182,452"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene." alt="" coords="5,349,196,376"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_transform.html" title="Tranformation in 3D space." alt="" coords="13,260,188,287"/>
+<area shape="rect"  href="classspatium_1_1geom3d_1_1_matrix4x4.html" title="4&#45;by&#45;4 matrix to represent and manipulate 3D transformations." alt="" coords="7,171,194,197"/>
+<area shape="rect"  href="classspatium_1_1_matrix.html" title="Mathematical matrix with an arbitrary number number of rows and columns." alt="" coords="45,95,157,121"/>
+<area shape="rect"  title=" " alt="" coords="27,5,174,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab5c64efc26d2b1ae97c3f8060b06b91f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#ab5c64efc26d2b1ae97c3f8060b06b91f">Camera</a> ()</td></tr>
-<tr class="separator:ab5c64efc26d2b1ae97c3f8060b06b91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea932363f8bc43b636110db0388b595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a9ea932363f8bc43b636110db0388b595">Camera</a> (double <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a9140712cf646d399f20decde8178360c">near</a>, double <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a6ed2cd7281c1bf76957676f9f69ed512">far</a>)</td></tr>
+<tr class="memdesc:a9ea932363f8bc43b636110db0388b595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a9ea932363f8bc43b636110db0388b595">More...</a><br /></td></tr>
+<tr class="separator:a9ea932363f8bc43b636110db0388b595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723550c8a2f176d2d0e3d0d078cecb2a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a723550c8a2f176d2d0e3d0d078cecb2a">~Camera</a> ()=default</td></tr>
+<tr class="separator:a723550c8a2f176d2d0e3d0d078cecb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9140712cf646d399f20decde8178360c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a9140712cf646d399f20decde8178360c">near</a> () const</td></tr>
+<tr class="memdesc:a9140712cf646d399f20decde8178360c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance to the near clipping plane in world space.  <a href="#a9140712cf646d399f20decde8178360c">More...</a><br /></td></tr>
+<tr class="separator:a9140712cf646d399f20decde8178360c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed2cd7281c1bf76957676f9f69ed512"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a6ed2cd7281c1bf76957676f9f69ed512">far</a> () const</td></tr>
+<tr class="memdesc:a6ed2cd7281c1bf76957676f9f69ed512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance to the far clipping plane in world space.  <a href="#a6ed2cd7281c1bf76957676f9f69ed512">More...</a><br /></td></tr>
+<tr class="separator:a6ed2cd7281c1bf76957676f9f69ed512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b6f06d5a6131869113ce25e258caec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a16b6f06d5a6131869113ce25e258caec">lookAt</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;target, const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;up)</td></tr>
-<tr class="memdesc:a16b6f06d5a6131869113ce25e258caec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make camera look in the direction of target.  <a href="#a16b6f06d5a6131869113ce25e258caec">More...</a><br /></td></tr>
+<tr class="memdesc:a16b6f06d5a6131869113ce25e258caec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set view direction towards target position. The resulting transformation matrix maps the reference point to the negative z axis and the eye point to the origin.  <a href="#a16b6f06d5a6131869113ce25e258caec">More...</a><br /></td></tr>
 <tr class="separator:a16b6f06d5a6131869113ce25e258caec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c679b4e18039e81da90f80667d90c52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a0c679b4e18039e81da90f80667d90c52">lookAt</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;<a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#aa27f7ceeeca81047dfef6a049780733b">position</a>, const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;target, const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;up)</td></tr>
-<tr class="memdesc:a0c679b4e18039e81da90f80667d90c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set camera position and make camera look in direction of target.  <a href="#a0c679b4e18039e81da90f80667d90c52">More...</a><br /></td></tr>
-<tr class="separator:a0c679b4e18039e81da90f80667d90c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddee57b9fae83a744da2c125b17b637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a5ddee57b9fae83a744da2c125b17b637">setPosition</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;xyz)</td></tr>
-<tr class="memdesc:a5ddee57b9fae83a744da2c125b17b637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position in world space (translation)  <a href="#a5ddee57b9fae83a744da2c125b17b637">More...</a><br /></td></tr>
-<tr class="separator:a5ddee57b9fae83a744da2c125b17b637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa27f7ceeeca81047dfef6a049780733b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#aa27f7ceeeca81047dfef6a049780733b">position</a> () const</td></tr>
-<tr class="memdesc:aa27f7ceeeca81047dfef6a049780733b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position in world space (translation)  <a href="#aa27f7ceeeca81047dfef6a049780733b">More...</a><br /></td></tr>
-<tr class="separator:aa27f7ceeeca81047dfef6a049780733b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aebc24f258b1d3591e1d68e1b81c9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a5aebc24f258b1d3591e1d68e1b81c9c0">setViewDirection</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;direction)</td></tr>
-<tr class="memdesc:a5aebc24f258b1d3591e1d68e1b81c9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the view direction (view plane normal) This is the opposite of the direction of projection.  <a href="#a5aebc24f258b1d3591e1d68e1b81c9c0">More...</a><br /></td></tr>
-<tr class="separator:a5aebc24f258b1d3591e1d68e1b81c9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcb5f5fed820aa92e7fc462e455c3f0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#afcb5f5fed820aa92e7fc462e455c3f0c">viewDirection</a> () const</td></tr>
-<tr class="memdesc:afcb5f5fed820aa92e7fc462e455c3f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the view direction (view plane normal) This is the opposite of the direction of projection.  <a href="#afcb5f5fed820aa92e7fc462e455c3f0c">More...</a><br /></td></tr>
-<tr class="separator:afcb5f5fed820aa92e7fc462e455c3f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa455b7f6d8d5d4f6d01a15955f29fba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#aa455b7f6d8d5d4f6d01a15955f29fba8">setViewUp</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;<a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a5de38fcb80b6173e10647e0d665a148b">viewUp</a>)</td></tr>
-<tr class="memdesc:aa455b7f6d8d5d4f6d01a15955f29fba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set view up vector View up is directly orthogonalized with view direction. You should set view direction first.  <a href="#aa455b7f6d8d5d4f6d01a15955f29fba8">More...</a><br /></td></tr>
-<tr class="separator:aa455b7f6d8d5d4f6d01a15955f29fba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5de38fcb80b6173e10647e0d665a148b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a5de38fcb80b6173e10647e0d665a148b">viewUp</a> () const</td></tr>
-<tr class="memdesc:a5de38fcb80b6173e10647e0d665a148b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get view up vector.  <a href="#a5de38fcb80b6173e10647e0d665a148b">More...</a><br /></td></tr>
-<tr class="separator:a5de38fcb80b6173e10647e0d665a148b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a32b6edb5d4b92dff2f339e40c41285c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a32b6edb5d4b92dff2f339e40c41285c7">orthogonalizeViewUp</a> ()</td></tr>
-<tr class="memdesc:a32b6edb5d4b92dff2f339e40c41285c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orthogonalize view up vector. Make view up perpendicular to view direction.  <a href="#a32b6edb5d4b92dff2f339e40c41285c7">More...</a><br /></td></tr>
-<tr class="separator:a32b6edb5d4b92dff2f339e40c41285c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42fe68647612ff418b8e18b66489bace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a42fe68647612ff418b8e18b66489bace">lookAt</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;eye, const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;target, const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;up)</td></tr>
+<tr class="memdesc:a42fe68647612ff418b8e18b66489bace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set camera position and set view direction towards target position. The resulting transformation matrix maps the reference point to the negative z axis and the eye point to the origin.  <a href="#a42fe68647612ff418b8e18b66489bace">More...</a><br /></td></tr>
+<tr class="separator:a42fe68647612ff418b8e18b66489bace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classspatium_1_1gfx3d_1_1_scene_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classspatium_1_1gfx3d_1_1_scene_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html">spatium::gfx3d::SceneObject</a></td></tr>
+<tr class="memitem:a786fff75be815ba32b43e4b52e0580c3 inherit pub_methods_classspatium_1_1gfx3d_1_1_scene_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a786fff75be815ba32b43e4b52e0580c3">SceneObject</a> ()</td></tr>
+<tr class="separator:a786fff75be815ba32b43e4b52e0580c3 inherit pub_methods_classspatium_1_1gfx3d_1_1_scene_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9819a894268c0c978a7a6702356f1c inherit pub_methods_classspatium_1_1gfx3d_1_1_scene_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1gfx3d_1_1_transform.html">Transform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#abd9819a894268c0c978a7a6702356f1c">transform</a> ()</td></tr>
+<tr class="memdesc:abd9819a894268c0c978a7a6702356f1c inherit pub_methods_classspatium_1_1gfx3d_1_1_scene_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transformation.  <a href="classspatium_1_1gfx3d_1_1_scene_object.html#abd9819a894268c0c978a7a6702356f1c">More...</a><br /></td></tr>
+<tr class="separator:abd9819a894268c0c978a7a6702356f1c inherit pub_methods_classspatium_1_1gfx3d_1_1_scene_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af9dfc7207e9d6cdd8052045f732a5173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#af9dfc7207e9d6cdd8052045f732a5173">m_position</a></td></tr>
-<tr class="separator:af9dfc7207e9d6cdd8052045f732a5173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bf4421348bb03cdbcaa3d0b5bd486fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a4bf4421348bb03cdbcaa3d0b5bd486fb">m_viewDirection</a></td></tr>
-<tr class="separator:a4bf4421348bb03cdbcaa3d0b5bd486fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4435504d6796e5fa4206f730611064a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a4435504d6796e5fa4206f730611064a9">m_viewUp</a></td></tr>
-<tr class="separator:a4435504d6796e5fa4206f730611064a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057e240a9f429259c1cc6b03a84e6e3a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a057e240a9f429259c1cc6b03a84e6e3a">m_near</a></td></tr>
+<tr class="separator:a057e240a9f429259c1cc6b03a84e6e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc66b65368ee29765d1da7e539bd092"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a2cc66b65368ee29765d1da7e539bd092">m_far</a></td></tr>
+<tr class="separator:a2cc66b65368ee29765d1da7e539bd092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classspatium_1_1gfx3d_1_1_scene_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classspatium_1_1gfx3d_1_1_scene_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html">spatium::gfx3d::SceneObject</a></td></tr>
+<tr class="memitem:a2b9316af66a941c2629628408687628d inherit pro_attribs_classspatium_1_1gfx3d_1_1_scene_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1gfx3d_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a2b9316af66a941c2629628408687628d">m_transform</a></td></tr>
+<tr class="separator:a2b9316af66a941c2629628408687628d inherit pro_attribs_classspatium_1_1gfx3d_1_1_scene_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -155,12 +147,12 @@ Friends</h2></td></tr>
 <tr class="separator:acb98d095f024810a3be4083587bc284f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera scene object.">Camera</a> scene object. </p>
-<p><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera scene object.">Camera</a> with perspective projection.</p>
-<p>Vantage point from where an image can be rendered. </p>
+<div class="textblock"><p><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera object in a 3D scene.">Camera</a> object in a 3D scene. </p>
+<p><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera object in a 3D scene.">Camera</a> with perspective projection.</p>
+<p>Vantage point from where an image can be rendered. In its default position centred at the origin and aligned along the negative z-axis. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab5c64efc26d2b1ae97c3f8060b06b91f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5c64efc26d2b1ae97c3f8060b06b91f">&#9670;&nbsp;</a></span>Camera()</h2>
+<a id="a9ea932363f8bc43b636110db0388b595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea932363f8bc43b636110db0388b595">&#9670;&nbsp;</a></span>Camera()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,8 +163,19 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">spatium::gfx3d::Camera::Camera </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>near</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>far</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -182,9 +185,64 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor. </p>
+
+</div>
+</div>
+<a id="a723550c8a2f176d2d0e3d0d078cecb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723550c8a2f176d2d0e3d0d078cecb2a">&#9670;&nbsp;</a></span>~Camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual spatium::gfx3d::Camera::~Camera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6ed2cd7281c1bf76957676f9f69ed512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ed2cd7281c1bf76957676f9f69ed512">&#9670;&nbsp;</a></span>far()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double spatium::gfx3d::Camera::far </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the distance to the far clipping plane in world space. </p>
+<dl class="section return"><dt>Returns</dt><dd>Far clipping plane distance. </dd></dl>
+
+</div>
+</div>
 <a id="a16b6f06d5a6131869113ce25e258caec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16b6f06d5a6131869113ce25e258caec">&#9670;&nbsp;</a></span>lookAt() <span class="overload">[1/2]</span></h2>
 
@@ -219,19 +277,19 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Make camera look in the direction of target. </p>
+<p>Set view direction towards target position. The resulting transformation matrix maps the reference point to the negative z axis and the eye point to the origin. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Target position </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">up</td><td>Up vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">up</td><td>Up vector May not be parallel with view direction vector </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a0c679b4e18039e81da90f80667d90c52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c679b4e18039e81da90f80667d90c52">&#9670;&nbsp;</a></span>lookAt() <span class="overload">[2/2]</span></h2>
+<a id="a42fe68647612ff418b8e18b66489bace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42fe68647612ff418b8e18b66489bace">&#9670;&nbsp;</a></span>lookAt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +301,7 @@ Friends</h2></td></tr>
           <td class="memname">void spatium::gfx3d::Camera::lookAt </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
+          <td class="paramname"><em>eye</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -270,20 +328,20 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set camera position and make camera look in direction of target. </p>
+<p>Set camera position and set view direction towards target position. The resulting transformation matrix maps the reference point to the negative z axis and the eye point to the origin. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td><a class="el" href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera scene object.">Camera</a> position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">eye</td><td>Camera/eye position </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Target position </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">up</td><td>Up vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">up</td><td>Up vector May not be parallel with vector from eye to target </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a32b6edb5d4b92dff2f339e40c41285c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32b6edb5d4b92dff2f339e40c41285c7">&#9670;&nbsp;</a></span>orthogonalizeViewUp()</h2>
+<a id="a9140712cf646d399f20decde8178360c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9140712cf646d399f20decde8178360c">&#9670;&nbsp;</a></span>near()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,34 +350,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void spatium::gfx3d::Camera::orthogonalizeViewUp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Orthogonalize view up vector. Make view up perpendicular to view direction. </p>
-
-</div>
-</div>
-<a id="aa27f7ceeeca81047dfef6a049780733b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa27f7ceeeca81047dfef6a049780733b">&#9670;&nbsp;</a></span>position()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::Camera::position </td>
+          <td class="memname">double spatium::gfx3d::Camera::near </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -332,166 +363,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the position in world space (translation) </p>
-<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
-
-</div>
-</div>
-<a id="a5ddee57b9fae83a744da2c125b17b637"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ddee57b9fae83a744da2c125b17b637">&#9670;&nbsp;</a></span>setPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void spatium::gfx3d::Camera::setPosition </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;&#160;</td>
-          <td class="paramname"><em>xyz</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the position in world space (translation) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>Position </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5aebc24f258b1d3591e1d68e1b81c9c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aebc24f258b1d3591e1d68e1b81c9c0">&#9670;&nbsp;</a></span>setViewDirection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void spatium::gfx3d::Camera::setViewDirection </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>direction</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the view direction (view plane normal) This is the opposite of the direction of projection. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">direction</td><td>View direction </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa455b7f6d8d5d4f6d01a15955f29fba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa455b7f6d8d5d4f6d01a15955f29fba8">&#9670;&nbsp;</a></span>setViewUp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void spatium::gfx3d::Camera::setViewUp </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>viewUp</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set view up vector View up is directly orthogonalized with view direction. You should set view direction first. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">direction</td><td>View direction </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="afcb5f5fed820aa92e7fc462e455c3f0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcb5f5fed820aa92e7fc462e455c3f0c">&#9670;&nbsp;</a></span>viewDirection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::Camera::viewDirection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the view direction (view plane normal) This is the opposite of the direction of projection. </p>
-<dl class="section return"><dt>Returns</dt><dd>View direction </dd></dl>
-
-</div>
-</div>
-<a id="a5de38fcb80b6173e10647e0d665a148b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5de38fcb80b6173e10647e0d665a148b">&#9670;&nbsp;</a></span>viewUp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::Camera::viewUp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get view up vector. </p>
-<dl class="section return"><dt>Returns</dt><dd>View up </dd></dl>
+<p>Get the distance to the near clipping plane in world space. </p>
+<dl class="section return"><dt>Returns</dt><dd>Near clipping plane distance. </dd></dl>
 
 </div>
 </div>
@@ -535,8 +408,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af9dfc7207e9d6cdd8052045f732a5173"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9dfc7207e9d6cdd8052045f732a5173">&#9670;&nbsp;</a></span>m_position</h2>
+<a id="a2cc66b65368ee29765d1da7e539bd092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc66b65368ee29765d1da7e539bd092">&#9670;&nbsp;</a></span>m_far</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -545,7 +418,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::Camera::m_position</td>
+          <td class="memname">double spatium::gfx3d::Camera::m_far</td>
         </tr>
       </table>
   </td>
@@ -557,8 +430,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a4bf4421348bb03cdbcaa3d0b5bd486fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bf4421348bb03cdbcaa3d0b5bd486fb">&#9670;&nbsp;</a></span>m_viewDirection</h2>
+<a id="a057e240a9f429259c1cc6b03a84e6e3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057e240a9f429259c1cc6b03a84e6e3a">&#9670;&nbsp;</a></span>m_near</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -567,29 +440,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> spatium::gfx3d::Camera::m_viewDirection</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4435504d6796e5fa4206f730611064a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4435504d6796e5fa4206f730611064a9">&#9670;&nbsp;</a></span>m_viewUp</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> spatium::gfx3d::Camera::m_viewUp</td>
+          <td class="memname">double spatium::gfx3d::Camera::m_near</td>
         </tr>
       </table>
   </td>

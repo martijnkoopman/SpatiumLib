@@ -1,5 +1,7 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx2d/Drawing.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx2d/Drawing.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,193,61"/>
-<area shape="rect" id="node2" href="$gfx2d_8h.html" title=" " alt="" coords="5,109,193,165"/>
-<area shape="rect" id="node3" href="$spatium_8h.html" title=" " alt="" coords="5,213,193,269"/>
+<area shape="rect" id="node1" title=" " alt="" coords="111,5,299,61"/>
+<area shape="rect" id="node2" href="$gfx2d_8h.html" title=" " alt="" coords="5,213,193,269"/>
+<area shape="rect" id="node4" href="$_wireframe_renderer_8h.html" title=" " alt="" coords="179,109,415,165"/>
+<area shape="rect" id="node3" href="$spatium_8h.html" title=" " alt="" coords="111,317,299,373"/>
+<area shape="rect" id="node5" href="$gfx3d_8h.html" title=" " alt="" coords="217,213,405,269"/>
 </map>

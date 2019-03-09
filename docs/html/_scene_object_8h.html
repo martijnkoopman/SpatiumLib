@@ -72,30 +72,29 @@ $(function() {
 <div class="title">SceneObject.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_point3_8h_source.html">spatium/geom3d/Point3.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_vector3_8h_source.html">spatium/geom3d/Vector3.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_matrix4x4_8h_source.html">spatium/geom3d/Matrix4x4.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_transform_8h_source.html">Transform.h</a>&quot;</code><br />
 <code>#include &lt;array&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SceneObject.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_scene_object_8h__incl.png" border="0" usemap="#_2home_2martijn_2_development_2_projects_2_spatium_lib_2include_2spatium_2gfx3d_2_scene_object_8h" alt=""/></div>
 <map name="_2home_2martijn_2_development_2_projects_2_spatium_lib_2include_2spatium_2gfx3d_2_scene_object_8h" id="_2home_2martijn_2_development_2_projects_2_spatium_lib_2include_2spatium_2gfx3d_2_scene_object_8h">
-<area shape="rect"  title=" " alt="" coords="230,5,429,61"/>
-<area shape="rect"  href="_point3_8h.html" title=" " alt="" coords="96,109,267,136"/>
-<area shape="rect"  href="_vector3_8h.html" title=" " alt="" coords="189,184,267,211"/>
-<area shape="rect"  href="_matrix4x4_8h.html" title=" " alt="" coords="291,184,482,211"/>
-<area shape="rect"  title=" " alt="" coords="392,109,443,136"/>
-<area shape="rect"  href="_matrix_8h.html" title=" " alt="" coords="190,333,309,360"/>
-<area shape="rect"  title=" " alt="" coords="5,408,64,435"/>
-<area shape="rect"  title=" " alt="" coords="89,408,186,435"/>
-<area shape="rect"  title=" " alt="" coords="210,408,289,435"/>
-<area shape="rect"  title=" " alt="" coords="313,408,383,435"/>
-<area shape="rect"  href="_math_8h.html" title=" " alt="" coords="407,408,470,435"/>
-<area shape="rect"  title=" " alt="" coords="329,483,388,509"/>
-<area shape="rect"  title=" " alt="" coords="412,483,465,509"/>
-<area shape="rect"  title=" " alt="" coords="489,483,543,509"/>
-<area shape="rect"  href="_vector_8h.html" title=" " alt="" coords="189,259,310,285"/>
+<area shape="rect"  title=" " alt="" coords="275,5,474,61"/>
+<area shape="rect"  href="_transform_8h.html" title=" " alt="" coords="287,109,379,136"/>
+<area shape="rect"  title=" " alt="" coords="392,184,443,211"/>
+<area shape="rect"  href="_point3_8h.html" title=" " alt="" coords="96,184,267,211"/>
+<area shape="rect"  href="_vector3_8h.html" title=" " alt="" coords="189,259,267,285"/>
+<area shape="rect"  href="_matrix4x4_8h.html" title=" " alt="" coords="291,259,482,285"/>
+<area shape="rect"  href="_matrix_8h.html" title=" " alt="" coords="190,408,309,435"/>
+<area shape="rect"  title=" " alt="" coords="5,483,64,509"/>
+<area shape="rect"  title=" " alt="" coords="89,483,186,509"/>
+<area shape="rect"  title=" " alt="" coords="210,483,289,509"/>
+<area shape="rect"  title=" " alt="" coords="313,483,383,509"/>
+<area shape="rect"  href="_math_8h.html" title=" " alt="" coords="407,483,470,509"/>
+<area shape="rect"  title=" " alt="" coords="329,557,388,584"/>
+<area shape="rect"  title=" " alt="" coords="412,557,465,584"/>
+<area shape="rect"  title=" " alt="" coords="489,557,543,584"/>
+<area shape="rect"  href="_vector_8h.html" title=" " alt="" coords="189,333,310,360"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -103,14 +102,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_scene_object_8h__dep__incl.png" border="0" usemap="#_2home_2martijn_2_development_2_projects_2_spatium_lib_2include_2spatium_2gfx3d_2_scene_object_8hdep" alt=""/></div>
 <map name="_2home_2martijn_2_development_2_projects_2_spatium_lib_2include_2spatium_2gfx3d_2_scene_object_8hdep" id="_2home_2martijn_2_development_2_projects_2_spatium_lib_2include_2spatium_2gfx3d_2_scene_object_8hdep">
-<area shape="rect"  title=" " alt="" coords="337,5,536,61"/>
-<area shape="rect"  href="_render_object_8h.html" title=" " alt="" coords="197,109,399,165"/>
-<area shape="rect"  href="gfx3d_8h.html" title=" " alt="" coords="213,525,401,581"/>
-<area shape="rect"  href="_mesh_8h.html" title=" " alt="" coords="5,317,193,373"/>
-<area shape="rect"  href="_scene_8h.html" title=" " alt="" coords="269,213,457,269"/>
-<area shape="rect"  href="spatium_8h.html" title=" " alt="" coords="213,629,401,685"/>
-<area shape="rect"  href="_renderer_8h.html" title=" " alt="" coords="320,317,508,373"/>
-<area shape="rect"  href="_wireframe_renderer_8h.html" title=" " alt="" coords="369,421,605,477"/>
+<area shape="rect"  title=" " alt="" coords="170,5,369,61"/>
+<area shape="rect"  href="_camera_8h.html" title=" " alt="" coords="176,109,364,165"/>
+<area shape="rect"  href="gfx3d_8h.html" title=" " alt="" coords="421,525,609,581"/>
+<area shape="rect"  href="_render_object_8h.html" title=" " alt="" coords="648,109,851,165"/>
+<area shape="rect"  href="_orthographic_camera_8h.html" title=" " alt="" coords="255,317,498,373"/>
+<area shape="rect"  href="_perspective_camera_8h.html" title=" " alt="" coords="48,421,286,477"/>
+<area shape="rect"  href="_scene_8h.html" title=" " alt="" coords="484,213,672,269"/>
+<area shape="rect"  href="_wireframe_renderer_8h.html" title=" " alt="" coords="552,421,788,477"/>
+<area shape="rect"  href="spatium_8h.html" title=" " alt="" coords="421,629,609,685"/>
+<area shape="rect"  href="_renderer_8h.html" title=" " alt="" coords="573,317,761,373"/>
+<area shape="rect"  href="_mesh_8h.html" title=" " alt="" coords="785,317,973,373"/>
 </map>
 </div>
 </div>

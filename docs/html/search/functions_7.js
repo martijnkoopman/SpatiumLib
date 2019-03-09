@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height',['height',['../classspatium_1_1imgproc_1_1_image.html#a5e743c1c51028e5a85e9197555804710',1,'spatium::imgproc::Image']]]
+  ['height',['height',['../classspatium_1_1_image.html#aaa27f73bdb0b3efe8fde411cd0400364',1,'spatium::Image']]]
 ];

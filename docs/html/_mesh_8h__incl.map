@@ -1,19 +1,20 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Mesh.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/Mesh.h">
-<area shape="rect" id="node1" title=" " alt="" coords="117,5,305,61"/>
-<area shape="rect" id="node2" href="$_render_object_8h.html" title=" " alt="" coords="215,109,329,136"/>
-<area shape="rect" id="node4" href="$_point3_8h.html" title=" " alt="" coords="72,259,243,285"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,557,64,584"/>
-<area shape="rect" id="node17" title=" " alt="" coords="368,259,419,285"/>
-<area shape="rect" id="node3" href="$_scene_object_8h.html" title=" " alt="" coords="218,184,326,211"/>
-<area shape="rect" id="node14" href="$_vector3_8h.html" title=" " alt="" coords="189,333,267,360"/>
-<area shape="rect" id="node16" href="$_matrix4x4_8h.html" title=" " alt="" coords="291,333,482,360"/>
-<area shape="rect" id="node5" href="$_matrix_8h.html" title=" " alt="" coords="190,483,309,509"/>
-<area shape="rect" id="node7" title=" " alt="" coords="89,557,186,584"/>
-<area shape="rect" id="node8" title=" " alt="" coords="210,557,289,584"/>
-<area shape="rect" id="node9" title=" " alt="" coords="313,557,383,584"/>
-<area shape="rect" id="node10" href="$_math_8h.html" title=" " alt="" coords="407,557,470,584"/>
-<area shape="rect" id="node11" title=" " alt="" coords="329,632,388,659"/>
-<area shape="rect" id="node12" title=" " alt="" coords="412,632,465,659"/>
-<area shape="rect" id="node13" title=" " alt="" coords="489,632,543,659"/>
-<area shape="rect" id="node15" href="$_vector_8h.html" title=" " alt="" coords="189,408,310,435"/>
+<area shape="rect" id="node1" title=" " alt="" coords="143,5,331,61"/>
+<area shape="rect" id="node2" href="$_render_object_8h.html" title=" " alt="" coords="223,109,337,136"/>
+<area shape="rect" id="node5" href="$_point3_8h.html" title=" " alt="" coords="72,333,243,360"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,632,64,659"/>
+<area shape="rect" id="node18" title=" " alt="" coords="368,333,419,360"/>
+<area shape="rect" id="node3" href="$_scene_object_8h.html" title=" " alt="" coords="226,184,334,211"/>
+<area shape="rect" id="node4" href="$_transform_8h.html" title=" " alt="" coords="213,259,305,285"/>
+<area shape="rect" id="node15" href="$_vector3_8h.html" title=" " alt="" coords="166,408,245,435"/>
+<area shape="rect" id="node17" href="$_matrix4x4_8h.html" title=" " alt="" coords="269,408,459,435"/>
+<area shape="rect" id="node6" href="$_matrix_8h.html" title=" " alt="" coords="167,557,286,584"/>
+<area shape="rect" id="node8" title=" " alt="" coords="373,632,470,659"/>
+<area shape="rect" id="node9" title=" " alt="" coords="89,632,167,659"/>
+<area shape="rect" id="node10" title=" " alt="" coords="192,632,261,659"/>
+<area shape="rect" id="node11" href="$_math_8h.html" title=" " alt="" coords="286,632,349,659"/>
+<area shape="rect" id="node12" title=" " alt="" coords="208,707,267,733"/>
+<area shape="rect" id="node13" title=" " alt="" coords="291,707,344,733"/>
+<area shape="rect" id="node14" title=" " alt="" coords="368,707,421,733"/>
+<area shape="rect" id="node16" href="$_vector_8h.html" title=" " alt="" coords="166,483,287,509"/>
 </map>

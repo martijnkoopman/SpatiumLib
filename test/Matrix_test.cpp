@@ -58,9 +58,6 @@ private slots:
   void test_solveSystemOfEquations();
   void test_leastSquares();
   void test_eigenDecomposition2d();
-
-private:
-  static bool approximatelyEqualDoubles(double d1, double d2);
 };
 
 Matrix_test::Matrix_test()
@@ -380,10 +377,10 @@ void Matrix_test::test_inverse()
   //QCOMPARE(matrix2(0,1),  8);
   //QCOMPARE(matrix2(1,0),  8.75);
   //QCOMPARE(matrix2(1,1), -7.5);
-  QVERIFY(Matrix_test::approximatelyEqualDoubles(matrix2(0,0), -9));
-  QVERIFY(Matrix_test::approximatelyEqualDoubles(matrix2(0,1),  8));
-  QVERIFY(Matrix_test::approximatelyEqualDoubles(matrix2(1,0),  8.75));
-  QVERIFY(Matrix_test::approximatelyEqualDoubles(matrix2(1,1), -7.5));
+  QVERIFY(qFuzzyCompare(matrix2(0,0), -9));
+  QVERIFY(qFuzzyCompare(matrix2(0,1),  8));
+  QVERIFY(qFuzzyCompare(matrix2(1,0),  8.75));
+  QVERIFY(qFuzzyCompare(matrix2(1,1), -7.5));
 }
 
 void Matrix_test::test_inverseNonSquare()
@@ -419,12 +416,9 @@ void Matrix_test::test_solveSystemOfEquations()
 
   Vector x = A.inverse() * b;
 
-  // X = x(0) = 5
-  // Y = x(1) = 3
-  // Z = x(1) = -2
-  QCOMPARE(x(0), 6);
-  QCOMPARE(x(1), -4);
-  QCOMPARE(x(2), 27);
+  QVERIFY(qFuzzyCompare(x(0), 5));
+  QVERIFY(qFuzzyCompare(x(1), 3));
+  QVERIFY(qFuzzyCompare(x(2), -2));
 }
 
 void Matrix_test::test_leastSquares()
@@ -461,7 +455,7 @@ void Matrix_test::test_eigenDecomposition2d()
 {
   // Test 1
   Matrix A = {{7,  3},
-                    {3, -1}};
+              {3, -1}};
 
   double eig1, eig2;
   QVERIFY(eigenvalues2d(A, eig1, eig2));
@@ -477,12 +471,6 @@ void Matrix_test::test_eigenDecomposition2d()
 
   QCOMPARE(eig1, -2);
   QCOMPARE(eig2, -1);
-}
-
-bool Matrix_test::approximatelyEqualDoubles(double d1, double d2)
-{
-  return (std::abs(d1-d2) <= std::numeric_limits<double>::epsilon() * std::abs(d1+d2) * 2
-          || std::abs(d1-d2) < std::numeric_limits<double>::min());
 }
 
 QTEST_APPLESS_MAIN(Matrix_test)

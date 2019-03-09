@@ -17,6 +17,7 @@
 #include "Matrix.h"
 #include "Vector.h"
 #include "Statistics.h"
+#include "Image.h"
 #include "imgproc.h"
 #include "geom3d.h"
 #include "gfx2d.h"

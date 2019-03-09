@@ -21,10 +21,15 @@ namespace spatium {
 
 /// Pi constant
 const double PI = std::atan(1) * 4;
+
+/// Radians to degrees conversion constant
 const double Rad2Deg = 180 / PI;
+
+/// Degrees to radians conversion constant
 const double Deg2Rad = PI / 180;
 
 /// Calculate the factorial
+///
 /// Example: factorial(4) = 4! = 4*3*2*1 = 24
 ///
 /// \param[in] n A positive integer
@@ -40,7 +45,9 @@ inline double factorial(int n)
 }
 
 /// Calculate the binomial coefficient.
-/// Combinatorics: Choose a subset of K elements from a fixed set of N elements
+///
+/// Combinatorics: Choose a subset of K elements from a fixed set of N
+/// elements.
 /// 'N choose K'
 ///
 /// \param[in] n Number of elements in fixed set

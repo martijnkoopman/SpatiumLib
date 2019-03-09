@@ -64,7 +64,7 @@ public:
   /// Copy constructor
   ///
   /// \param[in] other Other matrix
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   Vector3(const Matrix &other)
     : Vector(4)
   {
@@ -87,7 +87,7 @@ public:
   }
 
   /// Desctructor
-  virtual ~Vector3() override = default;
+  ~Vector3() = default;
 
   void x(double val) { m_data[0] = val; }
   double x() const   { return m_data[0]; }
@@ -104,7 +104,7 @@ public:
   /// Add matrix to vector.
   ///
   /// \param[in] other Matrix to add
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Added vector
   Vector3 operator+(const Matrix &other) const
   {
@@ -124,7 +124,7 @@ public:
   /// Subtract matrix from vector.
   ///
   /// \param[in] other Matrix to subtract
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Subtracted vector
   Vector3 operator-(const Matrix &other) const
   {
@@ -167,7 +167,7 @@ public:
     return result;
   }
 
-  /// Calculate length of vector.
+  /// Calculate length of vector (magnitude).
   ///
   /// \return Length
   double length() const

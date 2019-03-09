@@ -34,17 +34,13 @@ class Scene
 {
 public:
   /// Constructor
-  Scene() = default;
+  Scene()
+    : m_camera(nullptr)
+    , m_lights()
+    , m_renderObjects()
+  {
 
-  /// Copy constructor
-  /// The references to the scene objects will be copied. As a result objects
-  /// will be references from multiple scenes.
-  Scene(const Scene &scene) = default;
-
-  ///\todo Rule of 5. std::move
-
-  /// Destructor
-  virtual ~Scene() = default;
+  }
 
   /// Set the camera
   ///

@@ -11,7 +11,6 @@
  */
 
 #include "IImageFilter.h"
-#include <functional>
 
 #ifndef SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
 #define SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
@@ -19,6 +18,11 @@
 namespace spatium {
 namespace imgproc {
 
+/// \class GlobalThresholdFilter
+/// \brief Global threshold image filter
+///
+/// GlobalThreshold is a class for binarizing an image by a given threshold
+/// value.
 template<typename T>
 class GlobalThresholdFilter
 {
@@ -62,14 +66,14 @@ public:
     {
       for (int x = 0; x < input.width(); x++)
       {
-        std::array<T, N> pixel = input.getPixel(x, y);
-        T value = imgproc::PixelValue<T, 1>::value(pixel)[0];
+        std::array<T, N> pixel = input.pixel(x, y);
+        T value = PixelValue<T, 1>::value(pixel)[0];
         if (value > m_thresholdValue)
         {
-          output.setPixel(x, y, { newValue });
+          output.pixel(x, y) = { newValue };
         }
         else {
-          output.setPixel(x, y, { 0 });
+          output.pixel(x, y) = { 0 };
         }
       }
     }
@@ -86,14 +90,14 @@ public:
     {
       for (int x = 0; x < inoutput.width(); x++)
       {
-        std::array<T, 1> pixel = inoutput.getPixel(x, y);
+        std::array<T, 1> pixel = inoutput.pixel(x, y);
         T value = pixel[0];
         if (value > m_thresholdValue)
         {
-          inoutput.setPixel(x, y, { newValue });
+          inoutput.pixel(x, y) = { newValue };
         }
         else {
-          inoutput.setPixel(x, y, { 0 });
+          inoutput.pixel(x, y) = { 0 };
         }
       }
     }

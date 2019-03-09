@@ -1,10 +1,13 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/SceneObject.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/SceneObject.h">
-<area shape="rect" id="node1" title=" " alt="" coords="337,5,536,61"/>
-<area shape="rect" id="node2" href="$_render_object_8h.html" title=" " alt="" coords="197,109,399,165"/>
-<area shape="rect" id="node4" href="$gfx3d_8h.html" title=" " alt="" coords="213,525,401,581"/>
-<area shape="rect" id="node3" href="$_mesh_8h.html" title=" " alt="" coords="5,317,193,373"/>
-<area shape="rect" id="node6" href="$_scene_8h.html" title=" " alt="" coords="269,213,457,269"/>
-<area shape="rect" id="node5" href="$spatium_8h.html" title=" " alt="" coords="213,629,401,685"/>
-<area shape="rect" id="node7" href="$_renderer_8h.html" title=" " alt="" coords="320,317,508,373"/>
-<area shape="rect" id="node8" href="$_wireframe_renderer_8h.html" title=" " alt="" coords="369,421,605,477"/>
+<area shape="rect" id="node1" title=" " alt="" coords="170,5,369,61"/>
+<area shape="rect" id="node2" href="$_camera_8h.html" title=" " alt="" coords="176,109,364,165"/>
+<area shape="rect" id="node5" href="$gfx3d_8h.html" title=" " alt="" coords="421,525,609,581"/>
+<area shape="rect" id="node10" href="$_render_object_8h.html" title=" " alt="" coords="648,109,851,165"/>
+<area shape="rect" id="node3" href="$_orthographic_camera_8h.html" title=" " alt="" coords="255,317,498,373"/>
+<area shape="rect" id="node7" href="$_perspective_camera_8h.html" title=" " alt="" coords="48,421,286,477"/>
+<area shape="rect" id="node8" href="$_scene_8h.html" title=" " alt="" coords="484,213,672,269"/>
+<area shape="rect" id="node4" href="$_wireframe_renderer_8h.html" title=" " alt="" coords="552,421,788,477"/>
+<area shape="rect" id="node6" href="$spatium_8h.html" title=" " alt="" coords="421,629,609,685"/>
+<area shape="rect" id="node9" href="$_renderer_8h.html" title=" " alt="" coords="573,317,761,373"/>
+<area shape="rect" id="node11" href="$_mesh_8h.html" title=" " alt="" coords="785,317,973,373"/>
 </map>

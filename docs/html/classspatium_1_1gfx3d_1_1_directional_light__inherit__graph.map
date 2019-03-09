@@ -1,0 +1,4 @@
+<map id="spatium::gfx3d::DirectionalLight" name="spatium::gfx3d::DirectionalLight">
+<area shape="rect" id="node1" title="Light source that emits light in one direction as parallel rays &lt;&gt; the position." alt="" coords="5,80,184,121"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_light.html" title="Light scene object." alt="" coords="23,5,167,32"/>
+</map>

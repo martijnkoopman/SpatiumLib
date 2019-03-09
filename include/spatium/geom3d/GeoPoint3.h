@@ -52,7 +52,9 @@ public:
   }
 
   /// Copy constructor
-  GeoPoint3(const GeoPoint3 &other) // Needed?
+  ///
+  /// \param[in] other Other GeoPoint3
+  GeoPoint3(const GeoPoint3 &other)
     : Point3(other)
   {
   }
@@ -60,20 +62,23 @@ public:
   /// Copy constructor
   ///
   /// \param[in] other Other matrix
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   GeoPoint3(const Matrix &other)
     : Point3(other)
   {
   }
 
+//  /// Assignment operator
+//  GeoPoint3& operator=(GeoPoint3 other){
+//    Matrix::operator=(other);
+//    return *this;
+//  }
+
   /// Assignment operator
-  GeoPoint3& operator=(GeoPoint3 other){
-    Matrix::operator=(other);
-    return *this;
-  }
+  GeoPoint3& operator=(const GeoPoint3 &other) = default;
 
   /// Destructor
-  virtual ~GeoPoint3() override = default;
+  ~GeoPoint3() = default;
 
   void longitude(double val) { m_data[0] = val; }
   double longitude() const { return m_data[0]; }
@@ -85,7 +90,7 @@ public:
   /// Subtract matrix from geo point.
   ///
   /// \param[in] other Matrix to subtract
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Subtracted point
   GeoPoint3 operator-(const Matrix &other) const
   {
@@ -95,7 +100,7 @@ public:
   /// Add matrix to geo point.
   ///
   /// \param[in] other Matrix to add
-  /// \exception std::out_of_range Matrix dimensions out of range
+  /// \throw std::out_of_range Matrix dimensions out of range
   /// \return Added point
   GeoPoint3 operator+(const Matrix &other) const
   {

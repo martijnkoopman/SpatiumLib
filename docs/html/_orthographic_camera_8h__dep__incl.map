@@ -1,5 +1,6 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/OrthographicCamera.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/gfx3d/OrthographicCamera.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,248,61"/>
-<area shape="rect" id="node2" href="$gfx3d_8h.html" title=" " alt="" coords="33,109,221,165"/>
-<area shape="rect" id="node3" href="$spatium_8h.html" title=" " alt="" coords="33,213,221,269"/>
+<area shape="rect" id="node1" title=" " alt="" coords="79,5,322,61"/>
+<area shape="rect" id="node2" href="$_wireframe_renderer_8h.html" title=" " alt="" coords="5,109,241,165"/>
+<area shape="rect" id="node3" href="$gfx3d_8h.html" title=" " alt="" coords="107,213,295,269"/>
+<area shape="rect" id="node4" href="$spatium_8h.html" title=" " alt="" coords="107,317,295,373"/>
 </map>

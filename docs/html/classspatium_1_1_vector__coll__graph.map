@@ -1,5 +1,5 @@
 <map id="spatium::Vector" name="spatium::Vector">
 <area shape="rect" id="node1" title="Vector in column&#45;major order." alt="" coords="21,171,136,197"/>
-<area shape="rect" id="node2" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="23,95,135,121"/>
+<area shape="rect" id="node2" href="$classspatium_1_1_matrix.html" title="Mathematical matrix with an arbitrary number number of rows and columns." alt="" coords="23,95,135,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,5,152,32"/>
 </map>

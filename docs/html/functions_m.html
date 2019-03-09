@@ -64,9 +64,6 @@ $(function() {
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_m"></a>- m -</h3><ul>
-<li>m_aspectRatio
-: <a class="el" href="classspatium_1_1gfx3d_1_1_orthographic_camera.html#af0f8cac1f2d86177a0b815c98883e8c1">spatium::gfx3d::OrthographicCamera</a>
-</li>
 <li>m_axisX
 : <a class="el" href="classspatium_1_1geom3d_1_1_ellipsoid.html#afd30d93f66e8dbc14639cc0845d85dac">spatium::geom3d::Ellipsoid</a>
 </li>
@@ -89,8 +86,8 @@ $(function() {
 : <a class="el" href="classspatium_1_1_matrix.html#a4c4488ee38eb9fb54d99afd64f5bc696">spatium::Matrix</a>
 </li>
 <li>m_direction
-: <a class="el" href="classspatium_1_1gfx3d_1_1_spot_light.html#a1b3ebb5214823649643dd24e5937e3c1">spatium::gfx3d::SpotLight</a>
-, <a class="el" href="classspatium_1_1gfx3d_1_1_sun_light.html#a2e4d88cb76603dbf3b358d5fa84ec3ae">spatium::gfx3d::SunLight</a>
+: <a class="el" href="classspatium_1_1gfx3d_1_1_directional_light.html#a5cdd6a20821c4c93c8f599b27d3009e3">spatium::gfx3d::DirectionalLight</a>
+, <a class="el" href="classspatium_1_1gfx3d_1_1_spot_light.html#a1b3ebb5214823649643dd24e5937e3c1">spatium::gfx3d::SpotLight</a>
 </li>
 <li>m_ellipsoidalTransformation
 : <a class="el" href="classspatium_1_1geom3d_1_1_ellipsoid.html#a5148ed8c10a79adb445a0bd16dae4a57">spatium::geom3d::Ellipsoid</a>
@@ -98,11 +95,20 @@ $(function() {
 <li>m_ellipsoidalTransformationInverse
 : <a class="el" href="classspatium_1_1geom3d_1_1_ellipsoid.html#a1cd8013e95fb08f1bd0ba92c65d248d1">spatium::geom3d::Ellipsoid</a>
 </li>
+<li>m_far
+: <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a2cc66b65368ee29765d1da7e539bd092">spatium::gfx3d::Camera</a>
+</li>
 <li>m_height
-: <a class="el" href="classspatium_1_1imgproc_1_1_image.html#a08f482618d953159cc8447222bc6f1fb">spatium::imgproc::Image&lt; T, N &gt;</a>
+: <a class="el" href="classspatium_1_1_image.html#a727b852d75d1ed6bdf5ba56191c878ca">spatium::Image&lt; T, N &gt;</a>
 </li>
 <li>m_imageData
-: <a class="el" href="classspatium_1_1imgproc_1_1_image.html#a762d313690b3afccaf3ede87bdbb7657">spatium::imgproc::Image&lt; T, N &gt;</a>
+: <a class="el" href="classspatium_1_1_image.html#aa47c83352bb37f64afb2c7fb60283033">spatium::Image&lt; T, N &gt;</a>
+</li>
+<li>m_matrix
+: <a class="el" href="classspatium_1_1gfx3d_1_1_transform.html#a9dce26f2e56229d1bb73276fb5a7989f">spatium::gfx3d::Transform</a>
+</li>
+<li>m_near
+: <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a057e240a9f429259c1cc6b03a84e6e3a">spatium::gfx3d::Camera</a>
 </li>
 <li>m_normal
 : <a class="el" href="classspatium_1_1geom3d_1_1_plane.html#a8f1b7fcd69bbd65de73afe1fa736bbf4">spatium::geom3d::Plane</a>
@@ -113,23 +119,15 @@ $(function() {
 , <a class="el" href="classspatium_1_1geom3d_1_1_sphere.html#a1bc4f15b82e6e35d9e3f10f04191e937">spatium::geom3d::Sphere</a>
 </li>
 <li>m_position
-: <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#af9dfc7207e9d6cdd8052045f732a5173">spatium::gfx3d::Camera</a>
-, <a class="el" href="classspatium_1_1gfx3d_1_1_point_light.html#a8405ae6bc0c45f808c690a28f290713e">spatium::gfx3d::PointLight</a>
-, <a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a7a84f5cf865fa3abeb5e5350311ec909">spatium::gfx3d::SceneObject</a>
+: <a class="el" href="classspatium_1_1gfx3d_1_1_point_light.html#a8405ae6bc0c45f808c690a28f290713e">spatium::gfx3d::PointLight</a>
 , <a class="el" href="classspatium_1_1gfx3d_1_1_spot_light.html#a879e041a1adbf4f61319ec1224a7f539">spatium::gfx3d::SpotLight</a>
 </li>
 <li>m_radius
 : <a class="el" href="classspatium_1_1geom3d_1_1_sphere.html#a71d161e4c4275afa1c10562c81f0f189">spatium::geom3d::Sphere</a>
 , <a class="el" href="classspatium_1_1gfx3d_1_1_spot_light.html#a5b353799a408fb6f8c498b87c78cdaa0">spatium::gfx3d::SpotLight</a>
 </li>
-<li>m_rotation
-: <a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a1058ec0fb9da0acae529d8a693d29321">spatium::gfx3d::SceneObject</a>
-</li>
 <li>m_rows
 : <a class="el" href="classspatium_1_1_matrix.html#afc3396d15bca9b7488356ab6bdb279ca">spatium::Matrix</a>
-</li>
-<li>m_scale
-: <a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#ac58298238e5592ed096abe3c81a69c26">spatium::gfx3d::SceneObject</a>
 </li>
 <li>m_size
 : <a class="el" href="classspatium_1_1gfx3d_1_1_orthographic_camera.html#a1b614e9f6aae30f4bf1940935f52a4ed">spatium::gfx3d::OrthographicCamera</a>
@@ -137,20 +135,20 @@ $(function() {
 <li>m_strength
 : <a class="el" href="classspatium_1_1gfx3d_1_1_light.html#a2af7d7e66564e69741335cbd4325b2b8">spatium::gfx3d::Light</a>
 </li>
-<li>m_viewDirection
-: <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a4bf4421348bb03cdbcaa3d0b5bd486fb">spatium::gfx3d::Camera</a>
-</li>
-<li>m_viewUp
-: <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a4435504d6796e5fa4206f730611064a9">spatium::gfx3d::Camera</a>
+<li>m_transform
+: <a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a2b9316af66a941c2629628408687628d">spatium::gfx3d::SceneObject</a>
 </li>
 <li>m_width
-: <a class="el" href="classspatium_1_1imgproc_1_1_image.html#a0a6c752791c4d209acdd0c702381609e">spatium::imgproc::Image&lt; T, N &gt;</a>
+: <a class="el" href="classspatium_1_1_image.html#af9129e388f5ba1447de9d5241ea7a5df">spatium::Image&lt; T, N &gt;</a>
+</li>
+<li>matrix()
+: <a class="el" href="classspatium_1_1gfx3d_1_1_transform.html#a1c8df77313adebf0861a653e503763fa">spatium::gfx3d::Transform</a>
 </li>
 <li>Matrix()
-: <a class="el" href="classspatium_1_1_matrix.html#ab7955db9140cb5511657b55ce63849b9">spatium::Matrix</a>
+: <a class="el" href="classspatium_1_1_matrix.html#ac81f0713730779e812d4fa117f8f9942">spatium::Matrix</a>
 </li>
 <li>Matrix4x4()
-: <a class="el" href="classspatium_1_1geom3d_1_1_matrix4x4.html#a881df1cf8fa192e9a7873fd88797cd5a">spatium::geom3d::Matrix4x4</a>
+: <a class="el" href="classspatium_1_1geom3d_1_1_matrix4x4.html#a592ddb87dff905275e4e0379bd8693d6">spatium::geom3d::Matrix4x4</a>
 </li>
 <li>Mesh()
 : <a class="el" href="classspatium_1_1gfx3d_1_1_mesh.html#ab6768a527257fada346d05c6ceb80130">spatium::gfx3d::Mesh</a>

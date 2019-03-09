@@ -13,6 +13,7 @@
 #ifndef SPATIUMLIB_GFX3D_CAMERA_H
 #define SPATIUMLIB_GFX3D_CAMERA_H
 
+#include "SceneObject.h"
 #include <spatium/geom3d/Point3.h>
 #include <spatium/geom3d/Vector3.h>
 
@@ -22,94 +23,92 @@ namespace spatium {
 namespace gfx3d {
 
 /// \class Camera
-/// \brief Camera scene object
+/// \brief Camera object in a 3D scene
 ///
 /// Vantage point from where an image can be rendered.
-class Camera
+/// In its default position centred at the origin and aligned along the
+/// negative z-axis.
+class Camera : public SceneObject
 {
 public:
 
-  Camera()
-    : m_position({0,0,0})
-    , m_viewDirection({0,1,0})
-    , m_viewUp({0,0,1})
+  /// Constructor
+  Camera(double near, double far)
+    : SceneObject()
+    , m_near(near)
+    , m_far(far)
   {
   }
 
-  /// Make camera look in the direction of target.
+  virtual ~Camera() = default;
+
+  /// Get the distance to the near clipping plane in world space.
+  ///
+  /// \return Near clipping plane distance.
+  double near() const
+  {
+    return m_near;
+  }
+
+  /// Get the distance to the far clipping plane in world space.
+  ///
+  /// \return Far clipping plane distance.
+  double far() const
+  {
+    return m_far;
+  }
+
+  /// Set view direction towards target position.
+  /// The resulting transformation matrix maps the reference point to the
+  /// negative z axis and the eye point to the origin.
   ///
   /// \param[in] target Target position
   /// \param[in] up Up vector
+  ///                May not be parallel with view direction vector
   void lookAt(const geom3d::Point3 &target, const geom3d::Vector3 &up)
   {
-    setViewDirection(target - m_position);
-    setViewUp(up);
+    // Compute vector from target to eye
+    geom3d::Vector3 back = geom3d::Vector3(m_transform.position() - target).normalized();
+
+    // Normalize and orthogonalize view up vector
+    geom3d::Vector3 right = up.normalized().cross(back);
+    geom3d::Vector3 upOrtho = back.cross(right);
+
+    // Set rotation of transformation matrix based on view direction and view
+    // up vector.
+    geom3d::Matrix4x4 M = m_transform.matrix();
+
+    // First column is right vector
+    M(0,0) = right(0);
+    M(1,0) = right(1);
+    M(2,0) = right(2);
+
+    // Second column is up vector
+    M(0,1) = upOrtho(0);
+    M(1,1) = upOrtho(1);
+    M(2,1) = upOrtho(2);
+
+    // Third column is back vector
+    M(0,2) = back(0);
+    M(1,2) = back(1);
+    M(2,2) = back(2);
+
+    m_transform.setMatrix(M);
   }
 
-  /// Set camera position and make camera look in direction of target.
+  /// Set camera position and set view direction towards target position.
+  /// The resulting transformation matrix maps the reference point to the
+  /// negative z axis and the eye point to the origin.
   ///
-  /// \param[in] position Camera position
+  /// \param[in] eye Camera/eye position
   /// \param[in] target Target position
   /// \param[in] up Up vector
-  void lookAt(const geom3d::Point3 &position, const geom3d::Point3 &target,
+  ///                May not be parallel with vector from eye to target
+  void lookAt(const geom3d::Point3 &eye, const geom3d::Point3 &target,
               const geom3d::Vector3 &up)
   {
-    setPosition(position);
-    setViewDirection(target - m_position);
-    setViewUp(up);
-  }
-
-  /// Set the position in world space (translation)
-  ///
-  /// \param[in] position Position
-  void setPosition(const geom3d::Point3 &xyz)
-  {
-    m_position = xyz;
-  }
-
-  /// Get the position in world space (translation)
-  ///
-  /// \return Position
-  geom3d::Point3 position() const
-  {
-    return m_position;
-  }
-
-  /// Set the view direction (view plane normal)
-  /// This is the opposite of the direction of projection.
-  ///
-  /// \param[in] direction View direction
-  void setViewDirection(const geom3d::Vector3 &direction)
-  {
-    m_viewDirection = direction.normalized();
-  }
-
-  /// Get the view direction (view plane normal)
-  /// This is the opposite of the direction of projection.
-  ///
-  /// \return View direction
-  geom3d::Point3 viewDirection() const
-  {
-    return m_viewDirection;
-  }
-
-  /// Set view up vector
-  /// View up is directly orthogonalized with view direction. You should set
-  /// view direction first.
-  ///
-  /// \param[in] direction View direction
-  void setViewUp(const geom3d::Vector3 &viewUp)
-  {
-    m_viewUp = viewUp.normalized();
-    orthogonalizeViewUp();
-  }
-
-  /// Get view up vector
-  ///
-  /// \return View up
-  geom3d::Point3 viewUp() const
-  {
-    return m_viewUp;
+    m_transform.setPosition (eye);
+    lookAt(target, up);
   }
 
   /// Output to ostream
@@ -120,20 +119,8 @@ public:
   }
 
 protected:
-
-  /// Orthogonalize view up vector.
-  /// Make view up perpendicular to view direction.
-  void orthogonalizeViewUp()
-  {
-    geom3d::Vector3 viewRight = m_viewDirection.cross(m_viewUp);
-    viewRight.normalize(); // Needed ??
-    m_viewUp = viewRight.cross(m_viewDirection);
-    m_viewUp.normalize(); // Needed ??
-  }
-
-  geom3d::Point3 m_position;
-  geom3d::Vector3 m_viewDirection;
-  geom3d::Vector3 m_viewUp;
+  double m_near;
+  double m_far;
 };
 
 } // namespace gfx3d

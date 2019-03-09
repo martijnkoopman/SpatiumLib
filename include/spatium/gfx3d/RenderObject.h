@@ -27,8 +27,6 @@ namespace gfx3d {
 class RenderObject : public SceneObject
 {
 public:
-  // TODO: Rule of 5
-
   RenderObject()
     : SceneObject()
     , m_bounds({0})

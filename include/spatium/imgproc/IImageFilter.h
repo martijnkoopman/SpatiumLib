@@ -10,13 +10,10 @@
  *
  */
 
-#include "spatium/imgproc/Image.h"
+#include "spatium/Image.h"
 
 #ifndef SPATIUMLIB_IMGPROC_IIMAGEFILTER_H
 #define SPATIUMLIB_IMGPROC_IIMAGEFILTER_H
-
-#include <vector>
-#include <algorithm> // std::find
 
 namespace spatium {
 namespace imgproc {
@@ -33,7 +30,7 @@ public:
   template<typename T, int N>
   bool apply(const Image<T, N> &input, Image<T, 1> &output)
   {
-    // Check image size equal
+    // Check image size equalImage
     if (input.width() != output.width() || input.height() != output.height())
     {
       return false;

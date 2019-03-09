@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['width',['width',['../classspatium_1_1imgproc_1_1_image.html#a99ae07f94c428e63aa59f8dc35fe7408',1,'spatium::imgproc::Image']]],
-  ['wireframerenderer',['WireframeRenderer',['../classspatium_1_1gfx3d_1_1_wireframe_renderer.html#a68dfcbd8ce54a8c3ca7ced1af42de11d',1,'spatium::gfx3d::WireframeRenderer']]],
-  ['worldpointtoobjectpoint',['worldPointToObjectPoint',['../classspatium_1_1gfx3d_1_1_scene_object.html#a5542694532821cb0b125ca1ccde9365e',1,'spatium::gfx3d::SceneObject']]]
+  ['width',['width',['../classspatium_1_1_image.html#ad2e5004c7d2ff9cd410a6ffce61e01c2',1,'spatium::Image']]],
+  ['wireframerenderer',['WireframeRenderer',['../classspatium_1_1gfx3d_1_1_wireframe_renderer.html#ae31f39f6c35eda72399d9c6834dbfd01',1,'spatium::gfx3d::WireframeRenderer']]],
+  ['worldpointtoobjectpoint',['worldPointToObjectPoint',['../classspatium_1_1gfx3d_1_1_transform.html#ad43ddb6aacd93a162e8941a5df0381df',1,'spatium::gfx3d::Transform']]]
 ];

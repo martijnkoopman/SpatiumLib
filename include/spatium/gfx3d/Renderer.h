@@ -14,7 +14,7 @@
 #define SPATIUMLIB_GFX3D_RENDERER_H
 
 #include "Scene.h"
-#include <spatium/imgproc/Image.h>
+#include <spatium/Image.h>
 
 #include <vector>
 
@@ -26,8 +26,15 @@ namespace gfx3d {
 class Renderer
 {
 public:
+  /// Destructor
+  virtual ~Renderer() = default;
 
-  virtual void render(const Scene &scene, const imgproc::Image<> &image) = 0;
+  /// Render an image.
+  ///
+  /// \param[in] scene Scene to render
+  /// \param[in,out] image Image
+  /// \return True on success, false otherwise
+  virtual bool render(const Scene &scene, Image<unsigned char, 3> &image) = 0;
 
 private:
 };

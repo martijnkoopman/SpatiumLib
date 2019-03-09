@@ -27,7 +27,12 @@
 namespace spatium {
 
 /// \class Matrix
-/// \brief Matrix in column-major order
+/// \brief Mathematical matrix with an arbitrary number number of rows and
+/// columns
+///
+/// Matrix is a class to represent a mathematical matrix, i.e. a 2D array
+/// defined by a number of rows and columns. The content of the matrix is
+/// stored in column-major format.
 class Matrix
 {
 public:
@@ -80,37 +85,18 @@ public:
     }
   }
 
-  /// Copy constructor
-  Matrix(const Matrix &other)
-    : m_rows(other.m_rows)
-    , m_cols(other.m_cols)
-    , m_data(m_rows * m_cols)
-  {
-    std::copy(other.m_data.begin(), other.m_data.end(), m_data.begin());
-  }
-
-  /// Assignment operator
-  Matrix& operator=(Matrix other)
-  {
-    // Exception safe assignment operator
-    // Note: other passed as copy, not by reference.
-    std::swap(m_rows, other.m_rows);
-    std::swap(m_cols, other.m_cols);
-    std::swap(m_data, other.m_data);
-    return *this;
-  }
-
   /// Compare operator. Is equal.
   ///
+  /// Equal matrices have equal dimensions and values.
+  ///
   /// \param[in] other Other matrix
-  /// \exception std::out_of_range Matrix dimensions mismatch
   /// \return True if equal, otherwise false
   bool operator==(const Matrix &other) const
   {
     // Check bounds
     if (other.m_rows != m_rows || other.m_cols != m_cols)
     {
-      throw std::out_of_range ("Matrix dimensions mismatch");
+      return false;
     }
 
     // Compare elements
@@ -128,15 +114,11 @@ public:
   /// Compare operator. Is unequal.
   ///
   /// \param[in] other Other matrix
-  /// \exception std::out_of_range Matrix dimensions mismatch
-  /// \return True if unequal, otherwise false
+  /// \throwue if unequal, otherwise false
   bool operator!=(const Matrix &other) const
   {
     return !(operator ==(other));
   }
-
-  /// Destructor
-  virtual ~Matrix() = default;
 
   /// Construct identity matrix.
   ///
@@ -198,9 +180,10 @@ public:
   }
 
   /// Calculate determinant.
+  ///
   /// The determinant is calculated through expansion by minors.
   ///
-  /// \exception std::out_of_range Matrix is not square
+  /// \throw std::out_of_range Matrix is not square
   /// \return Determinant
   double determinant() const
   {
@@ -212,6 +195,7 @@ public:
   }
 
   /// Calulcate minor
+  ///
   /// The minor is the determinant of the matrix formed by omitting a given
   /// row and column.
   ///
@@ -256,8 +240,8 @@ public:
 
   /// Calculate inverse of matrix.
   ///
-  /// \exception std::out_of_range Matrix is not square
-  /// \exception std::out_of_range Matrix has no inverse
+  /// \throw std::out_of_range Matrix is not square
+  /// \throw std::out_of_range Matrix has no inverse
   /// \return Inverse of matrix
   Matrix inverse() const
   {
@@ -299,7 +283,7 @@ public:
   ///
   /// \param[in] row Row of element
   /// \param[in] col Column of element
-  /// \exception std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix element out of range
   /// \return Element value
   double operator() (unsigned row, unsigned col) const
   {
@@ -314,7 +298,7 @@ public:
   ///
   /// \param[in] row Row of element
   /// \param[in] col Column of element
-  /// \exception std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix element out of range
   /// \return Element reference
   double& operator() (unsigned row, unsigned col)
   {
@@ -325,10 +309,10 @@ public:
     return m_data[m_cols * row + col];
   }
 
-  /// Add with matrix.
+  /// Add by matrix.
   ///
   /// \param[in] other Matrix to add
-  /// \exception std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix element out of range
   /// \return Added matrix
   Matrix operator+(const Matrix &other) const
   {
@@ -353,7 +337,7 @@ public:
   /// Subtract by matrix.
   ///
   /// \param[in] other Matrix to subtract
-  /// \exception std::out_of_range Matrix element out of range
+  /// \throw std::out_of_range Matrix element out of range
   /// \return Subtracted matrix
   Matrix operator-(const Matrix &other) const
   {
@@ -378,7 +362,7 @@ public:
   /// Multiply by matrix.
   ///
   /// \param[in] other Matrix to multiply with
-  /// \exception std::out_of_range Matrix dimensions mismatch
+  /// \throw std::out_of_range Matrix dimensions mismatch
   /// \return Multiplied matrix
   Matrix operator*(const Matrix &other) const
   {
@@ -461,6 +445,7 @@ public:
 protected:
 
   /// Calculate determinant.
+  ///
   /// Recursive function.
   ///
   /// \return Determinant
@@ -484,7 +469,7 @@ protected:
 
   unsigned m_rows;
   unsigned m_cols;
-  std::vector<double> m_data;
+  std::vector<double> m_data; ///\TODO Use std::array instead
 };
 
 /// Compute eigenvalues for 2-by-2 matrix

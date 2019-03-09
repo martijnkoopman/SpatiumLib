@@ -2,6 +2,6 @@
 <area shape="rect" id="node1" title="Point in 3D geographical space as homogeneous coordinates." alt="" coords="5,323,196,349"/>
 <area shape="rect" id="node2" href="$classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates." alt="" coords="17,247,184,273"/>
 <area shape="rect" id="node3" href="$classspatium_1_1_vector.html" title="Vector in column&#45;major order." alt="" coords="43,171,158,197"/>
-<area shape="rect" id="node4" href="$classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="45,95,157,121"/>
+<area shape="rect" id="node4" href="$classspatium_1_1_matrix.html" title="Mathematical matrix with an arbitrary number number of rows and columns." alt="" coords="45,95,157,121"/>
 <area shape="rect" id="node5" title=" " alt="" coords="27,5,174,32"/>
 </map>

@@ -23,7 +23,7 @@ namespace spatium {
 namespace gfx3d {
 
 /// \class Mesh
-/// \brief Scene object with a mesh
+/// \brief Mesh object in a scene
 ///
 /// A mesh is a collection of vertices connected by edges.
 class Mesh : public RenderObject
@@ -41,8 +41,6 @@ public:
   {
     updateBounds();
   }
-
-  // TODO: Rule of 5
 
   /// Get all vertices
   ///
@@ -164,6 +162,25 @@ protected:
     }
 
     ///\todo Update these bounds based on m_transformation. Will that work?
+  }
+
+
+  /// Output to ostream
+  friend std::ostream &operator<<(std::ostream &os, const Mesh &mesh)
+  {
+    os << "Mesh" << std::endl;
+    os << "vertices: ";
+    for(size_t i = 0; i < mesh.m_vertices.size(); i++)
+    {
+      auto vertex = mesh.m_vertices[i];
+      os << i << " (" << vertex.x() << ", " << vertex.y() << ", " << vertex.z() << ") ";
+    }
+    os << std::endl << "edges: ";
+    for(auto edge : mesh.m_edges)
+    {
+      os << "(" << edge[0] << ", " << edge[1] << ") ";
+    }
+    return os;
   }
 
 private:

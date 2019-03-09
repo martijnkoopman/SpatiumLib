@@ -1,6 +1,6 @@
 <map id="spatium::gfx3d::Light" name="spatium::gfx3d::Light">
-<area shape="rect" id="node1" title="Light scene object." alt="" coords="218,5,362,32"/>
-<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_point_light.html" title="Light source that emits light in all directions from a fixed point in space." alt="" coords="5,80,180,107"/>
-<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_spot_light.html" title="Light source that emits a beam of light in one particular direction from a fixed point in space." alt="" coords="205,80,375,107"/>
-<area shape="rect" id="node4" href="$classspatium_1_1gfx3d_1_1_sun_light.html" title="Light source that emits light in one direction as parallel rays &lt;&gt; the position." alt="" coords="400,80,567,107"/>
+<area shape="rect" id="node1" title="Light scene object." alt="" coords="5,71,149,98"/>
+<area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_directional_light.html" title="Light source that emits light in one direction as parallel rays &lt;&gt; the position." alt="" coords="197,5,376,47"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_point_light.html" title="Light source that emits light in all directions from a fixed point in space." alt="" coords="199,71,374,98"/>
+<area shape="rect" id="node4" href="$classspatium_1_1gfx3d_1_1_spot_light.html" title="Light source that emits a beam of light in one particular direction from a fixed point in space." alt="" coords="201,122,372,149"/>
 </map>

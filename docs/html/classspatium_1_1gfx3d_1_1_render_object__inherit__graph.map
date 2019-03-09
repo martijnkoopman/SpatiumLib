@@ -1,5 +1,5 @@
 <map id="spatium::gfx3d::RenderObject" name="spatium::gfx3d::RenderObject">
 <area shape="rect" id="node1" title="Scene object that can be rendered." alt="" coords="5,80,201,107"/>
-<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_mesh.html" title="Scene object with a mesh." alt="" coords="29,155,177,181"/>
+<area shape="rect" id="node3" href="$classspatium_1_1gfx3d_1_1_mesh.html" title="Mesh object in a scene." alt="" coords="29,155,177,181"/>
 <area shape="rect" id="node2" href="$classspatium_1_1gfx3d_1_1_scene_object.html" title="Object in a 3D scene." alt="" coords="8,5,199,32"/>
 </map>

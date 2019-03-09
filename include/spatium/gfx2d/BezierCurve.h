@@ -23,6 +23,9 @@ namespace spatium {
 namespace gfx2d {
 
 /// \class BezierCurve
+/// \brief 2D Bezier curve
+///
+/// BezierCurve is a class to represent a parametric Bezier curve.
 class BezierCurve
 {
 public:
@@ -32,17 +35,27 @@ public:
   /// \param[in] points Anchor points (first and last point) and
   ///                   control points (intermediate). Min length = 2.
   BezierCurve(const std::vector<std::array<double, 2>> &points)
-  : m_points(points)
+    : m_points(points)
   {
   }
 
-  // http://www.malinc.se/m/DeCasteljauAndBezier.php
-
+  /// Get the points of the curve
+  ///
+  /// A curve should at least have 2 control points. The first and last
+  /// control points (anchor points) are the starting point and end point of
+  /// the line.
+  /// \return Points
   std::vector<std::array<double,2>> points() const
   {
     return m_points;
   }
 
+  /// Get the degree of the curve.
+  ///
+  /// The degree is the number of points - 1.
+  /// A 1st degree curve (linear) has two points, a 2nd degree curve (cubic)
+  /// has 3 points, a 3rd degree curve (cubic) has 4 points, etc,
+  /// \return Degree
   int degree() const
   {
     return static_cast<int>(m_points.size()) - 1;
@@ -72,19 +85,22 @@ public:
     return {x, y};
   }
 
-  /// Split a bezier curve.
-  /// This will increase the degree of the curve without affecting the shape
-  /// of the curve. The new control points are placed in between the existing
+  /// Divide a bezier curve
+  ///
+  /// This will increase the degree of the curve without affecting the shape.
+  /// The new control points are placed in between the existing
   /// control points
   ///
   /// \return Bezier curve with degree + 1
-  BezierCurve split() const
+  BezierCurve divide() const
   {
+    /// \todo This function doesn't work properly yet.
+    /// Perhaps it should be recursive.
     std::vector<std::array<double, 2>> points;
 
     points.push_back(m_points.front());
 
-    for (size_t i = 0; i < degree(); i++)
+    for (size_t i = 0; i < static_cast<size_t>(degree()); i++)
     {
       auto P0 = m_points[i];
       auto P1 = m_points[i+1];

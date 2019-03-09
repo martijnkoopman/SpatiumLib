@@ -73,6 +73,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Global threshold image filter.  
+ <a href="classspatium_1_1imgproc_1_1_global_threshold_filter.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_global_threshold_filter_8h_source.html">GlobalThresholdFilter.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -92,12 +95,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa2b1eae07f1696f9fe5d1761de4e2176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set threshold value.  <a href="#aa2b1eae07f1696f9fe5d1761de4e2176">More...</a><br /></td></tr>
 <tr class="separator:aa2b1eae07f1696f9fe5d1761de4e2176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e0a206db0060dd4fa4560788b15dd37"><td class="memTemplParams" colspan="2">template&lt;int N&gt; </td></tr>
-<tr class="memitem:a5e0a206db0060dd4fa4560788b15dd37"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classspatium_1_1imgproc_1_1_global_threshold_filter.html#a5e0a206db0060dd4fa4560788b15dd37">apply</a> (const <a class="el" href="classspatium_1_1imgproc_1_1_image.html">Image</a>&lt; T, N &gt; &amp;input, <a class="el" href="classspatium_1_1imgproc_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;output)</td></tr>
+<tr class="memitem:a5e0a206db0060dd4fa4560788b15dd37"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classspatium_1_1imgproc_1_1_global_threshold_filter.html#a5e0a206db0060dd4fa4560788b15dd37">apply</a> (const <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; T, N &gt; &amp;input, <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;output)</td></tr>
 <tr class="separator:a5e0a206db0060dd4fa4560788b15dd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97b76cc4212b70a1d65c0be803052d8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1imgproc_1_1_global_threshold_filter.html#a97b76cc4212b70a1d65c0be803052d8f">apply</a> (<a class="el" href="classspatium_1_1imgproc_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;inoutput)</td></tr>
+<tr class="memitem:a97b76cc4212b70a1d65c0be803052d8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1imgproc_1_1_global_threshold_filter.html#a97b76cc4212b70a1d65c0be803052d8f">apply</a> (<a class="el" href="classspatium_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;inoutput)</td></tr>
 <tr class="separator:a97b76cc4212b70a1d65c0be803052d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class spatium::imgproc::GlobalThresholdFilter&lt; T &gt;</h3>
+
+<p>Global threshold image filter. </p>
+<p>GlobalThreshold is a class for binarizing an image by a given threshold value. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5641143e90a0376ae430a6c77fac725e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5641143e90a0376ae430a6c77fac725e">&#9670;&nbsp;</a></span>GlobalThresholdFilter() <span class="overload">[1/2]</span></h2>
 
@@ -198,13 +207,13 @@ template&lt;int N&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classspatium_1_1imgproc_1_1_global_threshold_filter.html">spatium::imgproc::GlobalThresholdFilter</a>&lt; T &gt;::apply </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1imgproc_1_1_image.html">Image</a>&lt; T, N &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; T, N &gt; &amp;&#160;</td>
           <td class="paramname"><em>input</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classspatium_1_1imgproc_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classspatium_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>output</em>&#160;</td>
         </tr>
         <tr>
@@ -236,7 +245,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classspatium_1_1imgproc_1_1_global_threshold_filter.html">spatium::imgproc::GlobalThresholdFilter</a>&lt; T &gt;::apply </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classspatium_1_1imgproc_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classspatium_1_1_image.html">Image</a>&lt; T, 1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>inoutput</em></td><td>)</td>
           <td></td>
         </tr>

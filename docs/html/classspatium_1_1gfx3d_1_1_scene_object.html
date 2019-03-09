@@ -83,9 +83,12 @@ Inheritance diagram for spatium::gfx3d::SceneObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classspatium_1_1gfx3d_1_1_scene_object__inherit__graph.png" border="0" usemap="#spatium_1_1gfx3d_1_1_scene_object_inherit__map" alt="Inheritance graph"/></div>
 <map name="spatium_1_1gfx3d_1_1_scene_object_inherit__map" id="spatium_1_1gfx3d_1_1_scene_object_inherit__map">
-<area shape="rect"  title="Object in a 3D scene." alt="" coords="8,5,199,32"/>
-<area shape="rect"  href="classspatium_1_1gfx3d_1_1_render_object.html" title="Scene object that can be rendered." alt="" coords="5,80,201,107"/>
-<area shape="rect"  href="classspatium_1_1gfx3d_1_1_mesh.html" title="Scene object with a mesh." alt="" coords="29,155,177,181"/>
+<area shape="rect"  title="Object in a 3D scene." alt="" coords="5,107,196,134"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_camera.html" title="Camera object in a 3D scene." alt="" coords="261,78,423,105"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_render_object.html" title="Scene object that can be rendered." alt="" coords="244,133,440,159"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_orthographic_camera.html" title="Camera with orthographic projection." alt="" coords="488,5,679,47"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_perspective_camera.html" title=" " alt="" coords="491,71,676,112"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_mesh.html" title="Mesh object in a scene." alt="" coords="509,137,657,163"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -93,12 +96,11 @@ Collaboration diagram for spatium::gfx3d::SceneObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classspatium_1_1gfx3d_1_1_scene_object__coll__graph.png" border="0" usemap="#spatium_1_1gfx3d_1_1_scene_object_coll__map" alt="Collaboration graph"/></div>
 <map name="spatium_1_1gfx3d_1_1_scene_object_coll__map" id="spatium_1_1gfx3d_1_1_scene_object_coll__map">
-<area shape="rect"  title="Object in a 3D scene." alt="" coords="93,351,284,377"/>
-<area shape="rect"  href="classspatium_1_1geom3d_1_1_vector3.html" title="Vector in 3D space." alt="" coords="5,247,180,273"/>
-<area shape="rect"  href="classspatium_1_1_vector.html" title="Vector in column&#45;major order." alt="" coords="131,171,246,197"/>
-<area shape="rect"  href="classspatium_1_1geom3d_1_1_point3.html" title="Point in 3D Cartesian space as homogeneous coordinates." alt="" coords="204,247,371,273"/>
-<area shape="rect"  href="classspatium_1_1_matrix.html" title="Matrix in column&#45;major order." alt="" coords="133,95,245,121"/>
-<area shape="rect"  title=" " alt="" coords="115,5,262,32"/>
+<area shape="rect"  title="Object in a 3D scene." alt="" coords="5,349,196,376"/>
+<area shape="rect"  href="classspatium_1_1gfx3d_1_1_transform.html" title="Tranformation in 3D space." alt="" coords="13,260,188,287"/>
+<area shape="rect"  href="classspatium_1_1geom3d_1_1_matrix4x4.html" title="4&#45;by&#45;4 matrix to represent and manipulate 3D transformations." alt="" coords="7,171,194,197"/>
+<area shape="rect"  href="classspatium_1_1_matrix.html" title="Mathematical matrix with an arbitrary number number of rows and columns." alt="" coords="45,95,157,121"/>
+<area shape="rect"  title=" " alt="" coords="27,5,174,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -106,42 +108,14 @@ Collaboration diagram for spatium::gfx3d::SceneObject:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a786fff75be815ba32b43e4b52e0580c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a786fff75be815ba32b43e4b52e0580c3">SceneObject</a> ()</td></tr>
 <tr class="separator:a786fff75be815ba32b43e4b52e0580c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93f2ac7ebaa722e0d678ec67395e3d0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a93f2ac7ebaa722e0d678ec67395e3d0e">translate</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;xyz)</td></tr>
-<tr class="memdesc:a93f2ac7ebaa722e0d678ec67395e3d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate in world space.  <a href="#a93f2ac7ebaa722e0d678ec67395e3d0e">More...</a><br /></td></tr>
-<tr class="separator:a93f2ac7ebaa722e0d678ec67395e3d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afddf8ab261fc604c7e0eab34c325368a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#afddf8ab261fc604c7e0eab34c325368a">setPosition</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;xyz)</td></tr>
-<tr class="memdesc:afddf8ab261fc604c7e0eab34c325368a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position in world space (translation)  <a href="#afddf8ab261fc604c7e0eab34c325368a">More...</a><br /></td></tr>
-<tr class="separator:afddf8ab261fc604c7e0eab34c325368a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b84a9cae54248552c1492054ebd64b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a67b84a9cae54248552c1492054ebd64b">position</a> () const</td></tr>
-<tr class="memdesc:a67b84a9cae54248552c1492054ebd64b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position in world space (translation)  <a href="#a67b84a9cae54248552c1492054ebd64b">More...</a><br /></td></tr>
-<tr class="separator:a67b84a9cae54248552c1492054ebd64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1e8a18735a6fe16edde87fcd127718c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#af1e8a18735a6fe16edde87fcd127718c">rotate</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;euler)</td></tr>
-<tr class="memdesc:af1e8a18735a6fe16edde87fcd127718c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate (relative to object space)  <a href="#af1e8a18735a6fe16edde87fcd127718c">More...</a><br /></td></tr>
-<tr class="separator:af1e8a18735a6fe16edde87fcd127718c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1693345c8ca9247a0cf85e70a024a914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a1693345c8ca9247a0cf85e70a024a914">setRotation</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;euler)</td></tr>
-<tr class="memdesc:a1693345c8ca9247a0cf85e70a024a914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rotation in world space.  <a href="#a1693345c8ca9247a0cf85e70a024a914">More...</a><br /></td></tr>
-<tr class="separator:a1693345c8ca9247a0cf85e70a024a914"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a070a520e9f2cf914957c13c0d506c573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a070a520e9f2cf914957c13c0d506c573">rotation</a> () const</td></tr>
-<tr class="memdesc:a070a520e9f2cf914957c13c0d506c573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rotation in world space.  <a href="#a070a520e9f2cf914957c13c0d506c573">More...</a><br /></td></tr>
-<tr class="separator:a070a520e9f2cf914957c13c0d506c573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab61dcc0777e4d00551998a98cd123c86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_matrix4x4.html">geom3d::Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#ab61dcc0777e4d00551998a98cd123c86">transformationMatrix</a> () const</td></tr>
-<tr class="memdesc:ab61dcc0777e4d00551998a98cd123c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transformation matrix.  <a href="#ab61dcc0777e4d00551998a98cd123c86">More...</a><br /></td></tr>
-<tr class="separator:ab61dcc0777e4d00551998a98cd123c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80028192fd2c8db3a23f68de37a1561e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a80028192fd2c8db3a23f68de37a1561e">objectPointToWorldPoint</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;point) const</td></tr>
-<tr class="memdesc:a80028192fd2c8db3a23f68de37a1561e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert 3D Cartesian point coordinates from object space to world space. Object coordinates are defined with respect to the object's local coordinate system. World coordinates are defined with resect to the world's global cordinate system. (Origin = [0,0,0])  <a href="#a80028192fd2c8db3a23f68de37a1561e">More...</a><br /></td></tr>
-<tr class="separator:a80028192fd2c8db3a23f68de37a1561e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5542694532821cb0b125ca1ccde9365e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a5542694532821cb0b125ca1ccde9365e">worldPointToObjectPoint</a> (const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;point) const</td></tr>
-<tr class="memdesc:a5542694532821cb0b125ca1ccde9365e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert 3D Cartesian point coordinates from world space to object space. World coordinates are defined with resect to the world's global cordinate system. (Origin = [0,0,0]) Object coordinates are defined with respect to the object's local coordinate system.  <a href="#a5542694532821cb0b125ca1ccde9365e">More...</a><br /></td></tr>
-<tr class="separator:a5542694532821cb0b125ca1ccde9365e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9819a894268c0c978a7a6702356f1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1gfx3d_1_1_transform.html">Transform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#abd9819a894268c0c978a7a6702356f1c">transform</a> ()</td></tr>
+<tr class="memdesc:abd9819a894268c0c978a7a6702356f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transformation.  <a href="#abd9819a894268c0c978a7a6702356f1c">More...</a><br /></td></tr>
+<tr class="separator:abd9819a894268c0c978a7a6702356f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7a84f5cf865fa3abeb5e5350311ec909"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a7a84f5cf865fa3abeb5e5350311ec909">m_position</a></td></tr>
-<tr class="separator:a7a84f5cf865fa3abeb5e5350311ec909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1058ec0fb9da0acae529d8a693d29321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a1058ec0fb9da0acae529d8a693d29321">m_rotation</a></td></tr>
-<tr class="separator:a1058ec0fb9da0acae529d8a693d29321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac58298238e5592ed096abe3c81a69c26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#ac58298238e5592ed096abe3c81a69c26">m_scale</a></td></tr>
-<tr class="separator:ac58298238e5592ed096abe3c81a69c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9316af66a941c2629628408687628d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classspatium_1_1gfx3d_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a2b9316af66a941c2629628408687628d">m_transform</a></td></tr>
+<tr class="separator:a2b9316af66a941c2629628408687628d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Object in a 3D scene. </p>
@@ -173,8 +147,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a80028192fd2c8db3a23f68de37a1561e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80028192fd2c8db3a23f68de37a1561e">&#9670;&nbsp;</a></span>objectPointToWorldPoint()</h2>
+<a id="abd9819a894268c0c978a7a6702356f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9819a894268c0c978a7a6702356f1c">&#9670;&nbsp;</a></span>transform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,73 +157,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::SceneObject::objectPointToWorldPoint </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;&#160;</td>
-          <td class="paramname"><em>point</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Convert 3D Cartesian point coordinates from object space to world space. Object coordinates are defined with respect to the object's local coordinate system. World coordinates are defined with resect to the world's global cordinate system. (Origin = [0,0,0]) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>Point cordinates in object space </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Point coordinates in world space </dd></dl>
-
-</div>
-</div>
-<a id="a67b84a9cae54248552c1492054ebd64b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67b84a9cae54248552c1492054ebd64b">&#9670;&nbsp;</a></span>position()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::SceneObject::position </td>
+          <td class="memname"><a class="el" href="classspatium_1_1gfx3d_1_1_transform.html">Transform</a>&amp; spatium::gfx3d::SceneObject::transform </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the position in world space (translation) </p>
-<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
-
-</div>
-</div>
-<a id="af1e8a18735a6fe16edde87fcd127718c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1e8a18735a6fe16edde87fcd127718c">&#9670;&nbsp;</a></span>rotate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void spatium::gfx3d::SceneObject::rotate </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>euler</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -260,212 +170,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Rotate (relative to object space) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">euler</td><td>Degrees around x, y and z axis </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a070a520e9f2cf914957c13c0d506c573"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a070a520e9f2cf914957c13c0d506c573">&#9670;&nbsp;</a></span>rotation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> spatium::gfx3d::SceneObject::rotation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the rotation in world space. </p>
-<dl class="section return"><dt>Returns</dt><dd>Rotation in euler angles </dd></dl>
-
-</div>
-</div>
-<a id="afddf8ab261fc604c7e0eab34c325368a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afddf8ab261fc604c7e0eab34c325368a">&#9670;&nbsp;</a></span>setPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void spatium::gfx3d::SceneObject::setPosition </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;&#160;</td>
-          <td class="paramname"><em>xyz</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the position in world space (translation) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>Position </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a1693345c8ca9247a0cf85e70a024a914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1693345c8ca9247a0cf85e70a024a914">&#9670;&nbsp;</a></span>setRotation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void spatium::gfx3d::SceneObject::setRotation </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>euler</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the rotation in world space. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">euler</td><td>Rotation in euler angles </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab61dcc0777e4d00551998a98cd123c86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab61dcc0777e4d00551998a98cd123c86">&#9670;&nbsp;</a></span>transformationMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_matrix4x4.html">geom3d::Matrix4x4</a> spatium::gfx3d::SceneObject::transformationMatrix </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the transformation matrix. </p>
-<dl class="section return"><dt>Returns</dt><dd>Transformation matrix </dd></dl>
-
-</div>
-</div>
-<a id="a93f2ac7ebaa722e0d678ec67395e3d0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93f2ac7ebaa722e0d678ec67395e3d0e">&#9670;&nbsp;</a></span>translate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void spatium::gfx3d::SceneObject::translate </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>xyz</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Translate in world space. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">xyz</td><td>Translation on X, Y and Z axis </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5542694532821cb0b125ca1ccde9365e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5542694532821cb0b125ca1ccde9365e">&#9670;&nbsp;</a></span>worldPointToObjectPoint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::SceneObject::worldPointToObjectPoint </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> &amp;&#160;</td>
-          <td class="paramname"><em>point</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Convert 3D Cartesian point coordinates from world space to object space. World coordinates are defined with resect to the world's global cordinate system. (Origin = [0,0,0]) Object coordinates are defined with respect to the object's local coordinate system. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>Point cordinates in world space </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Point coordinates in object space </dd></dl>
+<p>Get the transformation. </p>
+<dl class="section return"><dt>Returns</dt><dd>transformation </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a7a84f5cf865fa3abeb5e5350311ec909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a84f5cf865fa3abeb5e5350311ec909">&#9670;&nbsp;</a></span>m_position</h2>
+<a id="a2b9316af66a941c2629628408687628d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9316af66a941c2629628408687628d">&#9670;&nbsp;</a></span>m_transform</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -474,51 +186,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_point3.html">geom3d::Point3</a> spatium::gfx3d::SceneObject::m_position</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1058ec0fb9da0acae529d8a693d29321"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1058ec0fb9da0acae529d8a693d29321">&#9670;&nbsp;</a></span>m_rotation</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> spatium::gfx3d::SceneObject::m_rotation</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac58298238e5592ed096abe3c81a69c26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac58298238e5592ed096abe3c81a69c26">&#9670;&nbsp;</a></span>m_scale</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classspatium_1_1geom3d_1_1_vector3.html">geom3d::Vector3</a> spatium::gfx3d::SceneObject::m_scale</td>
+          <td class="memname"><a class="el" href="classspatium_1_1gfx3d_1_1_transform.html">Transform</a> spatium::gfx3d::SceneObject::m_transform</td>
         </tr>
       </table>
   </td>

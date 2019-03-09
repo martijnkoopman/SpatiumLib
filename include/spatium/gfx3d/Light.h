@@ -37,8 +37,6 @@ public:
   {
   }
 
-  ///\todo: Rule of 5
-
   ///\todo Write to ostream
 
 protected:

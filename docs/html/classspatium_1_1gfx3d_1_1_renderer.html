@@ -89,14 +89,18 @@ Inheritance diagram for spatium::gfx3d::Renderer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a362baa46d12f2a5060dff9fab5a1289f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_renderer.html#a362baa46d12f2a5060dff9fab5a1289f">render</a> (const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;scene, const <a class="el" href="classspatium_1_1imgproc_1_1_image.html">imgproc::Image</a>&lt;&gt; &amp;image)=0</td></tr>
-<tr class="separator:a362baa46d12f2a5060dff9fab5a1289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd6227bbbc3e2294751471d8be7affa"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_renderer.html#a0cd6227bbbc3e2294751471d8be7affa">~Renderer</a> ()=default</td></tr>
+<tr class="memdesc:a0cd6227bbbc3e2294751471d8be7affa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a0cd6227bbbc3e2294751471d8be7affa">More...</a><br /></td></tr>
+<tr class="separator:a0cd6227bbbc3e2294751471d8be7affa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5951141f08c9100f512793385e7cadbb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_renderer.html#a5951141f08c9100f512793385e7cadbb">render</a> (const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;scene, <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 3 &gt; &amp;image)=0</td></tr>
+<tr class="memdesc:a5951141f08c9100f512793385e7cadbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render an image.  <a href="#a5951141f08c9100f512793385e7cadbb">More...</a><br /></td></tr>
+<tr class="separator:a5951141f08c9100f512793385e7cadbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for renderers. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a362baa46d12f2a5060dff9fab5a1289f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a362baa46d12f2a5060dff9fab5a1289f">&#9670;&nbsp;</a></span>render()</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0cd6227bbbc3e2294751471d8be7affa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd6227bbbc3e2294751471d8be7affa">&#9670;&nbsp;</a></span>~Renderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,7 +109,35 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void spatium::gfx3d::Renderer::render </td>
+          <td class="memname">virtual spatium::gfx3d::Renderer::~Renderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5951141f08c9100f512793385e7cadbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5951141f08c9100f512793385e7cadbb">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool spatium::gfx3d::Renderer::render </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;&#160;</td>
           <td class="paramname"><em>scene</em>, </td>
@@ -113,7 +145,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1imgproc_1_1_image.html">imgproc::Image</a>&lt;&gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -129,7 +161,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classspatium_1_1gfx3d_1_1_wireframe_renderer.html#a37152f2765da4b05eaba8ba7e0fd193b">spatium::gfx3d::WireframeRenderer</a>.</p>
+<p>Render an image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td><a class="el" href="classspatium_1_1gfx3d_1_1_scene.html" title="3D scene">Scene</a> to render </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false otherwise </dd></dl>
+
+<p>Implemented in <a class="el" href="classspatium_1_1gfx3d_1_1_wireframe_renderer.html#abbdb9bb09def7a2b219cf3b586a2f016">spatium::gfx3d::WireframeRenderer</a>.</p>
 
 </div>
 </div>

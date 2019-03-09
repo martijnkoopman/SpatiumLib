@@ -98,18 +98,25 @@ Collaboration diagram for spatium::gfx3d::WireframeRenderer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a68dfcbd8ce54a8c3ca7ced1af42de11d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_wireframe_renderer.html#a68dfcbd8ce54a8c3ca7ced1af42de11d">WireframeRenderer</a> (int edgeThickness=1, bool renderVertices=false, int vertexSize=2)</td></tr>
-<tr class="separator:a68dfcbd8ce54a8c3ca7ced1af42de11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37152f2765da4b05eaba8ba7e0fd193b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_wireframe_renderer.html#a37152f2765da4b05eaba8ba7e0fd193b">render</a> (const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;scene, const <a class="el" href="classspatium_1_1imgproc_1_1_image.html">imgproc::Image</a>&lt;&gt; &amp;image) override</td></tr>
-<tr class="memdesc:a37152f2765da4b05eaba8ba7e0fd193b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render 2D image from 3D scene. object-order rendering.  <a href="#a37152f2765da4b05eaba8ba7e0fd193b">More...</a><br /></td></tr>
-<tr class="separator:a37152f2765da4b05eaba8ba7e0fd193b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae31f39f6c35eda72399d9c6834dbfd01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_wireframe_renderer.html#ae31f39f6c35eda72399d9c6834dbfd01">WireframeRenderer</a> (int thickness=1)</td></tr>
+<tr class="memdesc:ae31f39f6c35eda72399d9c6834dbfd01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae31f39f6c35eda72399d9c6834dbfd01">More...</a><br /></td></tr>
+<tr class="separator:ae31f39f6c35eda72399d9c6834dbfd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38aab1490c0e1b91dd2554dbe66b59cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_wireframe_renderer.html#a38aab1490c0e1b91dd2554dbe66b59cc">~WireframeRenderer</a> () override=default</td></tr>
+<tr class="separator:a38aab1490c0e1b91dd2554dbe66b59cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbdb9bb09def7a2b219cf3b586a2f016"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_wireframe_renderer.html#abbdb9bb09def7a2b219cf3b586a2f016">render</a> (const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;scene, <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 3 &gt; &amp;image) override</td></tr>
+<tr class="memdesc:abbdb9bb09def7a2b219cf3b586a2f016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render 3D scene as 2D image.  <a href="#abbdb9bb09def7a2b219cf3b586a2f016">More...</a><br /></td></tr>
+<tr class="separator:abbdb9bb09def7a2b219cf3b586a2f016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classspatium_1_1gfx3d_1_1_renderer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classspatium_1_1gfx3d_1_1_renderer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classspatium_1_1gfx3d_1_1_renderer.html">spatium::gfx3d::Renderer</a></td></tr>
+<tr class="memitem:a0cd6227bbbc3e2294751471d8be7affa inherit pub_methods_classspatium_1_1gfx3d_1_1_renderer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1gfx3d_1_1_renderer.html#a0cd6227bbbc3e2294751471d8be7affa">~Renderer</a> ()=default</td></tr>
+<tr class="memdesc:a0cd6227bbbc3e2294751471d8be7affa inherit pub_methods_classspatium_1_1gfx3d_1_1_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classspatium_1_1gfx3d_1_1_renderer.html#a0cd6227bbbc3e2294751471d8be7affa">More...</a><br /></td></tr>
+<tr class="separator:a0cd6227bbbc3e2294751471d8be7affa inherit pub_methods_classspatium_1_1gfx3d_1_1_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wireframe renderer for meshes. </p>
-<p>WireframeRender is a renderer that renders only edges and optionally vertices, no faces. Also, the edges and vertices are not shaded, i.e., light in the scene have no effect on the rendering. The color of the wireframe is determined by the object's material. </p>
+<p>WireframeRender is a renderer that renders only edges. Also, the edges and vertices are not shaded, i.e., lights in the scene have no effect on the rendering. The color of the wireframe is determined by the object's material. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a68dfcbd8ce54a8c3ca7ced1af42de11d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68dfcbd8ce54a8c3ca7ced1af42de11d">&#9670;&nbsp;</a></span>WireframeRenderer()</h2>
+<a id="ae31f39f6c35eda72399d9c6834dbfd01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31f39f6c35eda72399d9c6834dbfd01">&#9670;&nbsp;</a></span>WireframeRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,24 +128,8 @@ Public Member Functions</h2></td></tr>
           <td class="memname">spatium::gfx3d::WireframeRenderer::WireframeRenderer </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>edgeThickness</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>thickness</em> = <code>1</code></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>renderVertices</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vertexSize</em> = <code>2</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -147,20 +138,19 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">edgeThickness</td><td>Edge thickness in pixels </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">renderVertices</td><td>Wether or not vertices should be rendered. Vertices are rendered as squares. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vertexSize</td><td>Size of the vertex square (diameter) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>Wire thickness in pixels </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a37152f2765da4b05eaba8ba7e0fd193b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37152f2765da4b05eaba8ba7e0fd193b">&#9670;&nbsp;</a></span>render()</h2>
+<a id="a38aab1490c0e1b91dd2554dbe66b59cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38aab1490c0e1b91dd2554dbe66b59cc">&#9670;&nbsp;</a></span>~WireframeRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +159,33 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void spatium::gfx3d::WireframeRenderer::render </td>
+          <td class="memname">spatium::gfx3d::WireframeRenderer::~WireframeRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abbdb9bb09def7a2b219cf3b586a2f016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbdb9bb09def7a2b219cf3b586a2f016">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool spatium::gfx3d::WireframeRenderer::render </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classspatium_1_1gfx3d_1_1_scene.html">Scene</a> &amp;&#160;</td>
           <td class="paramname"><em>scene</em>, </td>
@@ -177,7 +193,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1imgproc_1_1_image.html">imgproc::Image</a>&lt;&gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -193,9 +209,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Render 2D image from 3D scene. object-order rendering. </p>
+<p>Render 3D scene as 2D image. </p>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false otherwise </dd></dl>
+<p>\TODO Loose declaration of l and b </p>
 
-<p>Implements <a class="el" href="classspatium_1_1gfx3d_1_1_renderer.html#a362baa46d12f2a5060dff9fab5a1289f">spatium::gfx3d::Renderer</a>.</p>
+<p>Implements <a class="el" href="classspatium_1_1gfx3d_1_1_renderer.html#a5951141f08c9100f512793385e7cadbb">spatium::gfx3d::Renderer</a>.</p>
 
 </div>
 </div>

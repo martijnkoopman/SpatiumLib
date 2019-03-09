@@ -10,8 +10,8 @@
  *
  */
 
-#ifndef SPATIUMLIB_GFX3D_SUNLIGHT_H
-#define SPATIUMLIB_GFX3D_SUNLIGHT_H
+#ifndef SPATIUMLIB_GFX3D_DIRECTIONALLIGHT_H
+#define SPATIUMLIB_GFX3D_DIRECTIONALLIGHT_H
 
 #include "Light.h"
 #include <spatium/geom3d/Vector3.h>
@@ -19,9 +19,9 @@
 namespace spatium {
 namespace gfx3d {
 
-/// \class SunLight
+/// \class DirectionalLight
 /// \brief Light source that emits light in one direction as parallel rays <> the position.
-class SunLight : public Light
+class DirectionalLight : public Light
 {
 public:
 
@@ -30,14 +30,12 @@ public:
   /// \param[in] direction Direction of the light
   /// \param[in] strength Strength
   /// \param[in] color Color (RGB)
-  SunLight(double strength = 10,
-           std::array<unsigned char, 3> color = {255, 255, 255})
+  DirectionalLight(double strength = 10,
+                   std::array<unsigned char, 3> color = {255, 255, 255})
     : Light(strength, color)
     , m_direction({0,0,0})
   {
   }
-
-  ///\todo: Rule of 5
 
   ///\todo Write to ostream
 
@@ -48,4 +46,4 @@ protected:
 } // namespace gfx3d
 } // namespace spatium
 
-#endif // SPATIUMLIB_GFX3D_SUNLIGHT_H
+#endif // SPATIUMLIB_GFX3D_DIRECTIONALLIGHT_H
