@@ -9,15 +9,15 @@ SpatiumLib has the following key points:
 **Applicability**
 
 * Header-only. No platform dependent library linking.
-* Written in C++11
+* Written in C++11.
 * No dependencies except C++ Standard Library. QtTest for unit testing.
 
 **Education**
 
-* Readability of code more important than optimizations
-* Documentation through comments in code
-* Doxygen documentation ([read the docs](https://martijnkoopman.github.io/SpatiumLib/html/inherits.html))
-* Examples on the Wiki ([read the wiki](https://github.com/martijnkoopman/SpatiumLib/wiki))
+* Code readability more important than optimizations.
+* Documentation through comments in code.
+* Doxygen documentation ([read the docs](https://martijnkoopman.github.io/SpatiumLib/html/inherits.html)).
+* Examples on the Wiki ([read the wiki](https://github.com/martijnkoopman/SpatiumLib/wiki)).
 
 Performance is not a key point of SpatiumLib. There is no GPU acceleration or multithreading. This may be quite important, especially for 3D graphics.
 
@@ -29,17 +29,17 @@ SpatiumLib is a collection of header files (*.h) distributed over several direct
 TODO: Insert namespace dependency graph 
 
 ### Namespace: spatium
-Global namespace including base classes Matrix, Vector and Image. Also contains mathematical functions.
+Global namespace including base [Matrix](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1_matrix.html), [Vector](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1_vector.html) and [Image](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1_image.html). Also contains mathematical functions.
 
 ### Namespace: geom3d
 `#include <spatium/geom3d.h>`
 
-3D geometry namespace including classes Matrix4x4, Point3, Ellipsoid and more...
+3D geometry namespace including classes [Matrix4x4](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1geom3d_1_1_matrix4x4.html), [Point3](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1geom3d_1_1_point3.html), [Ellipsoid](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1geom3d_1_1_ellipsoid.html) and more...
 
 ### Namespace: gfx3d
 `#include <spatium/gfx3d.h>`
 
-3D graphics namespace including classes Mesh, Camera, Scene, Renderer and more...
+3D graphics namespace including classes [Mesh](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1gfx3d_1_1_mesh.html), [Camera](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1gfx3d_1_1_camera.html), [Scene](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1gfx3d_1_1_scene.html), [Renderer](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1gfx3d_1_1_renderer.html) and more...
 
 ### Namespace: gfx2d
 `#include <spatium/gfx2d.h>`
