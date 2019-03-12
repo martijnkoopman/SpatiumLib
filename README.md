@@ -37,22 +37,40 @@ Global namespace including base classes Matrix, Vector and Image. Also contains 
 3D geometry namespace including classes Matrix4x4, Point3, Ellipsoid and more...
 
 ### Namespace: gfx3d
-`#include <spatium/geom3d.h>`
+`#include <spatium/gfx3d.h>`
 
 3D graphics namespace including classes Mesh, Camera, Scene, Renderer and more...
 
 ### Namespace: gfx2d
-`#include <spatium/geom3d.h>`
+`#include <spatium/gfx2d.h>`
 
 2D graphics namespace including draw functions for lines, circles, rectangles and Bezier curves.
 
 ### Namespace: imgproc
-`#include <spatium/geom3d.h>`
+`#include <spatium/imgproc.h>`
 
 Image processing namespace including classes and functions for image convolution (thresholding, blurring, etc.) and feature extraction (corners, edges). 
 
 ## Usage
-Copy folder `spatium` in `include` to your project. Include the required files. You can include individual files (classes) or whole namespaces. You can also delete namescpaces that you don need as long as it isn'ta dependecny for other namespaces. See the dependency graph above.
+1. Clone or download this repository.
+```
+git clone https://github.com/martijnkoopman/SpatiumLib.git
+```
+
+2. Copy directory `spatium` from `include` into your project. 
+
+This directory has the following subdirectories, each being a namespace:
+
+* `geom3d`
+* `gfx2d`
+* `gfx3d`
+* `imgproc`
+
+3. Include the required files.
+
+For example: `#include <spatium/Matrix.h>`
+
+You can include individual files (classes) or whole namespaces. You can also delete namespaces (directories) that you don't need as long as it isn't a dependecny for other namespaces you're using. See the dependency graph.
 
 ### Unit testing...
 TODO
