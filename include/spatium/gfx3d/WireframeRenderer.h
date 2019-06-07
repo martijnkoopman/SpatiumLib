@@ -18,6 +18,8 @@
 #include "OrthographicCamera.h"
 #include "spatium/gfx2d/Drawing.h"
 
+#include <iostream>
+
 namespace spatium {
 namespace gfx3d {
 
@@ -47,6 +49,7 @@ public:
   /// \return True on success, false otherwise
   bool render(const Scene &scene, Image<unsigned char, 3> &image) override
   {
+    // Check for camera in scene
     auto camera = scene.camera();
     if (camera == nullptr)
     {
@@ -112,12 +115,18 @@ public:
           geom3d::Point3 v1Proj = matrixPipeline * v1;
           geom3d::Point3 v2Proj = matrixPipeline * v2;
 
+          std::cout << v1 << " to " << v1Proj << std::endl;
+          std::cout << v2 << " to " << v2Proj << std::endl;
+
           int x1 = static_cast<int>(v1Proj.x());
           int y1 = static_cast<int>(v1Proj.y());
           int x2 = static_cast<int>(v2Proj.x());
           int y2 = static_cast<int>(v2Proj.y());
 
-          gfx2d::Drawing::drawLine(image, {x1, y1}, {x2, y2}, {255, 255, 255});
+          // TODO: clipping of lines. Infinit loop in drawLine() otherwise!!
+
+          std::array<unsigned char, 3> col = mesh->color();
+          gfx2d::Drawing::drawLine<unsigned char, 3>(image, {x1, y1}, {x2, y2}, mesh->color());
         }
       }
     }

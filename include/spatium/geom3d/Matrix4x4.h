@@ -58,9 +58,9 @@ public:
       throw std::out_of_range("Matrix dimensions are not 4 by 4");
     }
 
-    for (unsigned row = 0; row < m_rows; row++)
+    for (size_t row = 0; row < m_rows; row++)
     {
-      for (unsigned col = 0; col < m_cols; col++)
+      for (size_t col = 0; col < m_cols; col++)
       {
         operator ()(row,col) = other(row,col);
       }

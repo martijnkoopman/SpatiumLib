@@ -16,7 +16,7 @@
 #include <spatium/geom3d/Point3.h>
 #include <spatium/geom3d/Vector3.h>
 #include <spatium/geom3d/Matrix4x4.h>
-#include <spatium/geom3d/Point3.h>
+#include <spatium/Math.h> // PI
 
 #include <array>
 

@@ -14,9 +14,9 @@ public:
       return false;
     }
 
-    for (unsigned row = 0; row < m1.rows(); row++)
+    for (size_t row = 0; row < m1.rows(); row++)
     {
-      for (unsigned col = 0; col < m1.cols(); col++)
+      for (size_t col = 0; col < m1.cols(); col++)
       {
         const double val1 = m1(row,col);
         const double val2 = m2(row,col);

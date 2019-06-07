@@ -25,7 +25,7 @@ public:
   /// Constructor
   ///
   /// \param[in] rows Number of rows
-  Vector(unsigned rows)
+  Vector(size_t rows)
     : Matrix(rows, 1)
   {
   }
@@ -34,7 +34,7 @@ public:
   ///
   /// \param[in] array Initializer list
   Vector(std::initializer_list<double> array)
-    : Matrix(static_cast<unsigned>(array.size()), 1)
+    : Matrix(array.size(), 1)
   {
     if (m_rows == 0)
     {
@@ -51,6 +51,15 @@ public:
       ++rowIt;
       ++dataIt;
     }
+  }
+
+  /// Constructor
+  ///
+  /// \param[in] vector STD vector
+  Vector(const std::vector<double> &vector)
+   : Matrix(vector.size(), 1)
+  {
+    m_data = vector;
   }
 
   /// Copy constructor
@@ -73,7 +82,7 @@ public:
       throw std::out_of_range("Matrix dimensions do not match vector dimensions");
     }
 
-    for (unsigned i = 0; i < m_rows; i++)
+    for (size_t i = 0; i < m_rows; i++)
     {
         m_data[i] = other(i,0);
     }
@@ -92,7 +101,7 @@ public:
   /// \param[in] row Row of element
   /// \throw std::out_of_range Matrix element out of range
   /// \return Element value
-  double operator() (unsigned row) const
+  double operator() (size_t row) const
   {
     if (row >= m_rows)
     {
@@ -107,7 +116,7 @@ public:
   /// \param[in] col Column of element
   /// \throw std::out_of_range Matrix element out of range
   /// \return Element reference
-  double& operator() (unsigned row)
+  double& operator() (size_t row)
   {
     if (row >= m_rows)
     {
@@ -133,7 +142,7 @@ public:
     }
 
     Vector result(m_rows);
-    for (unsigned row = 0; row < m_rows; row++)
+    for (size_t row = 0; row < m_rows; row++)
     {
         result(row) = operator()(row) + other(row, 0);
     }
@@ -159,7 +168,7 @@ public:
 
     // Subtract
     Vector result(m_rows);
-    for (unsigned row = 0; row < m_rows; row++)
+    for (size_t row = 0; row < m_rows; row++)
     {
         result(row) = operator()(row) - other(row, 0);
     }
@@ -176,7 +185,7 @@ public:
     //return Matrix::operator*(scalar);
 
     Vector result(m_rows);
-    for (unsigned row = 0; row < m_rows; row++)
+    for (size_t row = 0; row < m_rows; row++)
     {
         result(row) += operator()(row) * scalar;
     }
@@ -193,18 +202,30 @@ public:
     //return Matrix::operator/(scalar);
 
     Vector result(m_rows);
-    for (unsigned row = 0; row < m_rows; row++)
+    for (size_t row = 0; row < m_rows; row++)
     {
         result(row) += operator()(row) / scalar;
     }
     return result;
   }
 
+  // Other functions
+
+  /// Resize.
+  ///
+  /// This will set all values to 0.
+  ///
+  /// \param[in] rows Number of rows
+  void resize(size_t rows)
+  {
+    Matrix::resize(rows, 1);
+  }
+
   /// Output to ostream
   friend std::ostream &operator<<(std::ostream &os, const Vector &vector)
   {
     os << "Vector(" << vector.m_rows << ")" << std::endl;
-    for (unsigned row = 0; row < vector.m_rows; row++)
+    for (size_t row = 0; row < vector.m_rows; row++)
     {
       os << vector(row) << " ";
       if (row < vector.m_rows - 1)
@@ -217,6 +238,7 @@ public:
 
 private:
   using Matrix::cols;
+  using Matrix::resize;
 };
 
 } // namespace spatium

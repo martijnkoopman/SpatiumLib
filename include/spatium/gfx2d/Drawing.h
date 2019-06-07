@@ -95,7 +95,8 @@ public:
   /// \param[in] end End point of the line
   /// \param[in] val Value to apply for each pixel on the line
   template<typename T, int N>
-  static void drawLine(Image<T, N> &image, const std::array<int, 2> &start,
+  static void drawLine(Image<T, N> &image,
+                       const std::array<int, 2> &start,
                        const std::array<int, 2> &end,
                        const std::array<T, N> &val)
   {

@@ -73,21 +73,28 @@ void Graphics3D_test::test_lookAt()
   gfx3d::OrthographicCamera camera(5, 15, 10);
 
   // By default the camera is positioned at the origin (0,0,0) and aligned
-  // along the negative Z axis.
+  // along the negative Z axis. In this situation the transformation matrix is
+  // identical to the identity matrix.
 
-//  // Point centered at near plane
-//  geom3d::Point3 viewPoint = camera.worldToViewPoint({0, 0, -5});
-//  QVERIFY(TestUtilities::fuzzyCompareMatrix(viewPoint, geom3d::Point3(0,0,1)));
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().right(), geom3d::Vector3(1,0,0)));
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().up(), geom3d::Vector3(0,1,0)));
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().back(), geom3d::Vector3(0,0,1)));
 
-//  // Point centered at far plane
-//  viewPoint = camera.worldToViewPoint({0, 0, -15});
-//  QVERIFY(TestUtilities::fuzzyCompareMatrix(viewPoint, geom3d::Point3(0,0,-1)));
+  // Use lookat() to set the exact same position (= origin (0,0,0)) and look direction
+  camera.lookAt({0, 0, 0}, {0, 0, -1}, {0, 1, 0});
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().right(), geom3d::Vector3(1,0,0)));
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().up(), geom3d::Vector3(0,1,0)));
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().back(), geom3d::Vector3(0,0,1)));
 
-//  // Set camera at (10,0,0) and look along positive X axis with Y is up
-//  camera.lookAt({10, 0, 0}, {20, 0, 0}, {0, 0, 1});
+  // Make camera look 'east'.
+  camera.lookAt({0, 0, 0}, {1, 0, 0}, {0, 0, 1});
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().right(), geom3d::Vector3(0,-1,0)));
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().up(), geom3d::Vector3(0,0,1)));
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().back(), geom3d::Vector3(-1,0,0)));
 
-//  viewPoint = camera.worldToViewPoint({25, 0, 0});
-//  QVERIFY(TestUtilities::fuzzyCompareMatrix(viewPoint, geom3d::Point3(0,0,-1)));
+  // Test position
+  camera.lookAt({10, 20, 30}, {0,0,0}, {0,0,1});
+  QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().position(), geom3d::Point3(10, 20, 30)));
 }
 
 void Graphics3D_test::test_cubeMesh()
@@ -164,9 +171,31 @@ void Graphics3D_test::test_wireframeRendering()
   auto cube = std::make_shared<gfx3d::Mesh>(gfx3d::Mesh::cube(2));
   scene.addRenderObject(cube);
 
+  // X axis
+  std::vector<geom3d::Point3> vertices = { {0, 0, 0}, {1, 0, 0} };
+  std::vector<std::array<int, 2>> edges = { {0, 1} };
+  auto xAxis = std::make_shared<gfx3d::Mesh>(vertices, edges);
+  xAxis->setColor({255, 0, 0});
+  scene.addRenderObject(xAxis);
+
+  // Y axis
+  vertices = { {0, 0, 0}, {0, 1, 0} };
+  edges = { {0, 1} };
+  auto yAxis = std::make_shared<gfx3d::Mesh>(vertices, edges);
+  yAxis->setColor({0, 255, 0});
+  scene.addRenderObject(yAxis);
+
+  // Y axis
+  vertices = { {0, 0, 0}, {0, 0, 1} };
+  edges = { {0, 1} };
+  auto zAxis = std::make_shared<gfx3d::Mesh>(vertices, edges);
+  zAxis->setColor({0, 0, 255});
+  scene.addRenderObject(zAxis);
+
   // Set othographic camera in the scene
   auto camera = std::make_shared<gfx3d::OrthographicCamera>(5, 15, 5);
   camera->lookAt({10,5,5}, {0,0,0}, {0,0,1});
+  //camera->lookAt({0,-5,0}, {0,0,0}, {0,0,1});
   scene.setCamera(camera);
 
   // Render a 2D wireframe image

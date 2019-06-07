@@ -57,7 +57,6 @@ private slots:
   // Integration
   void test_solveSystemOfEquations();
   void test_leastSquares();
-  void test_eigenDecomposition2d();
 };
 
 Matrix_test::Matrix_test()
@@ -454,29 +453,6 @@ void Matrix_test::test_leastSquares()
 
   QCOMPARE(x(0), -0.480376766091052); // Fuzzy compare?
   QCOMPARE(x(1), 20.61538461538461);  // Fuzzy compare?
-}
-
-
-void Matrix_test::test_eigenDecomposition2d()
-{
-  // Test 1
-  Matrix A = {{7,  3},
-              {3, -1}};
-
-  double eig1, eig2;
-  QVERIFY(eigenvalues2d(A, eig1, eig2));
-
-  QCOMPARE(eig1, -2);
-  QCOMPARE(eig2, 8);
-
-  // Test 2
-  A = {{ 0,  1},
-       {-2, -3}};
-
-  QVERIFY(eigenvalues2d(A, eig1, eig2));
-
-  QCOMPARE(eig1, -2);
-  QCOMPARE(eig2, -1);
 }
 
 QTEST_APPLESS_MAIN(Matrix_test)

@@ -3,6 +3,7 @@
 
 #include <spatium/geom3d/Vector3.h>
 #include <spatium/geom3d/Matrix4x4.h>
+#include <spatium/Math.h>
 
 using namespace spatium;
 
@@ -44,9 +45,9 @@ void Matrix4x4_test::test_constructor()
   geom3d::Matrix4x4 matrix;
 
   // Check identity matrix
-  for (unsigned row = 0; row < 4; row++)
+  for (size_t row = 0; row < 4; row++)
   {
-    for (unsigned col = 0; col < 4; col++)
+    for (size_t col = 0; col < 4; col++)
     {
       if (row == col) // Diagonal
       {
