@@ -16,6 +16,8 @@
 #include "idx/Bounds.h"
 #include "idx/Geometry.h"
 #include "idx/Tree.h"
+#include "idx/TreeIterator.h"
+#include "idx/StringTree.h"
 #include "idx/Quadtree.h"
 
 #endif // SPATIUMLIB_IDX_H

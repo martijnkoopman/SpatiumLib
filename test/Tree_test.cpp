@@ -1,9 +1,14 @@
 #include <QtTest>
 
-#include <spatium/idx.h>
+#include <spatium/idx/Tree.h>
+#include <spatium/idx/TreeIterator.h>
+#include <spatium/idx/StringTree.h>
+#include <spatium/idx/Quadtree.h>
 
 #include <stack> // std::stack
 #include <tuple>
+
+#include <iostream>
 
 using namespace spatium;
 
@@ -17,6 +22,8 @@ public:
 
 private slots:
 
+  void test_customTree();
+  void test_stringTree();
   void test_quadtreeFromPoints();
 
 private:
@@ -32,53 +39,155 @@ Tree_test::~Tree_test()
 
 }
 
-// Constructors
+// Functions
 
-void Tree_test::test_quadtreeFromPoints()
+void Tree_test::test_customTree()
 {
-  std::vector<std::array<double, 2>> points = { {0,0}, {10,10}, {8.5,8.5}, {8.5,9.5}, {9.5,8.5} };
+  idx::Tree<std::string> tree("abc");
+  std::shared_ptr<idx::TreeNode<std::string>> root = tree.root();
 
-  auto tree = idx::PointQuadtree::buildFromPoints(points, 1);
+  // Change node string value
+  QCOMPARE(root->object(), "abc");
+  root->setObject("root");
+  QCOMPARE(root->object(), "root");
 
-//  //idx::Tree<std::array<double,2>>::
-//  for (idx::TreeIterator<std::array<double, 2>> it = tree.beginDepthFirst() ; it != tree.endDepthFirst(); ++it)
-//  {
-//    std::cout << ' ' << *it;
-//  }
+  // Add children to root node
+  auto root_0 = root->addChild(root, "root-0");
+  root->addChild(root, "root-1");
+  root->addChild(root, "root-2");
+  auto root_3 = root->addChild(root, "root-3");
 
-  //int depth = tree.computeDepth();
+  // Add children to root-0
+  root_0->addChild(root_0, "root-0-0");
+  root_0->addChild(root_0, "root-0-1");
+  root_0->addChild(root_0, "root-0-2");
+  root_0->addChild(root_0, "root-0-3");
+
+  // Add children to root-3
+  root_3->addChild(root_3, "root-3-0");
+  root_3->addChild(root_3, "root-3-1");
+  root_3->addChild(root_3, "root-3-2");
+  auto root_3_3 = root_3->addChild(root_3, "root-3-3");
+
+  // Add children to root-3-3
+  root_3_3->addChild(root_3_3, "root-3-3-0");
+  root_3_3->addChild(root_3_3, "root-3-3-1");
+  root_3_3->addChild(root_3_3, "root-3-3-2");
+  root_3_3->addChild(root_3_3, "root-3-3-3");
+
+  std::string depthFirstString = "";
+  for (idx::TreeIterator<std::string> it = tree.begin(); it != tree.end(); ++it)
+  {
+    std::shared_ptr<idx::TreeNode<std::string>> node = *it;
+
+    //std::shared_ptr<idx::StringTreeNode> node = *it;
+    depthFirstString += node->object() + ";";
+  }
+
+  QCOMPARE(depthFirstString, "root;root-0;root-0-0;root-0-1;root-0-2;root-0-3;root-1;root-2;root-3;root-3-0;root-3-1;root-3-2;root-3-3;root-3-3-0;root-3-3-1;root-3-3-2;root-3-3-3;");
+}
+
+void Tree_test::test_stringTree()
+{
+  // Create initial string tree with 1 root node
+  idx::StringTree tree("abc");
+
+  // Get root node
+  std::shared_ptr<idx::StringTreeNode> root = std::static_pointer_cast<idx::StringTreeNode>(tree.root());
+
+  // Change node string value
+  QCOMPARE(root->str(), "abc");
+  root->setString("root");
+  QCOMPARE(root->str(), "root");
+
+  // Add children to root node
+  auto root_0 = root->addChild(root, "root-0");
+  root->addChild(root, "root-1");
+  root->addChild(root, "root-2");
+  auto root_3 = root->addChild(root, "root-3");
+
+  // Add children to root-0
+  root_0->addChild(root_0, "root-0-0");
+  root_0->addChild(root_0, "root-0-1");
+  root_0->addChild(root_0, "root-0-2");
+  root_0->addChild(root_0, "root-0-3");
+
+  // Add children to root-3
+  root_3->addChild(root_3, "root-3-0");
+  root_3->addChild(root_3, "root-3-1");
+  root_3->addChild(root_3, "root-3-2");
+  auto root_3_3 = root_3->addChild(root_3, "root-3-3");
+
+  // Add children to root-3-3
+  root_3_3->addChild(root_3_3, "root-3-3-0");
+  root_3_3->addChild(root_3_3, "root-3-3-1");
+  root_3_3->addChild(root_3_3, "root-3-3-2");
+  root_3_3->addChild(root_3_3, "root-3-3-3");
+
+  // Check
+
+  std::string depthFirstString = "";
 
   // Traverse tree depth-first (using stack)
-  // Depth, index (0-3), node
-  std::stack<std::tuple<int, int, std::shared_ptr<idx::PointQuadtreeNode>>> stacky;
-  stacky.push(std::make_tuple(0,0, std::static_pointer_cast<idx::PointQuadtreeNode>(tree.root())));
+  std::stack<std::shared_ptr<idx::StringTreeNode>> stacky;
+  stacky.push(std::static_pointer_cast<idx::StringTreeNode>(tree.root()));
   while (!stacky.empty())
   {
     // Pop top element from stack
-    std::tuple<int, int, std::shared_ptr<idx::PointQuadtreeNode>> s = stacky.top();
+    std::shared_ptr<idx::StringTreeNode> node = stacky.top();
     stacky.pop();
 
-    int depth = std::get<0>(s);
-    int index = std::get<1>(s);
-    std::shared_ptr<idx::PointQuadtreeNode> node = std::get<2>(s);
+    depthFirstString += node->str() + ";";
 
-    //std::cout << node->str() << std::endl;
-
-    // Iterate 4 children
+    // Iterate children
     if (node->hasChildren())
     {
-      for (size_t i = 0; i < 4; i++)
+      for (size_t i = 0; i < node->childCount(); i++)
       {
-        auto n = std::static_pointer_cast<idx::PointQuadtreeNode>(node->child(i));
-        stacky.push(std::make_tuple(depth+1,i, n));
+        auto n = std::static_pointer_cast<idx::StringTreeNode>(node->child(node->childCount()-1-i));
+        stacky.push(n);
       }
     }
   }
 
-  QCOMPARE(1, 1);
+  QCOMPARE(depthFirstString, "root;root-0;root-0-0;root-0-1;root-0-2;root-0-3;root-1;root-2;root-3;root-3-0;root-3-1;root-3-2;root-3-3;root-3-3-0;root-3-3-1;root-3-3-2;root-3-3-3;");
+
+  depthFirstString = "";
+  for (idx::TreeIterator<std::string> it = tree.begin(); it != tree.end(); ++it)
+  {
+    std::shared_ptr<idx::StringTreeNode> node = std::static_pointer_cast<idx::StringTreeNode>(*it);
+    depthFirstString += node->str() + ";";
+  }
+
+  QCOMPARE(depthFirstString, "root;root-0;root-0-0;root-0-1;root-0-2;root-0-3;root-1;root-2;root-3;root-3-0;root-3-1;root-3-2;root-3-3;root-3-3-0;root-3-3-1;root-3-3-2;root-3-3-3;");
 }
 
+void Tree_test::test_quadtreeFromPoints()
+{
+  std::vector<std::array<double, 2>> points = { {0,0}, {10,10}, {8.5,8.5}, {8.5,9.5}, {9.5,8.5}, {4,1}, {9,4} };
 
+  // Construct tree
+  auto tree = idx::PointQuadtree::buildFromPoints(points, 1);
+
+  // Check bounds
+  auto bounds = tree.bounds();
+  QCOMPARE(bounds.min()[0], 0);
+  QCOMPARE(bounds.min()[1], 0);
+  QCOMPARE(bounds.max()[0], 10);
+  QCOMPARE(bounds.max()[1], 10);
+
+  // Check max point count in leaf node
+  QCOMPARE(tree.maxPointCountLeaf(), 1);
+
+  //  //idx::Tree<std::array<double,2>>::
+  //for (idx::TreeIterator<std::array<double, 2>> it = tree.begin() ; it != tree.end(); ++it)
+   // {
+  //    std::cout << ' ' << *it;
+    //}
+
+    //int depth = tree.computeDepth();
+
+}
 
 QTEST_APPLESS_MAIN(Tree_test)
 

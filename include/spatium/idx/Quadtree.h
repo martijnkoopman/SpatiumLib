@@ -14,6 +14,7 @@
 #define SPATIUMLIB_IDX_QUADTREE_H
 
 #include "Tree.h"
+#include "Bounds.h"
 
 #include <array> // std::array
 #include <vector> // std::vector
@@ -24,52 +25,49 @@ namespace idx {
 
 /// \class PointQuadtreeNode
 /// \brief A node in a point quadtree (a quadrant)
-class PointQuadtreeNode : public TreeNode<std::array<double,2>>
+class PointQuadtreeNode : public TreeNode<std::vector<std::array<double,2>>>
 {
 public:
   /// Constructor
   ///
   /// \param[in] Parent node (unset for root node)
-  PointQuadtreeNode(const std::string &str, const std::weak_ptr<PointQuadtreeNode> &parent = std::weak_ptr<PointQuadtreeNode>())
-    : TreeNode<std::array<double, 2>> (parent, 0)
-    , m_str(str)
+  PointQuadtreeNode(const std::weak_ptr<PointQuadtreeNode> &parent = std::weak_ptr<PointQuadtreeNode>())
+    : TreeNode<std::vector<std::array<double, 2>>> (parent, 0)
    {
    }
 
-  bool createChildren(const std::shared_ptr<PointQuadtreeNode> &parentSharedPtr, size_t childCount = 0)
+  /// Create 4 children nodes.
+  ///
+  /// \param[in] parentSharedPtr Parent node (this object) as shared pointer
+  /// \return True on success, false if children already existed.
+  bool createChildren(const std::shared_ptr<PointQuadtreeNode> &parentSharedPtr)
   {
     if (hasChildren())
     {
       return false;
     }
 
-    for (size_t i = 0; i < childCount; i++)
+    for (size_t i = 0; i < 4; i++)
     {
-      std::shared_ptr<TreeNode<std::array<double,2>>> n = std::make_shared<PointQuadtreeNode>(m_str+"-"+std::to_string(i), parentSharedPtr);
+      std::shared_ptr<TreeNode<std::vector<std::array<double,2>>>> n = std::make_shared<PointQuadtreeNode>(parentSharedPtr);
       m_children.push_back(n);
     }
 
     return true;
   }
 
-  std::string str() const ///\TODO Delete me
-  {
-    return m_str;
-  }
-
 protected:
-  std::string m_str; ///\TODO Delete me
 };
 
 /// \class PointQuadtree
 /// \brief Quadtree spatial index for 2D points
-class PointQuadtree : public Tree<std::array<double,2>>
+class PointQuadtree : public Tree<std::vector<std::array<double,2>>>
 {
 public:
 
   /// Constructor
   PointQuadtree(const BoundingBox<double,2> &bounds, size_t maxPointCountLeaf = 100)
-    : Tree<std::array<double,2>>(std::make_shared<PointQuadtreeNode>("1"))
+    : Tree<std::vector<std::array<double,2>>>(std::make_shared<PointQuadtreeNode>())
     , m_boundingBox(bounds)
     , m_maxPointCountLeaf(maxPointCountLeaf)
   {
@@ -94,7 +92,7 @@ public:
     // Compute minimum bounding rectangle
     BoundingBox<double,2> bounds = BoundingBox<double,2>::fromPoints(points);
 
-    // Derive minimum bounding square (TODO: Class BoundingSquare or BoundingQuad)
+    // Derive minimum bounding square
     double width = bounds.diameter(0);
     double height = bounds.diameter(1);
     std::array<double, 2> min = bounds.min();
@@ -106,8 +104,10 @@ public:
     }
     bounds = BoundingBox<double,2>::fromMinMax(min, max);
 
+    // Create inital tree
     PointQuadtree tree(bounds, maxPointCountLeaf);
 
+    // Add points
     for(auto point : points)
     {
       tree.addPoint(point);
@@ -147,22 +147,22 @@ public:
       else
       {
         // Leaf node. Add point. May need splitting child.
-        if (node->geometryCount() + 1 > m_maxPointCountLeaf)
+        if (node->object().size() + 1 > m_maxPointCountLeaf)
         {
           // Split node. Create 4 children.
-          node->createChildren(node, 4);
+          node->createChildren(node);
 
           // Distribute points of current node over 4 new children
-          for (size_t i = 0; i < node->geometryCount(); i++)
+          for (size_t i = 0; i < node->object().size(); i++)
           {
-            std::array<double, 2> childPoint = node->geometry(i);
+            std::array<double, 2> childPoint = node->object()[i];
 
             BoundingBox<double,2> curBounds;
             size_t curChildIndex = PointQuadtree::determineChild(bounds, childPoint, curBounds);
             std::shared_ptr<PointQuadtreeNode> curChild = std::static_pointer_cast<PointQuadtreeNode>(node->child(curChildIndex));
-            curChild->addGeometry(childPoint);
+            curChild->object().push_back(childPoint);
           }
-          node->clearGeometries();
+          node->object().clear();
 
           // Determine next child and traverse into
           size_t childIndex = PointQuadtree::determineChild(bounds, point, bounds);
@@ -171,7 +171,7 @@ public:
         else
         {
           // Simply add point
-          node->addGeometry(point);
+          node->object().push_back(point);
 
           // Stop tree traversal
           node = nullptr;
@@ -199,15 +199,15 @@ public:
       // Left half
       if (point[1] < center[1])
       {
-        // Top
+        // Bottom
         boundsChild = BoundingBox<double,2>::fromMinMax(min, center);
         return 0;
       }
       else
       {
-        // Bottom
+        // Top
         boundsChild = BoundingBox<double,2>::fromMinMax({ min[0], center[1] }, { center[0], max[1] });
-        return 3;
+        return 2;
       }
     }
     else
@@ -223,7 +223,7 @@ public:
       {
         // Bottom
         boundsChild = BoundingBox<double,2>::fromMinMax(center, max);
-        return 2;
+        return 3;
       }
     }
   }
@@ -235,6 +235,20 @@ public:
 
 //    return depth;
 //  }
+
+
+  BoundingBox<double,2> bounds() const
+  {
+    return m_boundingBox;
+  }
+
+  /// Get the maximum point count in a leaf node.
+  ///
+  /// A node is split when it exceeds this number.
+  size_t maxPointCountLeaf() const
+  {
+    return m_maxPointCountLeaf;
+  }
 
 protected:
   const BoundingBox<double,2> m_boundingBox;
