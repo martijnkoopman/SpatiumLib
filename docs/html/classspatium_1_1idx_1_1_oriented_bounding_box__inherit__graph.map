@@ -1,0 +1,5 @@
+<map id="spatium::idx::OrientedBoundingBox&lt; T, D &gt;" name="spatium::idx::OrientedBoundingBox&lt; T, D &gt;">
+<area shape="rect" id="node1" title="Oriented bounding box in D&#45;dimensional space." alt="" coords="5,184,209,225"/>
+<area shape="rect" id="node2" href="$classspatium_1_1idx_1_1_bounding_box.html" title="Axis&#45;aligned bounding box (AABB) in D&#45;dimensional space." alt="" coords="18,95,197,136"/>
+<area shape="rect" id="node3" href="$classspatium_1_1idx_1_1_bounds.html" title="Boundaries in D&#45;dimensional space." alt="" coords="35,5,180,47"/>
+</map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['renderer_2eh',['Renderer.h',['../_renderer_8h.html',1,'']]],
-  ['renderobject_2eh',['RenderObject.h',['../_render_object_8h.html',1,'']]]
+  ['quadtree_2eh',['Quadtree.h',['../_quadtree_8h.html',1,'']]]
 ];

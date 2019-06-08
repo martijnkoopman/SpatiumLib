@@ -22,11 +22,18 @@ namespace spatium {
 namespace idx {
 
 /// \class TreeIterator
-/// \brief Iterator that traverses a tree from top to bottom depth first.
+/// \brief Iterator for a Tree
+///
+/// TreeIterator is an iterator that traverses a tree in depth-frist order.
 template<typename G>
 class TreeIterator
 {
 public:
+  /// Constructor
+  ///
+  /// \param[in] tree Tree
+  /// \param[in] end If true, point to end of tree, otherwise point to
+  ///                beginning of tree. (default = false)
   TreeIterator(const Tree<G> &tree, bool end = false)
     : m_tree(tree)// Copies tree. Reference prefered?
     , m_end(end)
@@ -48,6 +55,10 @@ public:
     }
   }
 
+  /// Compare operator. Is equal.
+  ///
+  /// \param[in] other Other iterator
+  /// \return True if equal, otherwise false
   bool operator==(const TreeIterator<G> &other) const
   {
     return (m_tree.root() == other.m_tree.root() &&
@@ -55,11 +66,18 @@ public:
             m_end == other.m_end);
   }
 
+  /// Compare operator. Is unequal.
+  ///
+  /// \param[in] other Other iterator
+  /// \return True if unequal, otherwise false
   bool operator!= (const TreeIterator<G> &other) const
   {
     return !(*this == other);
   }
 
+  /// Increment operator.
+  ///
+  /// \return Iterator.
   TreeIterator<G>& operator++() // Return const?
   {
     if (m_stack.size() == 1 && !m_stack.top()->hasChildren())
@@ -87,6 +105,9 @@ public:
     return *this;
   }
 
+  /// Get tree node currently being pointed to.
+  ///
+  /// \return TreeNode
   std::shared_ptr<TreeNode<G>> operator*() const // Return reference? const reference?
   {
     return m_stack.top();

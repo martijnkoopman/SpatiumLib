@@ -73,15 +73,19 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:namespacespatium_1_1geom2d"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1geom2d.html">geom2d</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacespatium_1_1geom3d"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1geom3d.html">geom3d</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacespatium_1_1gfx2d"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1gfx2d.html">gfx2d</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacespatium_1_1gfx3d"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1gfx3d.html">gfx3d</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacespatium_1_1idx"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1idx.html">idx</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacespatium_1_1imgproc"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1imgproc.html">imgproc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacespatium_1_1statistics"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1statistics.html">statistics</a></td></tr>
+<tr class="memitem:namespacespatium_1_1stats"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium_1_1stats.html">stats</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -122,11 +126,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a6e7f93124da8ca19c9d502921b04a556"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium.html#a6e7f93124da8ca19c9d502921b04a556">solveCubic</a> (double a, double b, double c, double d, double &amp;x1, double &amp;x2, double &amp;x3)</td></tr>
 <tr class="memdesc:a6e7f93124da8ca19c9d502921b04a556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve a qubic equation: ax^3 + bx^2 + cx + d =0.  <a href="#a6e7f93124da8ca19c9d502921b04a556">More...</a><br /></td></tr>
 <tr class="separator:a6e7f93124da8ca19c9d502921b04a556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab24ba2ae56eb20e3350f50a9b2432bcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium.html#ab24ba2ae56eb20e3350f50a9b2432bcb">eigenvalues2d</a> (<a class="el" href="classspatium_1_1_matrix.html">Matrix</a> matrix, double &amp;eigenval1, double &amp;eigenval2)</td></tr>
-<tr class="memdesc:ab24ba2ae56eb20e3350f50a9b2432bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute eigenvalues for 2-by-2 matrix.  <a href="#ab24ba2ae56eb20e3350f50a9b2432bcb">More...</a><br /></td></tr>
-<tr class="separator:ab24ba2ae56eb20e3350f50a9b2432bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae932438a295a7a0de7bc5265598d30d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacespatium.html#ae932438a295a7a0de7bc5265598d30d5">eigenvector2d</a> (const <a class="el" href="classspatium_1_1_matrix.html">Matrix</a> &amp;matrix, double eigenval, <a class="el" href="classspatium_1_1_matrix.html">Matrix</a> &amp;eigenvector)</td></tr>
-<tr class="separator:ae932438a295a7a0de7bc5265598d30d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -185,101 +184,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Binomial coefficient </dd></dl>
-
-</div>
-</div>
-<a id="ab24ba2ae56eb20e3350f50a9b2432bcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab24ba2ae56eb20e3350f50a9b2432bcb">&#9670;&nbsp;</a></span>eigenvalues2d()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int spatium::eigenvalues2d </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classspatium_1_1_matrix.html">Matrix</a>&#160;</td>
-          <td class="paramname"><em>matrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>eigenval1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>eigenval2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compute eigenvalues for 2-by-2 matrix. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>2-by-2 matrix </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">eigenval1</td><td>Eigenvalue 1 </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">eigenval2</td><td>Eigenvalue 2 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of unique solutions 0, 1 or 2 </dd></dl>
-
-</div>
-</div>
-<a id="ae932438a295a7a0de7bc5265598d30d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae932438a295a7a0de7bc5265598d30d5">&#9670;&nbsp;</a></span>eigenvector2d()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int spatium::eigenvector2d </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classspatium_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>matrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>eigenval</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classspatium_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>eigenvector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

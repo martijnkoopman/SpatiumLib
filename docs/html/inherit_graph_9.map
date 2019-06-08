@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classspatium_1_1imgproc_1_1_global_threshold_filter.html" title="Global threshold image filter." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node1" href="$classspatium_1_1idx_1_1_bounds.html" title="Boundaries in D&#45;dimensional space." alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node2" href="$classspatium_1_1idx_1_1_bounding_box.html" title="Axis&#45;aligned bounding box (AABB) in D&#45;dimensional space." alt="" coords="199,5,377,47"/>
+<area shape="rect" id="node3" href="$classspatium_1_1idx_1_1_oriented_bounding_box.html" title="Oriented bounding box in D&#45;dimensional space." alt="" coords="425,5,629,47"/>
 </map>

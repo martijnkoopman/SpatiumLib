@@ -20,12 +20,11 @@ namespace spatium {
 namespace idx {
 
 /// \class TreeNode
-/// \brief Node in a tree.
+/// \brief Node in a Tree.
 ///
-/// A node in a tree has one parent (with exception of the root node) and
-/// optionally children. The nodes without children are called leaf nodes.
-///
-/// A node is a container for one object of type G.
+/// TreeNode is a node in a Tree. Each node can have any number of children.
+/// A TreeNode is a container for a single object. The type of this object is
+/// passed as template argument.
 template<typename G>
 class TreeNode
 {
@@ -60,15 +59,13 @@ public:
     m_children.reserve(estimatedChildCount);
   }
 
-  /// Get indicator for having children nodes.
-  ///
-  /// \return True on   for having children nodes
+  /// \return True when child count > 0, otherwise false.
   bool hasChildren()
   {
     return (m_children.size() > 0);
   }
 
-  /// Get the child count.
+  /// Get child count.
   ///
   /// \return Child count
   size_t childCount() const

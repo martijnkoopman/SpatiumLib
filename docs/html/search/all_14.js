@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['x',['x',['../classspatium_1_1geom3d_1_1_point3.html#a158c74589dbdaab8f406c9c0e1112c13',1,'spatium::geom3d::Point3::x(double val)'],['../classspatium_1_1geom3d_1_1_point3.html#ae3953e26093296e787bc15e5f3910319',1,'spatium::geom3d::Point3::x() const'],['../classspatium_1_1geom3d_1_1_vector3.html#ab3bb686e05d638caa056a73a988bdffd',1,'spatium::geom3d::Vector3::x(double val)'],['../classspatium_1_1geom3d_1_1_vector3.html#a2ad73c219b634484031d10b9b5fad5ea',1,'spatium::geom3d::Vector3::x() const']]]
+  ['width',['width',['../classspatium_1_1_image.html#ad2e5004c7d2ff9cd410a6ffce61e01c2',1,'spatium::Image']]],
+  ['wireframerenderer',['WireframeRenderer',['../classspatium_1_1gfx3d_1_1_wireframe_renderer.html',1,'spatium::gfx3d::WireframeRenderer'],['../classspatium_1_1gfx3d_1_1_wireframe_renderer.html#ae31f39f6c35eda72399d9c6834dbfd01',1,'spatium::gfx3d::WireframeRenderer::WireframeRenderer()']]],
+  ['wireframerenderer_2eh',['WireframeRenderer.h',['../_wireframe_renderer_8h.html',1,'']]],
+  ['worldpointtoobjectpoint',['worldPointToObjectPoint',['../classspatium_1_1gfx3d_1_1_transform.html#ad43ddb6aacd93a162e8941a5df0381df',1,'spatium::gfx3d::Transform']]]
 ];

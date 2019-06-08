@@ -61,7 +61,9 @@ $(function() {
 </div>
 
 <div class="contents">
-&#160;<ul>
+&#160;
+
+<h3><a id="index_m"></a>- m -</h3><ul>
 <li>m_axisX
 : <a class="el" href="classspatium_1_1geom3d_1_1_ellipsoid.html#afd30d93f66e8dbc14639cc0845d85dac">spatium::geom3d::Ellipsoid</a>
 </li>
@@ -71,14 +73,25 @@ $(function() {
 <li>m_axisZ
 : <a class="el" href="classspatium_1_1geom3d_1_1_ellipsoid.html#a2d1bd7ffd3c26c4200970f3ef9fcb9cd">spatium::geom3d::Ellipsoid</a>
 </li>
+<li>m_boundingBox
+: <a class="el" href="classspatium_1_1idx_1_1_point_quadtree.html#a39e1b21db75548f8b32121bedeba8215">spatium::idx::PointQuadtree</a>
+</li>
 <li>m_bounds
 : <a class="el" href="classspatium_1_1gfx3d_1_1_render_object.html#ab111b9c1e4c3f1351d444274b157c52d">spatium::gfx3d::RenderObject</a>
+, <a class="el" href="classspatium_1_1idx_1_1_geometry.html#a0912b6417117127cf8ded019a0141116">spatium::idx::Geometry&lt; T, D &gt;</a>
+</li>
+<li>m_center
+: <a class="el" href="classspatium_1_1idx_1_1_bounds.html#a2c9484bee7f529cacbd6cc857f474102">spatium::idx::Bounds&lt; T, D &gt;</a>
+</li>
+<li>m_children
+: <a class="el" href="classspatium_1_1idx_1_1_tree_node.html#a445de6ab28b3bde42ab7c9ccf3263084">spatium::idx::TreeNode&lt; G &gt;</a>
 </li>
 <li>m_color
 : <a class="el" href="classspatium_1_1gfx3d_1_1_light.html#a759e99f61cd6bbde76855007eec77f24">spatium::gfx3d::Light</a>
+, <a class="el" href="classspatium_1_1gfx3d_1_1_render_object.html#ab838f8511cab12ad69e66c59ea15d355">spatium::gfx3d::RenderObject</a>
 </li>
 <li>m_cols
-: <a class="el" href="classspatium_1_1_matrix.html#aee26b368e9a5ab79c5486dbde926d258">spatium::Matrix</a>
+: <a class="el" href="classspatium_1_1_matrix.html#a55f79b937dd21b5aaebe7cb49a2d897d">spatium::Matrix</a>
 </li>
 <li>m_data
 : <a class="el" href="classspatium_1_1_matrix.html#a4c4488ee38eb9fb54d99afd64f5bc696">spatium::Matrix</a>
@@ -93,6 +106,9 @@ $(function() {
 <li>m_ellipsoidalTransformationInverse
 : <a class="el" href="classspatium_1_1geom3d_1_1_ellipsoid.html#a1cd8013e95fb08f1bd0ba92c65d248d1">spatium::geom3d::Ellipsoid</a>
 </li>
+<li>m_end
+: <a class="el" href="classspatium_1_1idx_1_1_tree_iterator.html#a9c34ce1d0d94ff9d5f13c8bac36faee1">spatium::idx::TreeIterator&lt; G &gt;</a>
+</li>
 <li>m_far
 : <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a2cc66b65368ee29765d1da7e539bd092">spatium::gfx3d::Camera</a>
 </li>
@@ -105,36 +121,63 @@ $(function() {
 <li>m_matrix
 : <a class="el" href="classspatium_1_1gfx3d_1_1_transform.html#a9dce26f2e56229d1bb73276fb5a7989f">spatium::gfx3d::Transform</a>
 </li>
+<li>m_maxPointCountLeaf
+: <a class="el" href="classspatium_1_1idx_1_1_point_quadtree.html#a999415e8123ea0d89ecce98a6877ddbc">spatium::idx::PointQuadtree</a>
+</li>
 <li>m_near
 : <a class="el" href="classspatium_1_1gfx3d_1_1_camera.html#a057e240a9f429259c1cc6b03a84e6e3a">spatium::gfx3d::Camera</a>
 </li>
 <li>m_normal
 : <a class="el" href="classspatium_1_1geom3d_1_1_plane.html#a8f1b7fcd69bbd65de73afe1fa736bbf4">spatium::geom3d::Plane</a>
 </li>
+<li>m_object
+: <a class="el" href="classspatium_1_1idx_1_1_tree_node.html#ab1935f2b8c3da3708c92b8a9ca972b50">spatium::idx::TreeNode&lt; G &gt;</a>
+</li>
+<li>m_orientation
+: <a class="el" href="classspatium_1_1idx_1_1_oriented_bounding_box.html#a7fc463bac3b5eb6fab2f45e768bdc0da">spatium::idx::OrientedBoundingBox&lt; T, D &gt;</a>
+</li>
 <li>m_origin
 : <a class="el" href="classspatium_1_1geom3d_1_1_ellipsoid.html#a81acd41d1dbf4d0e48963e61b3f98736">spatium::geom3d::Ellipsoid</a>
 , <a class="el" href="classspatium_1_1geom3d_1_1_plane.html#a0aec9fbb76a070b91e0b8ef28d5b762f">spatium::geom3d::Plane</a>
 , <a class="el" href="classspatium_1_1geom3d_1_1_sphere.html#a1bc4f15b82e6e35d9e3f10f04191e937">spatium::geom3d::Sphere</a>
 </li>
+<li>m_parent
+: <a class="el" href="classspatium_1_1idx_1_1_tree_node.html#a3b7ad53a80080bab68bc8d4aa4019fea">spatium::idx::TreeNode&lt; G &gt;</a>
+</li>
 <li>m_position
 : <a class="el" href="classspatium_1_1gfx3d_1_1_point_light.html#a8405ae6bc0c45f808c690a28f290713e">spatium::gfx3d::PointLight</a>
 , <a class="el" href="classspatium_1_1gfx3d_1_1_spot_light.html#a879e041a1adbf4f61319ec1224a7f539">spatium::gfx3d::SpotLight</a>
+</li>
+<li>m_radii
+: <a class="el" href="classspatium_1_1idx_1_1_bounding_box.html#a205343e31ea99ea38c06d870efab36f5">spatium::idx::BoundingBox&lt; T, D &gt;</a>
 </li>
 <li>m_radius
 : <a class="el" href="classspatium_1_1geom3d_1_1_sphere.html#a71d161e4c4275afa1c10562c81f0f189">spatium::geom3d::Sphere</a>
 , <a class="el" href="classspatium_1_1gfx3d_1_1_spot_light.html#a5b353799a408fb6f8c498b87c78cdaa0">spatium::gfx3d::SpotLight</a>
 </li>
+<li>m_root
+: <a class="el" href="classspatium_1_1idx_1_1_tree.html#aa08ad3dbb069b105f3f53bfd65927a98">spatium::idx::Tree&lt; G &gt;</a>
+</li>
 <li>m_rows
-: <a class="el" href="classspatium_1_1_matrix.html#afc3396d15bca9b7488356ab6bdb279ca">spatium::Matrix</a>
+: <a class="el" href="classspatium_1_1_matrix.html#a99cb1018560b60b365a93ee5ee8f64fb">spatium::Matrix</a>
 </li>
 <li>m_size
 : <a class="el" href="classspatium_1_1gfx3d_1_1_orthographic_camera.html#a1b614e9f6aae30f4bf1940935f52a4ed">spatium::gfx3d::OrthographicCamera</a>
+</li>
+<li>m_stack
+: <a class="el" href="classspatium_1_1idx_1_1_tree_iterator.html#a665dfb2041334622e26091449a40fff2">spatium::idx::TreeIterator&lt; G &gt;</a>
+</li>
+<li>m_str
+: <a class="el" href="classspatium_1_1idx_1_1_string_tree_node.html#ab2cdb021e42c89dc08f6f449073b39a2">spatium::idx::StringTreeNode</a>
 </li>
 <li>m_strength
 : <a class="el" href="classspatium_1_1gfx3d_1_1_light.html#a2af7d7e66564e69741335cbd4325b2b8">spatium::gfx3d::Light</a>
 </li>
 <li>m_transform
 : <a class="el" href="classspatium_1_1gfx3d_1_1_scene_object.html#a2b9316af66a941c2629628408687628d">spatium::gfx3d::SceneObject</a>
+</li>
+<li>m_tree
+: <a class="el" href="classspatium_1_1idx_1_1_tree_iterator.html#a96577ab7e3202c921cd8923d6706e38a">spatium::idx::TreeIterator&lt; G &gt;</a>
 </li>
 <li>m_width
 : <a class="el" href="classspatium_1_1_image.html#af9129e388f5ba1447de9d5241ea7a5df">spatium::Image&lt; T, N &gt;</a>

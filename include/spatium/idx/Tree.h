@@ -25,7 +25,10 @@ template<typename G>
 class TreeIterator;
 
 /// \class Tree
-/// \brief Tree with variable number of children per tree node.
+/// \brief Tree data structure
+///
+/// Tree is a hierarchical data structure composed of nodes (TreeNode). It has
+/// one node that represents the root of the tree.
 template<typename G>
 class Tree
 {
@@ -57,8 +60,25 @@ public:
     return m_root;
   }
 
-  TreeIterator<G> begin() { return TreeIterator<G>(*this); }
-  TreeIterator<G> end() { return TreeIterator<G>(*this, true); }
+  /// Get iterator pointing to the beginning of the tree (root node).
+  ///
+  /// This iterator traverses the tree in depth-first order.
+  ///
+  /// \return Tree iterator
+  TreeIterator<G> begin()
+  {
+    return TreeIterator<G>(*this);
+  }
+
+  /// Get iterator pointing to the end of the tree.
+  ///
+  /// This iterator traverses the tree in depth-first order.
+  ///
+  /// \return Tree iterator
+  TreeIterator<G> end()
+  {
+    return TreeIterator<G>(*this, true);
+  }
 
 protected:
   const std::shared_ptr<TreeNode<G>> m_root;
