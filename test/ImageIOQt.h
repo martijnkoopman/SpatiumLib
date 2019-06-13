@@ -1,3 +1,18 @@
+/*
+ * Program: Spatium Library
+ *
+ * Copyright (C) Martijn Koopman
+ * All Rights Reserved
+ *
+ * This software is distributed WITHOUT ANY WARRANTY; without even
+ * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ * PURPOSE.
+ *
+ */
+
+#ifndef SPATIUMLIB_IMAGEIOQT_H
+#define SPATIUMLIB_IMAGEIOQT_H
+
 #include <spatium/Image.h>
 
 #include <QString>
@@ -71,7 +86,7 @@ struct ValueWriter<T, 4>
   static uint pixelValue(std::array<T, 4> rgba) { return qRgba(rgba[0], rgba[1], rgba[2], rgba[3]); }
 };
 
-class ImageIO
+class ImageIOQt
 {
 public:
 
@@ -144,9 +159,9 @@ public:
     QImage outputImage(image.width(), image.height(), format);
 
     // Set pixel values
-    for (int y = 0; y < outputImage.height(); y++)
+    for (size_t y = 0; y < outputImage.height(); y++)
     {
-      for (int x = 0; x < outputImage.width(); x++)
+      for (size_t x = 0; x < outputImage.width(); x++)
       {
         std::array<T, N> val = image.pixel(x,y);
 
@@ -167,5 +182,7 @@ public:
   }
 
 private:
-  ImageIO() = delete;
+  ImageIOQt() = delete;
 };
+
+#endif // SPATIUMLIB_IMAGEIOQT_H

@@ -15,7 +15,7 @@ ENABLE_TESTING()
 #if(TEST_IMAGING)
     find_package(Qt5Gui REQUIRED)
 
-    SET(test_files ImageIO_test.cpp Image_test.cpp GlobalThresholdFilter_test.cpp Graphics2D_test.cpp Graphics3D_test.cpp)
+    SET(test_files ImageIOQt_test.cpp Image_test.cpp GlobalThresholdFilter_test.cpp Graphics2D_test.cpp Graphics3D_test.cpp)
     FOREACH(test_file ${test_files})
         get_filename_component(test_name ${test_file} NAME_WE)
         add_executable(${test_name} ${test_file})
@@ -26,7 +26,7 @@ ENABLE_TESTING()
 
 # Other tests
 # file(GLOB test_files . "*.cpp")
-SET(test_files TestUtilities_test.cpp Matrix_test.cpp Vector3_test.cpp Matrix4x4_test.cpp Math_test.cpp Statistics_test.cpp Tree_test.cpp)
+SET(test_files TestUtilities_test.cpp Matrix_test.cpp Vector3_test.cpp Matrix4x4_test.cpp Math_test.cpp Statistics_test.cpp Tree_test.cpp ImageIO_test.cpp)
 
 FOREACH(test_file ${test_files})
     get_filename_component(test_name ${test_file} NAME_WE)

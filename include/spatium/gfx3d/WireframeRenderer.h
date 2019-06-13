@@ -89,7 +89,7 @@ public:
     // Iterate objects in scene
     for (auto renderObject : scene.renderObjects())
     {
-      // Cast to mesh
+      // For now only support meshes
       std::shared_ptr<Mesh> mesh = std::dynamic_pointer_cast<Mesh>(renderObject);
       if (mesh)
       {
@@ -125,11 +125,12 @@ public:
 
           // TODO: clipping of lines. Infinit loop in drawLine() otherwise!!
 
-          std::array<unsigned char, 3> col = mesh->color();
           gfx2d::Drawing::drawLine<unsigned char, 3>(image, {x1, y1}, {x2, y2}, mesh->color());
         }
       }
     }
+
+    return true;
   }
 
 private:

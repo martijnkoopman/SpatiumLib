@@ -1,6 +1,6 @@
 #include <QtTest>
 #include "TestUtilities.h"
-#include "ImageIO.h"
+#include "ImageIOQt.h"
 
 #include <spatium/Image.h>
 #include <spatium/gfx3d/Scene.h>
@@ -88,6 +88,9 @@ void Graphics3D_test::test_lookAt()
 
   // Make camera look 'east'.
   camera.lookAt({0, 0, 0}, {1, 0, 0}, {0, 0, 1});
+  auto r = camera.transform().right();
+  auto u = camera.transform().up();
+  auto b = camera.transform().back();
   QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().right(), geom3d::Vector3(0,-1,0)));
   QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().up(), geom3d::Vector3(0,0,1)));
   QVERIFY(TestUtilities::fuzzyCompareMatrix(camera.transform().back(), geom3d::Vector3(-1,0,0)));
@@ -171,21 +174,21 @@ void Graphics3D_test::test_wireframeRendering()
   auto cube = std::make_shared<gfx3d::Mesh>(gfx3d::Mesh::cube(2));
   scene.addRenderObject(cube);
 
-  // X axis
+  // X axis (red)
   std::vector<geom3d::Point3> vertices = { {0, 0, 0}, {1, 0, 0} };
   std::vector<std::array<int, 2>> edges = { {0, 1} };
   auto xAxis = std::make_shared<gfx3d::Mesh>(vertices, edges);
   xAxis->setColor({255, 0, 0});
   scene.addRenderObject(xAxis);
 
-  // Y axis
+  // Y axis (green)
   vertices = { {0, 0, 0}, {0, 1, 0} };
   edges = { {0, 1} };
   auto yAxis = std::make_shared<gfx3d::Mesh>(vertices, edges);
   yAxis->setColor({0, 255, 0});
   scene.addRenderObject(yAxis);
 
-  // Y axis
+  // Z axis (blue)
   vertices = { {0, 0, 0}, {0, 0, 1} };
   edges = { {0, 1} };
   auto zAxis = std::make_shared<gfx3d::Mesh>(vertices, edges);
@@ -204,8 +207,7 @@ void Graphics3D_test::test_wireframeRendering()
   renderer.render(scene, image);
 
   // Write image to output
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/render_cube.png", image));
-
+  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/render_cube.png", image));
 }
 
 QTEST_APPLESS_MAIN(Graphics3D_test)

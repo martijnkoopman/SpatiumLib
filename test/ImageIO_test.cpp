@@ -1,7 +1,10 @@
 #include <QtTest>
-#include "ImageIO.h"
 
 #include <spatium/Image.h>
+#include <spatium/ImageIO.h>
+#include <spatium/gfx2d/Drawing.h>
+
+using namespace spatium;
 
 class ImageIO_test : public QObject
 {
@@ -13,22 +16,19 @@ public:
 
 private slots:
 
-  // Constructors
-  void test_readGrayscaleToGrayscale();
-  void test_readGrayscaleToRgb();
-  void test_readGrayscaleToRgba();
+  // Functions
 
-  void test_readRgbToGrayscale();
-  void test_readRgbToRgb();
-  void test_readRgbToRgba();
+  // Write to PNM (PBM, PGM, PPM)
+  void test_writeBinaryToPbm();
+  void test_writeGrayscaleToPgm();
+  void test_writeRgbToPpm();
 
-  void test_readRgbaToGrayscale();
-  void test_readRgbaToRgb();
-  void test_readRgbaToRgba();
-
-//  void test_writeGrayscale();
-//  void test_writeRgb();
-//  void test_writeRgba();
+  // Write to PAM
+  void test_writeBinaryToPam();
+  void test_writeGrayscaleToPam();
+  void test_writeGrayscaleAlphaToPam();
+  void test_writeRgbToPam();
+  void test_writeRgbaToPam();
 
 private:
 };
@@ -43,142 +43,66 @@ ImageIO_test::~ImageIO_test()
 
 }
 
+// Write functions to PNM (PBM, PGM, PMM)
+
+void ImageIO_test::test_writeBinaryToPbm()
+{
+  // TODO
+}
+
+void ImageIO_test::test_writeGrayscaleToPgm()
+{
+  Image<unsigned char, 1> image8(20, 15);
+  gfx2d::Drawing::drawCircle(image8, {10,8}, 5, {128});
+  QVERIFY(ImageIO::writeGrayscaleImageAsPgm(image8, "grayscale8bit.pgm"));
+
+  Image<unsigned short, 1> image16(20, 15);
+  gfx2d::Drawing::drawCircle(image16, {10,8}, 5, {32768});
+  QVERIFY(ImageIO::writeGrayscaleImageAsPgm(image16, "grayscale16bit.pgm"));
+}
+
+void ImageIO_test::test_writeRgbToPpm()
+{
+  Image<unsigned char, 3> imageRgb(20, 15);
+  gfx2d::Drawing::drawCircle(imageRgb, {10,8}, 5, {255, 128, 0});
+  QVERIFY(ImageIO::writeRgbImageAsPpm(imageRgb, "rgb24bit.pgm"));
+}
+
+// Write functions to PAM
+
+void ImageIO_test::test_writeBinaryToPam()
+{
+  // TODO
+}
+
+void ImageIO_test::test_writeGrayscaleToPam()
+{
+  // TODO
+}
+
+void ImageIO_test::test_writeGrayscaleAlphaToPam()
+{
+  // TODO
+}
+
+void ImageIO_test::test_writeRgbToPam()
+{
+  Image<unsigned char, 3> imageRgb(20, 15);
+  gfx2d::Drawing::drawCircle(imageRgb, {10,8}, 5, {255, 128, 0});
+  QVERIFY(ImageIO::writeRgbImageAsPam(imageRgb, "rgb24bit.pam"));
+}
+
+void ImageIO_test::test_writeRgbaToPam()
+{
+  Image<unsigned char, 4> imageRgba(20, 15);
+  gfx2d::Drawing::drawCircle(imageRgba, {10,8}, 5, {255, 128, 0, 128});
+  QVERIFY(ImageIO::writeRgbaImageAsPam(imageRgba, "rgba32bit.pam"));
+}
+
 // Read functions
 
-void ImageIO_test::test_readGrayscaleToGrayscale()
-{
-  // Read grayscale image
-  Image<unsigned char, 1> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_gray.png", input));
+// ...
 
-  // Write as grayscale
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2gray.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 1> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2gray.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readGrayscaleToRgb()
-{
-  // Read grayscale image
-  Image<unsigned char, 3> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_gray.png", input));
-
-  // Write as RGB
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgb.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 3> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgb.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readGrayscaleToRgba()
-{
-  // Read grayscale image
-  Image<unsigned char, 4> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_gray.png", input));
-
-  // Write as RGBA
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgba.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 4> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray2rgba.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readRgbToGrayscale()
-{
-  // Read RGB image as grayscale image
-  Image<unsigned char, 1> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input));
-
-  // Write as grayscale
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2gray.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 1> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2gray.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readRgbToRgb()
-{
-  // Read RGB image
-  Image<unsigned char, 3> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input));
-
-  // Write as RGB
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgb.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 3> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgb.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readRgbToRgba()
-{
-  // Read RGB image
-  Image<unsigned char, 4> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input));
-
-  // Write as RGBA
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgba.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 4> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgba.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readRgbaToGrayscale()
-{
-  // Read RGBA image
-  Image<unsigned char, 1> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgba.png", input));
-
-  // Write as grayscale
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2gray.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 1> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2gray.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readRgbaToRgb()
-{
-  // Read RGBA image
-  Image<unsigned char, 3> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgba.png", input));
-
-  // Write as RGB
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgb.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 3> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgb.png", output));
-  QVERIFY(input == output);
-}
-
-void ImageIO_test::test_readRgbaToRgba()
-{
-  // Read RGBA image
-  Image<unsigned char, 4> input;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgba.png", input));
-
-  // Write as RGBA
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgba.png", input));
-
-  // Compare output with input
-  Image<unsigned char, 4> output;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgba2rgba.png", output));
-  QVERIFY(input == output);
-}
 
 QTEST_APPLESS_MAIN(ImageIO_test)
 

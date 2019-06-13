@@ -62,9 +62,9 @@ public:
   {
     T newValue = std::numeric_limits<T>::max();
 
-    for (int y = 0; y < input.height(); y++)
+    for (size_t y = 0; y < input.height(); y++)
     {
-      for (int x = 0; x < input.width(); x++)
+      for (size_t x = 0; x < input.width(); x++)
       {
         std::array<T, N> pixel = input.pixel(x, y);
         T value = PixelValue<T, 1>::value(pixel)[0];

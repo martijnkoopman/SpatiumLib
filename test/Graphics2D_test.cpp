@@ -1,5 +1,5 @@
 #include <QtTest>
-#include "ImageIO.h"
+#include "ImageIOQt.h"
 
 #include <spatium/Image.h>
 #include <spatium/gfx2d/Drawing.h>
@@ -49,11 +49,11 @@ void Graphics2D_test::test_drawLine()
   gfx2d::Drawing::drawLine(image, {5, 25}, {25, 5}, {0, 0, 255}); // diagonal blue line
 
   // Write as RGBA
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lines.png", image));
+  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lines.png", image));
 
   // Compare output with input
   Image<unsigned char, 3> groundtruth;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lines.png", groundtruth));
+  QVERIFY(ImageIOQt::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lines.png", groundtruth));
   QVERIFY(image == groundtruth);
 }
 
@@ -64,11 +64,11 @@ void Graphics2D_test::test_drawCircle()
   gfx2d::Drawing::drawCircle(image, {15, 15}, 10, {255, 0, 0});
 
   // Write as RGBA
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/circle.png", image));
+  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/circle.png", image));
 
   // Compare output with input
   Image<unsigned char, 3> groundtruth;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/circle.png", groundtruth));
+  QVERIFY(ImageIOQt::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/circle.png", groundtruth));
   QVERIFY(image == groundtruth);
 }
 
@@ -80,11 +80,11 @@ void Graphics2D_test::test_drawRectangle()
   gfx2d::Drawing::drawRectangle(image, {5, 5}, {25, 15}, {255, 0, 0});
 
   // Write to file
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/rectangle.png", image));
+  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/rectangle.png", image));
 
   // Compare output with input
   Image<unsigned char, 3> groundtruth;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/rectangle.png", groundtruth));
+  QVERIFY(ImageIOQt::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/rectangle.png", groundtruth));
   QVERIFY(image == groundtruth);
 
   // Draw rectangle WITH fill
@@ -92,10 +92,10 @@ void Graphics2D_test::test_drawRectangle()
   gfx2d::Drawing::drawRectangle(image, {5, 5}, {25, 15}, {255, 0, 0}, true);
 
   // Write to file
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/rectangle_fill.png", image));
+  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/rectangle_fill.png", image));
 
   // Compare output with input
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/rectangle_fill.png", groundtruth));
+  QVERIFY(ImageIOQt::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/rectangle_fill.png", groundtruth));
   QVERIFY(image == groundtruth);
 }
 
@@ -120,7 +120,7 @@ void Graphics2D_test::test_drawQuadraticCurve()
   image.pixel(points[2][0], points[2][1]) = {255,255,255};
 
   // Write to file
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/bezier_quadratic.png", image));
+  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/bezier_quadratic.png", image));
 
 }
 
@@ -155,7 +155,7 @@ void Graphics2D_test::test_drawCubicCurve()
   /// \TODO Finish bezier curve drawing
 
   // Write to file
-  QVERIFY(ImageIO::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/bezier_cubic.png", image));
+  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/bezier_cubic.png", image));
 }
 
 QTEST_APPLESS_MAIN(Graphics2D_test)

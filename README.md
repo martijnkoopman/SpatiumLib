@@ -16,7 +16,7 @@ SpatiumLib has the following key points:
 
 * Code readability more important than optimizations.
 * Documentation through comments in code.
-* Doxygen documentation ([read the docs](https://martijnkoopman.github.io/SpatiumLib/html/inherits.html)).
+* Doxygen documentation ([read the docs](https://martijnkoopman.github.io/SpatiumLib/html/annotated.html)).
 * Examples on the Wiki ([read the wiki](https://github.com/martijnkoopman/SpatiumLib/wiki)).
 
 Performance is not a key point of SpatiumLib. There is no GPU acceleration or multithreading. This may be quite important, especially for 3D graphics.

@@ -116,7 +116,7 @@ struct PixelValue<T, 4>
 /// \class Image
 /// \brief Templated image container
 ///
-/// An image has no knowledge about color.
+/// An image has no knowledge about color. The minimum image size is 1x1 pixel.
 template<typename T=unsigned char, int N=3>
 class Image
 {
@@ -140,7 +140,7 @@ public:
   /// \param[in] width Image width in pixels
   /// \param[in] height Image height in pixels
   /// \throw std::bad_alloc on bad allocation
-  Image(int width, int height)
+  Image(size_t width, size_t height)
     : m_width(width)
     , m_height(height)
     , m_imageData(new std::array<T, N>[height * width])
@@ -288,19 +288,19 @@ public:
   }
 
   /// Image width in pixels.
-  int width() const
+  size_t width() const
   {
     return m_width;
   }
 
   /// Image height in pixels.
-  int height() const
+  size_t height() const
   {
     return m_height;
   }
 
   /// Channel count of pixel values.
-  int channelCount() const
+  size_t channelCount() const
   {
     return N;
   }
@@ -317,7 +317,7 @@ public:
   /// \param[in] width Image width in pixels
   /// \param[in] height Image height in pixels
   /// \throw std::bad_alloc on bad allocation
-  void resize(int newWidth, int newHeight)
+  void resize(size_t newWidth, size_t newHeight)
   {
     m_width = newWidth;
     m_height = newHeight;
@@ -345,17 +345,19 @@ public:
   }
 
   /// Access pixel by value.
-  /// The X and Y coordinate are clamped if they are out of bounds of the
-  /// image resolution. Beware: this alters the X and Y coordinates.
   ///
-  /// \param[in,out] x X coordinate
-  /// \param[in,out] y Y coordinate
+  /// \param[in] x X coordinate
+  /// \param[in] y Y coordinate
+  /// \param[in] checkBounds Check bounds (default = true). If the coordinates
   /// \return Pixel value
-  std::array<T, N> pixel(int &x, int &y) const
+  std::array<T, N> pixel(size_t x, size_t y, bool checkBounds = true) const
   {
-    // Clamp coordinates
-    x = (x < 0 ? 0 : (x >= m_width ? m_width-1 : x));
-    y = (y < 0 ? 0 : (y >= m_height ? m_height-1 : y));
+    if (checkBounds)
+    {
+      // Clamp coordinates
+      x = (x >= m_width ? m_width-1 : x);
+      y = (y >= m_height ? m_height-1 : y);
+    }
 
     // Return value
     return m_imageData[y * m_width + x];
@@ -363,43 +365,28 @@ public:
 
   /// Access pixel by reference.
   ///
-  /// The X and Y coordinate are clamped if they are out of bounds of the
-  /// image resolution. Beware: this alters the X and Y coordinates.
-  ///
-  /// \param[in,out] x X coordinate
-  /// \param[in,out] y Y coordinate
+  /// \param[in] x X coordinate
+  /// \param[in] y Y coordinate
   /// \return Pixel reference
-  std::array<T, N>& pixel(int &x, int &y)
+  std::array<T, N>& pixel(size_t x, size_t y, bool checkBounds = true)
   {
-    // Clamp coordinates
-    x = (x < 0 ? 0 : (x >= m_width ? m_width-1 : x));
-    y = (y < 0 ? 0 : (y >= m_height ? m_height-1 : y));
+    if (checkBounds)
+    {
+      // Clamp coordinates
+      x = (x >= m_width ? m_width-1 : x);
+      y = (y >= m_height ? m_height-1 : y);
+    }
 
     // Return reference
     return m_imageData[y * m_width + x];
   }
 
-  /// Access pixel by reference.
-  ///
-  /// \param[in,out] x X coordinate
-  /// \param[in,out] y Y coordinate
-  /// \return Pixel reference
-  std::array<T, N>& pixel(const int &x, const int &y)
-  {
-    // Clamp coordinates
-    int xClamp = (x < 0 ? 0 : (x >= m_width ? m_width-1 : x));
-    int yClamp = (y < 0 ? 0 : (y >= m_height ? m_height-1 : y));
-
-    // Return reference
-    return m_imageData[yClamp * m_width + xClamp];
-  }
-
 protected:
   /// Image width in pixels.
-  int m_width;
+  size_t m_width;
 
   /// Image height in pixels.
-  int m_height;
+  size_t m_height;
 
   /// Pointer to image data.
   std::unique_ptr<std::array<T, N>[]> m_imageData;

@@ -1,7 +1,10 @@
 #include <QtTest>
-#include "ImageIO.h"
+#include "ImageIOQt.h"
 
+#include <spatium/Image.h>
 #include <spatium/imgproc/GlobalThresholdFilter.h>
+
+using namespace spatium;
 
 class GlobalThresholdFilter_test : public QObject
 {
@@ -35,11 +38,11 @@ void GlobalThresholdFilter_test::test_apply()
 {
   // Read ground truth image for verification
   Image<unsigned char, 1> groundtruth;
-  QVERIFY(ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/threshold.png", groundtruth));
+  QVERIFY(ImageIOQt::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/threshold.png", groundtruth));
 
   // Read input image from file
   Image<unsigned char, 1> input;
-  ImageIO::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input);
+  ImageIOQt::ReadImageFromFile(QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.png", input);
 
   imgproc::GlobalThresholdFilter<unsigned char> filter(127);
 

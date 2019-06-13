@@ -81,19 +81,19 @@ public:
     // up vector.
     geom3d::Matrix4x4 M = m_transform.matrix();
 
-    // First ROW is right vector
-    M(0,0) = right(0);
-    M(0,1) = right(1);
-    M(0,2) = right(2);
+    // First COLUMN is right vector // First ROW is right vector
+    M(0,0) = right(0); // M(0,0) = right(0);
+    M(1,0) = right(1);
+    M(2,0) = right(2);
 
-    // Second ROW is up vector
-    M(1,0) = upOrtho(0);
+    // Second COLUMN is up vector // Second ROW is up vector
+    M(0,1) = upOrtho(0);
     M(1,1) = upOrtho(1);
-    M(1,2) = upOrtho(2);
+    M(2,1) = upOrtho(2);
 
-    // Third ROW is back vector
-    M(2,0) = back(0);
-    M(2,1) = back(1);
+    // Third COLUMN is back vector
+    M(0,2) = back(0);
+    M(1,2) = back(1);
     M(2,2) = back(2);
 
     m_transform.setMatrix(M);

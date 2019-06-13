@@ -6,9 +6,6 @@
 #include <spatium/idx/Quadtree.h>
 
 #include <stack> // std::stack
-#include <tuple>
-
-#include <iostream>
 
 using namespace spatium;
 

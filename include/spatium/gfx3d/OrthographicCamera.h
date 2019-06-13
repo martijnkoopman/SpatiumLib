@@ -70,7 +70,7 @@ public:
   /// Output to ostream
   friend std::ostream &operator<<(std::ostream &os, const OrthographicCamera &camera)
   {
-    os << "Orthographic camera";
+    os << "Orthographic camera (size=" << camera.size() << ")";
     return os;
   }
 

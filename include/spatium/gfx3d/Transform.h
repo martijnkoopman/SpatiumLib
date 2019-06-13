@@ -24,7 +24,19 @@ namespace spatium {
 namespace gfx3d {
 
 /// \class Transform
-/// \brief Tranformation in 3D space
+/// \brief Tranformation in 3D space.
+///
+/// Default transformation (identity).
+///
+/// 1 0 0 x
+/// 0 1 0 y
+/// 0 0 1 z
+/// 0 0 0 1
+///
+/// 1st column = right vector
+/// 2nd column = up vector
+/// 3rd column = back vector
+/// 4rd column = translation (position)
 class Transform
 {
 public:

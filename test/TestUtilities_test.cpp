@@ -1,7 +1,6 @@
 #include <QtTest>
 #include "TestUtilities.h"
 
-
 class TestUtilities_test : public QObject
 {
   Q_OBJECT

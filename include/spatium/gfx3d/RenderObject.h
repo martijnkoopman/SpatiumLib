@@ -65,7 +65,7 @@ public:
 protected:
   virtual void updateBounds() = 0;
 
-  std::array<double, 6> m_bounds;
+  std::array<double, 6> m_bounds; ///\TODO: use BoundingBox<double, 3> from namespace idx
   std::array<unsigned char, 3> m_color;
 };
 
