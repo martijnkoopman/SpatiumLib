@@ -24,12 +24,15 @@ Performance is not a key point of SpatiumLib. There is no GPU acceleration or mu
 ## Content
 **Looking for class references? Go directly to the [Class References page](https://martijnkoopman.github.io/SpatiumLib/html/inherits.html).**
 
-SpatiumLib is a collection of header files (*.h) distributed over several directories. Each of these directories represents a namespace with identical name. These namespaces and their dependencies are shown in the dependency graph.
-
-TODO: Insert namespace dependency graph 
+SpatiumLib is a collection of header files (*.h) distributed over several directories. Each of these directories represents a namespace with identical name.
 
 ### Namespace: spatium
 Global namespace including base [Matrix](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1_matrix.html), [Vector](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1_vector.html) and [Image](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1_image.html). Also contains mathematical functions.
+
+### Namespace: geom2d
+`#include <spatium/geom2d.h>`
+
+2D geometry namespace including class [Vector2](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1geom2d_1_1_vector2.html)
 
 ### Namespace: geom3d
 `#include <spatium/geom3d.h>`
@@ -51,6 +54,17 @@ Global namespace including base [Matrix](https://martijnkoopman.github.io/Spatiu
 
 Image processing namespace including classes and functions for image convolution (thresholding, blurring, etc.) and feature extraction (corners, edges). 
 
+### Namespace: idx
+`#include <spatium/idx.h>`
+
+Spatial indexing namespace including class [Tree](https://martijnkoopman.github.io/SpatiumLib/html/classspatium_1_1idx_1_1_tree.html)
+
+### Namespace: stats
+`#include <spatium/stats.h>`
+
+Statistics namespace with convenience function for computing mean, standard deviation, variance, covariance, etc.
+
+
 ## Usage
 1. Clone or download this repository.
 ```
@@ -61,22 +75,20 @@ git clone https://github.com/martijnkoopman/SpatiumLib.git
 
 This directory has the following subdirectories, each being a namespace:
 
+* `geom2d`
 * `geom3d`
 * `gfx2d`
 * `gfx3d`
 * `imgproc`
+* `idx`
+* `stats`
+
 
 3. Include the required files.
 
 For example: `#include <spatium/Matrix.h>`
 
-You can include individual files (classes) or whole namespaces. You can also delete namespaces (directories) that you don't need as long as it isn't a dependecny for other namespaces you're using. See the dependency graph.
-
-### Unit testing...
-TODO
-
-## Background
-TODO
+You can include individual files (classes) or whole namespaces. You can also delete namespaces (directories) that you don't need as long as it isn't a dependecny for other namespaces you're using. 
 
 ## License
 This library is licensed under the GNU General Public License 3.0 - see the [LICENSE.md](LICENSE.md) file for details.
