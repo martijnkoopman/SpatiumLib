@@ -15,7 +15,7 @@ var searchData=
   ['m_5fellipsoidaltransformationinverse',['m_ellipsoidalTransformationInverse',['../classspatium_1_1geom3d_1_1_ellipsoid.html#a1cd8013e95fb08f1bd0ba92c65d248d1',1,'spatium::geom3d::Ellipsoid']]],
   ['m_5fend',['m_end',['../classspatium_1_1idx_1_1_tree_iterator.html#a9c34ce1d0d94ff9d5f13c8bac36faee1',1,'spatium::idx::TreeIterator']]],
   ['m_5ffar',['m_far',['../classspatium_1_1gfx3d_1_1_camera.html#a2cc66b65368ee29765d1da7e539bd092',1,'spatium::gfx3d::Camera']]],
-  ['m_5fheight',['m_height',['../classspatium_1_1_image.html#a727b852d75d1ed6bdf5ba56191c878ca',1,'spatium::Image']]],
+  ['m_5fheight',['m_height',['../classspatium_1_1_image.html#a28c1c1fbee3d6715b02b5bc651d8a5b5',1,'spatium::Image']]],
   ['m_5fimagedata',['m_imageData',['../classspatium_1_1_image.html#aa47c83352bb37f64afb2c7fb60283033',1,'spatium::Image']]],
   ['m_5fmatrix',['m_matrix',['../classspatium_1_1gfx3d_1_1_transform.html#a9dce26f2e56229d1bb73276fb5a7989f',1,'spatium::gfx3d::Transform']]],
   ['m_5fmaxpointcountleaf',['m_maxPointCountLeaf',['../classspatium_1_1idx_1_1_point_quadtree.html#a999415e8123ea0d89ecce98a6877ddbc',1,'spatium::idx::PointQuadtree']]],
@@ -36,5 +36,5 @@ var searchData=
   ['m_5fstrength',['m_strength',['../classspatium_1_1gfx3d_1_1_light.html#a2af7d7e66564e69741335cbd4325b2b8',1,'spatium::gfx3d::Light']]],
   ['m_5ftransform',['m_transform',['../classspatium_1_1gfx3d_1_1_scene_object.html#a2b9316af66a941c2629628408687628d',1,'spatium::gfx3d::SceneObject']]],
   ['m_5ftree',['m_tree',['../classspatium_1_1idx_1_1_tree_iterator.html#a96577ab7e3202c921cd8923d6706e38a',1,'spatium::idx::TreeIterator']]],
-  ['m_5fwidth',['m_width',['../classspatium_1_1_image.html#af9129e388f5ba1447de9d5241ea7a5df',1,'spatium::Image']]]
+  ['m_5fwidth',['m_width',['../classspatium_1_1_image.html#a3bedf5caca34d1e26af6507154978988',1,'spatium::Image']]]
 ];

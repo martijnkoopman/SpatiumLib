@@ -8,7 +8,7 @@ var searchData=
   ['renderobject',['RenderObject',['../classspatium_1_1gfx3d_1_1_render_object.html',1,'spatium::gfx3d::RenderObject'],['../classspatium_1_1gfx3d_1_1_render_object.html#a21793ed5c7da821aa2feff6f3c76f0b7',1,'spatium::gfx3d::RenderObject::RenderObject()']]],
   ['renderobject_2eh',['RenderObject.h',['../_render_object_8h.html',1,'']]],
   ['renderobjects',['renderObjects',['../classspatium_1_1gfx3d_1_1_scene.html#a9afb4d0a388ffb67b595d76e31c73056',1,'spatium::gfx3d::Scene']]],
-  ['resize',['resize',['../classspatium_1_1_image.html#a4bacf93b533527a6034ff4b601b367b4',1,'spatium::Image::resize()'],['../classspatium_1_1_matrix.html#a12b3a79af1d2bd337c918b9be19e2809',1,'spatium::Matrix::resize()'],['../classspatium_1_1_vector.html#aa38b25b35b032e71847f31b3a5367ccc',1,'spatium::Vector::resize()']]],
+  ['resize',['resize',['../classspatium_1_1_image.html#a2f01f270b103665d30d8b3f26894b280',1,'spatium::Image::resize()'],['../classspatium_1_1_matrix.html#a12b3a79af1d2bd337c918b9be19e2809',1,'spatium::Matrix::resize()'],['../classspatium_1_1_vector.html#aa38b25b35b032e71847f31b3a5367ccc',1,'spatium::Vector::resize()']]],
   ['right',['right',['../classspatium_1_1gfx3d_1_1_transform.html#ac444e1cb77bf8dc0e0f7c8a00c133bc5',1,'spatium::gfx3d::Transform']]],
   ['root',['root',['../classspatium_1_1idx_1_1_tree.html#acfa96ccd0b42153e6aa5276f43cd6a92',1,'spatium::idx::Tree']]],
   ['rotate',['rotate',['../classspatium_1_1gfx3d_1_1_transform.html#a00d7790bd09afc443004cde17fa7472f',1,'spatium::gfx3d::Transform']]],
