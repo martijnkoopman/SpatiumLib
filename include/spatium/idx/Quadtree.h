@@ -132,6 +132,8 @@ public:
       return false;
     }
 
+    //std::shared_ptr<TreeNode<std::vector<std::array<double,2>>>> n = this->m_root;
+
     std::shared_ptr<PointQuadtreeNode> node = std::static_pointer_cast<PointQuadtreeNode>(this->m_root);
     BoundingBox<double,2> bounds = m_boundingBox;
     while(node != nullptr)

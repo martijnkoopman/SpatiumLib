@@ -30,6 +30,11 @@ private slots:
   void test_writeRgbToPam();
   void test_writeRgbaToPam();
 
+  // Portable aNy Map (PNM) formats
+  void test_readWriteBinaryImageAsPbm();
+  void test_readWriteGrayscaleImageAsPgm();
+  void test_readWriteRgbImagePpm();
+
 private:
 };
 
@@ -97,6 +102,51 @@ void ImageIO_test::test_writeRgbaToPam()
   Image<unsigned char, 4> imageRgba(20, 15);
   gfx2d::Drawing::drawCircle(imageRgba, {10,8}, 5, {255, 128, 0, 128});
   QVERIFY(ImageIO::writeRgbaImageAsPam(imageRgba, "rgba32bit.pam"));
+}
+
+void ImageIO_test::test_readWriteBinaryImageAsPbm()
+{
+  // Read binary image
+  Image<unsigned char, 1> input;
+  QVERIFY(ImageIO::readBinaryImageFromPbm((QFileInfo(__FILE__).absolutePath() + "/resources/lenna_binary.pbm").toStdString(), input));
+
+  // Write binary image
+  QVERIFY(ImageIO::writeBinaryImageAsPbm(input, (QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_binary.pbm").toStdString()));
+
+  // Compare output with input
+  Image<unsigned char, 1> output;
+  QVERIFY(ImageIO::readBinaryImageFromPbm((QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_binary.pbm").toStdString(), output));
+  QVERIFY(input == output);
+}
+
+void ImageIO_test::test_readWriteGrayscaleImageAsPgm()
+{
+  // Read grayscale image
+  Image<unsigned char, 1> input;
+  QVERIFY(ImageIO::readGrayscaleImageFromPgm((QFileInfo(__FILE__).absolutePath() + "/resources/lenna_gray.pgm").toStdString(), input));
+
+  // Write grayscale image
+  QVERIFY(ImageIO::writeGrayscaleImageAsPgm(input, (QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray.pgm").toStdString()));
+
+  // Compare output with input
+  Image<unsigned char, 1> output;
+  QVERIFY(ImageIO::readGrayscaleImageFromPgm((QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_gray.pgm").toStdString(), output));
+  QVERIFY(input == output);
+}
+
+void ImageIO_test::test_readWriteRgbImagePpm()
+{
+  // Read RGB image
+  Image<unsigned char, 3> input;
+  QVERIFY(ImageIO::readRgbImageFromPpm((QFileInfo(__FILE__).absolutePath() + "/resources/lenna_rgb.ppm").toStdString(), input));
+
+  // Write RGB image
+  QVERIFY(ImageIO::writeRgbImageAsPpm(input, (QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgb.ppm").toStdString()));
+
+  // Compare output with input
+  Image<unsigned char, 3> output;
+  QVERIFY(ImageIO::readRgbImageFromPpm((QFileInfo(__FILE__).absolutePath() + "/resources/tmp/lenna_rgb2rgb.ppm").toStdString(), output));
+  QVERIFY(input == output);
 }
 
 // Read functions

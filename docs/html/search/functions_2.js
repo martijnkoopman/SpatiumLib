@@ -8,6 +8,7 @@ var searchData=
   ['child',['child',['../classspatium_1_1idx_1_1_tree_node.html#aaafd393b813b71ce236ac98c8f9d5d8b',1,'spatium::idx::TreeNode']]],
   ['childcount',['childCount',['../classspatium_1_1idx_1_1_tree_node.html#a22d22dd092ea040aaaaee55767b9cec8',1,'spatium::idx::TreeNode']]],
   ['clear',['clear',['../classspatium_1_1_image.html#a15f1acf0427233786b4de00788d26f37',1,'spatium::Image::clear()'],['../classspatium_1_1_matrix.html#a058509bb7c8f5f993589624b725c8f8d',1,'spatium::Matrix::clear()']]],
+  ['coefficients',['coefficients',['../classspatium_1_1imgproc_1_1_grayscale.html#aaf759365fb0e8186943c2ee6147fb4e1',1,'spatium::imgproc::Grayscale']]],
   ['color',['color',['../classspatium_1_1gfx3d_1_1_render_object.html#ab68623b31e20439a21b7cc34ca18680f',1,'spatium::gfx3d::RenderObject']]],
   ['cols',['cols',['../classspatium_1_1_matrix.html#adfaab6795e946fe2c3165ead69214c65',1,'spatium::Matrix']]],
   ['covariance',['covariance',['../namespacespatium_1_1stats.html#ac4eb1468a0334e3114c93581ecb07f18',1,'spatium::stats::covariance(const std::vector&lt; double &gt; &amp;values1, const std::vector&lt; double &gt; &amp;values2, bool sample=false)'],['../namespacespatium_1_1stats.html#a3b781f87b078fa1aae85e6341e9f5da7',1,'spatium::stats::covariance(const Matrix &amp;values)']]],

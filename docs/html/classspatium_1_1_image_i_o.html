@@ -67,19 +67,23 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classspatium_1_1_image_i_o-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">spatium::ImageIO Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Read and write images as PNM files (Portable Any Map).  
+<p>Read and write images.  
  <a href="classspatium_1_1_image_i_o.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_image_i_o_8h_source.html">ImageIO.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a01eea48587b533c7d09b160721fff294"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1_image_i_o.html#a01eea48587b533c7d09b160721fff294">writeBinaryImageAsPbm</a> (const <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 1 &gt; &amp;image, const std::string &amp;pbmPath)</td></tr>
+<tr class="memdesc:a01eea48587b533c7d09b160721fff294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write binary image to file as PBM (Portable Bit Map).  <a href="#a01eea48587b533c7d09b160721fff294">More...</a><br /></td></tr>
+<tr class="separator:a01eea48587b533c7d09b160721fff294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b6968d84844544c4795fdced4c777f0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1_image_i_o.html#a4b6968d84844544c4795fdced4c777f0">writeGrayscaleImageAsPgm</a> (const <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 1 &gt; &amp;image, const std::string &amp;pgmPath)</td></tr>
 <tr class="memdesc:a4b6968d84844544c4795fdced4c777f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write 8-bit grayscale image to file as PGM (Portable Gray Map)  <a href="#a4b6968d84844544c4795fdced4c777f0">More...</a><br /></td></tr>
 <tr class="separator:a4b6968d84844544c4795fdced4c777f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,14 +102,300 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae75d74ba2f4b93430e4caae1f863651e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1_image_i_o.html#ae75d74ba2f4b93430e4caae1f863651e">writeRgbaImageAsPam</a> (const <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 4 &gt; &amp;image, const std::string &amp;pamPath)</td></tr>
 <tr class="memdesc:ae75d74ba2f4b93430e4caae1f863651e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write 32-bit RGBA image to file as PAM (Portable Arbitrary Map)  <a href="#ae75d74ba2f4b93430e4caae1f863651e">More...</a><br /></td></tr>
 <tr class="separator:ae75d74ba2f4b93430e4caae1f863651e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a71f2fd3647821b55ffe061fc3eeb50"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1_image_i_o.html#a1a71f2fd3647821b55ffe061fc3eeb50">readBinaryImageFromPbm</a> (const std::string &amp;pbmPath, <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 1 &gt; &amp;image)</td></tr>
+<tr class="memdesc:a1a71f2fd3647821b55ffe061fc3eeb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read 1-bit binary image from PBM file (Portable Bit Map).  <a href="#a1a71f2fd3647821b55ffe061fc3eeb50">More...</a><br /></td></tr>
+<tr class="separator:a1a71f2fd3647821b55ffe061fc3eeb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7142af12d16ee21fcf4ff1663c9a34"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1_image_i_o.html#aef7142af12d16ee21fcf4ff1663c9a34">readGrayscaleImageFromPgm</a> (const std::string &amp;pgmPath, <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 1 &gt; &amp;image)</td></tr>
+<tr class="memdesc:aef7142af12d16ee21fcf4ff1663c9a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read 8-bit grayscale image from PGM file (Portable Gray Map)  <a href="#aef7142af12d16ee21fcf4ff1663c9a34">More...</a><br /></td></tr>
+<tr class="separator:aef7142af12d16ee21fcf4ff1663c9a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da0ad6297d5aab8a9cbe9efe9156438"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1_image_i_o.html#a1da0ad6297d5aab8a9cbe9efe9156438">readRgbImageFromPpm</a> (const std::string &amp;ppmPath, <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 3 &gt; &amp;image)</td></tr>
+<tr class="memdesc:a1da0ad6297d5aab8a9cbe9efe9156438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read 24-bit RGB image from PPM file (Portable Pixel Map)  <a href="#a1da0ad6297d5aab8a9cbe9efe9156438">More...</a><br /></td></tr>
+<tr class="separator:a1da0ad6297d5aab8a9cbe9efe9156438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a04ffa4b5297e2f89256337f55fd37ba6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatium_1_1_image_i_o.html#a04ffa4b5297e2f89256337f55fd37ba6">readPnmFileHeader</a> (std::ifstream &amp;ifile, std::string magicNumber, size_t &amp;width, size_t &amp;height, unsigned long &amp;maxVal)</td></tr>
+<tr class="memdesc:a04ffa4b5297e2f89256337f55fd37ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read header of a PNM file (PBM, PGM or PPM)  <a href="#a04ffa4b5297e2f89256337f55fd37ba6">More...</a><br /></td></tr>
+<tr class="separator:a04ffa4b5297e2f89256337f55fd37ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Read and write images as PNM files (Portable Any Map). </p>
-<p>This class supports 3 types:</p>
-<p>Portable Bit Map (PBM) <a href="http://netpbm.sourceforge.net/doc/pbm.html">http://netpbm.sourceforge.net/doc/pbm.html</a> This file format supports binary images (0 or 1 values).</p>
-<p>Portable Gray Map (PGM) <a href="http://netpbm.sourceforge.net/doc/ppm.html">http://netpbm.sourceforge.net/doc/ppm.html</a> This file format supports grayscale images. 8 and 16 bit.</p>
-<p>Portable Pixel Map (PPM) <a href="http://netpbm.sourceforge.net/doc/ppm.html">http://netpbm.sourceforge.net/doc/ppm.html</a> This file format supports RGB images. </p>
+<div class="textblock"><p>Read and write images. </p>
+<p>This class supports 4 file formats:</p>
+<ul>
+<li>Portable Bit Map (PBM) for binary images (values 0 and 1).<ul>
+<li><a href="http://netpbm.sourceforge.net/doc/pbm.html">http://netpbm.sourceforge.net/doc/pbm.html</a></li>
+</ul>
+</li>
+<li>Portable Gray Map (PGM) for 8-bit and 16-bit grayscale images.<ul>
+<li><a href="http://netpbm.sourceforge.net/doc/ppm.html">http://netpbm.sourceforge.net/doc/ppm.html</a></li>
+</ul>
+</li>
+<li>Portable Pixel Map (PPM) for 24-bit and 48-bit RGB images.<ul>
+<li><a href="http://netpbm.sourceforge.net/doc/ppm.html">http://netpbm.sourceforge.net/doc/ppm.html</a></li>
+</ul>
+</li>
+<li>Portable Arbitrary Map (PAM) for arbitrary images (binary, RGB, RGBA, etc).<ul>
+<li><a href="http://netpbm.sourceforge.net/doc/pam.html">http://netpbm.sourceforge.net/doc/pam.html</a></li>
+<li>Although this file format supports many pixel formats, it is not widely supported. Consider using the other 3 file formats when possisble. Only use this format if you require transparancy (alpha channel).</li>
+</ul>
+</li>
+</ul>
+<p>Beware! These functions have not been tested on endianness; big-endian vs little-endian. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1a71f2fd3647821b55ffe061fc3eeb50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a71f2fd3647821b55ffe061fc3eeb50">&#9670;&nbsp;</a></span>readBinaryImageFromPbm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool spatium::ImageIO::readBinaryImageFromPbm </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>pbmPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read 1-bit binary image from PBM file (Portable Bit Map). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pbmPath</td><td>Path to PBM file. Should have file extension *.pbm </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aef7142af12d16ee21fcf4ff1663c9a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7142af12d16ee21fcf4ff1663c9a34">&#9670;&nbsp;</a></span>readGrayscaleImageFromPgm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool spatium::ImageIO::readGrayscaleImageFromPgm </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>pgmPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read 8-bit grayscale image from PGM file (Portable Gray Map) </p>
+<p>Beware! This file format also supports 16-bit grayscale format (2 bytes per channel). This is not implemented and function will return false in that situation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pgmPath</td><td>Path to PGM file. Should have file extension *.pgm </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a04ffa4b5297e2f89256337f55fd37ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ffa4b5297e2f89256337f55fd37ba6">&#9670;&nbsp;</a></span>readPnmFileHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool spatium::ImageIO::readPnmFileHeader </td>
+          <td>(</td>
+          <td class="paramtype">std::ifstream &amp;&#160;</td>
+          <td class="paramname"><em>ifile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>magicNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long &amp;&#160;</td>
+          <td class="paramname"><em>maxVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read header of a PNM file (PBM, PGM or PPM) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ifile</td><td>Input file stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">magicNumber</td><td>Expected magic number </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">width</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> width </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">height</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> height </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">maxVal</td><td>Maximum pixel value (ignored for PBM images) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a1da0ad6297d5aab8a9cbe9efe9156438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da0ad6297d5aab8a9cbe9efe9156438">&#9670;&nbsp;</a></span>readRgbImageFromPpm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool spatium::ImageIO::readRgbImageFromPpm </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ppmPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read 24-bit RGB image from PPM file (Portable Pixel Map) </p>
+<p>Beware! This file format also supports 48-bit RGB format (2 bytes per channel). This is not implemented and function will return false in that situation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ppmPath</td><td>Path to PPM file. Should have file extension *.ppm </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a01eea48587b533c7d09b160721fff294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01eea48587b533c7d09b160721fff294">&#9670;&nbsp;</a></span>writeBinaryImageAsPbm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool spatium::ImageIO::writeBinaryImageAsPbm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classspatium_1_1_image.html">Image</a>&lt; unsigned char, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>pbmPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write binary image to file as PBM (Portable Bit Map). </p>
+<p>In this file each pixel is represented by 1 bit. In the <a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> object each pixel is represented by 1 byte.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pbmPath</td><td>Path to PBM file. Should have file extension *.pbm </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a4b6968d84844544c4795fdced4c777f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b6968d84844544c4795fdced4c777f0">&#9670;&nbsp;</a></span>writeGrayscaleImageAsPgm() <span class="overload">[1/2]</span></h2>
 
@@ -279,7 +569,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Write 32-bit RGBA image to file as PPM (Portable Pixel Map) </p>
-<p>This file format does not natively support transparancy. The alpha channel is mitted.</p>
+<p>This file format does not support transparancy. The alpha channel is omitted. Use PAM instead.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td><a class="el" href="classspatium_1_1_image.html" title="Templated image container.">Image</a> </td></tr>

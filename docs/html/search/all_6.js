@@ -8,6 +8,9 @@ var searchData=
   ['geopoint3_2eh',['GeoPoint3.h',['../_geo_point3_8h.html',1,'']]],
   ['gfx2d_2eh',['gfx2d.h',['../gfx2d_8h.html',1,'']]],
   ['gfx3d_2eh',['gfx3d.h',['../gfx3d_8h.html',1,'']]],
-  ['globalthresholdfilter',['GlobalThresholdFilter',['../classspatium_1_1imgproc_1_1_global_threshold_filter.html',1,'spatium::imgproc::GlobalThresholdFilter&lt; T &gt;'],['../classspatium_1_1imgproc_1_1_global_threshold_filter.html#a5641143e90a0376ae430a6c77fac725e',1,'spatium::imgproc::GlobalThresholdFilter::GlobalThresholdFilter(T thesholdValue=0)'],['../classspatium_1_1imgproc_1_1_global_threshold_filter.html#a66c7d7b73a0439c95ac1e2cea58f5cc2',1,'spatium::imgproc::GlobalThresholdFilter::GlobalThresholdFilter(const GlobalThresholdFilter &amp;rhs)=default']]],
-  ['globalthresholdfilter_2eh',['GlobalThresholdFilter.h',['../_global_threshold_filter_8h.html',1,'']]]
+  ['globalthreshold',['GlobalThreshold',['../classspatium_1_1imgproc_1_1_global_threshold.html',1,'spatium::imgproc::GlobalThreshold&lt; T &gt;'],['../classspatium_1_1imgproc_1_1_global_threshold.html#a69dfe0d8c1e436f415984374c2350a6c',1,'spatium::imgproc::GlobalThreshold::GlobalThreshold(T thesholdValue=0)'],['../classspatium_1_1imgproc_1_1_global_threshold.html#a4e2e8d94dbe7edab05fcea3373dbc7c9',1,'spatium::imgproc::GlobalThreshold::GlobalThreshold(const GlobalThreshold &amp;rhs)=default']]],
+  ['globalthreshold_2eh',['GlobalThreshold.h',['../_global_threshold_8h.html',1,'']]],
+  ['globalthresholdfilter',['GlobalThresholdFilter',['../class_global_threshold_filter.html',1,'']]],
+  ['grayscale',['Grayscale',['../classspatium_1_1imgproc_1_1_grayscale.html',1,'spatium::imgproc::Grayscale&lt; T &gt;'],['../classspatium_1_1imgproc_1_1_grayscale.html#a37bbeb3d786fbb457c8495f2dc526846',1,'spatium::imgproc::Grayscale::Grayscale()']]],
+  ['grayscale_2eh',['Grayscale.h',['../_grayscale_8h.html',1,'']]]
 ];

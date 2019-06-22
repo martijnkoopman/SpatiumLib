@@ -176,14 +176,15 @@ void Tree_test::test_quadtreeFromPoints()
   // Check max point count in leaf node
   QCOMPARE(tree.maxPointCountLeaf(), 1);
 
-  //  //idx::Tree<std::array<double,2>>::
-  //for (idx::TreeIterator<std::array<double, 2>> it = tree.begin() ; it != tree.end(); ++it)
-   // {
-  //    std::cout << ' ' << *it;
-    //}
-
-    //int depth = tree.computeDepth();
-
+  // Check point count
+  size_t pointCount = 0;
+  for (idx::TreeIterator<std::vector<std::array<double,2>>> it = tree.begin(); it != tree.end(); ++it)
+  {
+    std::shared_ptr<idx::PointQuadtreeNode> node = std::static_pointer_cast<idx::PointQuadtreeNode>(*it);
+    std::vector<std::array<double,2>> &p = node->object();
+    pointCount += p.size();
+  }
+  QCOMPARE(pointCount, 7);
 }
 
 QTEST_APPLESS_MAIN(Tree_test)

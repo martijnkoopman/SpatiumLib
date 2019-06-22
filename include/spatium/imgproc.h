@@ -14,6 +14,9 @@
 #define SPATIUMLIB_IMGPROC_H
 
 #include "imgproc/IImageFilter.h"
-#include "imgproc/GlobalThresholdFilter.h"
+#include "imgproc/GlobalThreshold.h"
+#include "imgproc/Grayscale.h"
+#include "imgproc/Sobel.h"
+#include "imgproc/Blur.h"
 
 #endif // SPATIUMLIB_IMGPROC_H

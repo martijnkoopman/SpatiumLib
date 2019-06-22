@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classspatium_1_1idx_1_1_tree.html" title=" " alt="" coords="5,5,157,61"/>
-<area shape="rect" id="node2" href="$classspatium_1_1idx_1_1_point_quadtree.html" title="Quadtree spatial index for 2D points." alt="" coords="205,20,389,47"/>
+<area shape="rect" id="node1" href="$classspatium_1_1idx_1_1_tree.html" title=" " alt="" coords="5,5,132,47"/>
+<area shape="rect" id="node2" href="$classspatium_1_1idx_1_1_string_tree.html" title="Tree structure for strings. Usefull for debugging." alt="" coords="180,13,341,39"/>
 </map>

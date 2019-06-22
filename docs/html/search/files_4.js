@@ -6,5 +6,6 @@ var searchData=
   ['geopoint3_2eh',['GeoPoint3.h',['../_geo_point3_8h.html',1,'']]],
   ['gfx2d_2eh',['gfx2d.h',['../gfx2d_8h.html',1,'']]],
   ['gfx3d_2eh',['gfx3d.h',['../gfx3d_8h.html',1,'']]],
-  ['globalthresholdfilter_2eh',['GlobalThresholdFilter.h',['../_global_threshold_filter_8h.html',1,'']]]
+  ['globalthreshold_2eh',['GlobalThreshold.h',['../_global_threshold_8h.html',1,'']]],
+  ['grayscale_2eh',['Grayscale.h',['../_grayscale_8h.html',1,'']]]
 ];

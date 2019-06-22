@@ -10,10 +10,10 @@
  *
  */
 
-#include "IImageFilter.h"
+#ifndef SPATIUMLIB_IMGPROC_GLOBALTHRESHOLD_H
+#define SPATIUMLIB_IMGPROC_GLOBALTHRESHOLD_H
 
-#ifndef SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
-#define SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
+#include "IImageFilter.h"
 
 namespace spatium {
 namespace imgproc {
@@ -24,21 +24,21 @@ namespace imgproc {
 /// GlobalThreshold is a class for binarizing an image by a given threshold
 /// value.
 template<typename T>
-class GlobalThresholdFilter
+class GlobalThreshold : public IImageFilter
 {
 public:
-  GlobalThresholdFilter(T thesholdValue = 0)
+  GlobalThreshold(T thesholdValue = 0)
     : m_thresholdValue(thesholdValue)
   {}
 
   // Copy constructor
-  GlobalThresholdFilter(const GlobalThresholdFilter &rhs) = default;
+  GlobalThreshold(const GlobalThreshold &rhs) = default;
 
   // Assignment operator
-  GlobalThresholdFilter& operator=(const GlobalThresholdFilter &rhs) = default;
+  GlobalThreshold& operator=(const GlobalThreshold &rhs) = default;
 
   // Destuctor
-  virtual ~GlobalThresholdFilter() = default;
+  virtual ~GlobalThreshold() = default;
 
   /// Get threshold value.
   ///
@@ -60,6 +60,12 @@ public:
   template<int N>
   bool apply(const Image<T, N> &input, Image<T, 1> &output)
   {
+    if (input.width() != output.width() ||
+        input.height() != output.height())
+    {
+      return false;
+    }
+
     T newValue = std::numeric_limits<T>::max();
 
     for (size_t y = 0; y < input.height(); y++)
@@ -105,7 +111,6 @@ public:
     return true;
   }
 
-
 private:
   T m_thresholdValue;
 };
@@ -113,5 +118,5 @@ private:
 } // namespace imgproc
 } // namespace spatium
 
-#endif // SPATIUMLIB_IMGPROC_GLOBALTHRESHOLDFILTER_H
+#endif // SPATIUMLIB_IMGPROC_GLOBALTHRESHOLD_H
 

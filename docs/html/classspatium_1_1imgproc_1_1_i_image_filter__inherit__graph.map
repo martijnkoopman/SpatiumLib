@@ -1,0 +1,6 @@
+<map id="spatium::imgproc::IImageFilter" name="spatium::imgproc::IImageFilter">
+<area shape="rect" id="node1" title="Interface class for all image filters." alt="" coords="5,64,176,105"/>
+<area shape="rect" id="node2" href="$classspatium_1_1imgproc_1_1_global_threshold.html" title=" " alt="" coords="251,5,418,47"/>
+<area shape="rect" id="node3" href="$classspatium_1_1imgproc_1_1_grayscale.html" title="Color image to grayscale." alt="" coords="224,71,445,98"/>
+<area shape="rect" id="node4" href="$classspatium_1_1imgproc_1_1_sobel.html" title=" " alt="" coords="253,122,416,149"/>
+</map>

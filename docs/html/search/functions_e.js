@@ -1,6 +1,10 @@
 var searchData=
 [
   ['radius',['radius',['../classspatium_1_1geom3d_1_1_sphere.html#aae3565d53ef808e8ac429727b26fe2d6',1,'spatium::geom3d::Sphere::radius(double radius)'],['../classspatium_1_1geom3d_1_1_sphere.html#adb8a5163bdb4fc6b72b10861dec8e853',1,'spatium::geom3d::Sphere::radius() const']]],
+  ['readbinaryimagefrompbm',['readBinaryImageFromPbm',['../classspatium_1_1_image_i_o.html#a1a71f2fd3647821b55ffe061fc3eeb50',1,'spatium::ImageIO']]],
+  ['readgrayscaleimagefrompgm',['readGrayscaleImageFromPgm',['../classspatium_1_1_image_i_o.html#aef7142af12d16ee21fcf4ff1663c9a34',1,'spatium::ImageIO']]],
+  ['readpnmfileheader',['readPnmFileHeader',['../classspatium_1_1_image_i_o.html#a04ffa4b5297e2f89256337f55fd37ba6',1,'spatium::ImageIO']]],
+  ['readrgbimagefromppm',['readRgbImageFromPpm',['../classspatium_1_1_image_i_o.html#a1da0ad6297d5aab8a9cbe9efe9156438',1,'spatium::ImageIO']]],
   ['render',['render',['../classspatium_1_1gfx3d_1_1_renderer.html#a5951141f08c9100f512793385e7cadbb',1,'spatium::gfx3d::Renderer::render()'],['../classspatium_1_1gfx3d_1_1_wireframe_renderer.html#abbdb9bb09def7a2b219cf3b586a2f016',1,'spatium::gfx3d::WireframeRenderer::render()']]],
   ['renderobject',['RenderObject',['../classspatium_1_1gfx3d_1_1_render_object.html#a21793ed5c7da821aa2feff6f3c76f0b7',1,'spatium::gfx3d::RenderObject']]],
   ['renderobjects',['renderObjects',['../classspatium_1_1gfx3d_1_1_scene.html#a9afb4d0a388ffb67b595d76e31c73056',1,'spatium::gfx3d::Scene']]],

@@ -1,6 +1,9 @@
 <map id="/home/martijn/Development/Projects/SpatiumLib/include/spatium/imgproc/IImageFilter.h" name="/home/martijn/Development/Projects/SpatiumLib/include/spatium/imgproc/IImageFilter.h">
-<area shape="rect" id="node1" title=" " alt="" coords="115,5,321,61"/>
-<area shape="rect" id="node2" href="$_global_threshold_filter_8h.html" title=" " alt="" coords="5,109,265,165"/>
-<area shape="rect" id="node3" href="$imgproc_8h.html" title=" " alt="" coords="124,213,312,269"/>
-<area shape="rect" id="node4" href="$spatium_8h.html" title=" " alt="" coords="124,317,312,373"/>
+<area shape="rect" id="node1" title=" " alt="" coords="281,5,488,61"/>
+<area shape="rect" id="node2" href="$_blur_8h.html" title=" " alt="" coords="5,109,193,165"/>
+<area shape="rect" id="node3" href="$imgproc_8h.html" title=" " alt="" coords="291,213,479,269"/>
+<area shape="rect" id="node5" href="$_global_threshold_8h.html" title=" " alt="" coords="269,109,500,165"/>
+<area shape="rect" id="node6" href="$_grayscale_8h.html" title=" " alt="" coords="524,109,720,165"/>
+<area shape="rect" id="node7" href="$_sobel_8h.html" title=" " alt="" coords="744,109,932,165"/>
+<area shape="rect" id="node4" href="$spatium_8h.html" title=" " alt="" coords="291,317,479,373"/>
 </map>

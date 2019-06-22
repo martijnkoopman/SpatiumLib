@@ -99,7 +99,7 @@ public:
   }
 
   /// Set the object.
-  G object() const
+  G& object()
   {
     return m_object;
   }

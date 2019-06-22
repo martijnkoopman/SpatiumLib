@@ -37,7 +37,7 @@ public:
   /// Constructor.
   ///
   /// \param[in] rootNode Root node (optional)
-  Tree(const std::shared_ptr<TreeNode<G>> &rootNode = std::make_shared<TreeNode<G>>())
+  Tree(std::shared_ptr<TreeNode<G>> rootNode = std::make_shared<TreeNode<G>>())
     : m_root(rootNode)
   {
   }

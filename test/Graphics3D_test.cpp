@@ -1,8 +1,8 @@
 #include <QtTest>
 #include "TestUtilities.h"
-#include "ImageIOQt.h"
 
 #include <spatium/Image.h>
+#include <spatium/ImageIO.h>
 #include <spatium/gfx3d/Scene.h>
 #include <spatium/gfx3d/Mesh.h>
 #include <spatium/gfx3d/OrthographicCamera.h>
@@ -207,7 +207,9 @@ void Graphics3D_test::test_wireframeRendering()
   renderer.render(scene, image);
 
   // Write image to output
-  QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/render_cube.png", image));
+  QVERIFY(ImageIO::writeRgbImageAsPpm(image, (QFileInfo(__FILE__).absolutePath() + "/resources/tmp/render_cube.pmm").toStdString()));
+
+  //QVERIFY(ImageIOQt::WriteImageToFile(QFileInfo(__FILE__).absolutePath() + "/resources/tmp/render_cube.png", image));
 }
 
 QTEST_APPLESS_MAIN(Graphics3D_test)

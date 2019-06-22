@@ -10,5 +10,7 @@ target_include_directories(spatiumlib INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
 
+add_subdirectory(sceneviewer)
+
 # Unit tests for spatiumlib
 add_subdirectory(test)

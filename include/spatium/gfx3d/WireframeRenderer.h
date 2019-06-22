@@ -86,6 +86,9 @@ public:
                                     {    0   ,    0   , 2/(n-f), -(n+f)/(n-f) },
                                     {    0   ,    0   ,    0   ,       1      } });
 
+    // 3. Construct camera transformation matrix (World space -> Camera space)
+    geom3d::Matrix4x4 matrixCamera = cameraOrtho->transform().matrix().inverse();
+
     // Iterate objects in scene
     for (auto renderObject : scene.renderObjects())
     {
@@ -93,9 +96,6 @@ public:
       std::shared_ptr<Mesh> mesh = std::dynamic_pointer_cast<Mesh>(renderObject);
       if (mesh)
       {
-        // 3. Construct camera transformation matrix (World space -> Camera space)
-        geom3d::Matrix4x4 matrixCamera = cameraOrtho->transform().matrix().inverse();
-
         // 4. Construct world transformation matrix (object space -> world space)
         geom3d::Matrix4x4 matrixObject = mesh->transform().matrix();
 
