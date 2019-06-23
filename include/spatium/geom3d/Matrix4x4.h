@@ -13,7 +13,10 @@
 #ifndef SPATIUMLIB_GEOM3D_MATRIX4X4_H
 #define SPATIUMLIB_GEOM3D_MATRIX4X4_H
 
-#include <spatium/Matrix.h>
+#include "spatium/Matrix.h"
+#include "Vector3.h"
+
+#include <cmath> // std::cos
 
 namespace spatium {
 namespace geom3d {
@@ -80,19 +83,6 @@ public:
   ~Matrix4x4() = default;
 
   // Construct affine transformation Matrix4x4
-
-//  / Construct identity matrix.
-//  /
-//  / \return Identity matrix
-//  static Matrix4x4 identity()
-//  {
-//    Matrix4x4 result;
-//    result(0,0) = 1;
-//    result(1,1) = 1;
-//    result(2,2) = 1;
-//    result(3,3) = 1;
-//    return result;
-//  }
 
   /// Construct translation matrix.
   ///

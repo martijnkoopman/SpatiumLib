@@ -115,8 +115,8 @@ public:
           geom3d::Point3 v1Proj = matrixPipeline * v1;
           geom3d::Point3 v2Proj = matrixPipeline * v2;
 
-          std::cout << v1 << " to " << v1Proj << std::endl;
-          std::cout << v2 << " to " << v2Proj << std::endl;
+          //std::cout << v1 << " to " << v1Proj << std::endl;
+          //std::cout << v2 << " to " << v2Proj << std::endl;
 
           int x1 = static_cast<int>(v1Proj.x());
           int y1 = static_cast<int>(v1Proj.y());

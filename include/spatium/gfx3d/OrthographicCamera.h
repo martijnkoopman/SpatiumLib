@@ -25,7 +25,6 @@ namespace gfx3d {
 class OrthographicCamera : public Camera
 {
 public:
-
   /// Constructor
   ///
   /// \param[in] near
@@ -37,10 +36,18 @@ public:
     : Camera(near, far)
     , m_size(size)
   {
-
   }
 
+  /// Destructor
   ~OrthographicCamera() override = default;
+
+  /// Set size of the viewing plane along the Y axis.
+  ///
+  /// \param[in[ Viewing plane size
+  void setSize(double size)
+  {
+    m_size = size;
+  }
 
   /// Get size of the viewing plane along the Y axis.
   ///

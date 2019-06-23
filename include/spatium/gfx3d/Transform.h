@@ -125,6 +125,15 @@ public:
     m_matrix = m_matrix * geom3d::Matrix4x4::rotation(euler.x(), euler.y(), euler.z());
   }
 
+  /// Rotate around axis (relative to self/object space)
+  ///
+  /// \param[in] axis Axis vector
+  /// \param[in] angle Angle in radians
+  void rotateAround(const geom3d::Vector3 &axis, double angle)
+  {
+    m_matrix = geom3d::Matrix4x4::rotationAround(axis, angle) * m_matrix;
+  }
+
   /// Set the rotation in world space
   ///
   /// \param[in] euler Rotation in euler angles

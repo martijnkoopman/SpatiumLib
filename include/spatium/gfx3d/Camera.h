@@ -19,9 +19,6 @@
 
 #include <ostream>
 
-
-#include <iostream> // DELETE ME
-
 namespace spatium {
 namespace gfx3d {
 
@@ -34,7 +31,6 @@ namespace gfx3d {
 class Camera : public SceneObject
 {
 public:
-
   /// Constructor
   Camera(double near, double far)
     : SceneObject()
@@ -43,6 +39,7 @@ public:
   {
   }
 
+  /// Destructor
   virtual ~Camera() = default;
 
   /// Get the distance to the near clipping plane in world space.
@@ -81,12 +78,12 @@ public:
     // up vector.
     geom3d::Matrix4x4 M = m_transform.matrix();
 
-    // First COLUMN is right vector // First ROW is right vector
-    M(0,0) = right(0); // M(0,0) = right(0);
+    // First COLUMN is right vector
+    M(0,0) = right(0);
     M(1,0) = right(1);
     M(2,0) = right(2);
 
-    // Second COLUMN is up vector // Second ROW is up vector
+    // Second COLUMN is up vector
     M(0,1) = upOrtho(0);
     M(1,1) = upOrtho(1);
     M(2,1) = upOrtho(2);
@@ -112,6 +109,20 @@ public:
   {
     m_transform.setPosition (eye);
     lookAt(target, up);
+  }
+
+  void orthogonalizeViewUp()
+  {
+    geom3d::Vector3 upOrtho = m_transform.back().cross(m_transform.right());
+
+    geom3d::Matrix4x4 M = m_transform.matrix();
+
+    // Second COLUMN is up vector
+    M(0,1) = upOrtho(0);
+    M(1,1) = upOrtho(1);
+    M(2,1) = upOrtho(2);
+
+    m_transform.setMatrix(M);
   }
 
   /// Output to ostream

@@ -21,7 +21,7 @@
 #include "gfx3d/PerspectiveCamera.h"
 #include "gfx3d/Light.h"
 #include "gfx3d/PointLight.h"
-#include "gfx3d/SunLight.h"
+#include "gfx3d/DirectionalLight.h"
 #include "gfx3d/SpotLight.h"
 #include "gfx3d/Scene.h"
 #include "gfx3d/Renderer.h"

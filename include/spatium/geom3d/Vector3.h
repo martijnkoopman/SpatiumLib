@@ -15,6 +15,8 @@
 
 #include "spatium/Vector.h"
 
+#include <cmath> // std::sqrt
+
 namespace spatium {
 namespace geom3d {
 
